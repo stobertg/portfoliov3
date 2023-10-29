@@ -1,5 +1,5 @@
 import React from 'react'
-import { styled } from '@theme'
+import { styled, keyframes } from '@theme'
 
 // For the master container of the Gather logo component
 // This holds the G logo of the project, but made in css so we can animate it
@@ -35,6 +35,7 @@ const LogoCap = styled('div', {
 		position: 'relative',
 		width: '50%',
 		height: '100%',
+		overflow: 'hidden',
 
 		// For the size of the bars on the top nd bottom of the container
 		// Here we set this to overflow the width of the container to give it the hex feel
@@ -55,7 +56,7 @@ const LogoCap = styled('div', {
 			top: { 
 				top: 0,
 				'*:before': { background: '#545554' },
-				'> *:first-child:before': { transform: 'rotate( -30deg )', boxShadow: '-3px 3px 2px rgba( 0,0,0, 0.2 )' },
+				'> *:first-child:before': { transform: 'rotate( -30deg )' },
 				'> *:last-child:before': { transform: 'rotate( 30deg )' }
 			},
 
@@ -118,6 +119,8 @@ const LogoMid = styled('div', {
 		}
 	}
 })
+
+// ---------- This is the end of declarations ---------- //
 
 export const GatherLogo = () => {
   return(
