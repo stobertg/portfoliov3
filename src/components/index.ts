@@ -3,7 +3,9 @@ export { Heading } from './Heading/Heading'
 export { HeadTags } from './HeadTags/HeadTags'
 export { Icon } from './Icon/Icon'
 export { Iphone } from './Iphone/Iphone'
+export { Logo } from './Logo/Logo'
 export { SiteContainer } from './SiteContainer/SiteContainer'
+export { SiteHeader } from './SiteHeader/SiteHeader'
 
 // For the form components
 
