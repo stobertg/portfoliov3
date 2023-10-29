@@ -12,10 +12,6 @@ const staticAnimation = keyframes({
 // This component is used to automate spacing, sizes, widths, ect for components wrapped within this components
 
 const SiteWrap = styled('div', {
-  display: 'flex',
-  justifyContent: 'center',
-  flexDirection: 'column',
-  alignItems: 'center',
   position: 'relative',
   width: '100vw',
   minHeight: '100vh'
@@ -30,6 +26,7 @@ const SiteContent = styled('div', {
   position: 'relative',
   width: '100%',
   margin: '0 auto',
+  padding: '150px 0',
   zIndex: 1,
 
   // The only variant option for this component is to automate the spacing between content blocks within the site

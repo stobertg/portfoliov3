@@ -1,13 +1,23 @@
 import React from 'react'
 import { styled } from '@theme'
 
+const LogoWrap = styled('div', {
+
+})
+
 // For the master container of the Tyler Stober logo
 // This contains the 'T' with the 'S' wrapped around it
 
-const LogoWrap = styled('figure', {
+const LogoContent = styled('figure', {
   position: 'relative',
 	width: 46,
-	height: 70
+	height: 70,
+
+  variants: {
+    size: {
+      l0: { transform: 'scale( 0.7 )' }
+    }
+  }
 })
 
 const Tyler = styled('div', {
@@ -70,7 +80,7 @@ const Stober = styled('div', {
   '&:before': {
     top: 8,
     width: '100%',
-    background: '$black',
+    background: '#111',
     transform: 'skewY(21deg)',
     borderRadius: '0px 2px 2px 2px',
     zIndex: 0
@@ -100,10 +110,9 @@ interface LogoProps {
 export const Logo = ({}:LogoProps) => {
   return(
 
-    <LogoWrap>
-      <Tyler />
-      <Stober />
-    </LogoWrap>
+    <LogoContent size="l0">
+      <Tyler /><Stober />
+    </LogoContent>
 
   )
 }

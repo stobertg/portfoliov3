@@ -1,6 +1,6 @@
 import React from 'react'
 import type { NextPage } from 'next'
-import { SiteContainer } from '@components'
+import { SiteContainer, Block } from '@components'
 
 const Gather: NextPage = () => {
   return (
@@ -13,7 +13,7 @@ const Gather: NextPage = () => {
       socialImage="https://mxmlcreative.com/global/social-hero.jpeg"
     >
 
-      <>This is some content</>
+      <Block width="medium">This is some content</Block>
     </SiteContainer>
 
   )
