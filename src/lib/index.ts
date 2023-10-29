@@ -1,0 +1,5 @@
+export { SmoothScroll } from './smoothScroll'
+export { useScrollPosition } from './utils'
+export { useScrollDirection } from './utils'
+export { useMediaQuery } from './useMediaQuery'
+export { smoothScrollTo } from './utils'
