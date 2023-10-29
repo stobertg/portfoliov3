@@ -1,10 +1,16 @@
 import React from 'react'
 import { styled } from '@theme'
 
+// For the master container of the block component
+// This component is the building block of the site, used to be a master parent inside of the SiteContainer
+
 const BlockWrap = styled('div', {
   position: 'relative',
   width: '100%'
 })
+
+// For the container of all of the content within the master container
+// This is mainly used to be able to set various width within the site, based on needs
 
 const BlockContent = styled('div', {
   position: 'relative',
@@ -12,14 +18,19 @@ const BlockContent = styled('div', {
   margin: '0 auto',
   '> *:not(:last-child)': { marginBottom: 80 },
 
+  // For the various widths supported
+  // By default the width is set at 100% and based on needs, we can adjust for the content
+
   variants: {
     width: {
-      small: {},
+      small: { maxWidth: 800 },
       medium: { maxWidth: 1200 },
-      large: {}
+      large: { maxWidth: 1300 }
     }
   }
 })
+
+// -------------- Typescript declarations -------------- //
 
 interface BlockProps {
   width?: 'small' | 'medium' | 'large'
@@ -28,7 +39,11 @@ interface BlockProps {
 
 // ---------- This is the end of declarations ---------- //
 
-export const Block = ({ width, children }:BlockProps) => {
+export const Block = ({ 
+    width, // Optional - Accomidating various widths based on needs
+    children // Required - For the content within the component
+  }:BlockProps) => {
+
   return(
 
     <BlockWrap>

@@ -63,6 +63,9 @@ const BrowserSide = styled('div', {
   '> *:not(:last-child)': { marginRight: 32 }
 })
 
+// For the container of the colored action buttons on the left side of the container
+// This is to represent the closing, minimizing, and expanding of the browser
+
 const BrowserControls = styled('div', {
   display: 'flex',
   flexDirection: 'row',
@@ -73,7 +76,8 @@ const BrowserControls = styled('div', {
   height: 10,
   '> *:not(:last-child)': { marginRight: 4 },
 
-  // For the dots on the left center and right of the container
+  // For the shared styling of the dots within the container
+  // This sets the size of the dots and the colors are designated below
 
   'span, &:before, &:after': {
     position: 'absolute',
@@ -82,26 +86,26 @@ const BrowserControls = styled('div', {
     borderRadius: '50%',
   },
 
-  // For the 
-
-  '&:before, &:after': {
-    content: ''
-  },
-
-  // For the placement of the dots on the left and right of the container
+  // For the placement and appearance of the dots on the left and right of the container
   // This is for the placement of the close button and the expand button
 
   'span': { background: 'yellow' },
+  '&:before, &:after': { content: '' },
   '&:before': { left: 0, background: 'red' },
   '&:after': { right: 0, background: 'green' }
 })
 
-const BrowserScreen = styled('figure', {
+// For the container of the screen, below the browser header
+// This contains the main part - showing off the product
+
+const BrowserScreen = styled('div', {
   position: 'relative',
   width: '100%',
   borderRadius: '0 0 $r2 $r2',
   overflow: 'hidden'
 })
+
+// -------------- Typescript declarations -------------- //
 
 interface BrowserProps {
   url: string
@@ -110,11 +114,13 @@ interface BrowserProps {
   content?: React.ReactNode
 }
 
+// ---------- This is the end of declarations ---------- //
+
 export const Browser = ({ 
-    url,
-    image,
-    imageAlt,
-    content
+    url, // Required - For the url address for web context (can be live or fake site)
+    image, // Required if no 'content' - For the image on display
+    imageAlt, // Required if image - For the alt text of the image
+    content // Required if no 'image' - For custom needs
   }:BrowserProps) => {
 
   return(
