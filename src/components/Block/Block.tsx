@@ -10,6 +10,7 @@ const BlockContent = styled('div', {
   position: 'relative',
   width: '90%',
   margin: '0 auto',
+  '> *:not(:last-child)': { marginBottom: 80 },
 
   variants: {
     width: {

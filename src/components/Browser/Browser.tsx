@@ -3,12 +3,15 @@ import { styled } from '@theme'
 import { Icon, Heading } from '@components'
 
 // For the master container of the browser component
-// This holds the comps with the screens inside of the browser lockup
+// This holds the browser bar on the top of the container and the screen below it
 
 const DeviceWrap = styled('div', {
   position: 'relative',
   width: '100%'
 })
+
+// For the container of the browser window on the top of the container
+// This holds the foundational styling, and the background of the browser component
 
 const BrowserWrap = styled('div', {
   position: 'relative',
@@ -17,7 +20,8 @@ const BrowserWrap = styled('div', {
   borderRadius: '$r2 $r2 0 0'
 })
 
-// For the container of the content 
+// For the container of all of the content within the master container
+// These holds the controls on the left and right and the url in the center of the container
 
 const BrowserContent = styled('div', {
   display: 'flex',
@@ -27,8 +31,12 @@ const BrowserContent = styled('div', {
   position: 'relative',
   width: '95%',
   margin: '0 auto',
-  padding: '12px 0'
+  padding: '12px 0',
+  '> *:last-child': { justifyContent: 'flex-end' }
 })
+
+// For the container of the URL in the center of the component
+// This has the font size icon on the left, the reload button on the right and the url address in the center
 
 const BrowserUrl = styled('div', {
   display: 'flex',
@@ -43,12 +51,15 @@ const BrowserUrl = styled('div', {
   fontSize: 12
 })
 
+// For the container of the buttons on the side of the browser bar
+// This holds the typical icons you see in the the Safari browser and is used as a static feature
+
 const BrowserSide = styled('div', {
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
   position: 'relative',
-
+  width: '25%',
   '> *:not(:last-child)': { marginRight: 32 }
 })
 
@@ -93,10 +104,19 @@ const BrowserScreen = styled('figure', {
 })
 
 interface BrowserProps {
-
+  url: string
+  image?: string
+  imageAlt?: string
+  content?: React.ReactNode
 }
 
-export const Browser = ({}:BrowserProps) => {
+export const Browser = ({ 
+    url,
+    image,
+    imageAlt,
+    content
+  }:BrowserProps) => {
+
   return(
 
     <DeviceWrap>
@@ -110,23 +130,22 @@ export const Browser = ({}:BrowserProps) => {
           </BrowserSide>
 
           <BrowserUrl>
-            <Icon size="l0" icon="case-sensitive" />
-            <Heading align="center" title="gather.goldininstitute.org" />
+            <Heading bold title="Aa" />
+            <Heading align="center" title={ url } />
             <Icon size="l0" icon="rotate-cw" />
           </BrowserUrl>
 
           <BrowserSide>
-            <span />
             <Icon size="l0" icon="share" />
             <Icon size="l0" icon="plus" />
             <Icon size="l0" icon="panel-right" />
           </BrowserSide>
         </BrowserContent>  
-
-        
       </BrowserWrap>
 
-      <BrowserScreen><img src="/projects/gather/profile.png" alt="Gather E-learning platform" /></BrowserScreen>
+      <BrowserScreen>
+        { image ? ( <img src={ image } alt={ imageAlt } /> ): ( <>{ content }</> )}
+      </BrowserScreen>
     </DeviceWrap>
 
   )

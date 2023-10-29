@@ -16,12 +16,18 @@ const HeroHeading = styled('div', {
   alignItems: 'center'
 })
 
+const HeroGraphic = styled('div', {
+
+})
+
 interface HeroProps {
+  heroGraphic?: React.ReactNode
   title: string
   subtitle?: string
 }
 
 export const Hero = ({ 
+    heroGraphic,
     title, 
     subtitle 
   }:HeroProps) => {
@@ -30,6 +36,10 @@ export const Hero = ({
 
     <HeroWrap>
       <HeroContent>
+        { heroGraphic && ( 
+          <HeroGraphic>{ heroGraphic }</HeroGraphic> 
+        )}
+
         <HeroHeading>
           <Heading heavy size="l6" {...{ title }} />
           <Heading size="l2" color="secondary" title={ subtitle } />

@@ -1,6 +1,6 @@
 import React from 'react'
 import type { NextPage } from 'next'
-import { SiteContainer, Block, Hero, Intro, Browser } from '@components'
+import { SiteContainer, Block, Hero, Intro, Browser, GatherLogo } from '@components'
 
 const Gather: NextPage = () => {
   return (
@@ -19,7 +19,7 @@ const Gather: NextPage = () => {
           title="Gather Web Application" 
           subtitle="E-Learning Application for Grassroots Leadership"
         />
-        <Browser />
+        <Browser url="gather.goldininstitute.org" image="/projects/gather/profile.png" imageAlt="Gather" />
       </Block>
 
       <Block>

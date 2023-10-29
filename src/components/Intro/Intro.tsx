@@ -18,6 +18,15 @@ const IntroContent = styled('div', {
   maxWidth: 900,
   width: '100%',
   margin: '0 auto',
+  '> *:not(:last-child)': { marginBottom: 50 }
+})
+
+// For the container of the title and the text
+// This is needed for spacing purposes between the main text and the skills and project info below
+
+const IntroMain = styled('div', {
+  position: 'relative',
+  width: '100%',
   '> *:not(:last-child)': { marginBottom: 32 }
 })
 
@@ -43,8 +52,11 @@ export const Intro = ({
 
     <IntroWrap>
       <IntroContent>
-        <Heading heavy size="l5" {...{ title }} />
-        <Text fontSize="l1">{ text }</Text>
+        <IntroMain>
+          <Heading heavy size="l5" {...{ title }} />
+          <Text fontSize="l1">{ text }</Text>
+        </IntroMain>
+
         <Grid columns={ 3 }>
           <List spacing="l1" size="l1" font="serif" title="Roles / Skills" listItems={ skills } />
           <List spacing="l1" size="l1" font="serif" title="Project" listItems={ project } />
