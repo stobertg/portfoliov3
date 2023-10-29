@@ -1,4 +1,5 @@
 export { Block } from './Block/Block'
+export { Browser } from './Browser/Browser'
 export { Heading } from './Heading/Heading'
 export { HeadTags } from './HeadTags/HeadTags'
 export { Icon } from './Icon/Icon'
