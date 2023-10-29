@@ -44,10 +44,10 @@ const SiteContent = styled('div', {
     // This will automate the spacing so that spacing is consistant throughout the site
 
     blockSpacing: {
-      l0: { '> *': { marginBottom: 32 }},
-      l1: { '> *': { marginBottom: 50 }},
-      l2: { '> *': { marginBottom: 100 }},
-      l3: { '> *': { marginBottom: 150, '@media(max-width: 767px)': { marginBottom: 75 }}},
+      l0: { '> *:not(:last-child)': { marginBottom: 32 }},
+      l1: { '> *:not(:last-child)': { marginBottom: 50 }},
+      l2: { '> *:not(:last-child)': { marginBottom: 100 }},
+      l3: { '> *:not(:last-child)': { marginBottom: 150, '@media(max-width: 767px)': { marginBottom: 75 }}},
     }
   }
 })

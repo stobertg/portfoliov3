@@ -1,5 +1,6 @@
 export { Block } from './Block/Block'
 export { Browser } from './Browser/Browser'
+export { Grid } from './Grid/Grid'
 export { Heading } from './Heading/Heading'
 export { HeadTags } from './HeadTags/HeadTags'
 export { Hero } from './Hero/Hero'

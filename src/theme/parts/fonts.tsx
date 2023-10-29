@@ -60,7 +60,7 @@ export const fonts = {
 export const fontSizes = {
   s0: '0.75rem', // 12px
   s1: '0.875rem', // 14px
-  s2: '1.0625rem', // 17px
+  s2: '1.25rem', // 17px
   s3: '1.375rem', // 22px
   s4: '1.5rem', // 24px
   s5: '1.75rem', // 28px
