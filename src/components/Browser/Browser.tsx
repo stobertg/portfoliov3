@@ -2,12 +2,22 @@ import React from 'react'
 import { styled } from '@theme'
 import { Icon, Heading } from '@components'
 
+// For the master container of the browser component
+// This holds the comps with the screens inside of the browser lockup
+
+const DeviceWrap = styled('div', {
+  position: 'relative',
+  width: '100%'
+})
+
 const BrowserWrap = styled('div', {
   position: 'relative',
   width: '100%',
   background: '#2b3340',
   borderRadius: '$r2 $r2 0 0'
 })
+
+// For the container of the content 
 
 const BrowserContent = styled('div', {
   display: 'flex',
@@ -89,31 +99,35 @@ interface BrowserProps {
 export const Browser = ({}:BrowserProps) => {
   return(
 
-    <BrowserWrap>
-      <BrowserContent>
-        <BrowserSide>
-          <BrowserControls><span /></BrowserControls>
-          <Icon size="l0" icon="book-open" />
-          <Icon size="l0" icon="chevron-left" />
-          <Icon size="l0" icon="chevron-right" />
-        </BrowserSide>
+    <DeviceWrap>
+      <BrowserWrap>
+        <BrowserContent>
+          <BrowserSide>
+            <BrowserControls><span /></BrowserControls>
+            <Icon size="l0" icon="book-open" />
+            <Icon size="l0" icon="chevron-left" />
+            <Icon size="l0" icon="chevron-right" />
+          </BrowserSide>
 
-        <BrowserUrl>
-          <Icon size="l0" icon="case-sensitive" />
-          <Heading align="center" title="gather.goldininstitute.org" />
-          <Icon size="l0" icon="rotate-cw" />
-        </BrowserUrl>
+          <BrowserUrl>
+            <Icon size="l0" icon="case-sensitive" />
+            <Heading align="center" title="gather.goldininstitute.org" />
+            <Icon size="l0" icon="rotate-cw" />
+          </BrowserUrl>
 
-        <BrowserSide>
-          <span />
-          <Icon size="l0" icon="share" />
-          <Icon size="l0" icon="plus" />
-          <Icon size="l0" icon="panel-right" />
-        </BrowserSide>
-      </BrowserContent>  
+          <BrowserSide>
+            <span />
+            <Icon size="l0" icon="share" />
+            <Icon size="l0" icon="plus" />
+            <Icon size="l0" icon="panel-right" />
+          </BrowserSide>
+        </BrowserContent>  
+
+        
+      </BrowserWrap>
 
       <BrowserScreen><img src="/projects/gather/profile.png" alt="Gather E-learning platform" /></BrowserScreen>
-    </BrowserWrap>
+    </DeviceWrap>
 
   )
 }
