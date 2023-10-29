@@ -2,10 +2,16 @@ import React from 'react'
 import { styled } from '@theme'
 import { Heading, Text, Grid, List } from '@components'
 
+// For the master container of the intro component
+// This holds all of the content concerning the project, which explains the project and roles/responsibilties
+
 const IntroWrap = styled('div', {
   position: 'relative',
   width: '100%'
 })
+
+// For the container of the all of the content within the master container
+// This holds the title on the top, the description in the middle and the roles/project info below
 
 const IntroContent = styled('div', {
   position: 'relative',
@@ -15,12 +21,7 @@ const IntroContent = styled('div', {
   '> *:not(:last-child)': { marginBottom: 32 }
 })
 
-const IntroStats = styled('div', {
-  display: 'flex',
-  flexDirection: 'row',
-  position: 'relative',
-  width: '100%'
-})
+// -------------- Typescript declarations -------------- //
 
 interface IntroProps {
   title: string
@@ -29,7 +30,15 @@ interface IntroProps {
   project: { title: string }[]
 }
 
-export const Intro = ({ title, text, skills, project }:IntroProps) => {
+// ---------- This is the end of declarations ---------- //
+
+export const Intro = ({ 
+    title, // Required - For the title of the intro (blurb about the project)
+    text, // Required - For the text describing the project (below the title)
+    skills, // Required - For the skills used to implement the project
+    project  // Required - Basic info about the project
+  }:IntroProps) => {
+
   return(
 
     <IntroWrap>

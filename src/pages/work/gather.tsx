@@ -49,7 +49,7 @@ const Gather: NextPage = () => {
           ]}
           project={[
             { title: 'Goldin Institute: 2017 - Present' },
-            { title: 'Founder & Co-founder - Travis Rejman' }
+            { title: 'Co-founder - Travis Rejman' }
           ]}
         />
       </Block>

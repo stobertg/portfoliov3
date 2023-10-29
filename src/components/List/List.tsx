@@ -4,6 +4,11 @@ import { Heading } from '@components'
 
 const ListWrap = styled('div', {
   position: 'relative',
+  width: '100%',
+
+  '> *:not(:last-child)': {
+    marginBottom: 12
+  }
 })
 
 const Ul = styled('ul', {

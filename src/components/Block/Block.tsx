@@ -8,13 +8,13 @@ const BlockWrap = styled('div', {
 
 const BlockContent = styled('div', {
   position: 'relative',
-  width: '100%',
+  width: '90%',
   margin: '0 auto',
 
   variants: {
     width: {
       small: {},
-      medium: { maxWidth: 1200, width: '90%' },
+      medium: { maxWidth: 1200 },
       large: {}
     }
   }
