@@ -16,10 +16,16 @@ const Gather: NextPage = () => {
 
       <Block width="medium">
         <Hero 
+          heroGraphic={ <GatherLogo /> }
           title="Gather Web Application" 
           subtitle="E-Learning Application for Grassroots Leadership"
         />
-        <Browser url="gather.goldininstitute.org" image="/projects/gather/profile.png" imageAlt="Gather" />
+
+        <Browser 
+          url="gather.goldininstitute.org" 
+          image="/projects/gather/profile.png" 
+          imageAlt="Gather" 
+        />
       </Block>
 
       <Block>

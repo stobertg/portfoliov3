@@ -3,17 +3,23 @@ import { styled } from '@theme'
 import { Heading } from '@components'
 
 const HeroWrap = styled('div', {
-
+  position: 'relative',
+  width: '100%'
 })
 
 const HeroContent = styled('div', {
-  
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  position: 'relative',
+  '> *:not(:last-child)': { marginBottom: 32 }
 })
 
 const HeroHeading = styled('div', {
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'center'
+  alignItems: 'center',
+  '> *:not(:last-child)': { marginBottom: 8 }
 })
 
 const HeroGraphic = styled('div', {
@@ -41,7 +47,7 @@ export const Hero = ({
         )}
 
         <HeroHeading>
-          <Heading heavy size="l6" {...{ title }} />
+          <Heading heavy htag='1' size="l6" {...{ title }} />
           <Heading size="l2" color="secondary" title={ subtitle } />
         </HeroHeading>
       </HeroContent>

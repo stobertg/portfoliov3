@@ -26,7 +26,7 @@ const SiteContent = styled('div', {
   position: 'relative',
   width: '100%',
   margin: '0 auto',
-  padding: '150px 0',
+  padding: '180px 0',
   zIndex: 1,
 
   // The only variant option for this component is to automate the spacing between content blocks within the site
@@ -82,7 +82,6 @@ interface SiteContainerProps {
   spacing?: 'l0' | 'l1' | 'l2' | 'l3'
   blockSpacing?: 'l0' | 'l1' | 'l2' | 'l3'
   children: React.ReactNode
-  logos?: any
   shareURL?: string
   pageTitle?: string
   content?: string
@@ -96,7 +95,6 @@ export const SiteContainer = ({
     spacing, // Optional - For the top and bottom spacing of the page content
     blockSpacing, // Optional - For the uniform spacing between each of the blocks that make up the page
     children, // Required - For all of the content within a page
-    logos, // Required - For the logo loop animation in the logo spot on the left of the container
     shareURL,
     pageTitle,
     content,

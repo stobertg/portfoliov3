@@ -15,16 +15,9 @@ const Cap = styled('div', {
 export const GatherLogo = () => {
   return(
 
-    <div className="loading__animation">
-			<LogoWrap>
-				<Cap />
-				<div className="g__middle">	
-					<div className="g__middle--left"></div>
-					<div className="g__middle--right"></div>
-				</div>
-				<Cap />
-			</LogoWrap>
-		</div>
+		<LogoWrap>
+			<img src="/projects/gather/logo.svg" alt="Gather logo" />
+		</LogoWrap>
 
   )
 }
