@@ -1,6 +1,24 @@
 import React from 'react'
 import { styled, keyframes } from '@theme'
 
+// Animations of the head and the neck
+// These are used to show motion of the horse running that matches it it's legs
+
+const rotateHead = keyframes({
+  '0%': { transform: 'rotate( 0deg ) translate3d(0, 0, 0)' },
+  '50%': { transform: 'rotate( 6deg ) translate3d(0, 6px, 0)' },
+  '100%': { transform: 'rotate( 0deg ) translate3d(0, 0, 0)' },
+})
+
+const rotateNeck = keyframes({
+  '0%': { transform: 'rotate( 0deg ) translate3d(0, 0, 0) scale(1, 1)' },
+  '50%': { transform: 'rotate( -6deg ) translate3d(0, 2px, 0) scale(0.95, 0.95)' },
+  '100%': { transform: 'rotate( 0deg ) translate3d(0, 0, 0) scale(1, 1)' }
+})
+
+// For the master container of the head and neck of the horse
+// This has them seperated so we can animate each of them on their own
+
 const HeadWrap = styled('div', {
   position: 'absolute',
   top: 0,
@@ -9,11 +27,8 @@ const HeadWrap = styled('div', {
   height: 134
 })
 
-const rotateHead = keyframes({
-  '0%': { transform: 'rotate( 0deg ) translate3d(0, 0, 0)' },
-  '50%': { transform: 'rotate( 6deg ) translate3d(0, 6px, 0)' },
-  '100%': { transform: 'rotate( 0deg ) translate3d(0, 0, 0)' },
-})
+// For the container of the head on the top of the container
+// This is to position the head on the top left of the container
 
 const Head = styled('div', {
   position: 'absolute',
@@ -23,11 +38,8 @@ const Head = styled('div', {
   animation: `${ rotateHead } 800ms ease infinite` 
 })
 
-const rotateNeck = keyframes({
-  '0%': { transform: 'rotate( 0deg ) translate3d(0, 0, 0) scale(1, 1)' },
-  '50%': { transform: 'rotate( -6deg ) translate3d(0, 2px, 0) scale(0.95, 0.95)' },
-  '100%': { transform: 'rotate( 0deg ) translate3d(0, 0, 0) scale(1, 1)' }
-})
+// For the container of the neck on the bottom of the container
+// This is position the neck on the bottom right of the container
 
 const Neck = styled('div', {
   position: 'absolute',
@@ -36,6 +48,8 @@ const Neck = styled('div', {
   width: 107,
   animation: `${ rotateNeck } 800ms ease infinite`
 })
+
+// ---------- This is the end of declarations ---------- //
 
 export const HorseHead = () => {
   return(

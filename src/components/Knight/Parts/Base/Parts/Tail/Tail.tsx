@@ -1,11 +1,17 @@
 import React from 'react'
 import { styled, keyframes } from '@theme'
 
+// For the animation of the tail
+// This is used to match the motion of the horse running in relation to the body and head
+
 const animateTail = keyframes({
   '0%': { transform: 'scale(1) rotate(-6deg)' },
   '50%': { transform: 'scale(1.1, 0.9) rotate(-6deg)' },
   '100%': { transform: 'scale(1) rotate(-6deg)' }
 })
+
+// For the container of the tail on the horse 
+// This sits on the far right of he container, to the right of the body... duhhh
 
 const Tail = styled('div', {
   position: 'absolute',
@@ -16,6 +22,8 @@ const Tail = styled('div', {
   animation: `${ animateTail } 800ms ease infinite`,
   transformOrigin: 'top left'
 })
+
+// ---------- This is the end of declarations ---------- //
 
 export const HorseTail = () => {
   return(
