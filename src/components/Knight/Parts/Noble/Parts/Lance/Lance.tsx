@@ -1,11 +1,17 @@
 import React from 'react'
 import { keyframes, styled } from '@theme'
 
+// For the animation of the lance and the arm
+// This gives the effect of it moving up and down as the horse runs
+
 const animateLance = keyframes({
   '0%': { transform: 'rotate(0deg)' },
 	'50%': { transform: 'rotate(-2deg)' },
 	'100%': { transform: 'rotate(0deg)' }
 })
+
+// For the master container of the lance section of the knight
+// This holds the lance that stretches full width and the arm on the right of the container
 
 const LanceWrap = styled('div', {
   position: 'absolute',
@@ -16,12 +22,17 @@ const LanceWrap = styled('div', {
 	svg: { fill: '#fff' }	
 })
 
+// For the container of the sholder and arm on the right side of the container
+// This shows the hand holding the lance, with it animating with the horse
+
 const KnightsSholder = styled('div', {
   position: 'absolute',
   top: 46,
   right: 0,
   width: 55
 })
+
+// ---------- This is the end of declarations ---------- //
 
 export const Lance = () => {
   return(

@@ -1,5 +1,9 @@
 import React from 'react'
 import { styled } from '@theme'
+import { Lines } from '../'
+
+// For the master container of the knight animation
+// This shows a jousting knight riding a horse, within the joust out in front of the horse
 
 const HorseMaster = styled('div', {
   display: 'flex',
@@ -7,6 +11,9 @@ const HorseMaster = styled('div', {
   alignItems: 'center',
   position: 'relative',
   width: '100%',
+
+  // Here we add support for this animation to be used as a preloader
+  // This supports a full screen takeover, sitting on top of the site until it is done loading
 
   variants: {
     preloader: {
@@ -38,10 +45,14 @@ const Horse = styled('div', {
 	transform: 'scale( 0.35 )'
 })
 
+// -------------- Typescript declarations -------------- //
+
 interface HorseProps {
   preloader?: boolean
   children: React.ReactNode
 }
+
+// ---------- This is the end of declarations ---------- //
 
 export const HorseWrap = ({ preloader, children }:HorseProps) => {
   return(
@@ -49,6 +60,7 @@ export const HorseWrap = ({ preloader, children }:HorseProps) => {
     <HorseMaster {...{ preloader }}>
 		  <HorseContent>
         <Horse>{ children }</Horse>
+        <Lines />
       </HorseContent>
     </HorseMaster>
 
