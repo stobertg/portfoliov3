@@ -35,7 +35,7 @@ const Horse = styled('div', {
 	width: 477,
 	height: 400,
 	paddingTop: 79,
-	// transform: 'scale( 0.35 )'
+	transform: 'scale( 0.35 )'
 })
 
 interface HorseProps {
