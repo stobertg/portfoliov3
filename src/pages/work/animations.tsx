@@ -1,6 +1,6 @@
 import React from 'react'
 import type { NextPage } from 'next'
-import { SiteContainer, Block, Hero, Intro, ArtizenAirplane, ArtizenNewton, ArtizenTrumpet } from '@components'
+import { SiteContainer, Block, Hero, Intro, ArtizenAirplane, ArtizenNewton, ArtizenTrumpet, Knight } from '@components'
 
 const Gather: NextPage = () => {
   return (
@@ -20,9 +20,11 @@ const Gather: NextPage = () => {
           subtitle="E-Learning Application for Grassroots Leadership"
         />
 
-        <ArtizenNewton />
+        <Knight />
+
+        {/* <ArtizenNewton />
         <ArtizenAirplane />
-        <ArtizenTrumpet />
+        <ArtizenTrumpet /> */}
       </Block>
 
       <Block>

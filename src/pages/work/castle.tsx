@@ -73,6 +73,18 @@ const Castle: NextPage = () => {
         <img src="/projects/castle/stalbans.jpg" alt="Tyler Stober St Albans 3d model" />
       </Block>
 
+      <Block width="medium">
+        <img src="/projects/castle/TheInn_v2.png" alt="Tyler Stober St Albans 3d model" />
+      </Block>
+
+      <Block width="medium">
+        <img src="/projects/castle/stmarks__tower.jpg" alt="Tyler Stober St Albans 3d model" />
+      </Block>
+
+      <Block width="medium">
+        <img src="/projects/castle/castle__entrance.jpg" alt="Tyler Stober St Albans 3d model" />
+      </Block>
+
       <Block>
         <NextProject 
           pageLink="/work/gather"
