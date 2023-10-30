@@ -7,8 +7,6 @@ const animateLance = keyframes({
 	'100%': { transform: 'rotate(0deg)' }
 })
 
-
-
 const LanceWrap = styled('div', {
   position: 'absolute',
 	right: 26,
@@ -25,10 +23,6 @@ const KnightsSholder = styled('div', {
   width: 55
 })
 
-const KnightsLance = styled('div', {
-
-})
-
 export const Lance = () => {
   return(
 
@@ -41,7 +35,7 @@ export const Lance = () => {
         </svg>
       </KnightsSholder>
 
-      <KnightsLance>
+      <div>
         <svg viewBox="0 0 281.7 58.5">
           <path d="M0.2,3c0-0.2,0.5-0.1,0.7,0C1.1,3,1.1,2.6,1.2,2.4c0-0.1-0.7-0.1-0.9-0.2s0-0.6,0.1-0.8C0.5,1.3,1,1.5,1.1,1.5
             c0.1,0,0.2-0.3,0.1-0.4C1.2,1,1.1,1,1.1,1C0.9,1,0.6,1,0.6,0.7c0-0.2,0-0.8,0.6-0.7c0.4,0.1,1.5,0.1,1.9,0.3S3.5,1,3.5,1L8,1.4
@@ -52,7 +46,7 @@ export const Lance = () => {
             L3.1,3.9C3.1,4.2,2.3,4.3,2.2,4.3c-0.1,0-1.9-0.4-2.1-0.4C-0.1,3.7,0.1,3.2,0.2,3z"
           />
         </svg>
-      </KnightsLance>
+      </div>
     </LanceWrap>
 
   )

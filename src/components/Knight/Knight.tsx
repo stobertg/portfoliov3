@@ -1,11 +1,18 @@
 import React from 'react'
 import { styled } from '@theme'
-import { Nobel } from './Parts'
+import { Nobel, HorseBase } from './Parts'
 
 export const Knight = () => {
   return(
 
-    <Nobel />
+    <div className="animation__horse">
+		  <div className="animation__horse--contain">
+			  <div className="horse">
+          <Nobel />
+          <HorseBase />
+        </div>
+      </div>
+    </div>
 
   )
 }
