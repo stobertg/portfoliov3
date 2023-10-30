@@ -26,7 +26,7 @@ const SiteContent = styled('div', {
   position: 'relative',
   width: '100%',
   margin: '0 auto',
-  padding: '180px 0',
+  padding: '150px 0 0',
   zIndex: 1,
 
   // The only variant option for this component is to automate the spacing between content blocks within the site

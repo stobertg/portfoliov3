@@ -37,6 +37,7 @@ interface IntroProps {
   text: React.ReactNode
   skills: { title: string }[]
   project: { title: string }[]
+  links?: { title: string }[]
 }
 
 // ---------- This is the end of declarations ---------- //
@@ -45,7 +46,8 @@ export const Intro = ({
     title, // Required - For the title of the intro (blurb about the project)
     text, // Required - For the text describing the project (below the title)
     skills, // Required - For the skills used to implement the project
-    project  // Required - Basic info about the project
+    project,  // Required - Basic info about the project
+    links // Optional - For links associated with the project
   }:IntroProps) => {
 
   return(
@@ -58,8 +60,9 @@ export const Intro = ({
         </IntroMain>
 
         <Grid columns={ 3 }>
-          <List spacing="l1" size="l1" font="serif" title="Roles / Skills" listItems={ skills } />
-          <List spacing="l1" size="l1" font="serif" title="Project" listItems={ project } />
+          { skills && ( <List spacing="l1" size="l1" font="serif" title="Roles / Skills" listItems={ skills } /> )}
+          { project && ( <List spacing="l1" size="l1" font="serif" title="Project" listItems={ project } /> )}
+          { links && ( <List spacing="l1" size="l1" font="serif" title="Links" listItems={ links } /> )}
         </Grid>
       </IntroContent>
     </IntroWrap>

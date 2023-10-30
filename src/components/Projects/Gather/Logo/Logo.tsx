@@ -1,6 +1,16 @@
 import React from 'react'
 import { styled, keyframes } from '@theme'
 
+const showCapBar = keyframes({
+  '0%': { transform: 'scale( 0, 1 ) rotate( 30deg )' },
+  '100%': { transform: 'scale( 1, 1 ) rotate( 30deg )' }
+})
+
+const showLeftBar = keyframes({
+  '0%': { transform: 'scale( 1, 0 )' },
+	'100%': { transform: 'scale( 1, 1 )' }
+})
+
 // For the master container of the Gather logo component
 // This holds the G logo of the project, but made in css so we can animate it
 
@@ -44,7 +54,9 @@ const LogoCap = styled('div', {
 			content: '',
 			position: 'absolute',
 			width: 78,
-			height: 24
+			minWidth: 78,
+			height: 24,
+			minHeight: 24
 		}
 	},
 
@@ -55,16 +67,30 @@ const LogoCap = styled('div', {
 		placement: {
 			top: { 
 				top: 0,
-				'*:before': { background: '#545554' },
-				'> *:first-child:before': { transform: 'rotate( -30deg )' },
-				'> *:last-child:before': { transform: 'rotate( 30deg )' }
+				'*:before': { top: -4, background: '#545554' },
+
+				'> *:first-child:before': {
+					transform: 'rotate( -30deg )',
+					transformOrigin: 'bottom right',
+				},
+
+				'> *:last-child:before': {
+					transform: 'rotate( 30deg )', 
+					transformOrigin: 'bottom left'
+				}
 			},
 
 			bottom: { 
 				bottom: 0,
-				'*:before': { background: '#f37223' },
-				'> *:first-child:before': { transform: 'rotate( 30deg )' },
-				'> *:last-child:before': { transform: 'rotate( -30deg )' },
+				'*:before': { bottom: -4, background: '#f37223' },
+				'> *:first-child:before': { 
+					transform: 'rotate( 30deg )',
+					transformOrigin: 'top right' 
+				},
+				'> *:last-child:before': { 
+					transform: 'rotate( -30deg ) scale( 1, 1 )',
+					transformOrigin: 'top left'
+				},
 			}
 		}
 	}

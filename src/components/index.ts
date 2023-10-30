@@ -9,6 +9,7 @@ export { Iphone } from './Iphone/Iphone'
 export { Intro } from './Intro/Intro'
 export { List } from './List/List'
 export { Logo } from './Logo/Logo'
+export { NextProject } from './NextProject/NextProject'
 export { SiteContainer } from './SiteContainer/SiteContainer'
 export { SiteHeader } from './SiteHeader/SiteHeader'
 export { Text } from './Text/Text'
@@ -20,6 +21,9 @@ export { FileInput } from './Inputs/FileInput/FileInput'
 export { Form } from './Form/Form'
 export { InputStatus } from './Inputs/InputStatus'
 
-// For Gather
+// Projects
 
 export { GatherLogo } from './Projects/Gather/Logo/Logo'
+export { ArtizenAirplane } from './Projects/Artizen/Animations/Airplane/Airplane'
+export { ArtizenNewton } from './Projects/Artizen/Animations/Newton/Newton'
+export { ArtizenTrumpet } from './Projects/Artizen/Animations/Trumpet/Trumpet'

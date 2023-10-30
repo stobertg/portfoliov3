@@ -26,14 +26,29 @@ const HeroGraphic = styled('div', {
 
 })
 
+const HeroImage = styled('div', {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  position: 'realtive',
+
+  img: { 
+    width: 150
+  }
+})
+
 interface HeroProps {
   heroGraphic?: React.ReactNode
+  heroImage?: string
+  heroImageAlt?: string
   title: string
   subtitle?: string
 }
 
 export const Hero = ({ 
     heroGraphic,
+    heroImage,
+    heroImageAlt,
     title, 
     subtitle 
   }:HeroProps) => {
@@ -42,8 +57,10 @@ export const Hero = ({
 
     <HeroWrap>
       <HeroContent>
-        { heroGraphic && ( 
+        { heroGraphic ? ( 
           <HeroGraphic>{ heroGraphic }</HeroGraphic> 
+        ) : (
+          <HeroImage><img src={ heroImage } alt={ heroImageAlt } /></HeroImage>
         )}
 
         <HeroHeading>
