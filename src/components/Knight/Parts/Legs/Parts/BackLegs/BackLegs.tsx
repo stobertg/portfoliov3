@@ -28,7 +28,7 @@ const LegsWrap = styled('div', {
   transformOrigin: 'top center',
   svg: { fill: '$white' },
 
-  // Here we add the respective animations to each of the feet
+  // Here we add the respective animations to each of the legs
   // This is the same animation, but accounts for delay
   
   variants: {
@@ -69,7 +69,7 @@ const LegBottom = styled('div', {
   height: 95,
   transformOrigin: 'top center',
 
-  // Here we add the respective animations to each of the feet
+  // Here we add the respective animations to each of the mid sections
   // This is the same animation, but accounts for delay
 
   variants: {
