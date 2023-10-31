@@ -20,6 +20,7 @@ export const PhonePresentation = () => {
     <PresWrap>
       <Iphone 
         size="l1" 
+        screenColor="black"
         screen={ <Cardiact /> }
       />
     </PresWrap>

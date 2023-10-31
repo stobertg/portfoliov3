@@ -13,8 +13,8 @@ const IphoneWrap = styled('div', {
   width: 360,
   maxWidth: '360px !important',
   height: 724,
-  background: '#000',
-  color: '$black !important',
+  background: '$black',
+  color: '$black',
   borderRadius: 56,
   boxShadow: '0 2px 20px rgba( 0,0,0, 0.2 )',
 
@@ -24,7 +24,8 @@ const IphoneWrap = styled('div', {
       l1: {
         width: 300,
         maxWidth: '300px !important',
-        height: 603
+        height: 603,
+        borderRadius: 50
       }
     }
   }
@@ -125,7 +126,17 @@ const IphoneScreen = styled('div', {
   position: 'realtive',
   width: '100%',
   height: '100%',
-  paddingTop: 40
+  background: '#fff',
+  paddingTop: 40,
+
+  variants: {
+    screenColor: {
+      black: {
+        background: '#111',
+        color: '#fff'
+      }
+    }
+  }
 })
 
 // -------------- Typescript declarations -------------- //
@@ -133,13 +144,15 @@ const IphoneScreen = styled('div', {
 interface IphoneProps {
   size?: 'l0' | 'l1'
   screen?: React.ReactNode
+  screenColor?: 'black'
 }
 
 // ---------- This is the end of declarations ---------- //
 
 export const Iphone = ({ 
     size,
-    screen
+    screen,
+    screenColor
   }:IphoneProps) => {
   
   return(
@@ -156,7 +169,7 @@ export const Iphone = ({
           </IphoneHeaderSide>
         </IphoneHeader>
 
-        <IphoneScreen>
+        <IphoneScreen {...{ screenColor }}>
           { screen }
         </IphoneScreen>
 
