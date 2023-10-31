@@ -1,9 +1,11 @@
 import React from 'react'
 import { styled } from '@theme'
-import { ProfileCard } from './Parts'
+import { ProfileCard, LocationCard, MedicalInfo } from './Parts'
 
 const ProfileWrap = styled('div', {
-
+  position: 'relative',
+  width: '100%',
+  '> *:not(:last-child)': { marginBottom: 8 }
 })
 
 export const Profile = () => {
@@ -11,6 +13,8 @@ export const Profile = () => {
 
     <ProfileWrap>
       <ProfileCard />
+      <LocationCard />
+      <MedicalInfo />
     </ProfileWrap>
 
   )

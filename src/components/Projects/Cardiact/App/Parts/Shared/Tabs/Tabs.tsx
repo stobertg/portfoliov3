@@ -33,13 +33,23 @@ const TabsContainer = styled('div', {
   display: 'flex',
   flexDirection: 'row',
   position: 'relative',
+  
+  '&:before': {
+    content: '',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    backdropFilter: 'blur( 10px )'
+  },
 
   variants: {
     variant: {
       mobile: {
-        padding: '0 32px',
+        padding: '0 32px 12px',
         justifyContent: 'space-between',
-        borderTop: '1px solid $borderDeco'
+        borderTop: '1px solid #252525'
       }
     }
   }
@@ -55,7 +65,7 @@ const TabsTrigger = styled( TabsPrimitive.Trigger, {
   variants: {
     variant: {
       mobile: {
-        padding: '14px 0',
+        padding: '12px 0',
         flexDirection: 'column',
         alignItems: 'center',
         fontSize: 12
