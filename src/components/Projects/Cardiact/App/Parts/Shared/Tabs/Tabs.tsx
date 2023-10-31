@@ -10,37 +10,39 @@ const TabsWrap = styled( TabsPrimitive.Root, {
   display: 'flex',
   flexDirection: 'column',
   position: 'relative',
-  width: '100%'
+  width: '100%',
+
+  variants: {
+    variant: {
+      mobile: {
+        flexDirection: 'column-reverse'
+      }
+    }
+  }
 })
 
 // For the master containers of the tabs on the top of the container
 // This contains the triggers that show the different content contextual to the tab that is clicked
 
 const TabsList = styled( TabsPrimitive.List, {
-  display: 'flex',
-  flexDirection: 'row',
-  alignItems: 'center',
   position: 'relative',
   width: '100%',
-  borderBottom: '1px solid $border',
-  overflow: 'scroll',
-  scrollbarWidth: 'none',
-
-  variants: {
-    border: {
-      noBorder: { borderBottom: 'none' }
-    },
-
-    onSearch: {
-      true: { justifyContent: 'space-between' }
-    }
-  }
 })
 
 const TabsContainer = styled('div', {
   display: 'flex',
   flexDirection: 'row',
-  position: 'relative'
+  position: 'relative',
+
+  variants: {
+    variant: {
+      mobile: {
+        padding: '0 32px',
+        justifyContent: 'space-between',
+        borderTop: '1px solid $borderDeco'
+      }
+    }
+  }
 })
 
 // For the indivudual shared stying of the tab triggers within the master container
@@ -48,70 +50,16 @@ const TabsContainer = styled('div', {
 
 const TabsTrigger = styled( TabsPrimitive.Trigger, {
   display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
   position: 'relative',
-  height: 55,
-  padding: '0 24px',
-  color: '$textSecondary',
-  fontSize: '$s1',
-  transition: '$s1',
-  userSelect: 'none',
-
-  // For the auto spacing between the icon and the text
-  // This will only trigger if an icon or logo is present to the left of the text
-
-  '> *:not(:last-child)': { 
-    marginRight: 8 
-  },
-
-  // For the line on the bottom of the container
-  // This lines shows when the tab is active, once the user has clicks on a trigger
-  // By default, this will always shows the selected tab usually being the first tab
-
-  '&:after': {
-    content: '',
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    width: '100%',
-    height: 2,
-    background: 'currentColor',
-    opacity: 0,
-    transition: '$s1'
-  },
-
-  // Change the color and add the bottom board on hover
-  // This is to give the button the afforance that it is cickable
-
-  '&:hover': { 
-    color: '$textPrimary',
-    '&:after': { opacity: 1 }
-  },
-
-  // For when the user clicks on a tab and the default tab
-  // This shows the primary color, with the button unclickable and shows the border on the bottom of the container
-
-  '&[data-state="active"]': {
-    color: '$textPrimary',
-    pointerEvents: 'none',
-    '&:after': { opacity: 1 }
-  },
 
   variants: {
-    tabSize: {
-      tiny: {
-        height: 32, 
-        padding: '0 12px',
-        '*': { fontSize: '$s1' }
-      },
-      small: { 
-        '*': { fontSize: 'initial' }
+    variant: {
+      mobile: {
+        padding: '14px 0',
+        flexDirection: 'column',
+        alignItems: 'center',
+        fontSize: 12
       }
-    },
-
-    hasIcon: {
-      true: { }
     }
   }
 })
@@ -141,6 +89,7 @@ const TabsContent = styled( TabsPrimitive.Content, {
 // -------------- Typescript declarations -------------- //
 
 interface TabsProps {
+  variant?: 'mobile'
   triggers: { 
     logo?: React.ReactNode
     icon?: string
@@ -162,6 +111,7 @@ interface TabsProps {
 // ---------- This is the end of declarations ---------- //
 
 export const Tabs = ({ 
+    variant,
     triggers,
     tabContent,
     defaultTab,
@@ -173,19 +123,17 @@ export const Tabs = ({
   }: TabsProps) => {
   return (
 
-    <TabsWrap defaultValue={ `tab${ defaultTab ? defaultTab : 1 }` }>
-      <TabsList aria-label="Manage your account" {...{ border, onSearch }}>
-        <TabsContainer>
+    <TabsWrap defaultValue={ `tab${ defaultTab ? defaultTab : 1 }` } {...{ variant }}>
+      <TabsList>
+        <TabsContainer {...{ variant }}>
           { triggers.map(( trigger, i ) => (
             <TabsTrigger 
               key={ `trigger-${ i + 1 }`} 
               value={`tab${ i + 1 }`}
-              hasIcon={ true }
-              {...{ tabSize }}
+              {...{ variant }}
             > 
-              { trigger.logo && ( <>{ trigger.logo }</> )}
               { trigger.icon && ( <Icon size="l0" icon={ trigger.icon } /> )}
-              { trigger.title && ( <Heading bold size="l2" title={ trigger.title } /> )}
+              { trigger.title && ( <Heading color="secondary" title={ trigger.title } /> )}
             </TabsTrigger>
           ))}
         </TabsContainer>

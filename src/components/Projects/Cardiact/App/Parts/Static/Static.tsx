@@ -1,20 +1,33 @@
 import React from 'react'
 import { styled } from '@theme'
-import { Profile } from './Parts'
+import { StaticHeader, StaticNav, Profile } from './Parts'
 
 const StaticWrap = styled('div', {
   position: 'relative',
   width: '100%',
   height: '100%',
   padding: '0 10px',
+  marginBottom: 12,
   overflow: 'scroll',
+})
+
+const StaticContent = styled('div', {
+  position: 'relative',
+  width: '100%',
+  marginTop: 8
 })
 
 export const CariactStatic = () => {
   return(
 
     <StaticWrap>
-      <Profile />
+      <StaticHeader />
+      
+      <StaticContent>
+        <Profile />
+      </StaticContent>
+
+      <StaticNav />
     </StaticWrap>
 
   )

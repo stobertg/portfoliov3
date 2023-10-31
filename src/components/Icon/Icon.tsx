@@ -28,7 +28,7 @@ const IconWrap = styled('span', {
   variants: {
     size: {
       l0: { width: 15, height: 16 },
-      l1: { width: 24, height: 24 },
+      l1: { width: 19, height: 20 },
       l2: { width: 50, height: 50 }
     }
   }

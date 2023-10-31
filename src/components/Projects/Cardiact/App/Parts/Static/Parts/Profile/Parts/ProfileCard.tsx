@@ -5,8 +5,9 @@ import { Heading } from '@components'
 const CardWrap = styled('div', {
   position: 'relative',
   width: '100%',
-  border: '1px solid $borderDeco',
-  borderRadius: '$r2'
+  background: '#151515',
+  border: '1px solid #212121',
+  borderRadius: '$r1'
 })
 
 const CardContent = styled('div', {
@@ -28,8 +29,8 @@ const ProfileImage = styled('div', {
   justifyContent: 'center',
   alignItems: 'center',
   position: 'relative',
-  width: 80,
-  height: 80,
+  width: 72,
+  height: 72,
   background: '$white',
   border: '2px solid $white',
   borderRadius: '50%',
@@ -48,7 +49,8 @@ const CardText = styled('div', {
   alignItems: 'center',
   position: 'relative',
   width: '100%',
-  fontSize: 14
+  fontSize: 14,
+  '> *:not(:last-child)': { marginBottom: 2 }
 })
 
 const CardChip = styled('div', {
@@ -56,9 +58,9 @@ const CardChip = styled('div', {
   justifyContent: 'center',
   alignItems: 'center',
   position: 'relative',
-  padding: '12px 8px',
-  borderTop: '1px solid $borderDeco',
-  color: 'green',
+  padding: '14px 8px',
+  borderTop: '1px solid #212121',
+  color: '#52fe52',
   fontSize: 12
 })
 
