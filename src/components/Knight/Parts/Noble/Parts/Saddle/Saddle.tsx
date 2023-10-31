@@ -1,13 +1,13 @@
 import React from 'react'
 import { styled } from '@theme'
 
-const SaddleNormal = styled('path', {
-  fill: '#e4e4e4'
-})
+// For the svg of the base of the saddle on the horse
+// These are static and their animations are driven by parent containers - so we use this to set and color
 
-const SaddleLight = styled('path', {
-  fill: '#404040'
-})
+const SaddleNormal = styled('path', { fill: '#e4e4e4' })
+const SaddleLight = styled('path', { fill: '#404040' })
+
+// ---------- This is the end of declarations ---------- //
 
 export const Saddle = () => {
   return(
