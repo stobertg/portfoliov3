@@ -1,19 +1,9 @@
 import React from 'react'
 import { styled } from '@theme'
 import { Heading, Icon } from '@components'
+import { Card } from '../../../../../Shared/'
 
-// For the master container of the location card within the profile view
-// This shows the current location of the user
-
-const CardWrap = styled('div', {
-  position: 'relative',
-  width: '100%',
-  background: '#151515',
-  border: '1px solid #212121',
-  borderRadius: '$r1',
-})
-
-// For the container of all of the content within the master container
+// For the container of all of the content within the master card container
 // This holds the map image on the left and the address text on the right
 
 const CardContent = styled('div', {
@@ -72,7 +62,7 @@ interface CardProps {
 export const LocationCard = ({ currentLocation }:CardProps) => {
   return(
 
-    <CardWrap>
+    <Card>
       <CardContent>
         <CardImage>
           <img src="/projects/cardiact/location.png" alt="location" />
@@ -84,7 +74,7 @@ export const LocationCard = ({ currentLocation }:CardProps) => {
           <Heading heavy title={ currentLocation } />
         </CardText>
       </CardContent>
-    </CardWrap>
+    </Card>
 
   )
 }

@@ -1,19 +1,9 @@
 import React from 'react'
 import { styled } from '@theme'
 import { Heading } from '@components'
+import { Card } from '../../../../../Shared/'
 
-// For the master container of the profile card, within the profile section
-// This holds the image, name, age, and if forceable entry is allowed
-
-const CardWrap = styled('div', {
-  position: 'relative',
-  width: '100%',
-  background: '#151515',
-  border: '1px solid #212121',
-  borderRadius: '$r1'
-})
-
-// For the container of the hero within the card
+// For the container of the hero within the master card container
 // This holds the image, title, and age on the top of the container
 
 const CardHero = styled('div', {
@@ -110,7 +100,7 @@ export const ProfileCard = ({
   
   return(
 
-    <CardWrap>
+    <Card>
       <CardHero>
         <ProfileImage><img src={ image } alt={ imageAlt } /></ProfileImage>
         <CardText>
@@ -122,7 +112,7 @@ export const ProfileCard = ({
       <CardChip {...{ forcedEntry }}>
         <Heading bold title={`Forcable entry ${ forcedEntry ? 'allowed' : 'not allowed' }`} />
       </CardChip>
-    </CardWrap>
+    </Card>
 
   )
 }

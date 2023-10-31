@@ -1,19 +1,9 @@
 import React from 'react'
 import { styled } from '@theme'
 import { Heading, Icon } from '@components'
+import { Card } from '../../../../../Shared/'
 
-// For the master container of the Medical Info within the profile screen in Cardiact
-// This shows valuable medical information that would be helpful to responders
-
-const InfoWrap = styled('div', {
-  position: 'relative',
-  width: '100%',
-  background: '#151515',
-  border: '1px solid #212121',
-  borderRadius: '$r1',
-})
-
-// This contains all of the content within the master container
+// This contains all of the content within the master card container
 // This has the main title on the top and the list of items below
 
 const InfoContent = styled('div', {
@@ -65,10 +55,10 @@ interface InfoProps {
 
 // ---------- This is the end of declarations ---------- //
 
-export const MedicalInfo = ({ title, listItems }:InfoProps) => {
+export const MedicalInfoCard = ({ title, listItems }:InfoProps) => {
   return(
 
-    <InfoWrap>
+    <Card>
       <InfoContent>
         <Heading heavy size="l0" color="secondary" {...{ title }} />
 
@@ -95,7 +85,7 @@ export const MedicalInfo = ({ title, listItems }:InfoProps) => {
           </ul>
         </InfoList>
       </InfoContent>
-    </InfoWrap>
+    </Card>
 
   )
 }

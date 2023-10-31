@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled } from '@theme'
-import { ProfileCard, LocationCard, MedicalInfo } from './Parts'
+import { ProfileCard, LocationCard, MedicalInfoCard } from './Parts'
 
 // For the master container of the profile screen, within the static version of the app
 // This contains the user's info, location, and medical information
@@ -28,7 +28,7 @@ export const Profile = () => {
 
       <LocationCard currentLocation="1483 Westminster England, UK" />
 
-      <MedicalInfo 
+      <MedicalInfoCard 
         title="Medical information"
         listItems={[
           { icon: 'pill', title: 'Takes 50mg of Lipitor daily' },
