@@ -9,6 +9,7 @@ const GridWrap = styled('div', {
   gridTemplateRows: '1fr',
   position: 'relative',
   width: '100%',
+  height: '100%',
 
   // Here we support various columns needed, based on the context
   // I only use one at the moment, but the shiz is made to scale if I need it

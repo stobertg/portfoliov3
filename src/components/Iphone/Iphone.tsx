@@ -22,9 +22,9 @@ const IphoneWrap = styled('div', {
     size: {
       l0: {},
       l1: {
-        width: 300,
-        maxWidth: '300px !important',
-        height: 603,
+        width: 310,
+        maxWidth: '310px !important',
+        height: 625,
         borderRadius: 50
       }
     }
