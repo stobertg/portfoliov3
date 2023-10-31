@@ -2,10 +2,16 @@ import React from 'react'
 import { styled } from '@theme'
 import { Icon, Heading } from '@components'
 
+// For the master container of the Header within the Static screens of Cardiact
+// This is positioned on the top of the app where additonal navigation is provided
+
 const HeaderWrap = styled('div', {
   position: 'relative',
   width: '100%'
 })
+
+// For the container of all of the content within the master container
+// This contains the menu button on the left, the notifications on the right and the title in the center
 
 const HeaderContent = styled('div', {
   display: 'flex',

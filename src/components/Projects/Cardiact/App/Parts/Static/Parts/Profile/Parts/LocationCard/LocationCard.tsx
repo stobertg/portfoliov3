@@ -71,7 +71,7 @@ export const LocationCard = ({ currentLocation }:CardProps) => {
 
         <CardText>
           <Heading color="secondary" title="Current location" />
-          <Heading heavy title={ currentLocation } />
+          <Heading bold title={ currentLocation } />
         </CardText>
       </CardContent>
     </Card>

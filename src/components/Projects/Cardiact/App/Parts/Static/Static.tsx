@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled } from '@theme'
-import { StaticHeader, StaticNav, Profile } from './Parts'
+import { StaticHeader, StaticNav, Profile, Status } from './Parts'
 
 const StaticWrap = styled('div', {
   position: 'relative',
@@ -22,7 +22,8 @@ export const CariactStatic = () => {
       <StaticHeader />
       
       <StaticContent>
-        <Profile />
+        <Status />
+        {/* <Profile /> */}
       </StaticContent>
 
       <StaticNav />
