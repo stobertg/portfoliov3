@@ -16,7 +16,18 @@ const IphoneWrap = styled('div', {
   background: '#000',
   color: '$black !important',
   borderRadius: 56,
-  boxShadow: '0 2px 20px rgba( 0,0,0, 0.2 )'
+  boxShadow: '0 2px 20px rgba( 0,0,0, 0.2 )',
+
+  variants: {
+    size: {
+      l0: {},
+      l1: {
+        width: 300,
+        maxWidth: '300px !important',
+        height: 603
+      }
+    }
+  }
 })
 
 // For all of the content within the iphone
@@ -120,28 +131,20 @@ const IphoneScreen = styled('div', {
 // -------------- Typescript declarations -------------- //
 
 interface IphoneProps {
-  name: string
-  title: string
-  location: string
-  image: string
-  bgImage: string
-  experience: any
+  size?: 'l0' | 'l1'
+  screen?: React.ReactNode
 }
 
 // ---------- This is the end of declarations ---------- //
 
 export const Iphone = ({ 
-    name, // Required - For the name of the user of the Gather Wallet
-    title, // Required - For the professional title of the user 
-    location, // Required - For the location of the user
-    image, // Required - For the image of the user wihtin the hero section
-    bgImage, // Required - For the background image of the user in the hero section
-    experience // Required - For the university and work information of the user
+    size,
+    screen
   }:IphoneProps) => {
   
   return(
 
-    <IphoneWrap>
+    <IphoneWrap {...{ size }}>
       <IphoneContent>
         <IphoneHeader>
           <IphoneHeaderSide><Heading bold title="05:29" /></IphoneHeaderSide>
@@ -154,7 +157,7 @@ export const Iphone = ({
         </IphoneHeader>
 
         <IphoneScreen>
-          This is some content
+          { screen }
         </IphoneScreen>
 
         <IphoneBottom />

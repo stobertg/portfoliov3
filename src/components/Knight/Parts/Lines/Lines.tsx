@@ -52,7 +52,7 @@ const LinesWrap = styled('div', {
 
 		'&:first-child': { top: -20, left: 150 },
 		'&:nth-child(2)': { top: 40, right: 100, animationDelay: '200ms', '&:before': { animationDelay: '200ms' }},
-		'&:nth-child(3)': { top: 110, left: 50, animationDelay: '400ms', '&:before': { animationDelay: '400ms' }},
+		'&:nth-child(3)': { top: 100, left: 50, animationDelay: '400ms', '&:before': { animationDelay: '400ms' }},
 		'&:nth-child(4)': { right: 50, bottom: 0, animationDelay: '600ms', '&:before': { animationDelay: '600ms' }},
 		'&:nth-child(5)': { right: 50, top: 0, animationDelay: '800ms', '&:before': { animationDelay: '800ms' }}
   }

@@ -11,7 +11,7 @@ const HorseMaster = styled('div', {
   alignItems: 'center',
   position: 'relative',
   width: '100%',
-  height: 200,
+  height: 150,
 
   // Here we add support for this animation to be used as a preloader
   // This supports a full screen takeover, sitting on top of the site until it is done loading
@@ -50,7 +50,7 @@ const KnightWrap = styled('div', {
 	height: 400,
 	paddingTop: 79,
   marginTop: 20,
-	transform: 'scale( 0.35 )',
+	transform: 'scale( 0.3 )',
   transformOrigin: 'top center'
 })
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import type { NextPage } from 'next'
+import ReactPlayer from 'react-player'
 import { SiteContainer, Block, Hero, Intro, ArtizenAirplane, ArtizenNewton, ArtizenTrumpet, Knight } from '@components'
 
 const Gather: NextPage = () => {
@@ -8,7 +9,7 @@ const Gather: NextPage = () => {
     <SiteContainer 
       hasContactForm 
       shareURL="https://tylerstober.com"
-      pageTitle="TS - Gather"
+      pageTitle="TS - CSS animations"
       content="Tyler Stober is a multidisicplinary designer"
       socialImage="https://mxmlcreative.com/global/social-hero.jpeg"
       blockSpacing="l2"
@@ -16,15 +17,16 @@ const Gather: NextPage = () => {
 
       <Block width="medium">
         <Hero 
-          title="Gather Web Application" 
-          subtitle="E-Learning Application for Grassroots Leadership"
+          heroGraphic={ <Knight /> }
+          title="The Anatomy of CSS Animations" 
+          subtitle="Giving movement to "
         />
 
-        <Knight />
-
-        {/* <ArtizenNewton />
-        <ArtizenAirplane />
-        <ArtizenTrumpet /> */}
+        <ReactPlayer
+          url="https://www.youtube.com/embed/SxX5DU8CkFI"
+          width="100%"
+          height="500px"
+        />
       </Block>
 
       <Block>
@@ -58,6 +60,12 @@ const Gather: NextPage = () => {
           ]}
         />
       </Block>
+
+      {/* <Block>
+        <ArtizenNewton />
+        <ArtizenAirplane />
+        <ArtizenTrumpet />
+      </Block> */}
     </SiteContainer>
 
   )

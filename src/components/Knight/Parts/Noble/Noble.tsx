@@ -30,7 +30,7 @@ export const Noble = () => {
 
     <Knight>
 	  	<Lance />
-
+			
 			<svg viewBox="0 0 305.8 524.9">
 				<Saddle />
 				<Person />

@@ -1,0 +1,1 @@
+export { CariactStatic } from './Static/Static'

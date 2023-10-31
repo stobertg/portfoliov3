@@ -23,7 +23,7 @@ const BlockContent = styled('div', {
 
   variants: {
     width: {
-      small: { maxWidth: 800, width: '90%' },
+      small: { maxWidth: 880, width: '90%' },
       medium: { maxWidth: 1200, width: '90%' },
       large: { maxWidth: 1300, width: '90%' }
     }
