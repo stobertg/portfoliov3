@@ -1,3 +1,3 @@
-export { ProfileCard } from './ProfileCard/ProfileCard'
-export { LocationCard } from './LocationCard/LocationCard'
-export { MedicalInfoCard } from './MedicalInfoCard/MedicalinfoCard'
+export { ProfileCard } from './ProfileCard'
+export { LocationCard } from './LocationCard'
+export { MedicalInfoCard } from './MedicalinfoCard'

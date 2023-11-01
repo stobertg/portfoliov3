@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled } from '@theme'
 import { Heading, Icon, Grid } from '@components'
-import { Chart } from './Parts'
+import { Chart, CurrentHr } from './Parts'
 import { Card } from '../../../../../Shared/Card/Card'
 
 const CardContent = styled('div', {
@@ -18,33 +18,11 @@ const CardHeader = styled('div', {
   alignItems: 'center',
   position: 'relative',
   width: '100%',
-  '> *:not(:last-child)': { marginRight: 12 }
+  '> *:not(:last-child)': { marginRight: 8 }
 })
 
-const Current = styled('div', {
-  position: 'relative',
-  width: '100%',
-  fontSize: 12,
-  '> *:not(:last-child)': { marginBottom: 4 }
-})
 
-const CurrentInfo = styled('div', {
-  display: 'flex',
-  flexDirection: 'row',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  position: 'relative',
-  width: '100%'
-})
-
-const CurrentHR = styled('div', {
-  display: 'flex',
-  flexDirection: 'row',
-  position: 'relative',
-  '*': { lineHeight: '1 !important' },
-  '> *:not(:last-child)': { marginRight: 4 },
-  '> *:last-child': { marginTop: 3 }
-})
+// ---------- This is the end of declarations ---------- //
 
 export const HeartRateCard = () => {
   return(
@@ -52,7 +30,7 @@ export const HeartRateCard = () => {
     <Card>
       <CardContent>
         <CardHeader>
-          <Icon size="l1" icon="heart" />
+          <Icon size="l0" icon="heart" />
           <Heading heavy title="Your heart rate" />
         </CardHeader>
 
@@ -88,7 +66,7 @@ export const HeartRateCard = () => {
               ]
             },
             {
-              time: '12 PM',
+              time: '6 PM',
               lines: [
                 { height: 'l1' },
                 { height: 'l4', position: 'l0' },
@@ -98,18 +76,10 @@ export const HeartRateCard = () => {
           ]}
         />
 
-        <Current>
-          <Heading size="l0" color="secondary" title="Current" />
-          
-          <CurrentInfo>
-            <CurrentHR>
-              <Heading bold size="l4" title="72" />
-              <Heading bold color="secondary" title="BPM" />
-            </CurrentHR>
-
-            <Heading color="secondary" title="Range: 65-96" />
-          </CurrentInfo>
-        </Current>
+        <CurrentHr 
+          heartRate={ 72 }
+          range="65-96"
+        />
       </CardContent>
     </Card>
 

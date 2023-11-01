@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled } from '@theme'
 import { Heading, Icon } from '@components'
-import { Card } from '../../../../../Shared/'
+import { Card } from '../../../../Shared'
 
 // For the container of all of the content within the master card container
 // This holds the map image on the left and the address text on the right

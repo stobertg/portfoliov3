@@ -1,2 +1,3 @@
-export { Chart } from './Chart/Chart'
-export { ChartColumn } from './ChartColumn/ChartColumn'
+export { Chart } from './Chart'
+export { ChartColumn } from './ChartColumn'
+export { CurrentHr } from './CurrentHr'

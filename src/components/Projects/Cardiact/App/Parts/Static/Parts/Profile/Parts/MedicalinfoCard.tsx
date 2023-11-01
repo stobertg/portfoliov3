@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled } from '@theme'
 import { Heading, Icon } from '@components'
-import { Card } from '../../../../../Shared/'
+import { Card } from '../../../../Shared'
 
 // This contains all of the content within the master card container
 // This has the main title on the top and the list of items below

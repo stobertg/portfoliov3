@@ -1,12 +1,18 @@
 import React from 'react'
 import { styled } from '@theme'
 import { Grid, Heading } from '@components'
-import { ChartColumn } from '..'
+import { ChartColumn } from '.'
+
+// For the master container of the charts within the Status screen in Cardiact
+// This holds the chart of the daily heart rate for the user, as they are wearing their heart rate monitor
 
 const History = styled('div', {
   position: 'relative',
   width: '100%',
 })
+
+// For the container of all of the content within the master container
+// This holds the chart grid with the lines on the left and the rate numbers on the right
 
 const ChartWrap = styled('div', {
   display: 'flex',
@@ -18,6 +24,9 @@ const ChartWrap = styled('div', {
   '> *:not(:last-child)': { marginRight: 12 }
 })
 
+// For the container of the numbers on the right of the container
+// These dictate the heart rate numbers that the lines are falling in between
+
 const ChartLevels = styled('div', {
   display: 'flex',
   flexDirection: 'column',
@@ -25,6 +34,8 @@ const ChartLevels = styled('div', {
   paddingBottom: 25,
   fontSize: 10
 })
+
+// -------------- Typescript declarations -------------- //
 
 interface ChartProps {
   columns: {
@@ -38,13 +49,14 @@ interface ChartProps {
   }[]
 }
 
+// ---------- This is the end of declarations ---------- //
+
 export const Chart = ({ columns }:ChartProps) => {
   return(
 
     <History>
       <ChartWrap>
         <Grid columns={ 4 }>
-
           { columns.map(( column, i ) => (
             <ChartColumn 
               key={`column-${ i }`}
