@@ -11,6 +11,7 @@ const CardWrap = styled('div', {
   background: '#151515',
   border: '1px solid #212121',
   borderRadius: '$r1',
+  overflow: 'hidden'
 })
 
 // For the container of all of the content within the master container
@@ -50,7 +51,7 @@ const CardContent = styled('div', {
     // This will keep the card content full width and height of the container, if needed
 
     removeSpacing: {
-      true: { width: '100%', padding: 0 }
+      true: { width: '100%', padding: 0, margin: 0 }
     }
   }
 })

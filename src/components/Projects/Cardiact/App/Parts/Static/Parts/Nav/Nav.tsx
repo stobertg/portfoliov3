@@ -13,24 +13,20 @@ const NavWrap = styled('div', {
 })
 
 interface NavProps {
-
+  triggers: {
+    icon: string
+    title: string
+  }[]
+  tabContent: {
+    content?: React.ReactNode
+  }[]
 }
 
-export const StaticNav = ({}:NavProps) => {
+export const StaticNav = ({ triggers, tabContent }:NavProps) => {
   return(
 
     <NavWrap>
-      <Tabs 
-        variant="mobile"
-        triggers={[
-          { icon: 'heart', title: 'Status' },
-          { icon: 'users-2', title: 'Contacts' },
-          { icon: 'user-2', title: 'Profile' }
-        ]}
-        tabContent={[
-          { }
-        ]}
-      />
+      <Tabs variant="mobile" {...{ triggers, tabContent }} />
     </NavWrap>
 
   )

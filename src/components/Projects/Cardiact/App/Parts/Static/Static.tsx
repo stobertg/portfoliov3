@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled } from '@theme'
-import { StaticHeader, StaticNav, Profile, Status } from './Parts'
+import { StaticHeader, StaticNav, Profile, Status, Contacts } from './Parts'
 
 const StaticWrap = styled('div', {
   position: 'relative',
@@ -22,11 +22,22 @@ export const CariactStatic = () => {
       <StaticHeader />
       
       <StaticContent>
-        <Status />
+        <Contacts />
+        {/* <Status /> */}
         {/* <Profile /> */}
       </StaticContent>
 
-      <StaticNav />
+      <StaticNav 
+        triggers={[
+          { icon: 'heart', title: 'Status' },
+          { icon: 'users-2', title: 'Contacts' },
+          { icon: 'user-2', title: 'Profile' },
+          { icon: 'alert-triangle', title: 'Help' }
+        ]}
+        tabContent={[
+          { content: '' }
+        ]}
+      />
     </StaticWrap>
 
   )
