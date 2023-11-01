@@ -35,7 +35,7 @@ const ChartColumnLines = styled('div', {
   position: 'relative',
   width: '100%',
   padding: '0 0 0 1px',
-  marginBottom: 20
+  marginBottom: 16
 })
 
 // For the container of the individual lines within the container

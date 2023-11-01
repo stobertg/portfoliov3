@@ -23,8 +23,8 @@ const CardContent = styled('div', {
 
   variants: {
     spacing: {
-      l0: { marginBottom: 8 },
-      l1: { marginBottom: 24 }
+      l0: { '> *:not(:last-child)': { marginBottom: 8 }},
+      l1: { '> *:not(:last-child)': { marginBottom: 24 }}
     },
 
     direction: {
@@ -45,10 +45,24 @@ const CardContent = styled('div', {
   }
 })
 
+// For the title on the top of the container
+// This holds the icon on the left and the title on the right
+
+const CardHeader = styled('div', {
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+  position: 'relative',
+  width: '100%',
+  '> *:not(:last-child)': { marginRight: 8 }
+})
+
 interface CardProps {
   spacing?: 'l0' | 'l1'
   direction?: 'horizontal'
   removeSpacing?: boolean
+  icon?: string
+  title?: string
   children: React.ReactNode
 }
 
@@ -56,13 +70,24 @@ export const Card = ({
     spacing, 
     direction,
     removeSpacing, 
+    icon,
+    title,
     children 
   }:CardProps) => {
 
   return(
 
     <CardWrap>
-      <CardContent {...{ spacing, direction, removeSpacing }}>{ children }</CardContent>
+      <CardContent {...{ spacing, direction, removeSpacing }}>
+        { title && (
+          <CardHeader>
+            { icon && ( <Icon size="l0" {...{ icon }} /> )}
+            <Heading heavy {...{ title }} />
+          </CardHeader>
+        )}
+
+        { children }
+      </CardContent>
     </CardWrap>
 
   )
