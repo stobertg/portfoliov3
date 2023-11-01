@@ -100,7 +100,7 @@ export const ProfileCard = ({
   
   return(
 
-    <Card>
+    <Card removeSpacing>
       <CardHero>
         <ProfileImage><img src={ image } alt={ imageAlt } /></ProfileImage>
         <CardText>

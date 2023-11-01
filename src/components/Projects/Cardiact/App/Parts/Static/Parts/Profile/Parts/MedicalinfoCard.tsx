@@ -3,17 +3,6 @@ import { styled } from '@theme'
 import { Heading, Icon } from '@components'
 import { Card } from '../../../../Shared'
 
-// This contains all of the content within the master card container
-// This has the main title on the top and the list of items below
-
-const InfoContent = styled('div', {
-  position: 'relative',
-  width: '85%',
-  margin: '0 auto',
-  padding: '20px 0',
-  '> *:not(:last-child)': { marginBottom: 12 }
-})
-
 // For the container of the list of information pertaining to the user
 // This describes all the medical information that would be relevant to the responder(s)
 
@@ -59,32 +48,30 @@ export const MedicalInfoCard = ({ title, listItems }:InfoProps) => {
   return(
 
     <Card>
-      <InfoContent>
-        <Heading heavy size="l0" color="secondary" {...{ title }} />
+      <Heading heavy size="l0" color="secondary" {...{ title }} />
 
-        <InfoList>
-          <ul>
-            { listItems?.map(( listItem, i ) => (
-              <li key={`list-item-${ i }`}>
+      <InfoList>
+        <ul>
+          { listItems?.map(( listItem, i ) => (
+            <li key={`list-item-${ i }`}>
 
-                <LineItem>
-                  <Icon size="l0" icon={ listItem.icon } />
-                  { listItem.titles ? (
-                    <div>
-                      { listItem.titles.map(( title, j ) => (
-                        <div key={`item-${ j }`}>{ title.title }</div>
-                      ))}
-                    </div>
-                  ) : (
-                    <div>{ listItem.title }</div>
-                  )}
-                </LineItem>
+              <LineItem>
+                <Icon size="l0" icon={ listItem.icon } />
+                { listItem.titles ? (
+                  <div>
+                    { listItem.titles.map(( title, j ) => (
+                      <div key={`item-${ j }`}>{ title.title }</div>
+                    ))}
+                  </div>
+                ) : (
+                  <div>{ listItem.title }</div>
+                )}
+              </LineItem>
 
-              </li>
-            ))}
-          </ul>
-        </InfoList>
-      </InfoContent>
+            </li>
+          ))}
+        </ul>
+      </InfoList>
     </Card>
 
   )

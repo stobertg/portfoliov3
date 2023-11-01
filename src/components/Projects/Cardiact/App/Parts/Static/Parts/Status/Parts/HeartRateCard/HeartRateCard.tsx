@@ -1,8 +1,11 @@
 import React from 'react'
 import { styled } from '@theme'
-import { Heading, Icon, Grid } from '@components'
+import { Heading, Icon } from '@components'
 import { Chart, CurrentHr } from './Parts'
 import { Card } from '../../../../../Shared/Card/Card'
+
+// For the master container of the Heart Rate card in the status screen
+// This holds the current and daily heart rate information of the user
 
 const CardContent = styled('div', {
   position: 'relative',
@@ -11,6 +14,9 @@ const CardContent = styled('div', {
   padding: '20px 0',
   '> *:not(:last-child)': { marginBottom: 24 }
 })
+
+// For the title on the top of the container
+// This holds the icon on the left and the title on the right
 
 const CardHeader = styled('div', {
   display: 'flex',

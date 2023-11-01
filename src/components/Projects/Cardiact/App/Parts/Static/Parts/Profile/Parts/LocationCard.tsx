@@ -62,18 +62,16 @@ interface CardProps {
 export const LocationCard = ({ currentLocation }:CardProps) => {
   return(
 
-    <Card>
-      <CardContent>
-        <CardImage>
-          <img src="/projects/cardiact/location.png" alt="location" />
-          <Icon size="l1" icon="map-pin" />
-        </CardImage>
+    <Card direction="horizontal">
+      <CardImage>
+        <img src="/projects/cardiact/location.png" alt="location" />
+        <Icon size="l1" icon="map-pin" />
+      </CardImage>
 
-        <CardText>
-          <Heading color="secondary" title="Current location" />
-          <Heading bold title={ currentLocation } />
-        </CardText>
-      </CardContent>
+      <CardText>
+        <Heading color="secondary" title="Current location" />
+        <Heading bold title={ currentLocation } />
+      </CardText>
     </Card>
 
   )
