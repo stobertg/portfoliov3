@@ -2,7 +2,7 @@ import React from 'react'
 import { styled } from '@theme'
 import { Heading } from '@components'
 
-const ChartColumn = styled('div', {
+const ColumnWrap = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
@@ -55,6 +55,15 @@ const Line = styled('div', {
       l6: { height: 50 }
     },
 
+    position: {
+      l0: { transform: 'translateY( -4px )' },
+      l1: { transform: 'translateY( -2px )' },
+      l2: { transform: 'translateY( 2px )' },
+      l3: { transform: 'translateY( 4px )' },
+      l4: { transform: 'translateY( 5px )' },
+      l5: { transform: 'translateY( 12px )' }
+    },
+
     hasTopDot: {
       true: { '&:before': { content: '', top: -6 }}
     },
@@ -66,25 +75,34 @@ const Line = styled('div', {
 })
 
 interface ColumnProps {
-
+  time?: string
+  lines?: {
+    height?: 'l0' | 'l1' | 'l2' | 'l3' | 'l4' | 'l5' | 'l6'
+    position?: 'l0' | 'l1' | 'l2' | 'l3' | 'l4' | 'l5'
+    topDot?: boolean
+    bottomDot?: boolean
+  }[]
 }
 
-export const ChartColumns = ({}:ColumnProps) => {
+export const ChartColumn = ({ time, lines }:ColumnProps) => {
   return(
 
-    <ChartColumn>
+    <ColumnWrap>
       <ChartColumnLines>
-        <Line height="l2" style={{ transform: 'translateY( 5px )' }} hasTopDot />
-        <Line height="l6" />
-        <Line height="l4" hasBottomDot />
-        <Line height="l3" style={{ transform: 'translateY( 12px )' }} />
-        <Line height="l2" />
-        <Line height="l2" style={{ transform: 'translateY( 4px )' }} hasTopDot hasBottomDot />
-        <Line height="l3" style={{ transform: 'translateY( -2px )' }} />
-        <Line height="l1" style={{ transform: 'translateY( 2px )' }} />
+        { lines?.map(( line, i ) => (
+
+          <Line 
+            key={`line-${ i }`}
+            height={ line.height }
+            position={ line.position }
+            hasTopDot={ line.topDot }
+            hasBottomDot={ line.bottomDot }
+          />
+
+        ))}
       </ChartColumnLines>
-      <Heading bold color="secondary" title="6 AM" />
-    </ChartColumn>
+      <Heading bold color="secondary" title={ time } />
+    </ColumnWrap>
 
   )
 }

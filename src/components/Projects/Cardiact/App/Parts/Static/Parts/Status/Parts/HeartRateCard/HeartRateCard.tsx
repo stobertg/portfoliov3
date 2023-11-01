@@ -1,6 +1,7 @@
 import React from 'react'
 import { styled } from '@theme'
 import { Heading, Icon, Grid } from '@components'
+import { Chart } from './Parts'
 import { Card } from '../../../../../Shared/Card/Card'
 
 const CardContent = styled('div', {
@@ -18,92 +19,6 @@ const CardHeader = styled('div', {
   position: 'relative',
   width: '100%',
   '> *:not(:last-child)': { marginRight: 12 }
-})
-
-const History = styled('div', {
-  position: 'relative',
-  width: '100%',
-})
-
-const Chart = styled('div', {
-  display: 'flex',
-  flexDirection: 'row',
-  position: 'relative',
-  width: '98%',
-  height: 100,
-  marginLeft: '2%',
-  '> *:not(:last-child)': { marginRight: 12 }
-})
-
-const ChartLevels = styled('div', {
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'space-between',
-  paddingBottom: 25,
-  fontSize: 10
-})
-
-const ChartColumn = styled('div', {
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  position: 'relative',
-  borderRight: '1px dotted #252525',
-  fontSize: 8,
-  '&:first-child': { borderLeft: '1px dotted #252525' },
-
-  '> div:last-child': { 
-    position: 'absolute',
-    bottom: 0,
-    padding: '0 4px'
-  }
-})
-
-const ChartColumnLines = styled('div', {
-  display: 'flex',
-  flexDirection: 'row',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  position: 'relative',
-  width: '100%',
-  padding: '0 0 0 1px',
-  marginBottom: 20
-})
-
-const Line = styled('div', {
-  position: 'relative',
-  width: 4,
-  background: 'red',
-  borderRadius: 4,
-
-  '&:before, &:after': {
-    position: 'absolute',
-    left: 0,
-    width: 4,
-    height: 4,
-    borderRadius: '50%',
-    background: 'red'
-  },
-
-  variants: {
-    height: {
-      l0: { height: 10 },
-      l1: { height: 15 },
-      l2: { height: 20 },
-      l3: { height: 25 },
-      l4: { height: 30 },
-      l5: { height: 40 },
-      l6: { height: 50 }
-    },
-
-    hasTopDot: {
-      true: { '&:before': { content: '', top: -6 }}
-    },
-
-    hasBottomDot: {
-      true: { '&:after': { content: '', bottom: -6 }}
-    }
-  }
 })
 
 const Current = styled('div', {
@@ -141,63 +56,47 @@ export const HeartRateCard = () => {
           <Heading heavy title="Your heart rate" />
         </CardHeader>
 
-        <History>
-          <Chart>
-            <Grid columns={ 4 }>
-              <ChartColumn>
-                <Heading bold color="secondary" title="12 AM" />
-              </ChartColumn>
-
-              <ChartColumn>
-                <ChartColumnLines>
-                  <Line height="l2" style={{ transform: 'translateY( 5px )' }} hasTopDot />
-                  <Line height="l6" />
-                  <Line height="l4" hasBottomDot />
-                  <Line height="l3" style={{ transform: 'translateY( 12px )' }} />
-                  <Line height="l2" />
-                  <Line height="l2" style={{ transform: 'translateY( 4px )' }} hasTopDot hasBottomDot />
-                  <Line height="l3" style={{ transform: 'translateY( -2px )' }} />
-                  <Line height="l1" style={{ transform: 'translateY( 2px )' }} />
-                </ChartColumnLines>
-                <Heading bold color="secondary" title="6 AM" />
-              </ChartColumn>
-
-              <ChartColumn>
-                <ChartColumnLines>
-                  <Line height="l3" />
-                  <Line height="l5" />
-                  <Line height="l2" style={{ transform: 'translateY( -4px )' }} hasBottomDot />
-                  <Line height="l0" style={{ transform: 'translateY( 4px )' }} />
-                  <Line height="l0" />
-                  <Line height="l1" style={{ transform: 'translateY( -4px )' }} hasBottomDot />
-                  <Line height="l2" style={{ transform: 'translateY( 4px )' }} />
-                  <Line height="l1" style={{ transform: 'translateY( -4px )' }} hasTopDot />
-                </ChartColumnLines>
-                <Heading bold color="secondary" title="12 PM" />
-              </ChartColumn>
-
-              <ChartColumn>
-                <ChartColumnLines>
-                  <Line height="l1" />
-                  <Line style={{ transform: 'translateY( -4px )' }} height="l4" />
-                  <Line />
-                  <Line />
-                  <Line />
-                  <Line />
-                  <Line />
-                  <Line />
-                </ChartColumnLines>
-
-                <Heading bold color="secondary" title="6 PM" />
-              </ChartColumn>
-            </Grid>
-
-            <ChartLevels>
-              <Heading bold color="secondary" title="100" />
-              <Heading bold color="secondary" title="60" />
-            </ChartLevels>
-          </Chart>
-        </History>
+        <Chart 
+          columns={[
+            { 
+              time: '12 AM' 
+            },
+            { 
+              time: '6 AM',
+              lines: [
+                { height: 'l2', position: 'l4', topDot: true },
+                { height: 'l6' },
+                { height: 'l4', bottomDot: true },
+                { height: 'l3', position: 'l5' },
+                { height: 'l2' },
+                { height: 'l2', position: 'l4', topDot: true, bottomDot: true },
+                { height: 'l3', position: 'l1', topDot: true },
+                { height: 'l1', position: 'l2', topDot: true }
+              ]
+            },
+            {
+              time: '12 PM',
+              lines: [
+                { height: 'l3' },
+                { height: 'l5' },
+                { height: 'l2', position: 'l0', bottomDot: true },
+                { height: 'l0', position: 'l3' },
+                { height: 'l0' },
+                { height: 'l1', position: 'l0', bottomDot: true },
+                { height: 'l2', position: 'l3' },
+                { height: 'l1', position: 'l0', topDot: true }
+              ]
+            },
+            {
+              time: '12 PM',
+              lines: [
+                { height: 'l1' },
+                { height: 'l4', position: 'l0' },
+                {},{},{},{},{},{}
+              ]
+            }
+          ]}
+        />
 
         <Current>
           <Heading size="l0" color="secondary" title="Current" />
