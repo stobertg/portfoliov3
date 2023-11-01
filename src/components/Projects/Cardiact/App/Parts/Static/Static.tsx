@@ -22,8 +22,8 @@ export const CariactStatic = () => {
       <StaticHeader />
       
       <StaticContent>
-        {/* <Status /> */}
-        <Profile />
+        <Status />
+        {/* <Profile /> */}
       </StaticContent>
 
       <StaticNav />
