@@ -25,6 +25,8 @@ const HeaderContent = styled('div', {
   fontSize: 12
 })
 
+// ---------- This is the end of declarations ---------- //
+
 export const StaticHeader = () => {
   return(
 

@@ -1,12 +1,11 @@
 import React from 'react'
 import { styled } from '@theme'
-import { Heading } from '@components'
-import { Card, List } from '../../../../Shared'
+import { Icon } from '@components'
 
 // For the container of the list of information pertaining to the user
 // This describes all the medical information that would be relevant to the responder(s)
 
-const InfoList = styled('div', {
+const ListWrap = styled('div', {
   position: 'relative',
   width: '100%',
 
@@ -33,8 +32,7 @@ const LineItem = styled('div', {
 
 // -------------- Typescript declarations -------------- //
 
-interface InfoProps {
-  title: string
+interface ListProps {
   listItems?: {
     icon?: string
     title?: string
@@ -44,13 +42,32 @@ interface InfoProps {
 
 // ---------- This is the end of declarations ---------- //
 
-export const MedicalInfoCard = ({ title, listItems }:InfoProps) => {
+export const List = ({ listItems }:ListProps) => {
   return(
 
-    <Card>
-      <Heading heavy size="l0" color="secondary" {...{ title }} />
-      <InfoList><List {...{ listItems }} /></InfoList>
-    </Card>
+    <ListWrap>
+      <ul>
+          { listItems?.map(( listItem, i ) => (
+            <li key={`list-item-${ i }`}>
+
+              <LineItem>
+                { listItem.icon && ( <Icon size="l0" icon={ listItem.icon } /> )}
+
+                { listItem.titles ? (
+                  <div>
+                    { listItem.titles.map(( title, j ) => (
+                      <div key={`item-${ j }`}>{ title.title }</div>
+                    ))}
+                  </div>
+                ) : (
+                  <div>{ listItem.title }</div>
+                )}
+              </LineItem>
+
+            </li>
+          ))}
+        </ul>
+    </ListWrap>
 
   )
 }
