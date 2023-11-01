@@ -155,9 +155,9 @@ export const HeartRateCard = () => {
                   <Line height="l4" hasBottomDot />
                   <Line height="l3" style={{ transform: 'translateY( 12px )' }} />
                   <Line height="l2" />
-                  <Line height="l2" hasTopDot hasBottomDot />
-                  <Line height="l3" />
-                  <Line height="l1" />
+                  <Line height="l2" style={{ transform: 'translateY( 4px )' }} hasTopDot hasBottomDot />
+                  <Line height="l3" style={{ transform: 'translateY( -2px )' }} />
+                  <Line height="l1" style={{ transform: 'translateY( 2px )' }} />
                 </ChartColumnLines>
                 <Heading bold color="secondary" title="6 AM" />
               </ChartColumn>
@@ -166,12 +166,12 @@ export const HeartRateCard = () => {
                 <ChartColumnLines>
                   <Line height="l3" />
                   <Line height="l5" />
-                  <Line height="l2" hasBottomDot />
+                  <Line height="l2" style={{ transform: 'translateY( -4px )' }} hasBottomDot />
+                  <Line height="l0" style={{ transform: 'translateY( 4px )' }} />
                   <Line height="l0" />
-                  <Line height="l0" />
-                  <Line height="l1" hasBottomDot />
-                  <Line height="l2" />
-                  <Line height="l1" hasTopDot />
+                  <Line height="l1" style={{ transform: 'translateY( -4px )' }} hasBottomDot />
+                  <Line height="l2" style={{ transform: 'translateY( 4px )' }} />
+                  <Line height="l1" style={{ transform: 'translateY( -4px )' }} hasTopDot />
                 </ChartColumnLines>
                 <Heading bold color="secondary" title="12 PM" />
               </ChartColumn>
@@ -179,7 +179,7 @@ export const HeartRateCard = () => {
               <ChartColumn>
                 <ChartColumnLines>
                   <Line height="l1" />
-                  <Line height="l4" />
+                  <Line style={{ transform: 'translateY( -4px )' }} height="l4" />
                   <Line />
                   <Line />
                   <Line />
