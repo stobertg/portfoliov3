@@ -51,7 +51,12 @@ const CardContent = styled('div', {
     // This will keep the card content full width and height of the container, if needed
 
     removeSpacing: {
-      true: { width: '100%', padding: 0, margin: 0 }
+      true: { 
+        width: '100%',
+        padding: 0, 
+        margin: 0,
+        '> *:not(:last-child)': { marginBottom: 0 },
+      }
     }
   }
 })

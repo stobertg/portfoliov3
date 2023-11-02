@@ -1,6 +1,7 @@
 import React from 'react'
 import { styled } from '@theme'
 import { Heading, Icon } from '@components'
+import { IphoneTop } from './Parts'
 
 // For the master container of the iphone component
 // This is set up to look like the iPhone Max 14
@@ -46,51 +47,6 @@ const IphoneContent = styled('div', {
   overflow: 'hidden'
 })
 
-// For the container of the iPhone default within the header
-// This holds the time on the left, the center animated bar, and the wireless connections, battery, ect on the right
-
-const IphoneHeader = styled('div', {
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'center',
-  alginItems: 'center',
-  position: 'absolute',
-  top: 0,
-  width: '100%',
-  height: 'calc( 28px + 16px )',
-  padding: '8px 0',
-  color: '$white',
-  zIndex: 10,
-  '> *:first-child': { fontSize: '14px' },
-  '> *:last-child': { fontSize: '13px' },
-})
-
-// For the container of the camera section in the center of the container
-// This is the black, pill-like comp that is new with the iPhone 14 Max
-
-const IphoneCamera = styled('div', {
-  position: 'relative',
-  width: 88,
-  minWidth: 90,
-  height: 28,
-  background: '#000',
-  borderRadius: '$pill'
-})
-
-// For the container of the content for the items on the side of the iphone header
-// These are to the left and the right of the camera in the center of the container
-
-const IphoneHeaderSide = styled('div', {
-  display: 'flex',
-  flexDirection: 'row',
-  alignItems: 'center',
-  justifyContent: 'center',
-  position: 'relative',
-  width: 'calc( 50% - 14px )',
-  height: '100%',
-  '> *:not(:last-child)': { marginRight: 6 }
-})
-
 // For the dismiss line on the bottom of the container
 // This is static, doesn't have a function
 
@@ -101,6 +57,7 @@ const IphoneBottom = styled('div', {
   position: 'absolute',
   bottom: 0,
   width: '100%',
+  zIndex: 9000,
 
   // For the close bar on the bottom of the container
   // Position horizonatally centered in the parent container
@@ -108,10 +65,10 @@ const IphoneBottom = styled('div', {
   '&:after': {
     content: '',
     position: 'absolute',
-    bottom: 4,
+    bottom: 8,
     width: 120,
-    height: 4,
-    background: '#000',
+    height: 2,
+    background: '$white',
     borderRadius: '$pill'
   }
 })
@@ -160,15 +117,7 @@ export const Iphone = ({
 
     <IphoneWrap {...{ size }}>
       <IphoneContent>
-        <IphoneHeader>
-          <IphoneHeaderSide><Heading bold title="05:29" /></IphoneHeaderSide>
-          <IphoneCamera />
-          <IphoneHeaderSide>
-            <Icon size="l0" icon="wifi" />
-            <Heading bold title="5G" />
-            <Icon size="l1" icon="battery" />
-          </IphoneHeaderSide>
-        </IphoneHeader>
+        <IphoneTop />
 
         <IphoneScreen {...{ screenColor }}>
           { screen }

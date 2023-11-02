@@ -1,5 +1,4 @@
 import React from 'react'
-import { styled } from '@theme'
 import { PageWrap } from '../../../Shared'
 import { EkgCard, HeartRateCard } from './Parts'
 
