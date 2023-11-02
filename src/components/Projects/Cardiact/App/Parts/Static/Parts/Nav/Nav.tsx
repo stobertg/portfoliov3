@@ -6,10 +6,7 @@ import { Tabs } from '../../../Shared'
 // This is more of a traditional app navigation because the UX is different vs active
 
 const NavWrap = styled('div', {
-  position: 'absolute',
-  bottom: 0,
-  left: 0,
-  width: '100%',
+  
 })
 
 interface NavProps {

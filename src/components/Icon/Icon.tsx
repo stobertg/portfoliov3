@@ -18,7 +18,7 @@ const IconWrap = styled('span', {
 
   svg: {
     position: 'absolute',
-    width: '110%',
+    width: '105%',
     fill: 'CurrentColor'
   },
 

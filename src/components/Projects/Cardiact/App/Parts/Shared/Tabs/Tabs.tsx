@@ -32,7 +32,10 @@ const TabsList = styled( TabsPrimitive.List, {
 const TabsContainer = styled('div', {
   display: 'flex',
   flexDirection: 'row',
+  justifyContent: 'space-between',
   position: 'relative',
+  width: '100%',
+  '> *:not(:last-child)': { marginRight: 12 },
   
   '&:before': {
     content: '',
@@ -65,15 +68,19 @@ const TabsContainer = styled('div', {
 
 const TabsTrigger = styled( TabsPrimitive.Trigger, {
   display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
   position: 'relative',
+  '> *:not(:last-child)': { marginRight: 4 },
 
   variants: {
     variant: {
       mobile: {
-        padding: '12px 0',
         flexDirection: 'column',
         alignItems: 'center',
-        fontSize: 12
+        padding: '12px 0',
+        fontSize: 12,
+        '> *:not(:last-child)': { marginRight: 0 },
       }
     }
   }
