@@ -1,17 +1,14 @@
 import React from 'react'
 import { styled } from '@theme'
+import { PageWrap } from '../../../Shared'
 import { EkgCard, HeartRateCard } from './Parts'
 
-const StatusWrap = styled('div', {
-  position: 'relative',
-  width: '100%',
-  '> *:not(:last-child)': { marginBottom: 8 }
-})
+// ---------- This is the end of declarations ---------- //
 
 export const Status = () => {
   return(
 
-    <StatusWrap>
+    <PageWrap>
       <HeartRateCard 
         icon="heart"
         title="Your heart rate"
@@ -67,7 +64,7 @@ export const Status = () => {
           { title: '72 BPM Average', time: '3:00 PM' }
         ]}
       />
-    </StatusWrap>
+    </PageWrap>
 
   )
 }

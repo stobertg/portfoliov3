@@ -1,18 +1,48 @@
 import React from 'react'
 import { styled } from '@theme'
+import { Heading } from '@components'
 
-const ButtonWrap = styled('div', {
+const ButtonContent = styled('button', {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  position: 'relative',
+  width: '100%',
+  height: 44,
+  borderRadius: '$r1',
+  transition: '$s1',
+  textAlign: 'center',
 
+  variants: {
+    variant: {
+
+      primary: {
+
+      },
+
+      secondary: {
+        border: '1px solid #616161',
+        
+        '&:hover': { 
+          background: '$white',
+          color: '$black' 
+        }
+      }
+    }
+  }
 })
 
 interface ButtonProps {
+  title: string
+  variant?: 'primary' | 'secondary'
+} 
 
-}
-
-export const Button = ({}:ButtonProps) => {
+export const Button = ({ title, variant }:ButtonProps) => {
   return(
 
-    <ButtonWrap></ButtonWrap>
+    <ButtonContent {...{ variant }}>
+      <Heading bold {...{ title }} />
+    </ButtonContent>
     
   )
 }

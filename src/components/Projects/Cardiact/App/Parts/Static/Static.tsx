@@ -5,8 +5,7 @@ import { StaticHeader, StaticNav, Profile, Status, Contacts } from './Parts'
 const StaticWrap = styled('div', {
   position: 'relative',
   width: '100%',
-  height: '100%',
-  padding: '0 10px'
+  height: '100%'
 })
 
 const StaticContent = styled('div', {
@@ -22,7 +21,7 @@ export const CariactStatic = () => {
       <StaticHeader />
       
       <StaticContent>
-        <Contacts />
+        {/* <Contacts /> */}
         {/* <Status /> */}
         {/* <Profile /> */}
       </StaticContent>
@@ -35,7 +34,9 @@ export const CariactStatic = () => {
           { icon: 'alert-triangle', title: 'Help' }
         ]}
         tabContent={[
-          { content: '' }
+          { content: <Status /> },
+          { content: <Contacts /> },
+          { content: <Profile /> }
         ]}
       />
     </StaticWrap>

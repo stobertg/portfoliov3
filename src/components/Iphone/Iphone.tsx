@@ -59,9 +59,10 @@ const IphoneHeader = styled('div', {
   width: '100%',
   height: 'calc( 28px + 16px )',
   padding: '8px 0',
+  color: '$white',
+  zIndex: 10,
   '> *:first-child': { fontSize: '14px' },
   '> *:last-child': { fontSize: '13px' },
-  zIndex: 10
 })
 
 // For the container of the camera section in the center of the container

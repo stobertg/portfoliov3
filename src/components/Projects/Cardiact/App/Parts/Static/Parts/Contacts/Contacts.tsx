@@ -1,90 +1,13 @@
 import React from 'react'
-import { styled } from '@theme'
-import { Heading, Icon } from '@components'
-import { Card } from '../../../Shared'
+import { PageWrap, Button } from '../../../Shared'
 import { ContactList } from './Parts'
 
-const ContactWrap = styled('div', {
-  position: 'relative',
-  width: '100%'
-})
+// ---------- This is the end of declarations ---------- //
 
-const ContactInfo = styled('div', {
-  position: 'relative',
-  width: '100%',
-  padding: '12px 0',
-
-  figure: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    position: 'relative',
-    width: 'calc( 100% - 24px )',
-    margin: '0 auto',
-    '> *:not(:last-child)': { marginRight: 12 }
-  },
-
-  figcaption: {
-    position: 'relative',
-    '> *:not(:last-child)': { marginBottom: 2 },
-    '> *:first-child': { fontSize: 12 }
-  }
-})
-
-const CardImage = styled('div', {
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  position: 'relative',
-  width: 52,
-  height: 52,
-  borderRadius: '$r0',
-  overflow: 'hidden',
-  
-  img: {  
-    position: 'absolute',
-    height: '100%',
-    width: 'auto'
-  }
-})
-
-const ContactControls = styled('div', {
-  display: 'flex',
-  flexDirection: 'row',
-  alignItems: 'center',
-  position: 'relative',
-  width: '100%',
-  borderTop: '1px solid $borderDeco',
-  '> *:not(:last-child)': { borderRight: '1px solid $borderDeco' }
-})
-
-const ControlButton = styled('button', {
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  position: 'relative',
-  width: '50%',
-  padding: '12px 0',
-  fontSize: 12,
-  transition: '$s1',
-  '> *:not(:last-child)': { marginRight: 8 },
-  '&:hover': { background: '$border' }
-})  
-
-interface ContactProps {
-  contacts?: {
-    image: string
-    imageAlt: string
-    relation: string
-    name: string
-  }[]
-}
-
-export const Contacts = ({ contacts }:ContactProps) => {
+export const Contacts = () => {
   return(
 
-    <>
-
+    <PageWrap>
       <ContactList 
         contacts={[
           { 
@@ -104,16 +27,11 @@ export const Contacts = ({ contacts }:ContactProps) => {
             imageAlt: 'Cardiact',
             relation: 'Son',
             name: 'Edward York V'
-          },
-          { 
-            image: '/projects/cardiact/ed.jpg',
-            imageAlt: 'Cardiact',
-            relation: 'Son',
-            name: 'Edward York V'
           }
         ]}
       />
 
-    </>
+      <Button variant="secondary" title="Add Contact" />
+    </PageWrap>
   )
 }

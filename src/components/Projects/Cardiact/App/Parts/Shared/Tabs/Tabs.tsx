@@ -49,7 +49,8 @@ const TabsContainer = styled('div', {
       mobile: {
         padding: '0 32px 12px',
         justifyContent: 'space-between',
-        borderTop: '1px solid #252525'
+        borderTop: '1px solid #252525',
+        zIndex: 10
       }
     }
   }
@@ -75,23 +76,15 @@ const TabsTrigger = styled( TabsPrimitive.Trigger, {
 })
 
 const TabsContent = styled( TabsPrimitive.Content, {
-  padding: '20px 0',
-  borderBottomLeftRadius: 6,
-  borderBottomRightRadius: 6,
   outline: 'none',
-  // '&:focus': { boxShadow: `0 0 0 2px black` },
 
   variants: {
-    bgColor: {
-      primary: { background: '$brandPrimary' },
-      secondary: { background: '$brandSecondary' },
-      tertiary: { background: '$brandTertiary' }
-    },
-
-    width: {
-      small: {},
-      medium: {},
-      large: { width: '90%', margin: '32px auto', borderRadius: '$r2' }
+    variant: {
+      mobile: {
+        height: 450,
+        zIndex: 0,
+        overflow: 'scroll'
+      }
     }
   }
 })
@@ -151,10 +144,9 @@ export const Tabs = ({
       
       { tabContent.map(( content, i ) => (
         <TabsContent 
-          {...{ bgColor }}
+          {...{ bgColor, variant }}
           key={`tab-${ i }`} 
           value={`tab${ i + 1 }`}
-          width={ contentWidth }
         >
           { content.content || content.title }
         </TabsContent>

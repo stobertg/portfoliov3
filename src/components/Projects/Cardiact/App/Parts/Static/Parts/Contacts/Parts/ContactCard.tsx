@@ -86,7 +86,6 @@ export const ContactCard = ({
   
   return(
 
-
       <Card removeSpacing>
         <ContactWrap>
           <ContactInfo>

@@ -5,7 +5,7 @@ import { ContactCard } from './ContactCard'
 const ListWrap = styled('div', {
   position: 'relative',
   width: '100%',
-  '> *:not(:last-child)': { marginBottom: 12 }
+  '> *:not(:last-child)': { marginBottom: 8 }
 })
 
 interface ListProps {
