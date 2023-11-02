@@ -1,11 +1,18 @@
 import React from 'react'
 import { styled } from '@theme'
-import { CariactStatic } from './Parts'
+import { CardiactEmergency, CariactStatic } from './Parts'
+
+const AppWrap = styled('div', {
+
+})
 
 export const Cardiact = () => {
   return(
 
-    <CariactStatic />
+    <AppWrap>
+      <CardiactEmergency />
+      {/* <CariactStatic /> */}
+    </AppWrap>
 
   )
 }
