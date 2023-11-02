@@ -25,15 +25,21 @@ const HeaderContent = styled('div', {
   fontSize: 12
 })
 
+// -------------- Typescript declarations -------------- //
+
+interface HeaderProps {
+  title: string
+} 
+
 // ---------- This is the end of declarations ---------- //
 
-export const StaticHeader = () => {
+export const StaticHeader = ({ title }:HeaderProps) => {
   return(
 
     <HeaderWrap>
       <HeaderContent>
         <Icon size="l0" icon="grip" />
-        <Heading bold title="Profile" />
+        <Heading bold {...{ title }} />
         <Icon size="l0" icon="bell" />
       </HeaderContent>
     </HeaderWrap>

@@ -47,6 +47,10 @@ const TabsContainer = styled('div', {
   variants: {
     variant: {
       mobile: {
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        width: '100%',
         padding: '0 32px 12px',
         justifyContent: 'space-between',
         borderTop: '1px solid #252525',
@@ -81,9 +85,11 @@ const TabsContent = styled( TabsPrimitive.Content, {
   variants: {
     variant: {
       mobile: {
-        height: 450,
+        height: 520,
         zIndex: 0,
-        overflow: 'scroll'
+        overflow: 'scroll',
+        scrollbarWidth: 'none',
+        '&::-webkit-scrollbar': { display: 'none' },
       }
     }
   }

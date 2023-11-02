@@ -1,6 +1,9 @@
 import React from 'react'
 import { styled } from '@theme'
 
+// For the container of the battery icon within the header of the iphone
+// This icon is used to simulate a real phone, where the battery is percentage is at
+
 const BatteryWrap = styled('div', {
   display: 'flex',
   flexDirection: 'row',
@@ -12,6 +15,7 @@ const BatteryWrap = styled('div', {
   paddingRight: 2,
 
   // For the nub on the right of the container
+  // This is a small line on the right to represent the charging end of a battery
 
   '&:after': { 
     content: '',
@@ -23,6 +27,9 @@ const BatteryWrap = styled('div', {
     background: '#878787'
   }
 })
+
+// For the container of the base of the battery that shows the current level
+// This has the slight border around it with the batter drained a little
 
 const BatteryBase = styled('div', {
   display: 'flex',

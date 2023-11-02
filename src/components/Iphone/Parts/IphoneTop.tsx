@@ -16,7 +16,6 @@ const IphoneHeader = styled('div', {
   width: '100%',
   height: 'calc( 28px + 16px )',
   padding: '8px 0',
-  color: '$white',
   fontSize: 12,
   lineHeight: 1,
   zIndex: 10,
@@ -50,20 +49,18 @@ const IphoneHeaderSide = styled('div', {
   '> *:not(:last-child)': { marginRight: 6 }
 })
 
-// -------------- Typescript declarations -------------- //
-
-interface TopProps {
-
-}
-
 // ---------- This is the end of declarations ---------- //
 
-export const IphoneTop = ({}:TopProps) => {
+export const IphoneTop = () => {
   return(
 
     <IphoneHeader>
-      <IphoneHeaderSide><Heading bold title="05:29" /></IphoneHeaderSide>
+      <IphoneHeaderSide>
+        <Heading title="05:29" />
+      </IphoneHeaderSide>
+
       <IphoneCamera />
+
       <IphoneHeaderSide>
         <IconNetwork />
         <Heading title="5G" />

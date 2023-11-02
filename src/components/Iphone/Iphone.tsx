@@ -19,15 +19,23 @@ const IphoneWrap = styled('div', {
   borderRadius: 56,
   boxShadow: '0 2px 20px rgba( 0,0,0, 0.2 )',
 
+  // Here we add different size the Iphone can be
+  // It still maintains the correct aspect ratio
+
   variants: {
     size: {
-      l0: {},
-      l1: {
+      l0: {
         width: 310,
         maxWidth: '310px !important',
         height: 625,
         borderRadius: 50
       }
+    },
+
+    // For Darkmode, we change the color of the text within the header to be white
+
+    darkMode: {
+      true: { color: '$white' }
     }
   }
 })
@@ -45,6 +53,33 @@ const IphoneContent = styled('div', {
   borderRadius: 44,
   background: '#fff',
   overflow: 'hidden'
+})
+
+// For the container of the screen content within the iPhone
+// For our purposes, this holds the Gather Wallet app, as an interactive prototype
+// For that spcific code, you can see the Gather Wallet app in the components
+
+const IphoneScreen = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  flex: 1,
+  position: 'realtive',
+  width: '100%',
+  height: '100%',
+  background: '#fff',
+  paddingTop: 40,
+
+  // Here we provide support for the Iphone to be Dark Mode
+  // This will change the background to black and the color to white
+
+  variants: {
+    darkMode: {
+      true: {
+        background: '#111',
+        color: '#fff'
+      }
+    }
+  }
 })
 
 // For the dismiss line on the bottom of the container
@@ -68,31 +103,15 @@ const IphoneBottom = styled('div', {
     bottom: 8,
     width: 120,
     height: 2,
-    background: '$white',
+    background: '$black',
     borderRadius: '$pill'
-  }
-})
+  },
 
-// For the container of the screen content within the iPhone
-// For our purposes, this holds the Gather Wallet app, as an interactive prototype
-// For that spcific code, you can see the Gather Wallet app in the components
+  // For Darkmode, we change the background of the dismiss bar to white
 
-const IphoneScreen = styled('div', {
-  display: 'flex',
-  flexDirection: 'column',
-  flex: 1,
-  position: 'realtive',
-  width: '100%',
-  height: '100%',
-  background: '#fff',
-  paddingTop: 40,
-
-  variants: {
-    screenColor: {
-      black: {
-        background: '#111',
-        color: '#fff'
-      }
+  variants: { 
+    darkMode: {
+      true: { '&:after': { background: '$white' }}
     }
   }
 })
@@ -100,30 +119,30 @@ const IphoneScreen = styled('div', {
 // -------------- Typescript declarations -------------- //
 
 interface IphoneProps {
-  size?: 'l0' | 'l1'
+  size?: 'l0'
   screen?: React.ReactNode
-  screenColor?: 'black'
+  darkMode?: boolean
 }
 
 // ---------- This is the end of declarations ---------- //
 
 export const Iphone = ({ 
-    size,
-    screen,
-    screenColor
+    size, // Optional - Supporting a smaller Iphone
+    screen, // Required - For the content within the Iphone
+    darkMode // Optional - Support Dark mode for the Iphone
   }:IphoneProps) => {
   
   return(
 
-    <IphoneWrap {...{ size }}>
+    <IphoneWrap {...{ size, darkMode }}>
       <IphoneContent>
         <IphoneTop />
 
-        <IphoneScreen {...{ screenColor }}>
+        <IphoneScreen {...{ darkMode }}>
           { screen }
         </IphoneScreen>
 
-        <IphoneBottom />
+        <IphoneBottom {...{ darkMode }} />
       </IphoneContent>
     </IphoneWrap>
       

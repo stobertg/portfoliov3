@@ -19,8 +19,8 @@ export const PhonePresentation = () => {
 
     <PresWrap>
       <Iphone 
-        size="l1" 
-        screenColor="black"
+        darkMode
+        size="l0" 
         screen={ <Cardiact /> }
       />
     </PresWrap>
