@@ -5,7 +5,7 @@ import { Directions } from './Parts'
 const MapWrap = styled('div', {
   display: 'flex',
   justifyContent: 'center',
-  alignItems: 'center',
+  alignItems: 'flex-end',
   position: 'relative',
   width: '100%',
   height: '100%'
@@ -22,7 +22,18 @@ const MapImage = styled('div', {
     height: '100%',
     maxHeight: '100%',
     width: 'auto'
-  }
+  },
+
+  '&:before': { 
+    content: '',
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    width: '100%',
+    height: '40%',
+    background: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)',
+    opacity: 0.9
+  },
 })
 
 interface MapProps {

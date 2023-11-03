@@ -54,6 +54,8 @@ const BatteryBase = styled('div', {
   }
 })
 
+// ---------- This is the end of declarations ---------- //
+
 export const IconBattery = () => {
   return(
 

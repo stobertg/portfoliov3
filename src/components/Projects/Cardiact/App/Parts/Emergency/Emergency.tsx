@@ -21,7 +21,7 @@ export const CardiactEmergency = () => {
         tabContent={[
           { content: <Map /> },
           {},
-          {}
+          { content: <Chat /> }
         ]}
       />
       
