@@ -1,9 +1,11 @@
 import React from 'react'
 import { styled } from '@theme'
-import { EmergencyHeader, Chat } from './Parts'
+import { EmergencyHeader, Map, Status, Chat } from './Parts'
 
 const EmergencyWrap = styled('div', {
-
+  position: 'relative',
+  width: '100%',
+  height: '100%'
 })
 
 export const CardiactEmergency = () => {
@@ -17,11 +19,13 @@ export const CardiactEmergency = () => {
           { icon: 'message-circle', title: 'Chat' }
         ]}
         tabContent={[
-          {},
+          { content: <Map /> },
           {},
           {}
         ]}
       />
+      
+      {/* <Status /> */}
       {/* <Chat /> */}
     </EmergencyWrap>
 

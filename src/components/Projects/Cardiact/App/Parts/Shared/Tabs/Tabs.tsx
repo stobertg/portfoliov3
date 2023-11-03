@@ -14,9 +14,7 @@ const TabsWrap = styled( TabsPrimitive.Root, {
 
   variants: {
     variant: {
-      mobile: {
-        flexDirection: 'column-reverse'
-      }
+      mobile: { flexDirection: 'column-reverse' }
     }
   }
 })
@@ -27,6 +25,18 @@ const TabsWrap = styled( TabsPrimitive.Root, {
 const TabsList = styled( TabsPrimitive.List, {
   position: 'relative',
   width: '100%',
+  borderBottom: '1px solid #212121',
+
+  variants: {
+    variant: {
+      mobile: {
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        borderBottom: 'none'
+      }
+    }
+  }
 })
 
 const TabsContainer = styled('div', {
@@ -34,7 +44,8 @@ const TabsContainer = styled('div', {
   flexDirection: 'row',
   justifyContent: 'space-between',
   position: 'relative',
-  width: '100%',
+  width: '80%',
+  margin: '0 auto',
   '> *:not(:last-child)': { marginRight: 12 },
   
   '&:before': {
@@ -50,14 +61,11 @@ const TabsContainer = styled('div', {
   variants: {
     variant: {
       mobile: {
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        width: '100%',
         padding: '0 32px 12px',
         justifyContent: 'space-between',
         borderTop: '1px solid #252525',
-        zIndex: 10
+        zIndex: 10,
+        '> *:not(:last-child)': { marginRight: 0 },
       }
     }
   }
@@ -71,6 +79,7 @@ const TabsTrigger = styled( TabsPrimitive.Trigger, {
   flexDirection: 'row',
   alignItems: 'center',
   position: 'relative',
+  padding: '12px 0',
   '> *:not(:last-child)': { marginRight: 4 },
 
   variants: {
@@ -78,7 +87,6 @@ const TabsTrigger = styled( TabsPrimitive.Trigger, {
       mobile: {
         flexDirection: 'column',
         alignItems: 'center',
-        padding: '12px 0',
         fontSize: 12,
         '> *:not(:last-child)': { marginRight: 0 },
       }
@@ -87,12 +95,15 @@ const TabsTrigger = styled( TabsPrimitive.Trigger, {
 })
 
 const TabsContent = styled( TabsPrimitive.Content, {
+  position: 'relative',
+  width: '100%',
+  height: 465,
   outline: 'none',
 
   variants: {
     variant: {
       mobile: {
-        height: 520,
+        height: 528,
         zIndex: 0,
         overflow: 'scroll',
         scrollbarWidth: 'none',
@@ -122,6 +133,7 @@ interface TabsProps {
   tabSize?: 'tiny' | 'small'
   contentWidth?: 'small' | 'medium' | 'large'
   onSearch?: any
+  bold?: boolean
 }
 
 // ---------- This is the end of declarations ---------- //
@@ -132,6 +144,7 @@ export const Tabs = ({
     tabContent,
     defaultTab,
     bgColor,
+    bold,
     border,
     tabSize,
     contentWidth,
@@ -140,7 +153,7 @@ export const Tabs = ({
   return (
 
     <TabsWrap defaultValue={ `tab${ defaultTab ? defaultTab : 1 }` } {...{ variant }}>
-      <TabsList>
+      <TabsList {...{ variant }}>
         <TabsContainer {...{ variant }}>
           { triggers.map(( trigger, i ) => (
             <TabsTrigger 
@@ -149,7 +162,7 @@ export const Tabs = ({
               {...{ variant }}
             > 
               { trigger.icon && ( <Icon size="l0" icon={ trigger.icon } /> )}
-              { trigger.title && ( <Heading color="secondary" title={ trigger.title } /> )}
+              { trigger.title && ( <Heading {...{ bold }} color="secondary" title={ trigger.title } /> )}
             </TabsTrigger>
           ))}
         </TabsContainer>

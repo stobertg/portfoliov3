@@ -10,8 +10,8 @@ export const Cardiact = () => {
   return(
 
     <AppWrap>
-      {/* <CardiactEmergency /> */}
-      <CariactStatic />
+      <CardiactEmergency />
+      {/* <CariactStatic /> */}
     </AppWrap>
 
   )

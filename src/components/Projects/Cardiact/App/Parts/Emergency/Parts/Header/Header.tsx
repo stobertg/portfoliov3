@@ -1,6 +1,7 @@
 import React from 'react'
 import { styled } from '@theme'
 import { Tabs } from '../../../Shared'
+import { HeaderStatus } from './Parts'
 import { Heading } from '@components'
 
 const HeaderWrap = styled('div', {
@@ -10,48 +11,17 @@ const HeaderWrap = styled('div', {
 
 const HeaderContent = styled('div', {
   position: 'relative',
-  width: '88%',
+  margin: '0 auto',
+})
+
+const HeaderNavWrap = styled('div', {
+  position: 'relative',
+  width: '100%'
+})
+
+const HeaderNav = styled('div', {
+  position: 'relative',
   margin: '0 auto'
-})
-
-const HeaderStatus = styled('div', {
-
-})
-
-const StatusPerson = styled('div', {
-  display: 'flex',
-  flexDirection: 'row',
-  alignItems: 'center',
-  position: 'relative',
-  width: '100%',
-  '> *:not(:last-child)': { marginRight: 12 }
-})
-
-const StatusImage = styled('div', {
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  position: 'relative',
-  width: 40,
-  height: 40,
-  borderRadius: '$r0',
-  overflow: 'hidden',
-  img: { height: '100%', objectFit: 'cover', }
-})
-
-const StatusText = styled('div', {
-  position: 'relative',
-
-  '> *:not(:last-child)': { marginBottom: 2 },
-
-  '> *:last-child': {
-    color: 'red', 
-    fontSize: 14 
-  }
-})
-
-const StatusTimer = styled('div', {
-
 })
 
 interface HeaderProps {
@@ -73,21 +43,11 @@ export const EmergencyHeader = ({
 
     <HeaderWrap>
       <HeaderContent>
-        <HeaderStatus>
-          <StatusPerson>
-            <StatusImage><img src="/projects/cardiact/ed.jpg" alt="Cardiact" /></StatusImage>
-            <StatusText>
-              <Heading heavy title="Edward York IV" />
-              <Heading title="Time in distress" />
-            </StatusText>
-          </StatusPerson>
+        <HeaderStatus />
 
-          <StatusTimer>
-
-          </StatusTimer>
-        </HeaderStatus>
-
-        <Tabs {...{ triggers, tabContent }} />
+        <HeaderNavWrap>
+          <HeaderNav><Tabs bold {...{ triggers, tabContent }} /></HeaderNav>
+        </HeaderNavWrap>
       </HeaderContent>
     </HeaderWrap>
 
