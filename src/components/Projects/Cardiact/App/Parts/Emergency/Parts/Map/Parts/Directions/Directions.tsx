@@ -34,7 +34,7 @@ const DirContent = styled('div', {
   backdropFilter: 'blur( 10px )',
   border: '1px solid #212121',
   overflow: 'hidden',
-  transition: 'max-height $s1 ease-in-out', // Transitioning max-height here
+  transition: 'max-height $s1 ease-in-out',
 
   variants: {
     collapsed: {
@@ -118,7 +118,7 @@ export const Directions = ({
         onClick={ expandDirections }
       >
         <DirectionHeader {...{ address, location, distance }} />
-        <DirectionList {...{ directions }} />
+        <DirectionList {...{ directions, collapsed }} />
       </DirContent>
 
       <DirButtonsWrap collapsed={ collapsed }>
