@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { styled } from '@theme'
-import { Directions, Confirm } from './Parts'
+import { MapMain, Directions, Confirm } from './Parts'
 
 const MapWrap = styled('div', {
   display: 'flex',
@@ -44,11 +44,35 @@ export const Map = ({}:MapProps) => {
   return(
 
     <MapWrap>
+      <MapMain />
       <MapImage>
         <img src="/projects/cardiact/map.jpg" alt="Cardiact map" />
       </MapImage>
 
-      <Directions />
+      <Directions 
+        address="1483 Westminster"
+        location="London, England"
+        distance="4 min away"
+        directions={[
+          { 
+            icon: 'corner-up-left',
+            title: 'Left at East Liberty St.',
+            distance: '0.3 miles away'
+          },
+          { 
+            icon: 'corner-up-left',
+            title: 'Left at Wheeler St.',
+            distance: '0.4 miles away'
+          },
+          { 
+            icon: 'heart',
+            title: 'Victim on the left',
+            distance: '0.5 miles away'
+          }
+        ]}
+      />
+
+
       <Confirm confirm={ false } />
     </MapWrap>
 

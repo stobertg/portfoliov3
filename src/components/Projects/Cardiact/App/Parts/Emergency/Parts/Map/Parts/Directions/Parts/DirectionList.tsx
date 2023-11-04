@@ -6,7 +6,6 @@ const DirListWrap = styled('div', {
   position: 'relative',
   width: '100%',
   opacity: 1,
-  transition: '$s1',
   
   variants: {
     collapsed: {
@@ -43,6 +42,8 @@ const DirectionItem = styled('div', {
   '> *:not(:last-child)': { marginRight: 12 }
 })
 
+// -------------- Typescript declarations -------------- //
+
 interface ListProps {
   directions: {
     icon: string
@@ -50,6 +51,8 @@ interface ListProps {
     distance: string
   }[]
 }
+
+// ---------- This is the end of declarations ---------- //
 
 export const DirectionList = ({ directions }:ListProps) => {
   return(

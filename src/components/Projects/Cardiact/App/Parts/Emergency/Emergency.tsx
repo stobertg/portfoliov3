@@ -13,6 +13,9 @@ export const CardiactEmergency = () => {
 
     <EmergencyWrap>
       <EmergencyHeader 
+        image="/projects/cardiact/ed.jpg"
+        imageAlt="Cardiact victim name"
+        name="Edward York IV"
         triggers={[
           { icon: 'map-pin', title: 'Map' },
           { icon: 'activity', title: 'Status' },
@@ -24,9 +27,6 @@ export const CardiactEmergency = () => {
           { content: <Chat /> }
         ]}
       />
-      
-      {/* <Status /> */}
-      {/* <Chat /> */}
     </EmergencyWrap>
 
   )
