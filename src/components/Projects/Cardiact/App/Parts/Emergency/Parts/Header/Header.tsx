@@ -2,29 +2,29 @@ import React from 'react'
 import { styled } from '@theme'
 import { Tabs } from '../../../Shared'
 import { HeaderStatus } from './Parts'
-import { Heading } from '@components'
+
+// For the master container of the global header on the top of the Emergency screens
+// This contains the Victim info and time in distress, as well as the navigation buttons below
 
 const HeaderWrap = styled('div', {
   position: 'relative',
   width: '100%',
 })
 
-const HeaderContent = styled('div', {
-  position: 'relative',
-  margin: '0 auto',
-})
-
-const HeaderNavWrap = styled('div', {
-  position: 'relative',
-  width: '100%'
-})
+// For the container of the navigation within the header
+// This contain the three options for 'Map, 'Status', and 'Chat' 
 
 const HeaderNav = styled('div', {
   position: 'relative',
-  margin: '0 auto'
+  width: '100%',
 })
 
+// -------------- Typescript declarations -------------- //
+
 interface HeaderProps {
+  image: string
+  imageAlt: string
+  name: string
   triggers: {
     icon: string
     title: string
@@ -34,21 +34,21 @@ interface HeaderProps {
   }[]
 }
 
+// ---------- This is the end of declarations ---------- //
+
 export const EmergencyHeader = ({ 
-    triggers, 
-    tabContent 
+    image, // Required - For the image of the victim
+    imageAlt, // Required - For the name of the person in the image
+    name, // Required - For the name of the vicitim
+    triggers, // Required - For the global navigation items in the header
+    tabContent // Required - For the content related to each of the tab triggers in the header
   }:HeaderProps) => {
 
   return(
 
     <HeaderWrap>
-      <HeaderContent>
-        <HeaderStatus />
-
-        <HeaderNavWrap>
-          <HeaderNav><Tabs bold {...{ triggers, tabContent }} /></HeaderNav>
-        </HeaderNavWrap>
-      </HeaderContent>
+      <HeaderStatus {...{ image, imageAlt, name }} />
+      <HeaderNav><Tabs bold {...{ triggers, tabContent }} /></HeaderNav>
     </HeaderWrap>
 
   )
