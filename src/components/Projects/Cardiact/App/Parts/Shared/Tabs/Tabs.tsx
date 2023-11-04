@@ -82,6 +82,12 @@ const TabsTrigger = styled( TabsPrimitive.Trigger, {
   padding: '12px 0',
   fontSize: 13,
   '> *:not(:last-child)': { marginRight: 4 },
+  '&[data-state="active"]': { 
+    '*': { 
+      color: '#4375ff' 
+      
+    }
+  },
 
   variants: {
     variant: {

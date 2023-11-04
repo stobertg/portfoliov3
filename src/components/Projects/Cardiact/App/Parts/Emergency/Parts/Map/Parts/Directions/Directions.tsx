@@ -46,7 +46,7 @@ const DirContent = styled('div', {
 
   variants: {
     collapsed: {
-      true: { maxHeight: '82px', transitionDelay: '210ms' },
+      true: { maxHeight: '82px', transitionDelay: '220ms' },
       false: { maxHeight: '500px' }
     }
   }
