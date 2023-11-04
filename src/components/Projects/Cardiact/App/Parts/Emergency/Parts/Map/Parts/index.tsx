@@ -1,2 +1,2 @@
 export { Confirm } from './Confirm'
-export { Directions } from './Directions'
+export { Directions } from './Directions/Directions'

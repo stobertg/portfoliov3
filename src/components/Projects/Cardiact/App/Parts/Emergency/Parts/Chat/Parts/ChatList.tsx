@@ -30,7 +30,7 @@ interface ListProps {
   messages: {
     person: 'sender' | 'reciever'
     image: string
-    message: string
+    message: string | React.ReactNode
   }[]
 }
 

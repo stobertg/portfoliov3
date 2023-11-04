@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { styled } from '@theme'
-import { Directions } from './Parts'
+import { Directions, Confirm } from './Parts'
 
 const MapWrap = styled('div', {
   display: 'flex',
@@ -40,7 +40,7 @@ interface MapProps {
 
 }
 
-export const Map = () => {
+export const Map = ({}:MapProps) => {
   return(
 
     <MapWrap>
@@ -49,6 +49,7 @@ export const Map = () => {
       </MapImage>
 
       <Directions />
+      <Confirm confirm={ false } />
     </MapWrap>
 
   )

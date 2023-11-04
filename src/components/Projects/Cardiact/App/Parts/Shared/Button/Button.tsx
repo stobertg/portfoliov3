@@ -17,7 +17,7 @@ const ButtonContent = styled('button', {
     variant: {
 
       primary: {
-        background: 'red'
+        background: '#de0000'
       },
 
       secondary: {

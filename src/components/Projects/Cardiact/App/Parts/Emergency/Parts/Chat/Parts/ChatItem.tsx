@@ -62,16 +62,20 @@ const BubbleText = styled('div', {
   fontSize: 13
 })
 
+// -------------- Typescript declarations -------------- //
+
 interface BubbleProps {
   person: 'sender' | 'reciever'
   image: string
   message: string | React.ReactNode
 }
 
+// ---------- This is the end of declarations ---------- //
+
 export const ChatBubble = ({
-    person,
-    image,
-    message
+    person, // Required - For the 'sender' or a 'reciever' styling
+    image, // Required - For the thumbnail image of the person texting 
+    message // Required - For the message of the text
   }:BubbleProps) => {
   
   return(
