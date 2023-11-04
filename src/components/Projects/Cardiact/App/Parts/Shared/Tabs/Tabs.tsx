@@ -80,6 +80,7 @@ const TabsTrigger = styled( TabsPrimitive.Trigger, {
   alignItems: 'center',
   position: 'relative',
   padding: '12px 0',
+  fontSize: 13,
   '> *:not(:last-child)': { marginRight: 4 },
 
   variants: {

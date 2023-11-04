@@ -38,6 +38,7 @@ interface ButtonProps {
   buttons: {
     variant?: 'primary' | 'secondary'
     title: string
+    onClick?: React.MouseEventHandler<HTMLButtonElement>
   }[]
 }
 
@@ -58,6 +59,7 @@ export const Buttons = ({
             key={`button-${ i }`}
             variant={ button.variant }
             title={ button.title }
+            onClick={ button.onClick }
           />
 
         ))}

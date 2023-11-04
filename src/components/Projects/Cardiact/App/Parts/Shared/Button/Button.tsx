@@ -12,6 +12,7 @@ const ButtonContent = styled('button', {
   borderRadius: '$r1',
   transition: '$s1',
   textAlign: 'center',
+  fontSize: 14,
 
   variants: {
     variant: {
@@ -35,12 +36,13 @@ const ButtonContent = styled('button', {
 interface ButtonProps {
   title: string
   variant?: 'primary' | 'secondary'
+  onClick?: React.MouseEventHandler<HTMLButtonElement>
 } 
 
-export const Button = ({ title, variant }:ButtonProps) => {
+export const Button = ({ title, variant, onClick }:ButtonProps) => {
   return(
 
-    <ButtonContent {...{ variant }}>
+    <ButtonContent {...{ variant, onClick }}>
       <Heading bold {...{ title }} />
     </ButtonContent>
     

@@ -41,6 +41,9 @@ interface MapProps {
 }
 
 export const Map = ({}:MapProps) => {
+  const [ showConfirm, setShowConfirm ] = useState( false )
+  const revealConfirm = () => setShowConfirm( !showConfirm )
+
   return(
 
     <MapWrap>
@@ -50,6 +53,9 @@ export const Map = ({}:MapProps) => {
       </MapImage>
 
       <Directions 
+        confirmButtonHidden={ false }
+        confirmButtonClick={ revealConfirm }
+        showConfirm={ revealConfirm }
         address="1483 Westminster"
         location="London, England"
         distance="4 min away"
@@ -72,8 +78,14 @@ export const Map = ({}:MapProps) => {
         ]}
       />
 
-
-      <Confirm confirm={ false } />
+      <Confirm 
+        confirm={ showConfirm } 
+        closeConfirm={ revealConfirm }
+        buttons={[
+          { variant: 'primary', title: "I'm here with AED" },
+          { variant: 'primary', title: "I'm here without AED" }
+        ]}
+      />
     </MapWrap>
 
   )

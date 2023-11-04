@@ -17,9 +17,10 @@ const ConfirmWrap = styled('div', {
   height: 240,
   backdropFilter: 'blur( 10px )',
   background: 'rgba( 0,0,0, 0.3 )',
-  borderRadius: '$r3 $r3 0 0',
-  transform: 'translateY( 100% )',
-  transition: '$s1',
+  borderRadius: '$r3 $r3 48px 48px',
+  transform: 'scale( 0.95 )',
+  transition: '$s1 ease',
+  pointerEvents: 'none',
   opacity: 0,
   zIndex: 9999,
 
@@ -34,13 +35,14 @@ const ConfirmWrap = styled('div', {
     width: '100%',
     height: '100%',
     background: 'linear-gradient( 140deg, rgba( 0,0,0, 0.3 ) 20%, rgba( 255,0,0, 0.5 ) 100%)',
-    borderRadius: '$r3 $r3 0 0'
+    borderRadius: '$r3 $r3 48px 48px'
   },
 
   variants: {
     showConfirm: {
       true: {
-        transform: 'translateY( 0 )',
+        transform: 'scale( 1 )',
+        pointerEvents: 'auto',
         opacity: 1
       }
     }
@@ -86,23 +88,42 @@ const CloseButton = styled('button', {
 
 interface ConfirmProps {
   confirm: boolean
+  closeConfirm: React.MouseEventHandler<HTMLButtonElement>
+  buttons: {
+    variant?: 'primary' | 'secondary'
+    title: string
+  }[]
 }
 
 // ---------- This is the end of declarations ---------- //
 
-export const Confirm = ({ confirm }:ConfirmProps) => {
+export const Confirm = ({ 
+    confirm,
+    closeConfirm,
+    buttons
+  }:ConfirmProps) => {
+
   return(
 
     <ConfirmWrap showConfirm={ confirm }>
       <ConfirmContent>
         <Heading align="center" size="l0" title="Are you with the victim?" />
         <ConfirmButtons>
-          <Button variant="primary" title="I'm here with AED" />
-          <Button variant="primary" title="I'm here without AED" />
+          { buttons.map(( button, i ) => (
+
+            <Button 
+              key={`button-${ i }`}
+              variant={ button.variant }
+              title={ button.title }
+            />
+
+          ))}
         </ConfirmButtons>
       </ConfirmContent>
 
-      <CloseButton><Icon size="l0" icon="x" /></CloseButton>
+      <CloseButton onClick={ closeConfirm }>
+        <Icon size="l0" icon="x" />
+      </CloseButton>
     </ConfirmWrap>
 
   )
