@@ -1,10 +1,16 @@
 import React from 'react'
 import { styled } from '@theme'
 
+// For the master container of a text message within the Chat page in Emergency mode
+// This is created to be reused within a list, that shows a text thread from multiple people
+
 const BubbleWrap = styled('div', {
   display: 'flex',
   flexDirection: 'row',
   position: 'relative',
+
+  // Here we start our variants for either a sender or reciever
+  // By default styling, it favors the reciever, so here we inverse the layout for the sender
 
   variants: {
     person: {
@@ -14,12 +20,18 @@ const BubbleWrap = styled('div', {
   }
 })
 
+// For the container of all of the content within the master container
+// This holds the thumbnail headshot on the left and the text bubble on the right
+
 const BubbleContent = styled('div', {
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'flex-start',
   position: 'relative',
   maxWidth: '95%',
+
+  // Here we account for the color of the text bubble and the spacing between the image and text
+  // For Senders, we have an inverse layout that needs to has spacing on the right of the text bubble
 
   variants: {
     person: {
@@ -29,6 +41,9 @@ const BubbleContent = styled('div', {
         '> *:last-child': { background: '#2020ff' }
       },
 
+      // For the reciever, we target spacing for the left side of the text bubble
+      // We also set the color to be a subtle gray that is traditional to other messaging apps
+
       reciever: {
         '> *:not(:first-child)': { marginLeft: 6 },
         '> *:last-child': { background: '#151515', border: '1px solid #262626' }
@@ -36,6 +51,9 @@ const BubbleContent = styled('div', {
     }
   }
 })
+
+// For the container of the thumbnail headshot image on the left of the container
+// This holds the headshot image in the center of the container to act as a backgound-cover
 
 const BubbleImage = styled('div', {
   display: 'flex',
@@ -49,11 +67,16 @@ const BubbleImage = styled('div', {
   borderRadius: '50%',
   overflow: 'hidden',
 
+  // For the sizing of the image within the container
+
   img: { 
     height: '100%',
     objectFit: 'cover' 
   }
 })
+
+// For the master container of the text message on the right of the container
+// This holds the text of the person, as well as sets the spacing and sizing around it - color declared before
 
 const BubbleText = styled('div', {
   position: 'relative',
