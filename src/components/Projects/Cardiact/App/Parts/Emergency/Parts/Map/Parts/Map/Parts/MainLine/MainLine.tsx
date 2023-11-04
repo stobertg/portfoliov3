@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled, keyframes } from '@theme'
-import { Victim, Responder } from './'
+import { Victim, Responder } from '..'
 
 // For the animations of the lines from the responder getting to the victim
 // This is taken from bottom to top in the container, going from the bottom left to the top right
@@ -45,7 +45,8 @@ const LineMaster = styled('div', {
   position: 'relative',
   width: 101,
   height: 210,
-  transform: 'translateY( -20px )'
+  transform: 'translateY( -20px )',
+  zIndex: 10
 })
 
 // Here we set the container of the four lines that shows the responder getting to the user

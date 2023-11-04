@@ -2,12 +2,18 @@ import React from 'react'
 import { styled, keyframes } from '@theme'
 import { Icon } from '@components'
 
+// For the heart pulse animation of the victim icon
+// This animates a traditional heart beat, to give emphasis that this is a heart problem
+
 const heartPulse = keyframes({
   '0%': { transform: 'scale( 0.9 )' },
   '25%': { transform: 'scale( 1.1 )' },
   '50%': { transform: 'scale( 0.95 )' },
   '75%, 100%': { transform: 'scale( 1 )' }
 })
+
+// For the master container of the vicitim location within the map
+// This is location in the top left of the map, where the main responder eventually gets to
 
 const VictimWrap = styled('div', {
   display: 'flex',
@@ -27,6 +33,8 @@ const VictimWrap = styled('div', {
   zIndex: 10,
   '> *': { marginTop: 1 }
 })
+
+// ---------- This is the end of declarations ---------- //
 
 export const Victim = () => {
   return(

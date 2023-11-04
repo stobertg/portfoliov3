@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled } from '@theme'
-import { MainLine } from './Parts'
+import { MainLine, SecondLine } from './Parts'
 
 const MapImage = styled('div', {
   display: 'flex',
@@ -48,7 +48,10 @@ export const MapMain = () => {
 
     <MapImage>
       <img src="/projects/cardiact/map.jpg" alt="Cardiact map" />
-      <MapLines><MainLine /></MapLines>
+      <MapLines>
+        <MainLine />
+        <SecondLine />
+      </MapLines>
     </MapImage>
 
   )

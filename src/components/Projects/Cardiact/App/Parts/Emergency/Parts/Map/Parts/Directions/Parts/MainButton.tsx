@@ -1,6 +1,12 @@
 import React from 'react'
 import { Button } from '../../../../../../Shared'
-import { styled } from '@theme'
+import { styled, keyframes } from '@theme'
+
+const showConfirm = keyframes({
+  '0%, 50%': { pointerEvents: 'none', opacity: 0 },
+  '51%, 99%': { pointerEvents: 'auto', opacity: 1 },
+  '100%': { pointerEvents: 'none', opacity: 0 }
+})
 
 // For the master container of the main button on the top of the container
 // This button shows once the animation user is next to the vicitim - prompting them to clairfy if they are w/ victim
@@ -9,16 +15,7 @@ const ButtonWrap = styled('div', {
   position: 'relative',
   width: '100%',
   transition: '$s1',
-
-  // Since this button is not shown by default, we need to hide it and animate it in when ready
-  // We also need to keep the container for structural purposes, but remove the click events
-
-  variants: {
-    hidden: {
-      true: { pointerEvents: 'none', opacity: 0 },
-      false: { opacity: 1 }
-    }
-  }
+  animation: `${ showConfirm } 20s linear infinite forwards`,
 })
 
 // For the container of the button to sit in the center of the parent container
@@ -46,7 +43,7 @@ export const MainButton = ({
 
   return(
 
-    <ButtonWrap {...{ hidden }}>
+    <ButtonWrap>
       <MainButtonContent>
         <Button variant="primary" title="I'm with Victim" {...{ onClick }} />
       </MainButtonContent>
