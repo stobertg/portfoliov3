@@ -48,10 +48,9 @@ const IphoneContent = styled('div', {
   flexDirection: 'column',
   alignItems: 'center',
   position: 'relative',
-  width: '94.5%',
+  width: '94%',
   height: '97.1%',
   borderRadius: 44,
-  background: '#fff',
   overflow: 'hidden'
 })
 
@@ -68,6 +67,7 @@ const IphoneScreen = styled('div', {
   height: '100%',
   background: '#fff',
   paddingTop: 40,
+  overflow: 'hidden',
 
   // Here we provide support for the Iphone to be Dark Mode
   // This will change the background to black and the color to white

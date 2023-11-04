@@ -1,7 +1,7 @@
 import React, { useState} from 'react'
 import { styled } from '@theme'
 import { Button } from '../../../../../Shared'
-import { DirectionHeader, DirectionList } from './Parts'
+import { MainButton, DirectionHeader, DirectionList, Buttons } from './Parts'
 
 // For the master container of the directions component
 // This holds all of the buttons and directions within the container on the bottom of the map screen
@@ -42,39 +42,6 @@ const DirContent = styled('div', {
       false: { maxHeight: '500px' }
     }
   }
-});
-
-const DirButtonsWrap = styled('div', {
-  position: 'relative',
-  width: '100%',
-
-  variants: {
-    collapsed: {
-      true: {
-        opacity: 0
-      }
-    }
-  }
-})
-
-const DirButtons = styled('div', {
-  position: 'relative',
-  width: '92%',
-  margin: '0 auto',
-  '> *:not(:last-child)': { marginBottom: 4 }
-})
-
-const MainButton = styled('div', {
-  position: 'relative',
-  width: '100%',
-  opacity: 0
-})
-
-const MainButtonContent = styled('div', {
-  position: 'relative',
-  width: '96%',
-  margin: '0 auto',
-  // opacity: 0
 })
 
 // -------------- Typescript declarations -------------- //
@@ -105,13 +72,7 @@ export const Directions = ({
   return(
 
     <DirWrap collapsed={ collapsed }>
-      { collapsed && (
-        <MainButton>
-          <MainButtonContent>
-            <Button variant="primary" title="I'm with Victim" />
-          </MainButtonContent>
-        </MainButton>
-      )}
+      { collapsed && ( <MainButton hidden={ true } onClick={ () => alert('hello') } /> )}
 
       <DirContent 
         collapsed={ collapsed } 
@@ -120,13 +81,14 @@ export const Directions = ({
         <DirectionHeader {...{ address, location, distance }} />
         <DirectionList {...{ directions, collapsed }} />
       </DirContent>
-
-      <DirButtonsWrap collapsed={ collapsed }>
-        <DirButtons>
-          <Button variant="primary" title="I'm with Victim" />
-          <Button variant="secondary" title="Back to map" />
-        </DirButtons>
-      </DirButtonsWrap>
+      
+      <Buttons 
+        collapsed={ collapsed }
+        buttons={[
+          { variant: 'primary', title: "I'm with victim" },
+          { variant: 'secondary', title: 'Back to map' }
+        ]}
+      />
     </DirWrap>
 
   )
