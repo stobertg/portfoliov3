@@ -12,6 +12,7 @@ const IphoneWrap = styled('div', {
   alignItems: 'center',
   position: 'relative',
   width: 360,
+  minWidth: 360,
   maxWidth: '360px !important',
   height: 724,
   background: '$black',
@@ -26,6 +27,7 @@ const IphoneWrap = styled('div', {
     size: {
       l0: {
         width: 310,
+        minWidth: 310,
         maxWidth: '310px !important',
         height: 625,
         borderRadius: 50

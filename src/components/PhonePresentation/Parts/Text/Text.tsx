@@ -22,7 +22,7 @@ export const PresText = ({}:TextProps) => {
   return(
 
     <TextWrap>
-      <AppMode><Heading heavy size="l1" title="Emergency Mode" /></AppMode>
+      <AppMode><Heading heavy title="Emergency Mode" /></AppMode>
       <TextMain>
         <Heading heavy size="l5" title="Map Screen" />
         <Text>
