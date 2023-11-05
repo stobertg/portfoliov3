@@ -61,6 +61,7 @@ const TabsContainer = styled('div', {
   variants: {
     variant: {
       mobile: {
+        width: '100%',
         padding: '0 32px 12px',
         justifyContent: 'space-between',
         borderTop: '1px solid #252525',
