@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled } from '@theme'
 import { Iphone, Cardiact } from '@components'
-import{ PresLogo, PresText, PresSwitch } from './Parts'
+import{ PresLogo, PresText, PresSwitch, PhoneBackground } from './Parts'
 
 const PresWrap = styled('div', {
   display: 'flex',
@@ -11,6 +11,24 @@ const PresWrap = styled('div', {
   width: '100%',
   height: '100%',
   '> *:not(:last-child)': { marginRight: 80 }
+})
+
+const PresPhone = styled('div', {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  position: 'relative',
+
+  '> *:first-child': {
+    zIndex: 10
+  },
+
+  '> *:last-child': { 
+    position: 'absolute',
+    width: 950,
+    transform: 'translate3d( 50px, 30px, 0 )',
+    zIndex: 0
+  }
 })
 
 const PhoneDescp = styled('div', {
@@ -46,7 +64,10 @@ export const PhonePresentation = () => {
   return(
 
     <PresWrap>
-      <Iphone darkMode size="l0" screen={ <Cardiact /> } />
+      <PresPhone>
+        <Iphone darkMode size="l0" screen={ <Cardiact /> } />
+        <PhoneBackground />
+      </PresPhone>
 
       <PhoneDescp>
         <PhoneDescpContent>

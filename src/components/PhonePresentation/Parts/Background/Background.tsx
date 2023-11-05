@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled } from '@theme'
 
-export const Background = () => {
+export const PhoneBackground = () => {
   return(
 
     <svg viewBox="0 0 200 200">
