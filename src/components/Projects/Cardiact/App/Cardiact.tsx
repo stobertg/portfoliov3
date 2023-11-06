@@ -6,12 +6,17 @@ const AppWrap = styled('div', {
 
 })
 
-export const Cardiact = () => {
+interface AppProps {
+  emergencyMode: boolean
+  staticMode: boolean
+}
+
+export const Cardiact = ({ emergencyMode, staticMode }:AppProps) => {
   return(
 
     <AppWrap>
-      <CardiactEmergency />
-      {/* <CariactStatic /> */}
+      { emergencyMode && ( <CardiactEmergency /> ) }
+      { staticMode && ( <CariactStatic /> )}
     </AppWrap>
 
   )

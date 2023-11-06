@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { styled } from '@theme'
 import { Iphone, Cardiact } from '@components'
 import{ PresLogo, PresText, PresSwitch, PhoneBackground } from './Parts'
@@ -61,11 +61,19 @@ interface PhoneProps {
 }
 
 export const PhonePresentation = () => {
+  const [ isEmergency, setIsEmergency ] = useState( true )
+  const changeToEmergency = () => setIsEmergency( true )
+  const changeToStatic = () => setIsEmergency( false )
+
   return(
 
     <PresWrap>
       <PresPhone>
-        <Iphone darkMode size="l0" screen={ <Cardiact /> } />
+        <Iphone 
+          darkMode 
+          size="l0" 
+          screen={ <Cardiact emergencyMode={ isEmergency } staticMode={ !isEmergency } /> } 
+        />
         <PhoneBackground />
       </PresPhone>
 
@@ -74,7 +82,10 @@ export const PhonePresentation = () => {
           <PresText />
 
           <PresBottom>
-            <PresSwitch />
+            <PresSwitch 
+              showEmergency={ changeToEmergency } 
+              showStatic={ changeToStatic }  
+            />
             <PresLogo />
           </PresBottom>
         </PhoneDescpContent>

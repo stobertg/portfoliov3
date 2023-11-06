@@ -18,7 +18,7 @@ const IphoneWrap = styled('div', {
   background: '$black',
   color: '$black',
   borderRadius: 56,
-  boxShadow: '0 2px 20px rgba( 0,0,0, 0.2 )',
+  boxShadow: '0 5px 20px rgba( 0,0,0, 0.8 )',
 
   // Here we add different size the Iphone can be
   // It still maintains the correct aspect ratio
@@ -116,6 +116,10 @@ const IphoneBottom = styled('div', {
       true: { '&:after': { background: '$white' }}
     }
   }
+})
+
+const IphoneTransition = styled('div', {
+
 })
 
 // -------------- Typescript declarations -------------- //
