@@ -13,6 +13,7 @@ interface NavProps {
   triggers: {
     icon: string
     title: string
+    onClick?: React.MouseEventHandler<HTMLButtonElement>
   }[]
   tabContent: {
     content?: React.ReactNode

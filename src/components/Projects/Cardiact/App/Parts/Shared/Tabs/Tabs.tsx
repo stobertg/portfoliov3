@@ -130,6 +130,7 @@ interface TabsProps {
     icon?: string
     iconLayered?: string
     title?: string 
+    onClick?: React.MouseEventHandler<HTMLButtonElement>
   }[]
   tabContent: { 
     title?: string 
@@ -137,10 +138,6 @@ interface TabsProps {
   }[]
   defaultTab?: number
   bgColor?: 'primary' | 'secondary' | 'tertiary'
-  border?: 'noBorder'
-  tabSize?: 'tiny' | 'small'
-  contentWidth?: 'small' | 'medium' | 'large'
-  onSearch?: any
   bold?: boolean
 }
 
@@ -152,11 +149,7 @@ export const Tabs = ({
     tabContent,
     defaultTab,
     bgColor,
-    bold,
-    border,
-    tabSize,
-    contentWidth,
-    onSearch
+    bold
   }: TabsProps) => {
   return (
 
@@ -168,6 +161,7 @@ export const Tabs = ({
               key={ `trigger-${ i + 1 }`} 
               value={`tab${ i + 1 }`}
               {...{ variant }}
+              onClick={ trigger.onClick }
             > 
               { trigger.icon && ( <Icon size="l0" icon={ trigger.icon } /> )}
               { trigger.title && ( <Heading {...{ bold }} color="secondary" title={ trigger.title } /> )}

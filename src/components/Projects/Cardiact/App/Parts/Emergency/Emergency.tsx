@@ -8,7 +8,18 @@ const EmergencyWrap = styled('div', {
   height: '100%'
 })
 
-export const CardiactEmergency = () => {
+interface EmergencyProps {
+  onMapClick: React.MouseEventHandler<HTMLButtonElement>
+  onStatusClick: React.MouseEventHandler<HTMLButtonElement>
+  onChatClick: React.MouseEventHandler<HTMLButtonElement>
+}
+
+export const CardiactEmergency = ({ 
+    onMapClick,
+    onStatusClick,
+    onChatClick
+  }:EmergencyProps) => {
+
   return(
 
     <EmergencyWrap>
@@ -17,13 +28,13 @@ export const CardiactEmergency = () => {
         imageAlt="Cardiact victim name"
         name="Edward York IV"
         triggers={[
-          { icon: 'map-pin', title: 'Map' },
-          { icon: 'activity', title: 'Status' },
-          { icon: 'message-circle', title: 'Chat' }
+          { icon: 'map-pin', title: 'Map', onClick: onMapClick },
+          { icon: 'activity', title: 'Status', onClick: onStatusClick },
+          { icon: 'message-circle', title: 'Chat', onClick: onChatClick }
         ]}
         tabContent={[
           { content: <Map /> },
-          {},
+          { content: <Status /> },
           { content: <Chat /> }
         ]}
       />

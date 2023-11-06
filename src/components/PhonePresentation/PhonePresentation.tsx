@@ -69,7 +69,19 @@ export const PhonePresentation = () => {
           <Iphone 
             darkMode 
             size="l0" 
-            screen={ <Cardiact emergencyMode={ isEmergency } staticMode={ !isEmergency } /> } 
+            screen={ 
+              <Cardiact 
+                emergencyMode={ isEmergency } 
+                staticMode={ !isEmergency } 
+                onMapClick={() => alert('hello')}
+                onStatusClick={() => alert('hello')}
+                onChatClick={() => alert('hello')}
+                onVitalsClick={() => alert('hello')}
+                onContactsClick={() => alert('hello')}
+                onProfileClick={() => alert('hello')}
+                onHelpClick={() => alert('hello')}
+              /> 
+            } 
           />
           <PhoneBackground />
         </PresPhone>
@@ -85,7 +97,10 @@ export const PhonePresentation = () => {
             />
 
             <PresBottom>
-              <PresSwitch showEmergency={ changeToEmergency } showStatic={ changeToStatic } />
+              <PresSwitch 
+                showEmergency={ changeToEmergency } 
+                showStatic={ changeToStatic } 
+              />
             </PresBottom>
           </PhoneDescpContent>
         </PhoneDescp>

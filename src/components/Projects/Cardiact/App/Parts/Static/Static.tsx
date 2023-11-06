@@ -8,7 +8,20 @@ const StaticWrap = styled('div', {
   height: '100%'
 })
 
-export const CariactStatic = () => {
+interface StatusProps {
+  onVitalsClick: React.MouseEventHandler<HTMLButtonElement>
+  onContactsClick: React.MouseEventHandler<HTMLButtonElement>
+  onProfileClick: React.MouseEventHandler<HTMLButtonElement>
+  onHelpClick: React.MouseEventHandler<HTMLButtonElement>
+}
+
+export const CariactStatic = ({ 
+    onVitalsClick,
+    onContactsClick,
+    onProfileClick,
+    onHelpClick
+  }:StatusProps) => {
+  
   return(
 
     <StaticWrap>
@@ -16,10 +29,10 @@ export const CariactStatic = () => {
 
       <StaticNav 
         triggers={[
-          { icon: 'heart', title: 'Status' },
-          { icon: 'users-2', title: 'Contacts' },
-          { icon: 'user-2', title: 'Profile' },
-          { icon: 'alert-triangle', title: 'Help' }
+          { icon: 'heart', title: 'Vitals', onClick: onVitalsClick },
+          { icon: 'users-2', title: 'Contacts', onClick: onContactsClick },
+          { icon: 'user-2', title: 'Profile', onClick: onProfileClick },
+          { icon: 'alert-triangle', title: 'Help', onClick: onHelpClick }
         ]}
         tabContent={[
           { content: <Status /> },
