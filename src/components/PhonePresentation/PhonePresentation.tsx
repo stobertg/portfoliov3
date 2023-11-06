@@ -4,12 +4,19 @@ import { Iphone, Cardiact } from '@components'
 import{ PresLogo, PresText, PresSwitch, PhoneBackground } from './Parts'
 
 const PresWrap = styled('div', {
+  position: 'relative',
+  width: '100%'
+})
+
+const PresContent = styled('div', {
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'space-between',
   position: 'relative',
+  maxWidth: 880,
   width: '100%',
   height: '100%',
+  margin: '0 auto',
   '> *:not(:last-child)': { marginRight: 80 }
 })
 
@@ -17,18 +24,7 @@ const PresPhone = styled('div', {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  position: 'relative',
-
-  '> *:first-child': {
-    zIndex: 10
-  },
-
-  '> *:last-child': { 
-    position: 'absolute',
-    width: 950,
-    transform: 'translate3d( 50px, 30px, 0 )',
-    zIndex: 0
-  }
+  position: 'relative'
 })
 
 const PhoneDescp = styled('div', {
@@ -68,28 +64,34 @@ export const PhonePresentation = () => {
   return(
 
     <PresWrap>
-      <PresPhone>
-        <Iphone 
-          darkMode 
-          size="l0" 
-          screen={ <Cardiact emergencyMode={ isEmergency } staticMode={ !isEmergency } /> } 
-        />
-        <PhoneBackground />
-      </PresPhone>
+      <PresContent>
+        <PresPhone>
+          <Iphone 
+            darkMode 
+            size="l0" 
+            screen={ <Cardiact emergencyMode={ isEmergency } staticMode={ !isEmergency } /> } 
+          />
+          <PhoneBackground />
+        </PresPhone>
 
-      <PhoneDescp>
-        <PhoneDescpContent>
-          <PresText />
-
-          <PresBottom>
-            <PresSwitch 
-              showEmergency={ changeToEmergency } 
-              showStatic={ changeToStatic }  
+        <PhoneDescp>
+          <PhoneDescpContent>
+            <PresText 
+              switchMode={ !isEmergency }
+              headings={[
+                { title: 'Map Screen' },
+                { title: 'Unified Response' }
+              ]}
             />
-            <PresLogo />
-          </PresBottom>
-        </PhoneDescpContent>
-      </PhoneDescp>
+
+            <PresBottom>
+              <PresSwitch showEmergency={ changeToEmergency } showStatic={ changeToStatic } />
+            </PresBottom>
+          </PhoneDescpContent>
+        </PhoneDescp>
+      </PresContent>
+
+      <PresLogo />
     </PresWrap>
 
   )

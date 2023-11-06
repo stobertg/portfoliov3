@@ -14,6 +14,7 @@ const SwitchWrap = styled('div', {
   width: 100,
   height: 56,
   background: '#750c0d',
+  border: '1px solid #720000',
   borderRadius: '$pill'
 })
 
@@ -40,7 +41,7 @@ const SwitchButton = styled('button', {
     width: 40,
     height: 40,
     borderRadius: '50%',
-    background: 'rgba( 255,255,255, 0.1 )',
+    background: 'rgba( 255,255,255, 0.05 )',
     transition: '$s1',
     transform: 'scale( 0 )'
   },
@@ -91,11 +92,17 @@ export const PresSwitch = ({
 
     <SwitchWrap>
       <SwitchContent>
-        <SwitchButton onClick={() => { toggleFeature(); showEmergency() }} selected={ !isFeatureActive }>
+        <SwitchButton 
+          onClick={() => { toggleFeature(); showEmergency() }} 
+          selected={ !isFeatureActive }
+        >
           <Icon size="l1" icon="heart" />
         </SwitchButton>
 
-        <SwitchButton onClick={() => { toggleFeature(); showStatic() }} selected={ isFeatureActive }>
+        <SwitchButton 
+          onClick={() => { toggleFeature(); showStatic() }} 
+          selected={ isFeatureActive }
+        >
           <Icon size="l1" icon="user-2" />
         </SwitchButton>
       </SwitchContent>

@@ -2,6 +2,9 @@ import React from 'react'
 import { Button } from '../../../../../../Shared'
 import { styled, keyframes } from '@theme'
 
+// For the animation showing the confirmtion button, directly above the directions
+// This will make it so the button shows up once the user gets close to the vicitim
+
 const showConfirm = keyframes({
   '0%, 50%': { pointerEvents: 'none', opacity: 0 },
   '51%, 99%': { pointerEvents: 'auto', opacity: 1 },

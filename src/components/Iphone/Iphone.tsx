@@ -18,7 +18,8 @@ const IphoneWrap = styled('div', {
   background: '$black',
   color: '$black',
   borderRadius: 56,
-  boxShadow: '0 5px 20px rgba( 0,0,0, 0.8 )',
+  boxShadow: '0 5px 15px rgba( 0,0,0, 0.8 )',
+  zIndex: 1,
 
   // Here we add different size the Iphone can be
   // It still maintains the correct aspect ratio

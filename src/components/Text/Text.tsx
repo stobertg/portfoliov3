@@ -14,21 +14,33 @@ const TextWrap = styled('div', {
 
   variants: {
     fontSize: {
-      l0: {},
+      l0: { p: { fontSize: '$s1' }},
       l1: { p: { fontSize: '$s2', lineHeight: '1.75' }}
+    },
+
+    font: {
+      sansSerif: {
+        p: { fontFamily: '$sansSerif' }
+      }
+    },
+
+    color: {
+      secondary: { color: '$textSecondary' }
     }
   }
 })
 
 interface TextProps {
+  font?: 'sansSerif'
   fontSize?: 'l0' | 'l1'
+  color?: 'secondary'
   children: React.ReactNode
 }
 
-export const Text = ({ children, fontSize }:TextProps) => {
+export const Text = ({ children, font, color, fontSize }:TextProps) => {
   return(
 
-    <TextWrap {...{ fontSize }}>{ children }</TextWrap>
+    <TextWrap {...{ font, fontSize, color }}>{ children }</TextWrap>
 
   )
 }

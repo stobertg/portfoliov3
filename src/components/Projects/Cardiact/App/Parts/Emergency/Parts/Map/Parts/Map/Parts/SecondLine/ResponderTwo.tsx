@@ -39,6 +39,8 @@ const ResponderLocation = styled('div', {
   }
 })
 
+// ---------- This is the end of declarations ---------- //
+
 export const ResponderTwo = () => {
   return(
 

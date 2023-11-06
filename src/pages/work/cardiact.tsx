@@ -14,7 +14,7 @@ const Gather: NextPage = () => {
       blockSpacing="l2"
     >
 
-      <Block width="small">
+      <Block width="medium">
         <PhonePresentation />
       </Block>
 

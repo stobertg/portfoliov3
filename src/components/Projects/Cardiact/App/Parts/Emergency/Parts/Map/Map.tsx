@@ -11,9 +11,13 @@ const MapWrap = styled('div', {
   height: '100%'
 })
 
+// -------------- Typescript declarations -------------- //
+
 interface MapProps {
 
 }
+
+// ---------- This is the end of declarations ---------- //
 
 export const Map = ({}:MapProps) => {
   const [ showConfirm, setShowConfirm ] = useState( false )
