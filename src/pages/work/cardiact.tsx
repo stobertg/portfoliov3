@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import type { NextPage } from 'next'
-import { SiteContainer, Block, Intro, PhonePresentation } from '@components'
+import { SiteContainer, Block, Intro, PhonePresentation, Cardiact } from '@components'
 
 const Gather: NextPage = () => {
+  const [ isEmergency, setIsEmergency ] = useState( true )
+
+  const changeToEmergency = () => { setIsEmergency( true ), showText( 'map' )}
+  const changeToStatic = () => { setIsEmergency( false ), showText( 'vitals' ) }
+
+  const [ currentText, setCurrentText ] = useState('map')
+  const showText = ( text:string ) => { setCurrentText( text )}
+
   return (
     
     <SiteContainer 
@@ -15,7 +23,23 @@ const Gather: NextPage = () => {
     >
 
       <Block width="medium">
-        <PhonePresentation />
+        <PhonePresentation 
+          darkMode
+          phoneHasBackground
+          screen={
+            <Cardiact 
+              emergencyMode={ isEmergency } 
+              staticMode={ !isEmergency } 
+              onMapClick={() => showText( 'map' )}
+              onStatusClick={() => showText( 'status' )}
+              onChatClick={() => showText( 'chat' )}
+              onVitalsClick={() => showText( 'vitals' )}
+              onContactsClick={() => showText( 'contacts' )}
+              onProfileClick={() => showText( 'profile' )}
+              onHelpClick={() => showText( 'help' )}
+            /> 
+          }
+        />
       </Block>
 
       <Block>
