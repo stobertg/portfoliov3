@@ -38,8 +38,10 @@ const Gather: NextPage = () => {
           logo="/projects/cardiact/logo.svg"
           logoAnimation={ <Victim /> }
           phoneBackground={ <Blob /> }
-          showEmergency={ changeToEmergency } 
-          showStatic={ changeToStatic }
+          showLeftSwitchScreen={ changeToEmergency } 
+          leftSwitchIcon="heart"
+          showRightSwitchScreen={ changeToStatic }
+          rightSwitchIcon="user-2"
           textSegments={ textSegments }
           currentText={ currentText }
           modeTitle={ !isEmergency }

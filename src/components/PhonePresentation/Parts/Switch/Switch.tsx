@@ -31,12 +31,18 @@ const SwitchContent = styled('div', {
   zIndex: 1
 })
 
+// For the container of the individual buttons within the container
+// Clicking these buttons will change the iPhone screen to their respective parts of the app
+
 const SwitchButton = styled('button', {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   position: 'relative',
   width: 44,
+
+  // For the hover effect of the buttons - where the circle scales up and fades in behind the icon
+  // This is set so at first it is hidden and adds a google-mui-like iteraction where the circle scales in
 
   '&:before': { 
     content: '',
@@ -49,9 +55,14 @@ const SwitchButton = styled('button', {
     transform: 'scale( 0 )'
   },
 
+  // On hover, we scale in the background of the button
+  // This give the afforance that the button is clickable
+
   '&:hover:before': {
     transform: 'scale( 1 )'
   },
+
+  // Here we set the button to not be clickable if selected
 
   variants: {
     selected: {
@@ -59,6 +70,9 @@ const SwitchButton = styled('button', {
     }
   }
 })
+
+// For the container and interaction of the bg red dot that changes based on the button click
+// This is a traditional switch-like dot that animates to the button clicked to show it has been selected
 
 const SwitchDot = styled('div', {
   position: 'absolute',
@@ -71,6 +85,9 @@ const SwitchDot = styled('div', {
   transition: '$s1',
   zIndex: 0,
 
+  // Here we set the location of the dot once the right button is clicked
+  // By default, this starts on the left as the first button is on by default
+
   variants: {
     static: {
       true: { transform: 'translateX( 50% )' }
@@ -78,14 +95,22 @@ const SwitchDot = styled('div', {
   }
 })
 
+// -------------- Typescript declarations -------------- //
+
 interface SwitchProps {
-  showStatic: any
-  showEmergency: any
+  showLeftSwitchScreen: any
+  showRightSwitchScreen: any
+  leftSwitchIcon: string
+  rightSwitchIcon: string
 }
 
+// ---------- This is the end of declarations ---------- //
+
 export const PresSwitch = ({ 
-    showStatic, 
-    showEmergency 
+    showLeftSwitchScreen, // Required - For the function to show the screens accociated with the left icon
+    showRightSwitchScreen, // Required - For the function to show the screens accociated with the right icon
+    leftSwitchIcon, // Required - For the icon on the left
+    rightSwitchIcon // Required - For the icon on the right
   }:SwitchProps) => {
   
   const [ isFeatureActive, setIsFeatureActive ] = useState( false )
@@ -96,17 +121,17 @@ export const PresSwitch = ({
     <SwitchWrap>
       <SwitchContent>
         <SwitchButton 
-          onClick={() => { toggleFeature(); showEmergency() }} 
+          onClick={() => { toggleFeature(); showLeftSwitchScreen() }} 
           selected={ !isFeatureActive }
         >
-          <Icon size="l1" icon="heart" />
+          <Icon size="l1" icon={ leftSwitchIcon } />
         </SwitchButton>
 
         <SwitchButton 
-          onClick={() => { toggleFeature(); showStatic() }} 
+          onClick={() => { toggleFeature(); showRightSwitchScreen() }} 
           selected={ isFeatureActive }
         >
-          <Icon size="l1" icon="user-2" />
+          <Icon size="l1" icon={ rightSwitchIcon } />
         </SwitchButton>
       </SwitchContent>
 

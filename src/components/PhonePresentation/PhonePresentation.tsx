@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { styled } from '@theme'
-import { Iphone, Cardiact } from '@components'
+import { Iphone } from '@components'
 import{ PresLogo, PresText, TextSegment, PresSwitch } from './Parts'
 
 // For the master container of the phone presentation
@@ -83,8 +83,10 @@ interface PhoneProps {
   screen: React.ReactNode
   phoneBackground?: React.ReactNode
   modeTitle?: any
-  showEmergency: any
-  showStatic: any
+  showLeftSwitchScreen: any
+  showRightSwitchScreen: any
+  leftSwitchIcon: string
+  rightSwitchIcon: string
   textSegments: Record<string, TextSegmentType>
   currentText: string
   logoAnimation?: React.ReactNode
@@ -98,16 +100,18 @@ interface PhoneProps {
 export const PhonePresentation = ({
     darkMode, // Optional - For the iPhone to be set to dark mode
     screen, // Required - For the content of the iPhone
-    phoneBackground, // Optional - I
-    modeTitle,
-    switchModeTitles,
-    showEmergency,
-    showStatic,
-    textSegments,
-    currentText,
-    logo,
-    logoAltText,
-    logoAnimation
+    phoneBackground, // Optional - Supporting a decorative background behind the iPhone
+    modeTitle, // Required - boolean item that allows the switching of the titles below
+    switchModeTitles, // Required - For the titles of the app modes 
+    showLeftSwitchScreen, // Required - For the function to show the screens associated with the left switch button
+    showRightSwitchScreen, // Required - For the function to show the screens associated with the right switch button
+    leftSwitchIcon, // Required - For the icon on the left of the switch 
+    rightSwitchIcon, // Required - For the icon on the right of the switch 
+    textSegments, // Required - Setting the title and descriptive text the content
+    currentText, // Required - Setting the title and descriptive text of the default content
+    logo, // Optional - For the image of the logo
+    logoAltText, // Required if 'logo' - For the description of the logo image
+    logoAnimation // Optional - For a subtle animation that sits above the logo
   }:PhoneProps) => {
 
   return(
@@ -142,7 +146,7 @@ export const PhonePresentation = ({
             </PresText>
 
             <PresBottom>
-              <PresSwitch {...{ showEmergency, showStatic }} />
+              <PresSwitch {...{ showLeftSwitchScreen, showRightSwitchScreen, leftSwitchIcon, rightSwitchIcon }} />
             </PresBottom>
           </PhoneDescpContent>
         </PhoneDescp>
