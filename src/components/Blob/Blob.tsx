@@ -13,7 +13,7 @@ const BlobWrap = styled('div', {
   }
 })
 
-export const PhoneBackground = () => {
+export const Blob = () => {
   return(
 
     <BlobWrap>

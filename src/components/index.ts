@@ -1,3 +1,4 @@
+export { Blob } from './Blob/Blob'
 export { Block } from './Block/Block'
 export { Browser } from './Browser/Browser'
 export { Grid } from './Grid/Grid'

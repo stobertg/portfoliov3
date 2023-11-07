@@ -3,7 +3,7 @@ import { styled } from '@theme'
 import { Icon } from '@components'
 
 // For the master container of the switch within the phone presentation
-// This switches the feature 
+// This switches the feature app, if there is more than one (i.e. User version & Admin Version )
 
 const SwitchWrap = styled('div', {
   display: 'flex',
@@ -17,6 +17,9 @@ const SwitchWrap = styled('div', {
   border: '1px solid #720000',
   borderRadius: '$pill'
 })
+
+// For the container of the icons within the center of the master container
+// These are represented by icons, where clicking one will change the app to the respective screens
 
 const SwitchContent = styled('div', {
   display: 'flex',

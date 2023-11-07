@@ -42,16 +42,18 @@ const AppModeContent = styled('div', {
 interface TextProps {
   switchMode: boolean
   children: React.ReactNode
+  titles: { title: string }[]
 }
 
-export const PresText = ({ switchMode, children }:TextProps) => {
+export const PresText = ({ switchMode, titles, children }:TextProps) => {
   return(
 
     <TextWrap>
       <AppMode>
         <AppModeContent {...{ switchMode }}>
-          <Heading color="secondary" heavy title="Emergency Mode" />
-          <Heading color="secondary" heavy title="Static Mode" />
+          { titles.map(( title, i ) => (
+            <Heading key={`title-${ i }`} heavy title={ title.title } />
+          ))}
         </AppModeContent>
       </AppMode>
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import { styled } from '@theme'
-import { Victim } from '../../../Projects/Cardiact/App/Parts/Emergency/Parts/Map/Parts/Map/Parts'
 
 // For the master container of the logo wrap in the bottom right of the presentation component
 // This shows the logo for the respective Iphone presentation
@@ -40,17 +39,19 @@ const LogoAnimation = styled('div', {
 // -------------- Typescript declarations -------------- //
 
 interface LogoProps {
-
+  logoAnimation?: React.ReactNode
+  logo?: string
+  logoAltText?: string
 }
 
 // ---------- This is the end of declarations ---------- //
 
-export const PresLogo = ({}:LogoProps) => {
+export const PresLogo = ({ logoAnimation, logo, logoAltText }:LogoProps) => {
   return(
 
     <LogoWrap>
-      <LogoAnimation><Victim /></LogoAnimation>
-      <LogoImage><img src="/projects/cardiact/logo.svg" alt="CardiAct logo" /></LogoImage>
+      { logoAnimation && ( <LogoAnimation>{ logoAnimation }</LogoAnimation> )}
+      <LogoImage><img src={ logo } alt={ logoAltText } /></LogoImage>
     </LogoWrap>
 
   )
