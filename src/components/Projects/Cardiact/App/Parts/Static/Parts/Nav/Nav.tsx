@@ -1,13 +1,7 @@
 import React from 'react'
-import { styled } from '@theme'
 import { Tabs } from '../../../Shared'
 
-// For the container of the navigation in static mode
-// This is more of a traditional app navigation because the UX is different vs active
-
-const NavWrap = styled('div', {
-  
-})
+// -------------- Typescript declarations -------------- //
 
 interface NavProps {
   triggers: {
@@ -20,12 +14,16 @@ interface NavProps {
   }[]
 }
 
-export const StaticNav = ({ triggers, tabContent }:NavProps) => {
+// ---------- This is the end of declarations ---------- //
+
+export const StaticNav = ({ 
+    triggers, // Required - For the tab buttons
+    tabContent // REquired - For the content associated with the tabs
+  }:NavProps) => {
+  
   return(
 
-    <NavWrap>
-      <Tabs variant="mobile" {...{ triggers, tabContent }} />
-    </NavWrap>
+    <Tabs variant="mobile" {...{ triggers, tabContent }} />
 
   )
 }

@@ -45,7 +45,7 @@ export const ResponderTwo = () => {
   return(
 
     <ResponderLocation>
-      <Icon size="l0" icon="user-2" />
+      <Icon size="l0" icon="user" />
     </ResponderLocation>
   )
 }

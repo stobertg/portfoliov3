@@ -40,7 +40,7 @@ const Gather: NextPage = () => {
           phoneBackground={ <Blob /> }
           leftSwitchIcon="heart"
           showLeftSwitchScreen={ changeToEmergency } 
-          rightSwitchIcon="user-2"
+          rightSwitchIcon="user"
           showRightSwitchScreen={ changeToStatic }
           textSegments={ textSegments }
           currentText={ currentText }

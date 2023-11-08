@@ -3,6 +3,9 @@ import { styled } from '@theme'
 import { PageWrap, Card, ProfileCard } from '../../../Shared'
 import { ResponderList } from './Parts'
 
+// For the master container of the content within the Status Screen on the Emergency part of the app
+// This autmoates the spacing between each of the content blocks and account for scroll if content gets long
+
 const StatusWrap = styled('div', {
   position: 'relative',
   width: '100%',
@@ -11,6 +14,8 @@ const StatusWrap = styled('div', {
   overflow: 'scroll',
   '> *:not(:last-child)': { marginBottom: 8 }
 })
+
+// ---------- This is the end of declarations ---------- //
 
 export const Status = () => {
   return(

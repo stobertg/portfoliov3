@@ -30,8 +30,8 @@ export const CariactStatic = ({
       <StaticNav 
         triggers={[
           { icon: 'heart', title: 'Vitals', onClick: onVitalsClick },
-          { icon: 'users-2', title: 'Contacts', onClick: onContactsClick },
-          { icon: 'user-2', title: 'Profile', onClick: onProfileClick },
+          { icon: 'users', title: 'Contacts', onClick: onContactsClick },
+          { icon: 'user', title: 'Profile', onClick: onProfileClick },
           { icon: 'alert-triangle', title: 'Help', onClick: onHelpClick }
         ]}
         tabContent={[
