@@ -39,8 +39,8 @@ const Gather: NextPage = () => {
           logoAnimation={ <Victim /> }
           phoneBackground={ <Blob /> }
           leftSwitchIcon="heart"
-          showLeftSwitchScreen={ changeToEmergency } 
           rightSwitchIcon="user"
+          showLeftSwitchScreen={ changeToEmergency } 
           showRightSwitchScreen={ changeToStatic }
           textSegments={ textSegments }
           currentText={ currentText }

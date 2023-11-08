@@ -1,6 +1,7 @@
 import React from 'react'
 import { styled } from '@theme'
-import { Heading } from '@components'
+import { Heading, Icon } from '@components'
+import { ResponseStatus } from './Parts'
 import { Card } from '../'
 
 // For the container of the hero within the master card container
@@ -106,6 +107,8 @@ export const ProfileCard = ({
         <CardText>
           <Heading heavy size="l1" title={ name } />
           <Heading color="secondary" title={`${ gender }, aged ${ age }`} />
+
+          <ResponseStatus />
         </CardText>
       </CardHero>
 
