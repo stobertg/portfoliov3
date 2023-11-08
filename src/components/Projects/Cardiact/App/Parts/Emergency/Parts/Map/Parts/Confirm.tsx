@@ -38,6 +38,9 @@ const ConfirmWrap = styled('div', {
     borderRadius: '$r3 $r3 48px 48px'
   },
 
+  // By default, the confirm button is hidden and we set the css to be hidden
+  // This variant is so the modal will apprear with a subtle animation scaling into the screen
+
   variants: {
     showConfirm: {
       true: {

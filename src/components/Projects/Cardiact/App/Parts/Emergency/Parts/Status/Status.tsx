@@ -12,11 +12,7 @@ const StatusWrap = styled('div', {
   '> *:not(:last-child)': { marginBottom: 8 }
 })
 
-interface StatusProps {
-
-}
-
-export const Status = ({}:StatusProps) => {
+export const Status = () => {
   return(
 
     <PageWrap>

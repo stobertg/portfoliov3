@@ -41,9 +41,8 @@ const LineMaster = styled('div', {
       bottom: 0,
       background: '#2b2b2b',
       borderRadius: 4
-    },
-  },
-
+    }
+  }
 })
 
 // For the master container of the Responder Two lines
@@ -97,6 +96,9 @@ const LineBottom = styled('div', {
     width: 4,
     height: '100%'
   },
+
+  // For the short small line on the top of the container 
+  // This shows the final line going towards the victim
 
   '&:after': {
     left: 0,
