@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled } from '@theme'
 import { Heading } from '@components'
-import { Card } from '../../../../Shared'
+import { Card } from '../'
 
 // For the container of the hero within the master card container
 // This holds the image, title, and age on the top of the container

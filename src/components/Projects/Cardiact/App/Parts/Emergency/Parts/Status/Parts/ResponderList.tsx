@@ -59,6 +59,7 @@ interface ResponderProps {
     name: string
     distance?: string
     relation?: string
+    hasAed?: boolean
   }[]
 }
 
@@ -80,36 +81,11 @@ export const ResponderList = ({ responders }:ResponderProps) => {
                 </ResponderText>
               </ResponderInfo>
 
-              <ResponderAttr><Aed /></ResponderAttr>
+              { responder.hasAed && ( <ResponderAttr><Aed /></ResponderAttr> )}
             </Responder>
           </li>
           
-        )) }
-        <li>
-          <Responder>
-            <ResponderInfo>
-              <ResponderImage><img src="/projects/cardiact/ed.jpg" alt="CardiactResponder" /></ResponderImage>
-              <ResponderText>
-                <Heading heavy size="l0" title="George Clearance" />
-                <Heading color="secondary" title="0.02 miles away" />
-              </ResponderText>
-            </ResponderInfo>
-
-            <ResponderAttr><Aed /></ResponderAttr>
-          </Responder>
-        </li>
-
-        <li>
-          <Responder>
-            <ResponderInfo>
-              <ResponderImage><img src="/projects/cardiact/ed.jpg" alt="CardiactResponder" /></ResponderImage>
-              <ResponderText>
-                <Heading heavy size="l0" title="Richard Neville" />
-                <Heading color="secondary" title="There now" />
-              </ResponderText>
-            </ResponderInfo>
-          </Responder>
-        </li>
+        ))}
       </ul>
     </ListWrap>
 

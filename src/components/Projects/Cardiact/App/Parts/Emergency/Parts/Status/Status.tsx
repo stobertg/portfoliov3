@@ -1,66 +1,13 @@
 import React from 'react'
 import { styled } from '@theme'
-import { Heading } from '@components'
-import { PageWrap, Card } from '../../../Shared'
-import { Aed } from '../Map/Parts/Map/Parts/SecondLine/Aed'
-import { ProfileCard } from '../../../Static/Parts/Profile/Parts'
+import { PageWrap, Card, ProfileCard } from '../../../Shared'
+import { ResponderList } from './Parts'
 
 const StatusWrap = styled('div', {
   position: 'relative',
   width: '100%',
   padding: '12px 0',
   '> *:not(:last-child)': { marginBottom: 8 }
-})
-
-
-const ResponderList = styled('div', {
-
-  ul: { listStyle: 'none' },
-  li: { 
-    padding: '12px 0',
-    '&:not(:last-child)': { borderBottom: '1px solid #1c1c1c' },
-    '&:first-child': { paddingTop: 0 },
-    '&:last-child': { paddingBottom: 0 }
-  }
-}) 
-
-const Responder = styled('div', {
-  display: 'flex',
-  flexDirection: 'row',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  position: 'relative',
-  width: '100%'
-})
-
-const ResponderInfo = styled('div', {
-  display: 'flex',
-  flexDirection: 'row',
-  alignItems: 'center',
-  position: 'relative',
-  '> *:not(:last-child)': { marginRight: 8 }
-})
-
-const ResponderImage = styled('div', {
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  position: 'relative',
-  width: 32,
-  height: 32,
-  borderRadius: '50%',
-  overflow: 'hidden',
-  img: { height: '100%', objectFit: 'cover' }
-})
-
-const ResponderText = styled('div', {
-  position: 'relative',
-  '> *:not(:last-child)': { marginBottom: 2 },
-  '> *:last-child': { fontSize: 13 }
-})
-
-const ResponderAttr = styled('div', {
-  '*': { position: 'relative', bottom: 'auto', right: 'auto' }
 })
 
 interface StatusProps {
@@ -86,35 +33,12 @@ export const Status = ({}:StatusProps) => {
           headingSize="l0"
           headingColor="secondary"
         >
-          <ResponderList>
-            <ul>
-              <li>
-                <Responder>
-                  <ResponderInfo>
-                    <ResponderImage><img src="/projects/cardiact/ed.jpg" alt="CardiactResponder" /></ResponderImage>
-                    <ResponderText>
-                      <Heading heavy size="l0" title="George Clearance" />
-                      <Heading color="secondary" title="0.02 miles away" />
-                    </ResponderText>
-                  </ResponderInfo>
-
-                  <ResponderAttr><Aed /></ResponderAttr>
-                </Responder>
-              </li>
-
-              <li>
-                <Responder>
-                  <ResponderInfo>
-                    <ResponderImage><img src="/projects/cardiact/ed.jpg" alt="CardiactResponder" /></ResponderImage>
-                    <ResponderText>
-                      <Heading heavy size="l0" title="Richard Neville" />
-                      <Heading color="secondary" title="There now" />
-                    </ResponderText>
-                  </ResponderInfo>
-                </Responder>
-              </li>
-            </ul>
-          </ResponderList>
+          <ResponderList 
+            responders={[
+              { image: '/projects/cardiact/ed.jpg', name: 'George Clearance', distance: '0.2 miles away', hasAed: true },
+              { image: '/projects/cardiact/ed.jpg', name: 'Richard Neville', distance: 'There now' }
+            ]}
+          />
         </Card>
 
         <Card
@@ -123,7 +47,12 @@ export const Status = ({}:StatusProps) => {
           headingSize="l0"
           headingColor="secondary"
         >
-      
+          <ResponderList 
+            responders={[
+              { image: '/projects/cardiact/ed.jpg', name: 'George Clearance', distance: '0.2 miles away' },
+              { image: '/projects/cardiact/ed.jpg', name: 'Richard Neville', distance: 'There now' }
+            ]}
+          />
         </Card>
       </StatusWrap>
     </PageWrap>

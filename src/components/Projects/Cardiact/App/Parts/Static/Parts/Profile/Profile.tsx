@@ -1,6 +1,6 @@
 import React from 'react'
-import { PageWrap } from '../../../Shared'
-import { ProfileCard, LocationCard, MedicalInfoCard } from './Parts'
+import { PageWrap, ProfileCard } from '../../../Shared'
+import { LocationCard, MedicalInfoCard } from './Parts'
 
 // ---------- This is the end of declarations ---------- //
 
