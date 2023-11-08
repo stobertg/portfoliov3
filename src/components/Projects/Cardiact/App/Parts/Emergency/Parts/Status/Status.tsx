@@ -32,7 +32,7 @@ export const Status = () => {
         />
 
         <Card
-          icon="users-2"
+          icon="users"
           title="Responders"
           headingSize="l0"
           headingColor="secondary"
@@ -46,7 +46,7 @@ export const Status = () => {
         </Card>
 
         <Card
-          icon="users-2"
+          icon="users"
           title="Emergency contacts"
           headingSize="l0"
           headingColor="secondary"

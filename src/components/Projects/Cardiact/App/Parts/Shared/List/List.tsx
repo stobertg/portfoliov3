@@ -16,7 +16,9 @@ const ListWrap = styled('div', {
   ul: {
     listStyle: 'none',
     fontSize: 13,
-    '> li:not(:last-child)': { borderBottom: '1px solid #212121' }
+    '> li:not(:last-child)': { borderBottom: '1px solid #212121' },
+    '> li:first-child > *': { paddingTop: 4 },
+    '> li:last-child > *': { paddingBottom: 0 }
   }
 })
 

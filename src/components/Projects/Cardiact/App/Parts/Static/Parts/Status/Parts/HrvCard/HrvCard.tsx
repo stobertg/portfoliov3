@@ -17,7 +17,7 @@ interface CardProps {
 export const HrvCard = ({ icon, title, listItems }:CardProps) => {
   return(
 
-    <Card {...{ icon, title }}>
+    <Card headingColor="secondary" headingSize="l0" {...{ icon, title }}>
       <List {...{ listItems }} />
     </Card>
 

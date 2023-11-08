@@ -1,5 +1,5 @@
 import React from 'react'
-import { PageWrap, ProfileCard } from '../../../Shared'
+import { PageWrap, ProfileCard, Callout } from '../../../Shared'
 import { LocationCard, MedicalInfoCard } from './Parts'
 
 // ---------- This is the end of declarations ---------- //
@@ -8,6 +8,11 @@ export const Profile = () => {
   return(
 
     <PageWrap>
+      <Callout 
+        icon="user"
+        title="You profile will be shared with responders in a cardiac event."
+      />
+
       <ProfileCard 
         forcedEntry
         image="/projects/cardiact/ed.jpg"

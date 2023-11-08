@@ -50,8 +50,8 @@ const CardImage = styled('div', {
   justifyContent: 'center',
   alignItems: 'center',
   position: 'relative',
-  width: 52,
-  height: 52,
+  width: 44,
+  height: 44,
   borderRadius: '$r0',
   overflow: 'hidden',
 

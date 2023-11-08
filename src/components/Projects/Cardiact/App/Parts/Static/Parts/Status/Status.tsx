@@ -8,7 +8,10 @@ export const Status = () => {
   return(
 
     <PageWrap>
-      <Callout />
+      <Callout 
+        icon="activity"
+        title="Your numbers look good and normal at the moment."
+      />
       
       <HeartRateCard 
         icon="heart"

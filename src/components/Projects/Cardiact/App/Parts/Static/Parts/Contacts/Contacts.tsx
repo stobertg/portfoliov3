@@ -1,5 +1,5 @@
 import React from 'react'
-import { PageWrap, Button } from '../../../Shared'
+import { PageWrap, Button, Callout } from '../../../Shared'
 import { ContactList } from './Parts'
 
 // ---------- This is the end of declarations ---------- //
@@ -8,6 +8,11 @@ export const Contacts = () => {
   return(
 
     <PageWrap>
+      <Callout 
+        icon="users"
+        title="These contacts will be notified in the event of an emergency."
+      />
+
       <ContactList 
         contacts={[
           { 

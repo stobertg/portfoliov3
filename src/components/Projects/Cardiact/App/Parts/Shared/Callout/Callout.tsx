@@ -32,16 +32,17 @@ const CalloutText = styled('div', {
 })
 
 interface CalloutProps {
-
+  icon: string
+  title: string
 }
 
-export const Callout = ({}:CalloutProps) => {
+export const Callout = ({ icon, title }:CalloutProps) => {
   return(
 
     <CalloutWrap>
       <CalloutContent>
-        <CalloutIcon><Icon size="l0" icon="activity" /></CalloutIcon>
-        <CalloutText><Heading title="Your numbers look good and normal at the moment." /></CalloutText>
+        <div><Icon size="l0" {...{ icon }} /></div>
+        <div><Heading {...{ title }} /></div>
       </CalloutContent>
     </CalloutWrap>
 

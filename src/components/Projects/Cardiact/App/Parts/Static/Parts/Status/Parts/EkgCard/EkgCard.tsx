@@ -17,7 +17,7 @@ interface EkgProps {
 export const EkgCard = ({ icon, title, listItems }:EkgProps) => {
   return(
 
-    <Card {...{ icon, title }}>
+    <Card headingColor="secondary" headingSize="l0" {...{ icon, title }}>
       <List {...{ listItems }} />
     </Card>
 
