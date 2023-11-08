@@ -8,7 +8,8 @@ const TextWrap = styled('div', {
   position: 'relative',
   padding: '10px 16px',
   backdropFilter: 'blur( 10px )',
-  background: 'rgba( 0,0,0, 0.3 )',
+  background: 'rgba( 117,12,13, 0.3 )',
+  border: '1px solid rgb( 107, 6, 6 )',
   borderRadius: '$pill',
   fontSize: 14,
   '*': { display: 'inline-flex', width: 'auto' }

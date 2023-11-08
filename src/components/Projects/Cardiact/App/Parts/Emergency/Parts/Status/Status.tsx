@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled } from '@theme'
-import { PageWrap, Card, ProfileCard, Callout } from '../../../Shared'
+import { PageWrap, Card, ProfileCard } from '../../../Shared'
 import { ResponderList } from './Parts'
 
 const StatusWrap = styled('div', {
@@ -21,8 +21,6 @@ export const Status = ({}:StatusProps) => {
 
     <PageWrap>
       <StatusWrap>
-        <Callout />
-        
         <ProfileCard 
           forcedEntry
           image="/projects/cardiact/ed.jpg"
@@ -31,6 +29,7 @@ export const Status = ({}:StatusProps) => {
           gender="male"
           age={ 40 }
         />
+
         <Card
           icon="users-2"
           title="Responders"
@@ -53,9 +52,9 @@ export const Status = ({}:StatusProps) => {
         >
           <ResponderList 
             responders={[
-              { image: '/projects/cardiact/ed.jpg', name: 'Liz Woodville', relation: 'Wife (Married)' },
-              { image: '/projects/cardiact/ed.jpg', name: 'Richard York', distance: 'Brother & Neighbor' },
-              { image: '/projects/cardiact/ed.jpg', name: 'Edward York', distance: 'Son' }
+              { image: '/projects/cardiact/ed.jpg', name: 'Liz Woodville', relation: 'Wife (Married)', hasPhone: true },
+              { image: '/projects/cardiact/ed.jpg', name: 'Richard York', distance: 'Brother & Neighbor', hasPhone: true },
+              { image: '/projects/cardiact/ed.jpg', name: 'Edward York', distance: 'Son', hasPhone: true }
             ]}
           />
         </Card>

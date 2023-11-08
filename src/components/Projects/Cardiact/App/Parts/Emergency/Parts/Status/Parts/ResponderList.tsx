@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled } from '@theme'
-import { Heading } from '@components'
+import { Heading, Icon } from '@components'
 import { Aed } from '../../Map/Parts/Map/Parts/SecondLine/Aed'
 
 const ListWrap = styled('div', {
@@ -53,6 +53,17 @@ const ResponderAttr = styled('div', {
   '*': { position: 'relative', bottom: 'auto', right: 'auto' }
 })
 
+const ResponderPhone = styled('div', {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  position: 'relative',
+  width: 32,
+  height: 32,
+  borderRadius: '50%',
+  background: '#4375ff'
+})
+
 interface ResponderProps {
   responders: {
     image: string
@@ -60,6 +71,7 @@ interface ResponderProps {
     distance?: string
     relation?: string
     hasAed?: boolean
+    hasPhone?: boolean
   }[]
 }
 
@@ -82,6 +94,7 @@ export const ResponderList = ({ responders }:ResponderProps) => {
               </ResponderInfo>
 
               { responder.hasAed && ( <ResponderAttr><Aed /></ResponderAttr> )}
+              { responder.hasPhone && ( <ResponderAttr><ResponderPhone><Icon size="l0" icon="phone" /></ResponderPhone></ResponderAttr> )}
             </Responder>
           </li>
           

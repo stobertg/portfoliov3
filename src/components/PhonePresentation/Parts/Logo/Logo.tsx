@@ -9,7 +9,7 @@ const LogoWrap = styled('div', {
   justifyContent: 'center',
   alignItems: 'center',
   position: 'absolute',
-  bottom: 50,
+  bottom: 80,
   right: 0,
   width: 120
 })
