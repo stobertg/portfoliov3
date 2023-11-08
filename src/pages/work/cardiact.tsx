@@ -38,10 +38,10 @@ const Gather: NextPage = () => {
           logo="/projects/cardiact/logo.svg"
           logoAnimation={ <Victim /> }
           phoneBackground={ <Blob /> }
-          showLeftSwitchScreen={ changeToEmergency } 
           leftSwitchIcon="heart"
-          showRightSwitchScreen={ changeToStatic }
+          showLeftSwitchScreen={ changeToEmergency } 
           rightSwitchIcon="user-2"
+          showRightSwitchScreen={ changeToStatic }
           textSegments={ textSegments }
           currentText={ currentText }
           modeTitle={ !isEmergency }
@@ -103,6 +103,7 @@ const Gather: NextPage = () => {
 
 export default Gather
 
+// For the content of the 
 
 const textSegments: Record<string, TextSegmentType> = {
   map: {

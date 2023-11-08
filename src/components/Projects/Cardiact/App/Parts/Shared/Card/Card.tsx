@@ -81,6 +81,8 @@ interface CardProps {
   removeSpacing?: boolean
   icon?: string
   title?: string
+  headingSize?: 'l0',
+  headingColor?: 'secondary'
   children: React.ReactNode
 }
 
@@ -92,6 +94,8 @@ export const Card = ({
     removeSpacing, // Optional - For the skeleton feature of the card
     icon, // Optional - For the icon to the left of the title in the card
     title, // Optional - For the title of the card 
+    headingSize,
+    headingColor,
     children // Required - For the content within the card
   }:CardProps) => {
 
@@ -102,7 +106,12 @@ export const Card = ({
         { title && (
           <CardHeader>
             { icon && ( <Icon size="l0" {...{ icon }} /> )}
-            <Heading heavy {...{ title }} />
+            <Heading 
+              heavy 
+              size={ headingSize }
+              color={ headingColor } 
+              {...{ title }} 
+            />
           </CardHeader>
         )}
 

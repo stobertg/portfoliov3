@@ -12,6 +12,30 @@ const showText = keyframes({
   '100%': { transform: 'translateY( 0 )', opacity: 1 }
 })
 
+const showComplexTitleOne = keyframes({
+  '0%': { transform: 'translateY( 50% )', opacity: 0 },
+  '3%, 45%': { transform: 'translateY( 0 )', opacity: 1  },
+  '48%, 100%': { transform: 'translateY( -50% )', opacity: 0 }
+})
+
+const showComplexTitleTwo = keyframes({
+  '0%, 47%': { transform: 'translateY( 30% )', opacity: 0 },
+  '50%, 97%': { transform: 'translateY( -100% )', opacity: 1 },
+  '100%': { transform: 'translateY( -130% )', opacity: 0 }
+})
+
+const showComplexTextOne = keyframes({
+  '0%': { transform: 'translateY( 20% )', opacity: 0 },
+  '3%, 45%': { transform: 'translateY( 0 )', opacity: 1  },
+  '48%, 100%': { transform: 'translateY( -5% )', opacity: 0 }
+})
+
+const showComplexTextTwo = keyframes({
+  '0%, 47%': { transform: 'translateY( 20% )', opacity: 0 },
+  '50%, 96%': { transform: 'translateY( 0 )', opacity: 1  },
+  '99%, 100%': { transform: 'translateY( -20% )', opacity: 0 }
+})
+
 // For the master container of the text explaining the content of the iPhone to the left of it
 // This can support a single title or and array of titles, if needed ( i.e. titles change on an animation )
 
@@ -27,7 +51,21 @@ const TextMain = styled('div', {
 const TextHeading = styled('div', {
   position: 'relative',
   height: 60,
-  overflow: 'hidden'
+  overflow: 'hidden',
+
+  '> *': { 
+    transform: 'translateY( 50% )',
+    opacity: 0
+  },
+
+  '> *:first-child': { 
+    animation: `${ showComplexTitleOne } 20s ease forwards infinite`,
+    animationDelay: '300ms', 
+  },
+
+  '> *:last-child': { 
+    animation: `${ showComplexTitleTwo } 20s ease forwards infinite`
+  }
 })
 
 const TitleWrap = styled('div', {
@@ -47,11 +85,32 @@ const TextWrap = styled('div', {
   position: 'relative',
   width: '100%',
 
-  '> *': {
-    transform: 'translateY( 30% )',
+  '> * > p': {
+    transform: 'translateY( 10% )',
     animation: `${ showText } 600ms ease forwards`,
     animationDelay: '500ms',
     opacity: 0
+  }
+})
+
+const ComplexTextItem = styled('div', {
+
+  '> p:first-child': { 
+    transform: 'translateY( 30% )',
+    animation: `${ showComplexTextOne } 20s ease forwards infinite`,
+    animationDelay: '500ms',
+    opacity: 0
+  },
+
+  '> p:last-child': { 
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    marginTop: 0,
+    animation: `${ showComplexTextTwo } 20s ease forwards infinite`,
+    animationDelay: '500ms',
+    opacity: 0,
   }
 })
 
@@ -95,11 +154,11 @@ export const TextSegment = ({
       <TextWrap>
         <Text font="sansSerif" fontSize="l0" color="secondary">
           { textItems ? (
-            <>
+            <ComplexTextItem>
               { textItems?.map(( textItem, i ) => (
                 <p key={`textItem-${ i }`}>{ textItem.text }</p>
               ))}
-            </>
+            </ComplexTextItem>
           ) : (
             <p>{ text }</p>
           )}
