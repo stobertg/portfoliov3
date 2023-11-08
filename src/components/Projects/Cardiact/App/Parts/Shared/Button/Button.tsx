@@ -8,20 +8,21 @@ const ButtonContent = styled('button', {
   alignItems: 'center',
   position: 'relative',
   width: '100%',
-  height: 44,
   borderRadius: '$r1',
   transition: '$s1',
   textAlign: 'center',
+  whiteSpace: 'nowrap',
   fontSize: 14,
 
   variants: {
     variant: {
-
       primary: {
+        height: 44,
         background: '#de0000'
       },
 
       secondary: {
+        height: 44,
         border: '1px solid #616161',
         
         '&:hover': { 
@@ -29,6 +30,10 @@ const ButtonContent = styled('button', {
           color: '$black' 
         }
       }
+    },
+
+    inline: {
+      true: { width: 'auto' }
     }
   }
 })
@@ -36,13 +41,14 @@ const ButtonContent = styled('button', {
 interface ButtonProps {
   title: string
   variant?: 'primary' | 'secondary'
+  inline?: boolean
   onClick?: React.MouseEventHandler<HTMLButtonElement>
 } 
 
-export const Button = ({ title, variant, onClick }:ButtonProps) => {
+export const Button = ({ title, variant, inline, onClick }:ButtonProps) => {
   return(
 
-    <ButtonContent {...{ variant, onClick }}>
+    <ButtonContent {...{ variant, inline, onClick }}>
       <Heading bold {...{ title }} />
     </ButtonContent>
     

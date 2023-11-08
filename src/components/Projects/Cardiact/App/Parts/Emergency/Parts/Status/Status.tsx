@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled } from '@theme'
-import { PageWrap, Card, ProfileCard } from '../../../Shared'
+import { PageWrap, Card, ProfileCard, MedicalInfoCard } from '../../../Shared'
 import { ResponderList } from './Parts'
 
 // For the master container of the content within the Status Screen on the Emergency part of the app
@@ -9,10 +9,11 @@ import { ResponderList } from './Parts'
 const StatusWrap = styled('div', {
   position: 'relative',
   width: '100%',
-  padding: '12px 0',
   height: 465,
+  padding: '10px 0 20px',
   overflow: 'scroll',
-  '> *:not(:last-child)': { marginBottom: 8 }
+  '> *:not(:last-child)': { marginBottom: 8 },
+  '&::-webkit-scrollbar': { display: 'none' }
 })
 
 // ---------- This is the end of declarations ---------- //
@@ -59,6 +60,16 @@ export const Status = () => {
             ]}
           />
         </Card>
+
+        <MedicalInfoCard 
+          title="Medical information"
+          listItems={[
+            { icon: 'pill', title: 'Takes 50mg of Lipitor daily' },
+            { icon: 'leaf', title: 'Has seasonal allergies' },
+            { icon: 'graduation-cap', titles: [{ title: 'Primary Care Physician:' }, { title: 'William Hatteclyffe' }] },
+            { icon: 'graduation-cap', titles: [{ title: 'Preferred Hospital:' }, { title: 'University Hospital' }] }
+          ]}
+        />
       </StatusWrap>
     </PageWrap>
 

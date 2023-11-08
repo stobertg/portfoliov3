@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled } from '@theme'
 import { Heading } from '@components'
-import { Card, List } from '../../../../Shared'
+import { Card, List } from '../'
 
 // For the container of the list of information pertaining to the user
 // This describes all the medical information that would be relevant to the responder(s)

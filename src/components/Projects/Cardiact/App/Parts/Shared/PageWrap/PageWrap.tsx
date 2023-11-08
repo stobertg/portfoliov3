@@ -4,7 +4,7 @@ import { styled } from '@theme'
 const PageContent = styled('div', {
   position: 'relative',
   width: '100%',
-  padding: '10px 10px 80px',
+  padding: '0 10px 80px',
   '> *:not(:last-child)': { marginBottom: 8 }
 })
 

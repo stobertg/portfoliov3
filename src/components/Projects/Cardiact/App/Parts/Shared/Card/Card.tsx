@@ -1,5 +1,6 @@
 import React from 'react'
 import { styled } from '@theme'
+import { Button } from '../'
 import { Heading, Icon } from '@components'
 
 // For the master container of the card component
@@ -61,6 +62,13 @@ const CardContent = styled('div', {
   }
 })
 
+const CardHeaderWrap = styled('div', {
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  position: 'relative'
+})
+
 // For the title on the top of the container
 // This holds the icon on the left and the title on the right
 
@@ -81,6 +89,7 @@ interface CardProps {
   removeSpacing?: boolean
   icon?: string
   title?: string
+  buttonTitle?: string
   headingSize?: 'l0',
   headingColor?: 'secondary'
   children: React.ReactNode
@@ -94,6 +103,7 @@ export const Card = ({
     removeSpacing, // Optional - For the skeleton feature of the card
     icon, // Optional - For the icon to the left of the title in the card
     title, // Optional - For the title of the card 
+    buttonTitle,
     headingSize,
     headingColor,
     children // Required - For the content within the card
@@ -104,15 +114,19 @@ export const Card = ({
     <CardWrap>
       <CardContent {...{ spacing, direction, removeSpacing }}>
         { title && (
-          <CardHeader>
-            { icon && ( <Icon size="l0" {...{ icon }} /> )}
-            <Heading 
-              heavy 
-              size={ headingSize }
-              color={ headingColor } 
-              {...{ title }} 
-            />
-          </CardHeader>
+          <CardHeaderWrap>
+            <CardHeader>
+              { icon && ( <Icon size="l0" {...{ icon }} /> )}
+              <Heading 
+                heavy 
+                size={ headingSize }
+                color={ headingColor } 
+                {...{ title }} 
+              />
+            </CardHeader>
+
+            { buttonTitle && ( <Button inline title={ buttonTitle } /> )}
+          </CardHeaderWrap>
         )}
 
         { children }

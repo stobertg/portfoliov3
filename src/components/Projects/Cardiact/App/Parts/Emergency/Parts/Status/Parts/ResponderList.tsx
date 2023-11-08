@@ -9,6 +9,7 @@ import { Aed } from '../../Map/Parts/Map/Parts/SecondLine/Aed'
 const ListWrap = styled('div', {
   position: 'relative',
   width: '100%',
+  marginTop: 4,
   ul: { listStyle: 'none' },
 
   // For the styling of the list items in the ul
