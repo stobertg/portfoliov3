@@ -1,5 +1,5 @@
 import React from 'react'
-import { PageWrap } from '../../../Shared'
+import { PageWrap, Callout } from '../../../Shared'
 import { EkgCard, HeartRateCard } from './Parts'
 
 // ---------- This is the end of declarations ---------- //
@@ -8,6 +8,8 @@ export const Status = () => {
   return(
 
     <PageWrap>
+      <Callout />
+      
       <HeartRateCard 
         icon="heart"
         title="Your heart rate"
@@ -51,6 +53,15 @@ export const Status = () => {
               {},{},{},{},{},{}
             ]
           }
+        ]}
+      />
+
+      <EkgCard 
+        icon="activity"
+        title="HR Variability"
+        listItems={[
+          { title: '60 ms', time: '4:03 PM' },
+          { title: '52 ms', time: '12:31 PM' }
         ]}
       />
 

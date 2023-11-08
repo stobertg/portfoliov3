@@ -3,7 +3,7 @@ import { Card, List } from '../../../../../Shared/'
 
 // -------------- Typescript declarations -------------- //
 
-interface EkgProps {
+interface CardProps {
   icon: string
   title: string
   listItems: {
@@ -14,7 +14,7 @@ interface EkgProps {
 
 // ---------- This is the end of declarations ---------- //
 
-export const EkgCard = ({ icon, title, listItems }:EkgProps) => {
+export const HrvCard = ({ icon, title, listItems }:CardProps) => {
   return(
 
     <Card {...{ icon, title }}>

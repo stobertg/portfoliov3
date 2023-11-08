@@ -59,30 +59,30 @@ export const List = ({ listItems }:ListProps) => {
 
     <ListWrap>
       <ul>
-          { listItems?.map(( listItem, i ) => (
-            <li key={`list-item-${ i }`}>
+        { listItems?.map(( listItem, i ) => (
+          <li key={`list-item-${ i }`}>
 
-              <LineItem>
-                <ListItemMain>
-                  { listItem.icon && ( <Icon size="l0" icon={ listItem.icon } /> )}
+            <LineItem>
+              <ListItemMain>
+                { listItem.icon && ( <Icon size="l0" icon={ listItem.icon } /> )}
 
-                  { listItem.titles ? (
-                    <div>
-                      { listItem.titles.map(( title, j ) => (
-                        <div key={`item-${ j }`}>{ title.title }</div>
-                      ))}
-                    </div>
-                  ) : (
-                    <div>{ listItem.title }</div>
-                  )}
-                </ListItemMain>
+                { listItem.titles ? (
+                  <div>
+                    { listItem.titles.map(( title, j ) => (
+                      <div key={`item-${ j }`}>{ title.title }</div>
+                    ))}
+                  </div>
+                ) : (
+                  <div>{ listItem.title }</div>
+                )}
+              </ListItemMain>
 
-                { listItem.time && ( <Chip title={ listItem.time} /> )}
-              </LineItem>
+              { listItem.time && ( <Chip title={ listItem.time} /> )}
+            </LineItem>
 
-            </li>
-          ))}
-        </ul>
+          </li>
+        ))}
+      </ul>
     </ListWrap>
 
   )

@@ -2,6 +2,8 @@ import React from 'react'
 import { Chart, CurrentHr } from './Parts'
 import { Card } from '../../../../../Shared/Card/Card'
 
+// -------------- Typescript declarations -------------- //
+
 interface CardProps {
   icon: string
   title: string
