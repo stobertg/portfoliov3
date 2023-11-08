@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled } from '@theme'
 import { Iphone } from '@components'
-import{ PresLogo, PresText, TextSegment, PresSwitch } from './Parts'
+import{ PresLogo, PresText, TextSegment, PresSwitch, InteractiveText } from './Parts'
 
 // For the master container of the phone presentation
 // This shows the Cardiact project for now, will scale if needed in the future which required more complex logic
@@ -64,9 +64,10 @@ const PhoneDescpContent = styled('div', {
 
 const PresBottom = styled('div', {
   display: 'flex',
-  flexDirection: 'row',
+  flexDirection: 'column',
   position: 'relative',
-  width: '100%'
+  width: '100%',
+  '> *:not(:last-child)': { marginBottom: 4 }
 })
 
 // -------------- Typescript declarations -------------- //
@@ -147,6 +148,7 @@ export const PhonePresentation = ({
 
             <PresBottom>
               <PresSwitch {...{ showLeftSwitchScreen, showRightSwitchScreen, leftSwitchIcon, rightSwitchIcon }} />
+              <InteractiveText />
             </PresBottom>
           </PhoneDescpContent>
         </PhoneDescp>

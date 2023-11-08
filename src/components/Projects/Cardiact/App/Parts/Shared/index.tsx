@@ -1,4 +1,5 @@
 export { Button } from './Button/Button'
+export { Callout } from './Callout/Callout'
 export { Card } from './Card/Card'
 export { Chip } from './Chip/Chip'
 export { List } from './List/List'
