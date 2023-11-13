@@ -14,7 +14,12 @@ interface EkgProps {
 
 // ---------- This is the end of declarations ---------- //
 
-export const EkgCard = ({ icon, title, listItems }:EkgProps) => {
+export const EkgCard = ({
+    icon, // Required - For the Icon to the left of the title
+    title, // Required - For the title of the card
+    listItems // Required - For the data within the card
+  }:EkgProps) => {
+    
   return(
 
     <Card headingColor="secondary" headingSize="l0" {...{ icon, title }}>

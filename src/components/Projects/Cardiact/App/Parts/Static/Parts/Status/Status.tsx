@@ -16,8 +16,13 @@ export const Status = () => {
       <HeartRateCard 
         icon="heart"
         title="Your heart rate"
-        heartRate={ 72 } 
         range="65-96"
+        heartRate={[
+          { number: 72 }, 
+          { number: 75 }, 
+          { number: 69 }, 
+          { number: 73 }
+        ]} 
         columns={[
           { 
             time: '12 AM' 

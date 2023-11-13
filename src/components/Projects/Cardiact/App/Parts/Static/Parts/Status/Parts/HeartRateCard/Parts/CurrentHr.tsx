@@ -1,5 +1,6 @@
 import React from 'react'
 import { styled } from '@theme'
+import { NumberLoop } from '../../../../../../Shared'
 import { Heading } from '@components'
 
 // For the master container of the current section on the bottom of the heart rate chart
@@ -39,7 +40,7 @@ const CurrentHR = styled('div', {
 // -------------- Typescript declarations -------------- //
 
 interface CurrentProps {
-  heartRate: number
+  heartRate: { number: number }[]
   range: string
 }
 
@@ -57,7 +58,7 @@ export const CurrentHr = ({
       
       <CurrentInfo>
         <CurrentHR>
-          <Heading bold size="l4" title={ `${ heartRate }` } />
+          <NumberLoop size="l4" numbers={ heartRate } />
           <Heading bold color="secondary" title="BPM" />
         </CurrentHR>
         <Heading color="secondary" title={`Range: ${ range }`} />

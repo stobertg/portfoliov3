@@ -25,7 +25,9 @@ const LoopNumbers = styled('div', {
   display: 'flex',
   position: 'relative',
   width: '100%',
+  minWidth: 36,
   height: 24,
+  minHeight: 28,
   overflow: 'hidden',
 
   // For the positioning of the numbers within the container in order for the looping animation to work
@@ -46,6 +48,7 @@ const LoopNumbers = styled('div', {
 
 interface LoopProps {
   delay?: number
+  size?: 'l1' | 'l3' | 'l4'
   numbers: { number: number }[]
 }
 
@@ -53,6 +56,7 @@ interface LoopProps {
 
 export const NumberLoop = ({ 
     numbers, // Required - For the numbers in the looping animation
+    size,
     delay // Optional - For custom delay in the animation
   }:LoopProps) => {
 
@@ -83,7 +87,7 @@ export const NumberLoop = ({
         <Heading 
           key={`number-${ i }`} 
           bold 
-          size="l2"
+          size={ size ? size : "l2"}
           title={ number.number } 
           style={{
             animation: `${i === currentNumberIndex ? enterAnimation : exitAnimation} 1s`,

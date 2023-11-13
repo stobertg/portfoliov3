@@ -7,7 +7,7 @@ import { Card } from '../../../../../Shared/Card/Card'
 interface CardProps {
   icon: string
   title: string
-  heartRate: number
+  heartRate: { number: number }[]
   range: string
   columns: {
     time: string
@@ -23,11 +23,11 @@ interface CardProps {
 // ---------- This is the end of declarations ---------- //
 
 export const HeartRateCard = ({ 
-    icon,
-    title,
-    heartRate,
-    range,
-    columns
+    icon, // Required - For the icon to the left of the title
+    title, // Required - For the title of the card
+    heartRate, // Required - For the heart rate numbers to simulate
+    range, // Required - For the daily rage of the user's heart rate
+    columns // Required - For the chart of the heart rate
   }:CardProps) => {
   
   return(
