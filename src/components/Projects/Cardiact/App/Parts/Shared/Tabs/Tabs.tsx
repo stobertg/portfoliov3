@@ -1,5 +1,5 @@
 import React from 'react'
-import * as TabsPrimitive from '@radix-ui/react-tabs';
+import * as TabsPrimitive from '@radix-ui/react-tabs'
 import { styled } from '@theme'
 import { Heading, Icon } from '@components'
 
@@ -57,17 +57,8 @@ const TabsContainer = styled('div', {
   margin: '0 auto',
   '> *:not(:last-child)': { marginRight: 12 },
 
-  //
-  
-  '&:before': {
-    content: '',
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    backdropFilter: 'blur( 10px )'
-  },
+  // For the mobile variant of the tab navigation
+  // Since this is positioned on the bottom of the page, we need some spacing and design changes
 
   variants: {
     variant: {
@@ -76,6 +67,7 @@ const TabsContainer = styled('div', {
         padding: '0 32px 12px',
         justifyContent: 'space-between',
         borderTop: '1px solid #252525',
+        backdropFilter: 'blur( 10px )',
         zIndex: 10,
         '> *:not(:last-child)': { marginRight: 0 },
       }
@@ -94,19 +86,17 @@ const TabsTrigger = styled( TabsPrimitive.Trigger, {
   padding: '12px 0',
   fontSize: 13,
   '> *:not(:last-child)': { marginRight: 4 },
-  '&[data-state="active"]': { 
-    '*': { 
-      color: '#4375ff' 
-      
-    }
-  },
+  '&[data-state="active"]': { '*': { color: '#4375ff' }},
+
+  // For the mobile variant, the content stacks on top of one another
+  // Here we have the icon on the top, the text below, and we change the font size to be smaller
 
   variants: {
     variant: {
       mobile: {
         flexDirection: 'column',
         alignItems: 'center',
-        fontSize: 12,
+        fontSize: 11,
         '> *:not(:last-child)': { marginRight: 0 },
       }
     }
