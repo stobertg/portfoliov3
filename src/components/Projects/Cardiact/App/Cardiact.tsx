@@ -3,7 +3,8 @@ import { styled } from '@theme'
 import { CardiactEmergency, CariactStatic } from './Parts'
 
 const AppWrap = styled('div', {
-
+  position: 'relative',
+  width: '100%'
 })
 
 interface AppProps {

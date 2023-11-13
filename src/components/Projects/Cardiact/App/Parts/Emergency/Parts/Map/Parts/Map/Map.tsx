@@ -36,8 +36,6 @@ const MapImage = styled('div', {
     width: '100%',
     height: '40%',
     background: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)',
-    borderRadius: '0 0 40px 40px',
-    overflow: 'hidden',
     opacity: 0.9,
     zIndex: 1
   },

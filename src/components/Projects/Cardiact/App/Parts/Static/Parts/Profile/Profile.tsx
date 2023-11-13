@@ -30,7 +30,7 @@ export const Profile = () => {
           { icon: 'pill', title: 'Takes 50mg of Lipitor daily' },
           { icon: 'leaf', title: 'Has seasonal allergies' },
           { icon: 'graduation-cap', titles: [{ title: 'Primary Care Physician:' }, { title: 'William Hatteclyffe' }] },
-          { icon: 'graduation-cap', titles: [{ title: 'Preferred Hospital:' }, { title: 'University Hospital' }] }
+          { icon: 'graduation-cap', titles: [{ title: 'Preferred Hospital:' }, { title: 'Hospital of St. John' }] }
         ]}
       />
     </PageWrap>

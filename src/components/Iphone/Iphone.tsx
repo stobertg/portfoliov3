@@ -15,6 +15,7 @@ const IphoneWrap = styled('div', {
   minWidth: 360,
   maxWidth: '360px !important',
   height: 724,
+  padding: 10,
   background: '$black',
   color: '$black',
   borderRadius: 56,
@@ -51,10 +52,11 @@ const IphoneContent = styled('div', {
   flexDirection: 'column',
   alignItems: 'center',
   position: 'relative',
-  width: '94%',
-  height: '97.1%',
-  borderRadius: 44,
-  overflow: 'hidden'
+  width: '100%',
+  height: '100%',
+  borderRadius: 40,
+  overflow: 'hidden',
+  zIndex: 11
 })
 
 // For the container of the screen content within the iPhone
@@ -70,7 +72,6 @@ const IphoneScreen = styled('div', {
   height: '100%',
   background: '#fff',
   paddingTop: 40,
-  overflow: 'hidden',
 
   // Here we provide support for the Iphone to be Dark Mode
   // This will change the background to black and the color to white

@@ -24,6 +24,7 @@ export const Status = () => {
     <PageWrap>
       <StatusWrap>
         <ProfileCard 
+          emergency
           forcedEntry
           image="/projects/cardiact/ed.jpg"
           imageAlt="Cardiact"
@@ -40,8 +41,8 @@ export const Status = () => {
         >
           <ResponderList 
             responders={[
-              { image: '/projects/cardiact/ed.jpg', name: 'George Clearance', distance: '0.2 miles away', hasAed: true },
-              { image: '/projects/cardiact/ed.jpg', name: 'Richard Neville', distance: 'There now' }
+              { image: '/projects/cardiact/george_clarence.webp', name: 'George Clearance', distance: '0.2 miles away', hasAed: true },
+              { image: '/projects/cardiact/neville.webp', name: 'Richard Neville', distance: 'There now' }
             ]}
           />
         </Card>
@@ -54,9 +55,9 @@ export const Status = () => {
         >
           <ResponderList 
             responders={[
-              { image: '/projects/cardiact/ed.jpg', name: 'Liz Woodville', relation: 'Wife (Married)', hasPhone: true },
-              { image: '/projects/cardiact/ed.jpg', name: 'Richard York', distance: 'Brother & Neighbor', hasPhone: true },
-              { image: '/projects/cardiact/ed.jpg', name: 'Edward York', distance: 'Son', hasPhone: true }
+              { image: '/projects/cardiact/woodville.webp', name: 'Liz Woodville', relation: 'Wife (Married)', hasPhone: true },
+              { image: '/projects/cardiact/richardiii.webp', name: 'Richard York', distance: 'Brother & Neighbor', hasPhone: true },
+              { image: '/projects/cardiact/edwardv.webp', name: 'Edward York', distance: 'Son', hasPhone: true }
             ]}
           />
         </Card>
@@ -67,7 +68,7 @@ export const Status = () => {
             { icon: 'pill', title: 'Takes 50mg of Lipitor daily' },
             { icon: 'leaf', title: 'Has seasonal allergies' },
             { icon: 'graduation-cap', titles: [{ title: 'Primary Care Physician:' }, { title: 'William Hatteclyffe' }] },
-            { icon: 'graduation-cap', titles: [{ title: 'Preferred Hospital:' }, { title: 'University Hospital' }] }
+            { icon: 'graduation-cap', titles: [{ title: 'Preferred Hospital:' }, { title: 'Hospital of St. John' }] }
           ]}
         />
       </StatusWrap>

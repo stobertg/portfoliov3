@@ -16,19 +16,19 @@ export const Contacts = () => {
       <ContactList 
         contacts={[
           { 
-            image: '/projects/cardiact/ed.jpg',
+            image: '/projects/cardiact/woodville.webp',
             imageAlt: 'Cardiact',
             relation: 'Wife (Married)',
             name: 'Elizabeth Woodville'
           },
           { 
-            image: '/projects/cardiact/ed.jpg',
+            image: '/projects/cardiact/richardiii.webp',
             imageAlt: 'Cardiact',
             relation: 'Brother & neighbor',
             name: 'Richard York III'
           },
           { 
-            image: '/projects/cardiact/ed.jpg',
+            image: '/projects/cardiact/edwardv.webp',
             imageAlt: 'Cardiact',
             relation: 'Son',
             name: 'Edward York V'

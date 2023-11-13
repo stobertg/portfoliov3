@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled } from '@theme'
-import { Heading, Icon } from '@components'
+import { Heading } from '@components'
 import { ResponseStatus } from './Parts'
 import { Card } from '../'
 
@@ -65,14 +65,15 @@ const CardChip = styled('div', {
   position: 'relative',
   padding: '14px 8px',
   borderTop: '1px solid #212121',
-  color: 'red',
   fontSize: 12,
+
+  // For the color of the forced entry allowed when responding to the victim
+  // This is to show if a user is legally allowed to "break" into the home of the victim to help save their life
 
   variants: {
     forcedEntry: {
-      true: {
-        color: '#52fe52',
-      }
+      true: { color: '#52fe52' },
+      false: { color: 'red' }
     }
   }
 })
@@ -86,6 +87,7 @@ interface CardProps {
   gender: string
   age: number
   forcedEntry?: boolean
+  emergency?: boolean
 }
 
 // ---------- This is the end of declarations ---------- //
@@ -96,7 +98,8 @@ export const ProfileCard = ({
     name, // Required - For the name of the user
     gender, // Required - For the gender of the user
     age, // Required - For the age of the user 
-    forcedEntry // Required - If a responder is allowed to enter or not
+    forcedEntry, // Required - If a responder is allowed to enter or not
+    emergency // Optional - For the emergency side of the app to show the EMS and BPM status
   }:CardProps) => {
   
   return(
@@ -108,7 +111,7 @@ export const ProfileCard = ({
           <Heading heavy size="l1" title={ name } />
           <Heading color="secondary" title={`${ gender }, aged ${ age }`} />
 
-          <ResponseStatus />
+          { emergency && ( <ResponseStatus /> )}
         </CardText>
       </CardHero>
 

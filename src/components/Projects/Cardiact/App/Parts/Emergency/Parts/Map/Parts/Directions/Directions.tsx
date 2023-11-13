@@ -10,7 +10,6 @@ const DirWrap = styled('div', {
   width: '100%',
   paddingBottom: 32,
   background: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)',
-  borderRadius: '0 0 48px 48px',
   overflow: 'hidden',
   transition: '$s2',
   zIndex: 10,
@@ -77,7 +76,7 @@ export const Directions = ({
     directions, // Required - For step-by-step directions to get to the vicitim
     confirmButtonHidden, // Required - For the function to reveal the confirm modal
     confirmButtonClick, // Required - To be able to close the confirm modal
-    showConfirm
+    showConfirm // Required - For the Confirm button to 
   }:DirectionProps) => {
   
   const [ collapsed, setCollapsed ] = useState( true )

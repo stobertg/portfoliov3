@@ -12,6 +12,9 @@ const TabsWrap = styled( TabsPrimitive.Root, {
   position: 'relative',
   width: '100%',
 
+  // For the mobile layout we swap directions of the nav and the content
+  // This is so the navigation can sit on the bottom of the container, as traditional App navigation
+
   variants: {
     variant: {
       mobile: { flexDirection: 'column-reverse' }
