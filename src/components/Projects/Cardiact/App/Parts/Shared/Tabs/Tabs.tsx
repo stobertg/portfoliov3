@@ -30,6 +30,9 @@ const TabsList = styled( TabsPrimitive.List, {
   width: '100%',
   borderBottom: '1px solid #212121',
 
+  // For the mobile variant, we want the navigation to be on the bottom of the container
+  // This will set it here and remove the default border from the default
+
   variants: {
     variant: {
       mobile: {
@@ -42,6 +45,9 @@ const TabsList = styled( TabsPrimitive.List, {
   }
 })
 
+// For the master container of the tabs buttons on the top or bottom of the application
+// This hodls all of the buttons which will switch the content to match the screen clicked
+
 const TabsContainer = styled('div', {
   display: 'flex',
   flexDirection: 'row',
@@ -50,6 +56,8 @@ const TabsContainer = styled('div', {
   width: '80%',
   margin: '0 auto',
   '> *:not(:last-child)': { marginRight: 12 },
+
+  //
   
   '&:before': {
     content: '',
@@ -105,11 +113,17 @@ const TabsTrigger = styled( TabsPrimitive.Trigger, {
   }
 })
 
+// For the master container of the content associated with each of the tabs
+// For CardiAct, this sets the height of the content within the phone
+
 const TabsContent = styled( TabsPrimitive.Content, {
   position: 'relative',
   width: '100%',
   height: 465,
   outline: 'none',
+
+  // For the mobile variant we change the default styling to be able to function as a mobile application
+  // This will allow the scroll within the container, as the content falls within the restrictions set by the phone height
 
   variants: {
     variant: {
@@ -128,6 +142,9 @@ const TabsContent = styled( TabsPrimitive.Content, {
 
 interface TabsProps {
   variant?: 'mobile'
+  defaultTab?: number
+  bgColor?: 'primary' | 'secondary' | 'tertiary'
+  bold?: boolean
   triggers: { 
     logo?: React.ReactNode
     icon?: string
@@ -139,20 +156,17 @@ interface TabsProps {
     title?: string 
     content?: React.ReactNode 
   }[]
-  defaultTab?: number
-  bgColor?: 'primary' | 'secondary' | 'tertiary'
-  bold?: boolean
 }
 
 // ---------- This is the end of declarations ---------- //
 
 export const Tabs = ({ 
-    variant,
-    triggers,
-    tabContent,
-    defaultTab,
-    bgColor,
-    bold
+    variant, // Optional - For the ability to mave a traditional mobile app navigation
+    triggers, // Required - For the tab buttons within the navigation
+    tabContent, // Required - For the content assicociated with each tab
+    defaultTab, // Optional - To set the default screen of the application
+    bgColor, // Optiaonal - For the background color of the tabs
+    bold // Optional - To make the titles of the tab be bold
   }: TabsProps) => {
   return (
 
