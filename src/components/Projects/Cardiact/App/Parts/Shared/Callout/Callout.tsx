@@ -2,6 +2,8 @@ import React from 'react'
 import { styled } from '@theme'
 import { Heading, Icon } from '@components'
 
+// For the master container of the callout component used throughout the application
+// This holds a callout with the icon on the left and the text to the right
 
 const CalloutWrap = styled('div', {
   position: 'relative',
@@ -10,6 +12,9 @@ const CalloutWrap = styled('div', {
   border: '1px solid #222',
   borderRadius: '$r1'
 })
+
+// For the container of all of the content within the master container
+// This is used to position the content within the center of the parent container
 
 const CalloutContent = styled('div', {
   display: 'flex',
@@ -23,20 +28,20 @@ const CalloutContent = styled('div', {
   '> *:not(:last-child)': { marginRight: 12 }
 })
 
-const CalloutIcon = styled('div', {
-
-})
-
-const CalloutText = styled('div', {
-
-})
+// -------------- Typescript declarations -------------- //
 
 interface CalloutProps {
   icon: string
   title: string
 }
 
-export const Callout = ({ icon, title }:CalloutProps) => {
+// ---------- This is the end of declarations ---------- //
+
+export const Callout = ({ 
+    icon, // Required - For the icon on the left of the container
+    title // Required - For the title of the callout
+  }:CalloutProps) => {
+
   return(
 
     <CalloutWrap>

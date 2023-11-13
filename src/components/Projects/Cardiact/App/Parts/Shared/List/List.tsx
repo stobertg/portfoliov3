@@ -35,6 +35,9 @@ const LineItem = styled('div', {
   '> *:first-child': { marginTop: 2 }
 })
 
+// For the container of each of the individual line items
+// This holds the icon on the left and the text on the right of the container
+
 const ListItemMain = styled('div', {
   display: 'flex',
   flexDirection: 'row',

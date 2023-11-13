@@ -62,6 +62,9 @@ const CardContent = styled('div', {
   }
 })
 
+// For the master container of the header part of the card
+// This holds the icon and title on the left and the optional button on the right of the container
+
 const CardHeaderWrap = styled('div', {
   display: 'flex',
   flexDirection: 'row',
@@ -103,9 +106,9 @@ export const Card = ({
     removeSpacing, // Optional - For the skeleton feature of the card
     icon, // Optional - For the icon to the left of the title in the card
     title, // Optional - For the title of the card 
-    buttonTitle,
-    headingSize,
-    headingColor,
+    buttonTitle, // Optional - For the title on the right side of the header
+    headingSize, // Optonal - For the ability to make the title of the card smaller
+    headingColor, // Optional - For the ability to make the title more gray
     children // Required - For the content within the card
   }:CardProps) => {
 
