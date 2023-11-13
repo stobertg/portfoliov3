@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { styled } from '@theme'
 import { MapMain, Directions, Confirm } from './Parts'
 
+// For the master container of mpa page within the emergency section of CardiAct
+// This holds the map that takes up the height of the container and the directions on the bottom
+
 const MapWrap = styled('div', {
   display: 'flex',
   justifyContent: 'center',

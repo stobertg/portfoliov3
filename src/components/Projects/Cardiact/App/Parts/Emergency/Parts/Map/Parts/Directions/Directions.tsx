@@ -9,19 +9,32 @@ const DirWrap = styled('div', {
   position: 'absolute',
   width: '100%',
   paddingBottom: 32,
-  background: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)',
   overflow: 'hidden',
   transition: '$s2',
-  zIndex: 10,
+  zIndex: 1,
   '> *:not(:last-child)': { marginBottom: 8 },
+
+  // For the gradent background behind the content of the directions
+
+  '&:before': {
+    content: '',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    background: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)',
+    opacity: 0,
+    transition: '$s1'
+  },
 
   // Sinced the directions are hidden by default, we need to set as hidden
   // And then once revealed, provide an animation to show the content
 
   variants: { 
     collapsed: {
-      true: { transform: 'translateY( calc( 100% - 152px ) )' },
-      false: { transform: 'translateY( 0 )' }
+      true: { transform: 'translateY( calc( 100% - 152px ))'},
+      false: { transform: 'translateY( 0 )', '&:before': { opacity: 1 } }
     }
   }
 })

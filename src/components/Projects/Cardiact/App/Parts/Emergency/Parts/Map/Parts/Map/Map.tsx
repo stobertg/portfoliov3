@@ -62,6 +62,7 @@ export const MapMain = () => {
 
     <MapImage>
       <img src="/projects/cardiact/map.jpg" alt="Cardiact map" />
+      
       <MapLines>
         <MainLine />
         <SecondLine />
