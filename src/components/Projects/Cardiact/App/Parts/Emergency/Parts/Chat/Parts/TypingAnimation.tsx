@@ -19,6 +19,7 @@ const TypingWrap = styled('div', {
   alignItems: 'center',
   justifyContent: 'space-between',
   position: 'relative',
+  padding: '4px 0',
   '> *:not(:last-child)': { marginRight: 2 },
 
   // For the shared styling of the three dots, horizontally centered in the container

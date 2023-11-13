@@ -25,7 +25,7 @@ export const CariactStatic = ({
   return(
 
     <StaticWrap>
-      <StaticHeader title="Profile" />
+      <StaticHeader />
 
       <StaticNav 
         triggers={[

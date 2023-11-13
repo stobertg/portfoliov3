@@ -80,9 +80,10 @@ const BubbleImage = styled('div', {
 
 const BubbleText = styled('div', {
   position: 'relative',
-  padding: '12px 14px',
+  padding: '10px 14px',
   borderRadius: '$r1',
-  fontSize: 13
+  fontSize: 13,
+  lineHeight: 1.1
 })
 
 // -------------- Typescript declarations -------------- //

@@ -12,22 +12,22 @@ export const Chat = () => {
         messages={[
           { 
             person: 'reciever',
-            image: '/projects/cardiact/ed.jpg',
+            image: '/projects/cardiact/neville.webp',
             message: "I'm here. Need an AED!"
           },
           { 
             person: 'reciever',
-            image: '/projects/cardiact/ed.jpg',
+            image: '/projects/cardiact/george_clarence.webp',
             message: "There's one close to me and I am getting it now"
           },
           { 
             person: 'sender',
-            image: '/projects/cardiact/ed.jpg',
-            message: "I'm his son and I'm on my way. Let me know how I can help."
+            image: '/projects/cardiact/richardiii.webp',
+            message: "I'm his brother and I live next door. On my way."
           },
           { 
             person: 'reciever',
-            image: '/projects/cardiact/ed.jpg',
+            image: '/projects/cardiact/neville.webp',
             message: <TypingAnimation />
           }
         ]}

@@ -25,21 +25,25 @@ const HeaderContent = styled('div', {
   fontSize: 12
 })
 
-// -------------- Typescript declarations -------------- //
+// For the container of the logo in the center of the container
+// This is for the logo of the cardiact app
 
-interface HeaderProps {
-  title: string
-} 
+const LogoWrap = styled('div', {
+  position: 'relative',
+  width: 50,
+  transform: 'translateY( 3px )',
+  opacity: 0.8
+})
 
 // ---------- This is the end of declarations ---------- //
 
-export const StaticHeader = ({ title }:HeaderProps) => {
+export const StaticHeader = () => {
   return(
 
     <HeaderWrap>
       <HeaderContent>
         <Icon size="l0" icon="grip" />
-        <Heading bold {...{ title }} />
+        <LogoWrap><img src="/projects/cardiact/logo.svg" /></LogoWrap>
         <Icon size="l0" icon="bell" />
       </HeaderContent>
     </HeaderWrap>

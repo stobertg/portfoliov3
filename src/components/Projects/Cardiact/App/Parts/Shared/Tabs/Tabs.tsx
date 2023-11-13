@@ -114,7 +114,7 @@ const TabsContent = styled( TabsPrimitive.Content, {
   variants: {
     variant: {
       mobile: {
-        height: 528,
+        height: 522,
         zIndex: 0,
         overflow: 'scroll',
         scrollbarWidth: 'none',

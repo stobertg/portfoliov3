@@ -39,7 +39,7 @@ const SwitchButton = styled('button', {
   justifyContent: 'center',
   alignItems: 'center',
   position: 'relative',
-  width: 44,
+  width: 45,
 
   // For the hover effect of the buttons - where the circle scales up and fades in behind the icon
   // This is set so at first it is hidden and adds a google-mui-like iteraction where the circle scales in
