@@ -31,7 +31,7 @@ export const CardiactEmergency = ({
 
     <EmergencyWrap>
       <EmergencyHeader 
-        image="/projects/cardiact/ed.jpg"
+        image="/projects/cardiact/ed.webp"
         imageAlt="Cardiact victim name"
         name="Edward York IV"
         triggers={[

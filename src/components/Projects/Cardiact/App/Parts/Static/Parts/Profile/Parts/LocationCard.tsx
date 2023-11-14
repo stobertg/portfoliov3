@@ -64,7 +64,7 @@ export const LocationCard = ({ currentLocation }:CardProps) => {
 
     <Card direction="horizontal">
       <CardImage>
-        <img src="/projects/cardiact/location.png" alt="location" />
+        <img src="/projects/cardiact/location.webp" alt="location" />
         <Icon size="l1" icon="map-pin" />
       </CardImage>
 

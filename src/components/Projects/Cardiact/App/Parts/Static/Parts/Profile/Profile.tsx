@@ -15,7 +15,7 @@ export const Profile = () => {
 
       <ProfileCard 
         forcedEntry
-        image="/projects/cardiact/ed.jpg"
+        image="/projects/cardiact/ed.webp"
         imageAlt="Cardiact"
         name="Edward York IV"
         gender="Male"

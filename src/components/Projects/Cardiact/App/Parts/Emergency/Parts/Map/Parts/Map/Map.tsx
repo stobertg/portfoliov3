@@ -61,7 +61,7 @@ export const MapMain = () => {
   return(
 
     <MapImage>
-      <img src="/projects/cardiact/map.jpg" alt="Cardiact map" />
+      <img src="/projects/cardiact/map.webp" alt="Cardiact map" />
       
       <MapLines>
         <MainLine />
