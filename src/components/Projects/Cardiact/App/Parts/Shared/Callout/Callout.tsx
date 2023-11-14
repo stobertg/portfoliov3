@@ -21,7 +21,7 @@ const CalloutContent = styled('div', {
   flexDirection: 'row',
   alignItems: 'center',
   position: 'relative',
-  width: '85%',
+  width: '88%',
   margin: '0 auto',
   padding: '12px 0',
   fontSize: 14,

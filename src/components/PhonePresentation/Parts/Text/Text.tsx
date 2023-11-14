@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled } from '@theme'
-import { Heading, Text } from '@components'
+import { Heading } from '@components'
 
 // For the master container of the text to the right of the phone screen
 // This contains the mode title on the top, and the content below with a seperate title and the paragraph explaing the content

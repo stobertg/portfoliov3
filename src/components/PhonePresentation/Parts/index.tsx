@@ -1,5 +1,5 @@
+export { InteractiveText } from './InteractiveText/InteractiveText'
 export { PresLogo } from './Logo/Logo'
+export { PresSwitch } from './Switch/Switch'
 export { PresText } from './Text/Text'
 export { TextSegment } from './Text/TextSegment'
-export { PresSwitch } from './Switch/Switch'
-export { InteractiveText } from './InteractiveText/InteractiveText'

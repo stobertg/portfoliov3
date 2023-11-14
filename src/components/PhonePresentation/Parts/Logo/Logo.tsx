@@ -46,7 +46,12 @@ interface LogoProps {
 
 // ---------- This is the end of declarations ---------- //
 
-export const PresLogo = ({ logoAnimation, logo, logoAltText }:LogoProps) => {
+export const PresLogo = ({ 
+    logoAnimation, // Optional - For a aubtle animation sitting above the logo
+    logo, // Required - For the logo
+    logoAltText // Required - For the alt text of the logo
+  }:LogoProps) => {
+
   return(
 
     <LogoWrap>
