@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled } from '@theme'
 import { Heading, Icon } from '@components'
-import { Aed } from '../../Map/Parts/Map/Parts/SecondLine/Aed'
+import { Aed } from '../../Emergency/Parts/Map/Parts/Map/Parts/SecondLine/Aed'
 
 // For the master container of the Responders list 
 // This component is used to show all of the responders and emergency contact invloved in saving the victim

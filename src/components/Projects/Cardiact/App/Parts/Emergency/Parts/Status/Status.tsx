@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled } from '@theme'
 import { PageWrap, Card, ProfileCard, MedicalInfoCard } from '../../../Shared'
-import { ResponderList } from './Parts'
+import { ResponderList } from '../../../Shared'
 
 // For the master container of the content within the Status Screen on the Emergency part of the app
 // This autmoates the spacing between each of the content blocks and account for scroll if content gets long
