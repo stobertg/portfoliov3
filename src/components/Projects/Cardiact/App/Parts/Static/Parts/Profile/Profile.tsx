@@ -18,7 +18,7 @@ export const Profile = () => {
         image="/projects/cardiact/ed.jpg"
         imageAlt="Cardiact"
         name="Edward York IV"
-        gender="male"
+        gender="Male"
         age={ 40 }
       />
 

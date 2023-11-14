@@ -29,7 +29,7 @@ export const Status = () => {
           image="/projects/cardiact/ed.jpg"
           imageAlt="Cardiact"
           name="Edward York IV"
-          gender="male"
+          gender="Male"
           age={ 40 }
         />
 
