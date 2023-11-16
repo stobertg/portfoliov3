@@ -16,7 +16,7 @@ const IntroWrap = styled('div', {
 const IntroContent = styled('div', {
   position: 'relative',
   maxWidth: 900,
-  width: '100%',
+  width: '88%',
   margin: '0 auto',
   '> *:not(:last-child)': { marginBottom: 50 }
 })
@@ -29,6 +29,9 @@ const IntroMain = styled('div', {
   width: '100%',
   '> *:not(:last-child)': { marginBottom: 32 }
 })
+
+// For the container of additional project info on the bottom of the container
+// This contains the Roles/Skills on the left of the container and the project info on the right
 
 const IntroAttrs = styled('div', {
   position: 'realtive',

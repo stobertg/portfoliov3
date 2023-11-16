@@ -5,6 +5,7 @@ import { Heading } from '@components'
 const ListWrap = styled('div', {
   position: 'relative',
   width: '100%',
+  lineHeight: 1.3,
 
   '> *:not(:last-child)': {
     marginBottom: 12

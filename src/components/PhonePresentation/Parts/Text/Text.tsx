@@ -8,7 +8,8 @@ import { Heading } from '@components'
 const TextWrap = styled('div', {
   position: 'relative',
   width: '100%',
-  '> *:not(:last-child)': { marginBottom: 4 }
+  '> *:not(:last-child)': { marginBottom: 4 },
+  '@tablet': { display: 'none' }
 })
 
 // For the title of the overall text exmapling the content of the iPhone

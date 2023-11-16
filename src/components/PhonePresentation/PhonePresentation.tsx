@@ -23,7 +23,16 @@ const PresContent = styled('div', {
   width: '100%',
   height: '100%',
   margin: '0 auto',
-  '> *:not(:last-child)': { marginRight: 80 }
+  '> *:not(:last-child)': { marginRight: 80 },
+
+  // On tablet breakpoints we remove the text to the right of the iphone
+  // We alsodisplay the content in the column format and remove the spacing
+
+  '@tablet': { 
+    flexDirection: 'column',
+    '> *:not(:last-child)': { marginRight: 0 },
+    '@tablet': { '> *:not(:last-child)': { marginBottom: 32 }}
+  }
 })
 
 // For the container of the phone on the left of the container
@@ -67,7 +76,13 @@ const PresBottom = styled('div', {
   flexDirection: 'column',
   position: 'relative',
   width: '100%',
-  '> *:not(:last-child)': { marginBottom: 4 }
+  '> *:not(:last-child)': { marginBottom: 4 },
+
+  '@tablet': { 
+    alignItems: 'center', 
+    '*': { alignSelf: 'center !important' },
+    '> *:not(:last-child)': { marginBottom: 12 }
+  }
 })
 
 // -------------- Typescript declarations -------------- //

@@ -20,6 +20,9 @@ const ProcessText = styled('div', {
   '> *:not(:last-child)': { marginBottom: 12 }
 })
 
+// For the master container of all of the images wihtin the process container
+// This is the content directly below the title and description
+
 const ProcessImageWrap = styled('div', {
   display: 'flex',
   flexDirection: 'column',
@@ -27,6 +30,23 @@ const ProcessImageWrap = styled('div', {
   alignItems: 'center',
   position: 'relative',
   width: '100%',
+
+  '@tablet': { 
+    paddingBottom: '0 !important',
+
+    '*': { 
+      flexDirection: 'column !important',
+      position: 'relative !important',
+      maxWidth: '100% !important',
+      top: 'auto',
+      right: 'auto',
+      bottom: 'auto',
+      left: 'auto',
+      transform: 'translateY( 0 ) !important'
+    }
+  },
+
+  // Here we account for the 
 
   variants: {
     variant: {
@@ -81,15 +101,16 @@ const ProcessImages = styled('div', {
 })
 
 const ProcessImage = styled('div', {
+  display: 'flex',
   position: 'relative',
 
   variants: {
     size: {
-      l0: { width: 585 },
-      l1: { width: 400 },
-      l2: { width: 500 },
-      l3: { width: 820 },
-      l4: { width: 936 }
+      l0: { maxWidth: 585, width: '100%' },
+      l1: { maxWidth: 400, width: '100%' },
+      l2: { maxWidth: 500, width: '100%' },
+      l3: { maxWidth: 820, width: '100%' },
+      l4: { maxWidth: 936, width: '100%' }
     },
 
     hasBackgorund: {
@@ -97,6 +118,8 @@ const ProcessImage = styled('div', {
     }
   }
 })
+
+// -------------- Typescript declarations -------------- //
 
 interface ProcessProps {
   variant?: 'v1' | 'v2' | 'v3'
@@ -113,8 +136,10 @@ interface ProcessProps {
   }[]
 }
 
+// ---------- This is the end of declarations ---------- //
+
 export const CardiactProcess = ({ 
-    title, 
+    title, // Required - For the title of the process screen
     text, 
     images, 
     mainImage, 

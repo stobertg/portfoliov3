@@ -11,7 +11,8 @@ const LogoWrap = styled('div', {
   position: 'absolute',
   bottom: 80,
   right: 0,
-  width: 120
+  width: 120,
+  '@tablet': { 'display': 'none' }
 })
 
 // For the container of the logo within the master container

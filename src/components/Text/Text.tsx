@@ -15,7 +15,7 @@ const TextWrap = styled('div', {
   variants: {
     fontSize: {
       l0: { p: { fontSize: '$s1' }},
-      l1: { p: { fontSize: '$s2', lineHeight: '1.75' }}
+      l1: { p: { fontSize: '$s2', lineHeight: '1.75', '@tablet': { fontSize: '$s1' }}}
     },
 
     font: {
