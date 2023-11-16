@@ -30,6 +30,12 @@ const IntroMain = styled('div', {
   '> *:not(:last-child)': { marginBottom: 32 }
 })
 
+const IntroAttrs = styled('div', {
+  position: 'realtive',
+  maxWidth: 720,
+  width: '100%'
+})
+
 // -------------- Typescript declarations -------------- //
 
 interface IntroProps {
@@ -55,15 +61,17 @@ export const Intro = ({
     <IntroWrap>
       <IntroContent>
         <IntroMain>
-          <Heading htag="2" heavy size="l5" {...{ title }} />
+          <Heading htag="2" heavy size="l4" {...{ title }} />
           <Text fontSize="l1">{ text }</Text>
         </IntroMain>
 
-        <Grid columns={ 3 }>
-          { skills && ( <List spacing="l1" size="l1" font="serif" title="Roles / Skills" listItems={ skills } /> )}
-          { project && ( <List spacing="l1" size="l1" font="serif" title="Project" listItems={ project } /> )}
-          { links && ( <List spacing="l1" size="l1" font="serif" title="Links" listItems={ links } /> )}
-        </Grid>
+        <IntroAttrs>
+          <Grid columns={ 2 }>
+            { skills && ( <List spacing="l1" size="l1" font="serif" title="Roles / Skills" listItems={ skills } /> )}
+            { project && ( <List spacing="l1" size="l1" font="serif" title="Project" listItems={ project } /> )}
+            { links && ( <List spacing="l1" size="l1" font="serif" title="Links" listItems={ links } /> )}
+          </Grid>
+        </IntroAttrs>
       </IntroContent>
     </IntroWrap>
 

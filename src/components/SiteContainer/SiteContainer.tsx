@@ -48,6 +48,7 @@ const SiteContent = styled('div', {
       l1: { '> *:not(:last-child)': { marginBottom: 50 }},
       l2: { '> *:not(:last-child)': { marginBottom: 100 }},
       l3: { '> *:not(:last-child)': { marginBottom: 150, '@media(max-width: 767px)': { marginBottom: 75 }}},
+      l4: { '> *:not(:last-child)': { marginBottom: 200, '@media(max-width: 767px)': { marginBottom: 75 }}},
     }
   }
 })
@@ -80,7 +81,7 @@ const SiteBg = styled('div', {
 interface SiteContainerProps {
   hasContactForm?: boolean
   spacing?: 'l0' | 'l1' | 'l2' | 'l3'
-  blockSpacing?: 'l0' | 'l1' | 'l2' | 'l3'
+  blockSpacing?: 'l0' | 'l1' | 'l2' | 'l3' | 'l4'
   children: React.ReactNode
   shareURL?: string
   pageTitle?: string

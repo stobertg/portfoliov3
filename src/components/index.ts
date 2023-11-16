@@ -28,6 +28,7 @@ export { InputStatus } from './Inputs/InputStatus'
 
 export { GatherLogo } from './Projects/Gather/Logo/Logo'
 export { Cardiact } from './Projects/Cardiact/App/Cardiact'
+export { CardiactProcess } from './Projects/Cardiact/Process/Process'
 export { ArtizenAirplane } from './Projects/Artizen/Animations/Airplane/Airplane'
 export { ArtizenNewton } from './Projects/Artizen/Animations/Newton/Newton'
 export { ArtizenTrumpet } from './Projects/Artizen/Animations/Trumpet/Trumpet'

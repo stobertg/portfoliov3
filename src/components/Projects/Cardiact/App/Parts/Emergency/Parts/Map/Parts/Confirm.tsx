@@ -17,12 +17,13 @@ const ConfirmWrap = styled('div', {
   height: 240,
   backdropFilter: 'blur( 10px )',
   background: 'rgba( 0,0,0, 0.3 )',
-  borderRadius: '$r3 $r3 0 0',
+  borderRadius: '$r3 $r3 40px 40px',
   transform: 'scale( 0.95 )',
   transition: '$s1 ease',
   pointerEvents: 'none',
   opacity: 0,
-  zIndex: 9999,
+  overflow: 'hidden',
+  zIndex: 10,
 
   // For the red gradient that sits on top of the blur black background
   // This is used to give more highlight to the modal
@@ -35,7 +36,7 @@ const ConfirmWrap = styled('div', {
     width: '100%',
     height: '100%',
     background: 'linear-gradient( 140deg, rgba( 0,0,0, 0.3 ) 20%, rgba( 255,0,0, 0.5 ) 100%)',
-    borderRadius: '$r3 $r3 0 0'
+    borderRadius: '$r3 $r3 40px 40px'
   },
 
   // By default, the confirm button is hidden and we set the css to be hidden

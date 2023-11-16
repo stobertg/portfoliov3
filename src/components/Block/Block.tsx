@@ -26,6 +26,11 @@ const BlockContent = styled('div', {
       small: { maxWidth: 950, width: '90%' },
       medium: { maxWidth: 1200, width: '90%' },
       large: { maxWidth: 1300, width: '90%' }
+    },
+
+    spacing: {
+      l0: { '> *:not(:last-child)': { marginBottom: 32 }},
+      l1: { '> *:not(:last-child)': { marginBottom: 100 }}
     }
   }
 })
@@ -34,6 +39,7 @@ const BlockContent = styled('div', {
 
 interface BlockProps {
   width?: 'small' | 'medium' | 'large'
+  spacing?: 'l0' | 'l1'
   children: React.ReactNode
 }
 
@@ -41,13 +47,14 @@ interface BlockProps {
 
 export const Block = ({ 
     width, // Optional - Accomidating various widths based on needs
+    spacing,
     children // Required - For the content within the component
   }:BlockProps) => {
 
   return(
 
     <BlockWrap>
-      <BlockContent {...{ width }}>
+      <BlockContent {...{ width, spacing }}>
         { children }
       </BlockContent>
     </BlockWrap>

@@ -30,7 +30,7 @@ const NextContent = styled('div', {
   maxWidth: 500,
   width: '90%',
   margin: '0 auto',
-  padding: '120px 0',
+  padding: '100px 0',
   zIndex: 1,
   '> *:not(:last-child)': { marginBottom: 12 }
 })
@@ -84,7 +84,7 @@ export const NextProject = ({
       <NextWrap>
         <NextContent>
           <Heading title="Next Project" />
-          <Heading heavy size="l5" {...{ title }} />
+          <Heading heavy size="l4" {...{ title }} />
         </NextContent>
 
         <NextBg><img src={ image } alt={ imageAlt } /></NextBg>
