@@ -54,7 +54,8 @@ const PhoneDescp = styled('div', {
   justifyContent: 'flex-end',
   position: 'relative',
   width: '100%',
-  marginBottom: 50
+  marginBottom: 50,
+  '@tablet': { marginBottom: 0 }
 })
 
 // For all of the content within the master container 

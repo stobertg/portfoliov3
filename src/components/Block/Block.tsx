@@ -30,7 +30,8 @@ const BlockContent = styled('div', {
 
     spacing: {
       l0: { '> *:not(:last-child)': { marginBottom: 32 }},
-      l1: { '> *:not(:last-child)': { marginBottom: 100 }}
+      l1: { '> *:not(:last-child)': { marginBottom: 52 }},
+      l2: { '> *:not(:last-child)': { marginBottom: 100, '@tablet': { marginBottom: 75 } }}
     }
   }
 })
@@ -39,7 +40,7 @@ const BlockContent = styled('div', {
 
 interface BlockProps {
   width?: 'small' | 'medium' | 'large'
-  spacing?: 'l0' | 'l1'
+  spacing?: 'l0' | 'l1' | 'l2'
   children: React.ReactNode
 }
 

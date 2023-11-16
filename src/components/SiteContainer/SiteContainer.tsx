@@ -47,8 +47,8 @@ const SiteContent = styled('div', {
       l0: { '> *:not(:last-child)': { marginBottom: 32 }},
       l1: { '> *:not(:last-child)': { marginBottom: 50 }},
       l2: { '> *:not(:last-child)': { marginBottom: 100 }},
-      l3: { '> *:not(:last-child)': { marginBottom: 150, '@media(max-width: 767px)': { marginBottom: 75 }}},
-      l4: { '> *:not(:last-child)': { marginBottom: 200, '@media(max-width: 767px)': { marginBottom: 75 }}},
+      l3: { '> *:not(:last-child)': { marginBottom: 150, '@tablet': { marginBottom: 75 }}},
+      l4: { '> *:not(:last-child)': { marginBottom: 200, '@tablet': { marginBottom: 50 }}},
     }
   }
 })

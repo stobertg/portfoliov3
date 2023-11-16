@@ -101,7 +101,7 @@ const Gather: NextPage = () => {
         <img src="/projects/cardiact/process/poster.webp" alt="Cardiact Web Poster" />
       </Block>
 
-      <Block width="medium" spacing="l1">
+      <Block width="medium" spacing="l2">
         <CardiactProcess
           mainImage="/projects/cardiact/process/pone.webp"
           title="1. Research and Benchmarking"

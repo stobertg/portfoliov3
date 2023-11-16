@@ -30,7 +30,7 @@ const NextContent = styled('div', {
   maxWidth: 500,
   width: '90%',
   margin: '0 auto',
-  padding: '100px 0',
+  padding: '120px 0',
   zIndex: 1,
   '> *:not(:last-child)': { marginBottom: 12 }
 })

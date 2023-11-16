@@ -8,7 +8,7 @@ import { Heading, Text } from '@components'
 const ProcessWrap = styled('div', {
   position: 'relative',
   width: '100%',
-  '> *:not(:last-child)': { marginBottom: 32 }
+  '> *:not(:last-child)': { marginBottom: 50 }
 })
 
 // For the container of the text on the top of the container
@@ -43,7 +43,9 @@ const ProcessImageWrap = styled('div', {
       bottom: 'auto',
       left: 'auto',
       transform: 'translateY( 0 ) !important'
-    }
+    },
+
+    '> *:not(:last-child)': { marginBottom: 12 }
   },
 
   // Here we account for the 
@@ -66,6 +68,7 @@ const ProcessImages = styled('div', {
   alignItems: 'center',
   position: 'relative',
   width: '100%',
+  '@tablet': { '> *:not(:last-child)': { marginBottom: 12 }},
 
   variants: { 
     variant: {
