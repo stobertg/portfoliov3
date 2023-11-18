@@ -48,6 +48,9 @@ const SocialLinks = styled('div', {
   position: 'relative',
   '> *:not(:last-child)': { marginRight: 4 },
 
+  // For styling of the container for the individual boxes for the social links
+  // This is used to add the border around the box and give affordance that it is a button
+
   a: {
     display: 'flex',
     justifyContent: 'center',
@@ -61,12 +64,18 @@ const SocialLinks = styled('div', {
     '&:hover': { background: '$border' }
   },
 
+  // For the size of the icons within the link container
+  // This is to set the icons a bit smaller than bumping up against the sides of the container
+
   svg: {
     fill: '$white',
     width: 30,
     height: 30
   }
 })
+
+// For the container of the Resume link within the social link container
+// This is needed so we can add some spacing on the left and right of the container
 
 const ResumeLink = styled('div', {
   position: 'relative',
