@@ -22,7 +22,9 @@ const AboutContent = styled('div', {
 })
 
 const AboutBackground = styled('div', {
-  position: 'absolute'
+  position: 'absolute',
+  opacity: 0.1,
+  video: { width: 1100 }
 })
 
 interface AboutProps {
@@ -51,8 +53,10 @@ export const About = ({}:AboutProps) => {
           tiltMaxAngleX={ 10 }
           tiltMaxAngleY={ 10 }
         >
-  
-          Nothing to see here
+
+          <video autoPlay muted loop playsInline>
+            <source type="video/mp4" src='/about/turtles.mp4' />
+          </video>
           
         </Tilt>
       </AboutBackground>
