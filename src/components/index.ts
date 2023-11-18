@@ -16,6 +16,7 @@ export { NextProject } from './NextProject/NextProject'
 export { PhonePresentation } from './PhonePresentation/PhonePresentation'
 export { SiteContainer } from './SiteContainer/SiteContainer'
 export { SiteHeader } from './SiteHeader/SiteHeader'
+export { DribbleIcon, GithubIcon, LinkedInIcon, MediumIcon } from './SocialIcons'
 export { Text } from './Text/Text'
 
 // For the form components

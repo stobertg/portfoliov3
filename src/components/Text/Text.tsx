@@ -12,6 +12,31 @@ const TextWrap = styled('div', {
     '&:not(:first-child)': { marginTop: 32 }
   },
 
+  a: {
+    display: 'inline-flex',
+    position: 'relative',
+    fontFamily: 'inherit',
+    overflow: 'hidden',
+
+    '&:before': {
+      content: '',
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      background: '$yellow',
+      transform: 'translateY( calc( 100% - 1px ))',
+      transition: '$s1',
+      zIndex: -1
+    },
+
+    '&:hover': {
+      color: '$black',
+      '&:before': { transform: 'translateY( 0 )' }
+    }
+  },
+
   variants: {
     fontSize: {
       l0: { p: { fontSize: '$s1' }},

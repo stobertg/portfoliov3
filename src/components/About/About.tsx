@@ -18,33 +18,60 @@ const AboutContent = styled('div', {
   position: 'relative',
   maxWidth: 800,
   width: '90%',
-  margin: '0 auto'
+  margin: '0 auto',
+  zIndex: 10,
+  '> *:not(:last-child)': { marginBottom: 20 }
 })
 
 const AboutBackground = styled('div', {
   position: 'absolute',
-  opacity: 0.1,
+  opacity: 0.05,
   video: { width: 1100 }
 })
 
-interface AboutProps {
+const SocialLinks = styled('div', {
+  display: 'flex',
+  flexDirection: 'row',
+  position: 'relative',
+  '> *:not(:last-child)': { marginRight: 4 }
+})
 
+interface AboutProps {
+  title: string
+  descp: React.ReactNode
+  video: string
+  socials: { 
+    href: string
+    icon: React.ReactNode 
+  }[]
 }
 
-export const About = ({}:AboutProps) => {
+export const About = ({ 
+    title,
+    descp,
+    socials,
+    video
+  }:AboutProps) => {
+
   return(
 
     <AboutWrap>
       <AboutContent>
-        <Heading title="Tyler Stober" />
+        <Heading heavy size="l5" {...{ title }} />
+        <Text fontSize="l1">{ descp }</Text>
 
-        <Text>
-          <p>
-            Multidisciplinary designer with a primary background in User Experience, User Interface Design, and Front End Development. 
-            In addition, also proficient in Motion and 3D design, rendering a unique technical perspective and collaborator with an 
-            awareness of multiple mediums.
-          </p>
-        </Text>
+        <SocialLinks>
+          { socials.map(( social, i ) => (
+            <a 
+              key={`social-${ i }`} 
+              href={ social.href } 
+              target="_blank" 
+              rel="noreferrer"
+            >
+              { social.icon }
+            </a>
+          ))}
+        </SocialLinks>
       </AboutContent>
 
       <AboutBackground>
@@ -55,7 +82,7 @@ export const About = ({}:AboutProps) => {
         >
 
           <video autoPlay muted loop playsInline>
-            <source type="video/mp4" src='/about/turtles.mp4' />
+            <source type="video/mp4" src={ video } />
           </video>
           
         </Tilt>
