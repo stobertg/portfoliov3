@@ -93,7 +93,6 @@ interface SiteContainerProps {
 // ---------- This is the end of declarations ---------- //
 
 export const SiteContainer = ({
-    hasContactForm, // Optional - For the site header contact form, if a page has it at the bottom, then it isn't needed
     spacing, // Optional - For the top and bottom spacing of the page content
     blockSpacing, // Optional - For the uniform spacing between each of the blocks that make up the page
     children, // Required - For all of the content within a page

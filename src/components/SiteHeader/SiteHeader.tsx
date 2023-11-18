@@ -7,13 +7,26 @@ import { Logo, Heading } from '@components'
 // For the master container of the global site header
 // This is always positioned on the top of the site, and hides on scroll down and shows on scroll up
 
-const SiteContainer = styled('header', {
+const HeaderWrap = styled('header', {
   position: 'fixed',
   top: 0,
   left: 0,
   width: '100vw',
+  background: 'rgba( 24,24,24, 0.8 )',
   transition: '$s1',
-  zIndex: 9000
+  zIndex: 9000,
+
+  // For the blur background behind the header that gives the header depth on the content below
+
+  '&:before': {
+    content: '',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    backdropFilter: 'blur( 10px )'
+  }
 })
 
 // For the container of all of the links within the site container
@@ -28,8 +41,11 @@ const Nav = styled('nav', {
   maxWidth: 1400,
   width: '95%',
   margin: '0 auto',
-  padding: '20px 0'
+  padding: '12px 0'
 })
+
+// For the container of the links on the right side of the container
+// This holds all of the nav buttons for the site, opposite of the logo on the left
 
 const NavLinks = styled('div', {
   display: 'flex',
@@ -38,12 +54,18 @@ const NavLinks = styled('div', {
   '> *:not(:last-child)': { marginRight: 12 }
 })
 
+// For the styling of the individual nav links within the container
+// This holds the button and the underline that animates on hover
+
 const NavLink = styled('div', {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   position: 'relative',
   padding: '8px 0',
+
+  // For the line on the bottom, that shows up when the user hovers over the link
+  // By default, the line is hidden and we set the styling here for the reveal
 
   '&:after': { 
     content: '',
@@ -55,6 +77,8 @@ const NavLink = styled('div', {
     transform: 'scale( 0, 1 )',
     transition: '$s1'
   },
+
+  // When the user hovers of the button, the underline is shown below
 
   '&:hover:after': { transform: 'scale( 1, 1 )' }
 })
@@ -98,7 +122,7 @@ export const SiteHeader = ({}:HeaderProps) => {
 
   return(
 
-    <SiteContainer style={{ transform: `translateY( ${ scrollDirection == 'down' ? '-100%' : '0' })` }}>
+    <HeaderWrap style={{ transform: `translateY( ${ scrollDirection == 'down' ? '-100%' : '0' })` }}>
       <Nav>
         <Logo />
 
@@ -108,7 +132,7 @@ export const SiteHeader = ({}:HeaderProps) => {
           <button><NavLink><Heading bold size="l0" title="Contact" /></NavLink></button>
         </NavLinks>
       </Nav>
-    </SiteContainer>
+    </HeaderWrap>
 
   )
 }

@@ -1,8 +1,13 @@
 import React from 'react'
 import { styled } from '@theme'
+import { Heading } from '@components'
 
 const LogoWrap = styled('div', {
-
+  display: 'inline-flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+  position: 'relative',
+  '> *:not(:last-child)': { marginRight: 12 }
 })
 
 // For the master container of the Tyler Stober logo
@@ -15,7 +20,7 @@ const LogoContent = styled('figure', {
 
   variants: {
     size: {
-      l0: { transform: 'scale( 0.7 )' }
+      l0: { transform: 'scale( 0.6 )' }
     }
   }
 })
@@ -110,9 +115,13 @@ interface LogoProps {
 export const Logo = ({}:LogoProps) => {
   return(
 
-    <LogoContent size="l0">
-      <Tyler /><Stober />
-    </LogoContent>
+    <LogoWrap>
+      <LogoContent size="l0">
+        <Tyler /><Stober />
+      </LogoContent>
+
+      <Heading bold size="l1" title="Tyler Stober" />
+    </LogoWrap>
 
   )
 }

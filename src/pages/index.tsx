@@ -19,7 +19,8 @@ const Home: NextPage = () => {
           { link: '/work/cardiact', title: 'Walgreens' },
           { link: '/work/cardiact', title: 'CardiAct' },
           { link: '/work/cardiact', title: 'Castle for no Reason' },
-          { link: '/work/cardiact', title: 'The Apparel Agency' },
+          { link: '/work/taa', title: 'The Apparel Agency' },
+          { link: '/work/taa', title: 'CSS Animations' },
         ]}
       />
     </SiteContainer>
