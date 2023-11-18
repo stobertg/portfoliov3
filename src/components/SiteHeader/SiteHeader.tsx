@@ -124,11 +124,11 @@ export const SiteHeader = ({}:HeaderProps) => {
 
     <HeaderWrap style={{ transform: `translateY( ${ scrollDirection == 'down' ? '-100%' : '0' })` }}>
       <Nav>
-        <Logo />
+        <Link href="/"><a><Logo /></a></Link>
 
         <NavLinks>
           <Link href="/"><a><NavLink><Heading bold size="l0" title="Work" /></NavLink></a></Link>
-          <Link href="/"><a><NavLink><Heading bold size="l0" title="About" /></NavLink></a></Link>
+          <Link href="/about"><a><NavLink><Heading bold size="l0" title="About" /></NavLink></a></Link>
           <button><NavLink><Heading bold size="l0" title="Contact" /></NavLink></button>
         </NavLinks>
       </Nav>

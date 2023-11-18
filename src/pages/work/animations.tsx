@@ -1,7 +1,7 @@
 import React from 'react'
 import type { NextPage } from 'next'
 import ReactPlayer from 'react-player'
-import { SiteContainer, Block, Hero, Intro, ArtizenAirplane, ArtizenNewton, ArtizenTrumpet, Knight } from '@components'
+import { SiteContainer, Block, Hero, Intro, ArtizenAirplane, ArtizenNewton, ArtizenTrumpet, Knight, NextProject } from '@components'
 
 const Gather: NextPage = () => {
   return (
@@ -66,6 +66,15 @@ const Gather: NextPage = () => {
         <ArtizenAirplane />
         <ArtizenTrumpet />
       </Block> */}
+
+      <Block>
+        <NextProject 
+          pageLink="/work/gather"
+          title="Walgreens' Design Systems" 
+          image="/projects/gather/profile.png"
+          imageAlt="Gather by Tyler Stober"
+        />
+      </Block>
     </SiteContainer>
 
   )

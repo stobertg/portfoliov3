@@ -27,7 +27,7 @@ const LoopNumbers = styled('div', {
   width: '100%',
   minWidth: 36,
   height: 24,
-  minHeight: 28,
+  minHeight: 32,
   overflow: 'hidden',
 
   // For the positioning of the numbers within the container in order for the looping animation to work

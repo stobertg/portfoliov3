@@ -1,6 +1,6 @@
 import React from 'react'
 import type { NextPage } from 'next'
-import { SiteContainer, Block, Hero, Intro, Browser, GatherLogo } from '@components'
+import { SiteContainer, Block, Hero, Intro, Browser, GatherLogo, NextProject } from '@components'
 
 const Gather: NextPage = () => {
   return (
@@ -58,6 +58,15 @@ const Gather: NextPage = () => {
             { title: 'Goldin Institute: 2017 - Present' },
             { title: 'Co-founder - Travis Rejman' }
           ]}
+        />
+      </Block>
+
+      <Block>
+        <NextProject 
+          pageLink="/work/gather"
+          title="Walgreens' Design Systems" 
+          image="/projects/gather/profile.png"
+          imageAlt="Gather by Tyler Stober"
         />
       </Block>
     </SiteContainer>

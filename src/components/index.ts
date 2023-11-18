@@ -1,3 +1,4 @@
+export { About } from './About/About'
 export { Blob } from './Blob/Blob'
 export { Block } from './Block/Block'
 export { Browser } from './Browser/Browser'
