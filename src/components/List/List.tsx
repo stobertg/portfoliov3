@@ -2,6 +2,9 @@ import React from 'react'
 import { styled } from '@theme'
 import { Heading } from '@components'
 
+// For the master container of the List component
+// This holds 
+
 const ListWrap = styled('div', {
   position: 'relative',
   width: '100%',
@@ -26,12 +29,12 @@ const Ul = styled('ul', {
   variants: {
     spacing: {
       l0: { li: { padding: 0 }},
-      l1: { li: { padding: '8px 0' }}
+      l1: { li: { padding: '8px 0', '@tablet': { padding: '4px 0' }}}
     },
 
     size: {
       l0: {},
-      l1: { fontSize: '$s1' }
+      l1: { fontSize: '$s1', '@tablet': { fontSize: 'initial' }}
     },
 
     font: {
@@ -39,6 +42,8 @@ const Ul = styled('ul', {
     }
   }
 })
+
+// -------------- Typescript declarations -------------- //
 
 interface ListProps {
   title?: string
@@ -49,6 +54,8 @@ interface ListProps {
     title: string
   }[]
 }
+
+// ---------- This is the end of declarations ---------- //
 
 export const List = ({ 
     title, 

@@ -36,7 +36,8 @@ const IntroMain = styled('div', {
 const IntroAttrs = styled('div', {
   position: 'realtive',
   maxWidth: 720,
-  width: '100%'
+  width: '100%',
+  '@tablet': { '> * > *:not(:last-child)': { marginBottom: 32 }}
 })
 
 // -------------- Typescript declarations -------------- //
@@ -69,7 +70,7 @@ export const Intro = ({
         </IntroMain>
 
         <IntroAttrs>
-          <Grid columns={ 2 }>
+          <Grid columns={ 2 } tabletColumns={ 1 }>
             { skills && ( <List spacing="l1" size="l1" font="serif" title="Roles / Skills" listItems={ skills } /> )}
             { project && ( <List spacing="l1" size="l1" font="serif" title="Project" listItems={ project } /> )}
             { links && ( <List spacing="l1" size="l1" font="serif" title="Links" listItems={ links } /> )}

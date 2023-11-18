@@ -80,7 +80,7 @@ const Stober = styled('div', {
   '&:before': {
     top: 8,
     width: '100%',
-    background: '#111',
+    background: '$gray900',
     transform: 'skewY(21deg)',
     borderRadius: '0px 2px 2px 2px',
     zIndex: 0
@@ -93,7 +93,7 @@ const Stober = styled('div', {
     right: 0,
     width: '85%',
     transform: 'skewY(-26deg)',
-    background: '$black',
+    background: '$gray900',
     borderRadius: '2px 0px 2px 2px',
     zIndex: 2
   }

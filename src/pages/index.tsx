@@ -1,6 +1,6 @@
 import React from 'react'
 import type { NextPage } from 'next'
-import { SiteContainer } from '@components'
+import { SiteContainer, Projects } from '@components'
 
 const Home: NextPage = () => {
   return (
@@ -13,7 +13,15 @@ const Home: NextPage = () => {
       socialImage="https://mxmlcreative.com/global/social-hero.jpeg"
     >
 
-      <>This is some content</>
+      <Projects 
+        projects={[
+          { link: '/work/cardiact', title: 'Gather' },
+          { link: '/work/cardiact', title: 'Walgreens' },
+          { link: '/work/cardiact', title: 'CardiAct' },
+          { link: '/work/cardiact', title: 'Castle for no Reason' },
+          { link: '/work/cardiact', title: 'The Apparel Agency' },
+        ]}
+      />
     </SiteContainer>
 
   )

@@ -26,9 +26,12 @@ export { InputStatus } from './Inputs/InputStatus'
 
 // Projects
 
-export { GatherLogo } from './Projects/Gather/Logo/Logo'
-export { Cardiact } from './Projects/Cardiact/App/Cardiact'
-export { CardiactProcess } from './Projects/Cardiact/Process/Process'
+export { Projects } from './Projects/Projects'
 export { ArtizenAirplane } from './Projects/Artizen/Animations/Airplane/Airplane'
 export { ArtizenNewton } from './Projects/Artizen/Animations/Newton/Newton'
 export { ArtizenTrumpet } from './Projects/Artizen/Animations/Trumpet/Trumpet'
+export { Cardiact } from './Projects/Cardiact/App/Cardiact'
+export { CardiactProcess } from './Projects/Cardiact/Process/Process'
+export { GatherLogo } from './Projects/Gather/Logo/Logo'
+export { TAALogo } from './Projects/TAA/Logo/Logo'
+

@@ -102,7 +102,8 @@ const BrowserScreen = styled('div', {
   position: 'relative',
   width: '100%',
   borderRadius: '0 0 $r2 $r2',
-  overflow: 'hidden'
+  overflow: 'hidden',
+  img: { display: 'flex' }
 })
 
 // -------------- Typescript declarations -------------- //

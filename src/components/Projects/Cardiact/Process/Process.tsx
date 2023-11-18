@@ -31,6 +31,19 @@ const ProcessImageWrap = styled('div', {
   position: 'relative',
   width: '100%',
 
+  // Here we account for the 
+
+  variants: {
+    variant: {
+      v1: { paddingBottom: 330 },
+      v2: { alignItems: 'flex-start' },
+      v3: { alignItems: 'flex-start' }
+    }
+  },
+
+  // Here we set the changes on tablet breakpoint for the responsive design
+  // We can just target all items 
+
   '@tablet': { 
     paddingBottom: '0 !important',
 
@@ -47,16 +60,6 @@ const ProcessImageWrap = styled('div', {
 
     '> *:not(:last-child)': { marginBottom: 12 }
   },
-
-  // Here we account for the 
-
-  variants: {
-    variant: {
-      v1: { paddingBottom: 330 },
-      v2: { alignItems: 'flex-start' },
-      v3: { alignItems: 'flex-start' }
-    }
-  }
 })
 
 // For the container if multiple images are needed within the process section

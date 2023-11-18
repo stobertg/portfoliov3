@@ -11680,6 +11680,11 @@ react-moving-text@^0.0.7:
   resolved "https://registry.yarnpkg.com/react-moving-text/-/react-moving-text-0.0.7.tgz#afa2e3d6a52cc6707bf869ce4d37d7df04993e75"
   integrity sha512-WA72if8QS2/QVOmZ2mDnWu1UFkMqt7Y1TFLfKT3MDRwPbcpz2F7WAyGi349anuKth0bQKg0CQddlQLQQiII8zQ==
 
+react-parallax-tilt@^1.7.174:
+  version "1.7.174"
+  resolved "https://registry.yarnpkg.com/react-parallax-tilt/-/react-parallax-tilt-1.7.174.tgz#261bddb3fbaf697598a40ed3a47d58f0d2e9dd58"
+  integrity sha512-NFmSZ1O+CJ+K+vDqhnNNSREzhJez3sXYX4b12tl00kxvN7jmdngZwCgd5bOtqgyk3OcGAAM43P+pkvxBXrzbSg==
+
 react-player@^2.13.0:
   version "2.13.0"
   resolved "https://registry.yarnpkg.com/react-player/-/react-player-2.13.0.tgz#b6fb252bf70574608ac711f6c83d7057c8fb0c14"

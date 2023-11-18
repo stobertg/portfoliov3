@@ -14,7 +14,8 @@ const staticAnimation = keyframes({
 const SiteWrap = styled('div', {
   position: 'relative',
   width: '100vw',
-  minHeight: '100vh'
+  minHeight: '100vh',
+  overflow: 'hidden'
 })
 
 // For all of the content within the site

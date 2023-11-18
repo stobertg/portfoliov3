@@ -47,7 +47,6 @@ const NextBg = styled('div', {
   left: 0,
   width: '100%',
   height: '100%',
-  objectFit: 'cover',
   zIndex: 0,
 
   // Here we set the image to be within the center of the container
@@ -56,7 +55,9 @@ const NextBg = styled('div', {
   img: {
     position: 'absolute',
     opacity: 0.2,
-    transition: '$s2'
+    transition: '$s2',
+    height: '100%',
+    objectFit: 'cover'
   }
 })
 
@@ -81,14 +82,16 @@ export const NextProject = ({
   return(
 
     <Link href={ pageLink }>
-      <NextWrap>
-        <NextContent>
-          <Heading title="Next Project" />
-          <Heading heavy size="l4" {...{ title }} />
-        </NextContent>
+      <a>
+        <NextWrap>
+          <NextContent>
+            <Heading title="Next Project" />
+            <Heading heavy size="l4" {...{ title }} />
+          </NextContent>
 
-        <NextBg><img src={ image } alt={ imageAlt } /></NextBg>
-      </NextWrap>
+          <NextBg><img src={ image } alt={ imageAlt } /></NextBg>
+        </NextWrap>
+      </a>
     </Link>
 
   )
