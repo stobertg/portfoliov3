@@ -16,6 +16,7 @@ const AboutPage: NextPage = () => {
       <About
         title="Tyler Stober"
         video="/about/turtles.mp4"
+        resumeLink="/"
         descp={
           <>
             <p>
@@ -27,7 +28,7 @@ const AboutPage: NextPage = () => {
             <p>
               Made in <a href="https://en.wikipedia.org/wiki/Bethel,_Ohio" target="_blank" rel="noreferer">small town</a> Ohio, educated 
               at <a href="https://en.wikipedia.org/wiki/University_of_Cincinnati_College_of_Design,_Architecture,_Art,_and_Planning" target="_blank" rel="noreferer">DAAP</a> at U 
-              of Cincy, professionally developed in NYC and Chicago. Appreciator of <a href="https://www.pinterest.com/stobertg/user-interfaces/" target="_blank" rel="noreferer">design</a>, <a href="https://www.pinterest.com/stobertg/history/" target="_blank" rel="noreferer">history</a>, <a href="https://www.pinterest.com/stobertg/medieval-architecture/" target="_blank" rel="noreferer">architecture</a>, <a href="https://www.pinterest.com/stobertg/cinema4d/" target="_blank" rel="noreferer">3D</a>, and memorable <a href="https://www.pinterest.com/stobertg/experiences/" target="_blank" rel="noreferer">experiences</a>.
+              of Cincy, professionally developed in NYC and Chicago. Interests in <a href="https://www.pinterest.com/stobertg/user-interfaces/" target="_blank" rel="noreferer">design</a>, <a href="https://www.pinterest.com/stobertg/history/" target="_blank" rel="noreferer">history</a>, <a href="https://www.pinterest.com/stobertg/medieval-architecture/" target="_blank" rel="noreferer">architecture</a>, <a href="https://www.pinterest.com/stobertg/cinema4d/" target="_blank" rel="noreferer">3D</a>, and memorable <a href="https://www.pinterest.com/stobertg/experiences/" target="_blank" rel="noreferer">experiences</a>.
             </p>
           </>
         }

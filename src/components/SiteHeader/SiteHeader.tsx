@@ -12,7 +12,7 @@ const HeaderWrap = styled('header', {
   top: 0,
   left: 0,
   width: '100vw',
-  background: 'rgba( 24,24,24, 0.8 )',
+  // background: 'rgba( 24,24,24, 0.8 )',
   transition: '$s1',
   zIndex: 9000,
 
@@ -25,7 +25,7 @@ const HeaderWrap = styled('header', {
     left: 0,
     width: '100%',
     height: '100%',
-    backdropFilter: 'blur( 10px )'
+    // backdropFilter: 'blur( 10px )'
   }
 })
 

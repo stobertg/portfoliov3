@@ -3,6 +3,9 @@ import Tilt from 'react-parallax-tilt'
 import { styled } from '@theme'
 import { Heading, Text } from '@components'
 
+// For the master container of the about page that can clicked on in the global navigation
+// This is the about me page that has a short bio and such for a quick about
+
 const AboutWrap = styled('div', {
   display: 'flex',
   justifyContent: 'center',
@@ -14,43 +17,83 @@ const AboutWrap = styled('div', {
   height: '100vh'
 })
 
+// For the conainer of the main content within the master container
+// This contains the title on the top, the desciption below and the links on the bottom of the container
+
 const AboutContent = styled('div', {
   position: 'relative',
   maxWidth: 800,
   width: '90%',
   margin: '0 auto',
   zIndex: 10,
-  '> *:not(:last-child)': { marginBottom: 20 }
+  '> *:not(:last-child)': { marginBottom: 20 },
+  '> *:nth-child( 2 )': { marginBottom: 40 }
 })
+
+// For the background behind the main text of the about page
+// This is displays the easter egg video that is a bit memeey
 
 const AboutBackground = styled('div', {
   position: 'absolute',
-  opacity: 0.05,
-  video: { width: 1100 }
+  opacity: 0.1,
+  video: { maxWidth: 1400, width: '100%' }
 })
+
+// For the container of the links on the bottom of the container
+// This contains the social links that I'm conforatable with sharing such as LinkedIn, Github, ect
 
 const SocialLinks = styled('div', {
   display: 'flex',
   flexDirection: 'row',
   position: 'relative',
-  '> *:not(:last-child)': { marginRight: 4 }
+  '> *:not(:last-child)': { marginRight: 4 },
+
+  a: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'relative',
+    minWidth: 50,
+    height: 50,
+    border: '1px solid $border',
+    borderRadius: 20,
+    transition: '$s1',
+    '&:hover': { background: '$border' }
+  },
+
+  svg: {
+    fill: '$white',
+    width: 30,
+    height: 30
+  }
 })
+
+const ResumeLink = styled('div', {
+  position: 'relative',
+  padding: '0 20px'
+})
+
+// -------------- Typescript declarations -------------- //
 
 interface AboutProps {
   title: string
   descp: React.ReactNode
   video: string
+  resumeLink: string
   socials: { 
     href: string
     icon: React.ReactNode 
   }[]
 }
 
+// ---------- This is the end of declarations ---------- //
+
 export const About = ({ 
-    title,
-    descp,
-    socials,
-    video
+    title, // Required - For the title of the page
+    descp, // Required - For my short bio
+    socials, // Required - For the social links people can view to learn more about me
+    video, // Required - For the easter egg video in the background
+    resumeLink // Required - For the link for the resume
   }:AboutProps) => {
 
   return(
@@ -62,15 +105,14 @@ export const About = ({
 
         <SocialLinks>
           { socials.map(( social, i ) => (
-            <a 
-              key={`social-${ i }`} 
-              href={ social.href } 
-              target="_blank" 
-              rel="noreferrer"
-            >
+            <a key={`social-${ i }`} href={ social.href } target="_blank" rel="noreferrer">
               { social.icon }
             </a>
           ))}
+
+          <a href={ resumeLink } target="_blank" rel="noreferrer">
+            <ResumeLink><Heading bold title="Résumé" /></ResumeLink>
+          </a>
         </SocialLinks>
       </AboutContent>
 
