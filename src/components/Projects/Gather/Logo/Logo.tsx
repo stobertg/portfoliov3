@@ -1,6 +1,9 @@
 import React from 'react'
 import { styled, keyframes } from '@theme'
 
+// For the animation of the G logo for gather
+// I'm not sure if I am actually going to go through with the animation, so going to punt on this
+
 const showCapBar = keyframes({
   '0%': { transform: 'scale( 0, 1 ) rotate( 30deg )' },
   '100%': { transform: 'scale( 1, 1 ) rotate( 30deg )' }
@@ -80,13 +83,18 @@ const LogoCap = styled('div', {
 				}
 			},
 
+			// For the container of the bottom parts of the G
+			// This contains the upwards slant on the left and the last part of the g on the right of the container
+
 			bottom: { 
 				bottom: 0,
 				'*:before': { bottom: -4, background: '#f37223' },
+				
 				'> *:first-child:before': { 
 					transform: 'rotate( 30deg )',
 					transformOrigin: 'top right' 
 				},
+
 				'> *:last-child:before': { 
 					transform: 'rotate( -30deg ) scale( 1, 1 )',
 					transformOrigin: 'top left'
