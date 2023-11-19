@@ -19,12 +19,6 @@ export { SiteHeader } from './SiteHeader/SiteHeader'
 export { DribbleIcon, GithubIcon, LinkedInIcon, MediumIcon } from './SocialIcons'
 export { Text } from './Text/Text'
 
-// For the form components
-
-export { CheckboxInput } from './Inputs/CheckboxInput'
-export { FileInput } from './Inputs/FileInput/FileInput'
-export { InputStatus } from './Inputs/InputStatus'
-
 // Projects
 
 export { Projects } from './Projects/Projects'
