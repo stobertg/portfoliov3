@@ -8,6 +8,7 @@ const BlobWrap = styled('div', {
   position: 'absolute',
   width: 600,
   height: '100%',
+  opacity: 0.1,
 
   svg: {
     transform: 'scale( 1.2 )',

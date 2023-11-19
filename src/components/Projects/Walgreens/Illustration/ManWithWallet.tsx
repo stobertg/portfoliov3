@@ -7,7 +7,8 @@ const AnimationWrap = styled('div', {
   justifyContent: 'center',
   alignItems: 'center',
   position: 'relative',
-  padding: '50px 0'
+  padding: '50px 0',
+  transform: 'scale( 0.3 )'
 })
 
 const WalletAnimation = styled('div', {
