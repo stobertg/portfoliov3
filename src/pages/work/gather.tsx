@@ -61,6 +61,38 @@ const Gather: NextPage = () => {
         />
       </Block>
 
+      <Block width="medium">
+        <Browser 
+          url="walgreens.com" 
+          image="/projects/gather/ds1.webp" 
+          imageAlt="Walgreens Design Systems" 
+        />
+
+        <Browser 
+          url="walgreens.com" 
+          image="/projects/gather/lessons.webp" 
+          imageAlt="Walgreens Design Systems" 
+        />
+
+        <Browser 
+          url="walgreens.com" 
+          image="/projects/gather/library.webp" 
+          imageAlt="Walgreens Design Systems" 
+        />
+
+        <Browser 
+          url="walgreens.com" 
+          image="/projects/gather/upload.webp" 
+          imageAlt="Walgreens Design Systems" 
+        />
+
+        <Browser 
+          url="walgreens.com" 
+          image="/projects/gather/admin.webp" 
+          imageAlt="Walgreens Design Systems" 
+        />
+      </Block>
+
       <Block>
         <NextProject 
           pageLink="/work/gather"

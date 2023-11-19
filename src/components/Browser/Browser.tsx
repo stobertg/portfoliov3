@@ -48,7 +48,8 @@ const BrowserUrl = styled('div', {
   padding: '8px 12px',
   borderRadius: '$r0',
   background: '#444e61',
-  fontSize: 12
+  fontSize: 12,
+  '@smallDesktop': { width: '100%' }
 })
 
 // For the container of the buttons on the side of the browser bar
@@ -60,7 +61,8 @@ const BrowserSide = styled('div', {
   alignItems: 'center',
   position: 'relative',
   width: '25%',
-  '> *:not(:last-child)': { marginRight: 32 }
+  '> *:not(:last-child)': { marginRight: 32 },
+  '@smallDesktop': { display: 'none' }
 })
 
 // For the container of the colored action buttons on the left side of the container

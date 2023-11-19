@@ -1,6 +1,6 @@
 import React from 'react'
 import type { NextPage } from 'next'
-import { SiteContainer, Block, Hero, Intro, Browser, GatherLogo, ManWithWallet, WalgreensIcons, NextProject } from '@components'
+import { SiteContainer, Block, Hero, Intro, Browser, GatherLogo, ManWithWallet, WalgreensIcons, WalgreensGui, NextProject } from '@components'
 
 const Walgreens: NextPage = () => {
   return (
@@ -22,9 +22,9 @@ const Walgreens: NextPage = () => {
         />
 
         <Browser 
-          url="gather.goldininstitute.org" 
-          image="/projects/gather/profile.png" 
-          imageAlt="Gather" 
+          url="walgreens.com" 
+          image="/projects/wag/gui/coupons.webp" 
+          imageAlt="Walgreens Design Systems" 
         />
       </Block>
 
@@ -68,6 +68,18 @@ const Walgreens: NextPage = () => {
 
       <Block width="medium">
         <WalgreensIcons />
+      </Block>
+
+      <Block>
+        <WalgreensGui />
+      </Block>
+
+      <Block width="medium">
+        <Browser 
+          url="walgreens.com" 
+          image="/projects/wag/site.webp" 
+          imageAlt="Walgreens Design Systems" 
+        />
       </Block>
 
       <Block>

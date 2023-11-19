@@ -81,7 +81,7 @@ export const Projects = ({ projects }:ProjectProps) => {
   
   const images = [
     { id: 0, image: '/projects/gather/profile.webp', alt: "This is the Alt text" },
-    { id: 1, image: '/projects/cardiact/hero.webp', alt: "This is the Alt text" },
+    { id: 1, image: '/projects/wag/gui/coupons.webp', alt: "This is the Alt text" },
     { id: 2, image: '/projects/cardiact/hero.webp', alt: "This is the Alt text" },
     { id: 3, image: '/projects/castle/stalbans.webp', alt: "This is the Alt text" },
     { id: 4, image: '/projects/taa/screens/hero.webp', alt: "This is the Alt text" },

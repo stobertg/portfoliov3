@@ -22,7 +22,7 @@ const Castle: NextPage = () => {
           subtitle="The House of Doge - all day, all night"
         />
 
-        <img src="/projects/castle/castle__hero.jpg" alt="Castle by Tyler Stober" />
+        <img src="/projects/castle/castle-hero.webp" alt="Castle by Tyler Stober" />
       </Block>
 
       <Block width="medium">
@@ -70,26 +70,26 @@ const Castle: NextPage = () => {
       </Block>
 
       <Block width="medium">
-        <img src="/projects/castle/stalbans.jpg" alt="Tyler Stober St Albans 3d model" />
+        <img src="/projects/castle/stalbans.webp" alt="Tyler Stober St Albans 3d model" />
       </Block>
 
       <Block width="medium">
-        <img src="/projects/castle/TheInn_v2.png" alt="Tyler Stober St Albans 3d model" />
+        <img src="/projects/castle/the-inn.webp" alt="Tyler Stober St Albans 3d model" />
       </Block>
 
       <Block width="medium">
-        <img src="/projects/castle/stmarks__tower.jpg" alt="Tyler Stober St Albans 3d model" />
+        <img src="/projects/castle/stmarks.webp" alt="Tyler Stober St Albans 3d model" />
       </Block>
 
       <Block width="medium">
-        <img src="/projects/castle/castle__entrance.jpg" alt="Tyler Stober St Albans 3d model" />
+        <img src="/projects/castle/castle-entrance.webp" alt="Tyler Stober St Albans 3d model" />
       </Block>
 
       <Block>
         <NextProject 
           pageLink="/work/gather"
           title="Gather E-Learning app" 
-          image="/projects/gather/profile.png"
+          image="/projects/gather/profile.webp"
           imageAlt="Gather by Tyler Stober"
         />
       </Block>

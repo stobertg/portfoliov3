@@ -12,9 +12,14 @@ const HeaderWrap = styled('header', {
   top: 0,
   left: 0,
   width: '100vw',
-  // background: 'rgba( 24,24,24, 0.8 )',
   transition: '$s1',
   zIndex: 9000,
+
+  variants: {
+    active: {
+      true: { background: 'rgba( 24,24,24, 0.8 )' }
+    }
+  },
 
   // For the blur background behind the header that gives the header depth on the content below
 
@@ -25,7 +30,12 @@ const HeaderWrap = styled('header', {
     left: 0,
     width: '100%',
     height: '100%',
-    // backdropFilter: 'blur( 10px )'
+    
+    variants: {
+      active: {
+        true: { backdropFilter: 'blur( 10px )' }
+      }
+    }
   }
 })
 

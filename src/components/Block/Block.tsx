@@ -1,4 +1,6 @@
 import React from 'react'
+import "@animxyz/core"
+import { XyzTransition } from '@animxyz/react'
 import { styled } from '@theme'
 
 // For the master container of the block component
@@ -54,11 +56,13 @@ export const Block = ({
 
   return(
 
-    <BlockWrap>
-      <BlockContent {...{ width, spacing }}>
-        { children }
-      </BlockContent>
-    </BlockWrap>
+    <XyzTransition xyz="fade" appearVisible>
+      <BlockWrap>
+        <BlockContent {...{ width, spacing }}>
+          { children }
+        </BlockContent>
+      </BlockWrap>
+    </XyzTransition>
 
   )
 }
