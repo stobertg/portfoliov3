@@ -2,6 +2,9 @@ import React from 'react'
 import { styled, keyframes } from '@theme'
 import { HeadTags, SiteHeader } from '@components'
 
+// For the animation of the static background - super subtle
+// By static I mean like static on a television ( i.e. noise )
+
 const staticAnimation = keyframes({
   '0%':   { transform: 'translate3d( -50px, 50px, 0 )' },
 	'50%':  { transform: 'translate3d( 50px, -50px, 0 )' },
@@ -54,12 +57,17 @@ const SiteContent = styled('div', {
   }
 })
 
+// For the container of the subtle noise animation in the background of the site
+// This is positioned fixed within in the site and show a faint static animation in the background
+
 const SiteBg = styled('div', {
   position: 'fixed',
   top: 0,
   left: 0,
   width: '100vw',
   height: '100vh',
+
+  // For the setup of the static animation and applying the animation of it
 
   '&:before': {
     content: '',
@@ -96,10 +104,10 @@ export const SiteContainer = ({
     spacing, // Optional - For the top and bottom spacing of the page content
     blockSpacing, // Optional - For the uniform spacing between each of the blocks that make up the page
     children, // Required - For all of the content within a page
-    shareURL,
-    pageTitle,
-    content,
-    socialImage
+    shareURL, // Required - For the share url of the specific page
+    pageTitle, // Required - For the title of the page within the head tags
+    content, // Required - For the description of the page within the head tags
+    socialImage // Required - For the socially shared image 
   }: SiteContainerProps ) => {
   
   return(

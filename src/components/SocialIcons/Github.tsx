@@ -1,9 +1,14 @@
 import React from 'react'
 import { styled } from '@theme'
 
+// For the container of the github icon on the about page
+// This holds the social link to my github
+
 const IconWrap = styled('div', {
   svg: { width: '24px !important' }
 })
+
+// ---------- This is the end of declarations ---------- //
 
 export const GithubIcon = () => {
   return(

@@ -1,5 +1,7 @@
 import React from 'react'
 
+// ---------- This is the end of declarations ---------- //
+
 export const DribbleIcon = () => {
   return(
 
