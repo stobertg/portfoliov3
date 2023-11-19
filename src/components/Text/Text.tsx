@@ -1,10 +1,16 @@
 import React from 'react'
 import { styled } from '@theme'
 
+// For the master container of the Text component
+// This component is used a bunch throughout the site and comprises of paragraphs making up a long form description
+
 const TextWrap = styled('div', {
   position: 'relative',
   maxWidth: 900,
   width: '100%',
+
+  // For the styling of all p tags used within the text component
+  // This will set the defaut font and automate the spacing between each of the paragraphs
 
   p: {
     fontFamily: '$serif',
@@ -12,11 +18,17 @@ const TextWrap = styled('div', {
     '&:not(:first-child)': { marginTop: 32 }
   },
 
+  // For the styling of the links within the text component - needed for accessability as well
+  // This has the yellow line on the bottom of the container by default and scales to fill the entire link on hover
+
   a: {
     display: 'inline-flex',
     position: 'relative',
     fontFamily: 'inherit',
     overflow: 'hidden',
+
+    // Here we set the hyperlink line that is default set on the bottom of the container
+    // Here we set the default start animation and get it ready to animte to take up the entire container on hover
 
     '&:before': {
       content: '',
@@ -31,11 +43,17 @@ const TextWrap = styled('div', {
       zIndex: -1
     },
 
+    // On hover, the underline on the bottom will scale up to take over the entire container
+    // This will also change the color to black to set againt the yellow background
+
     '&:hover': {
       color: '$black',
       '&:before': { transform: 'translateY( 0 )' }
     }
   },
+
+  // For the variants of the text component
+  // This allows for the change in font size, font to be sans serif, and the color of the text
 
   variants: {
     fontSize: {
@@ -43,17 +61,24 @@ const TextWrap = styled('div', {
       l1: { p: { fontSize: '$s2', lineHeight: '1.75', '@tablet': { fontSize: '$s1' }}}
     },
 
+    // Here we support the change of the text to be set as sans serif, such as in the phone presentation
+    // By default the text within the p tags is set to serif font
+
     font: {
       sansSerif: {
         p: { fontFamily: '$sansSerif' }
       }
     },
 
+    // Here we support the color of the text to be changed from the default primary color
+
     color: {
       secondary: { color: '$textSecondary' }
     }
   }
 })
+
+// -------------- Typescript declarations -------------- //
 
 interface TextProps {
   font?: 'sansSerif'
@@ -62,7 +87,15 @@ interface TextProps {
   children: React.ReactNode
 }
 
-export const Text = ({ children, font, color, fontSize }:TextProps) => {
+// ---------- This is the end of declarations ---------- //
+
+export const Text = ({ 
+    children, // Required - For the text that makes up the content of the component
+    font, // Optional - For the ability to change the text to sans serif
+    color, // Optional - For the ability to change the color of the text from the default primary color
+    fontSize // Optional - For the ability to change the font size of the p's within the component
+  }:TextProps) => {
+
   return(
 
     <TextWrap {...{ font, fontSize, color }}>{ children }</TextWrap>
