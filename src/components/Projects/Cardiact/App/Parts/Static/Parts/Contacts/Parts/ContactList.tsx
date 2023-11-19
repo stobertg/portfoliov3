@@ -31,6 +31,7 @@ export const ContactList = ({ contacts }:ListProps) => {
       { contacts.map(( contact, i ) => (
         
         <ContactCard
+          key={`contact-${ i }`}
           image={ contact.image }
           imageAlt={ contact.imageAlt }
           relation={ contact.relation } 

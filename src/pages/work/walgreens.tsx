@@ -36,7 +36,7 @@ const Walgreens: NextPage = () => {
               <p>
                 At Walgreens, my current role is the designer and developer for the Walgreens Live Style Guide, promoting the 
                 design and front-end integrity of foundational components that support Walgreens.com. In addition, front-end 
-                developer of the Walgreens.com homepage and designer of Walgreen's functional icons.
+                developer of the Walgreens.com homepage and designer of Walgreen&apos;s functional icons.
               </p>
 
               <p>
