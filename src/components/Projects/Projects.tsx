@@ -4,6 +4,9 @@ import Tilt from 'react-parallax-tilt'
 import { styled } from '@theme'
 import { Browser, Heading } from '@components'
 
+// For the master container of the Project Selection component
+// This is set on the index page, where a user can choose to view a selected project
+
 const ProjectWrap = styled('div', {
   position: 'fixed',
   top: 0,
@@ -11,6 +14,9 @@ const ProjectWrap = styled('div', {
   width: '100vw',
   height: '100vh'
 })
+
+// For the master container of the text within the center of the master container
+// This holds the project titles text aligned center
 
 const ProjectContent = styled('div', {
   display: 'flex',
@@ -77,8 +83,8 @@ export const Projects = ({ projects }:ProjectProps) => {
     { id: 0, image: '/projects/gather/profile.webp', alt: "This is the Alt text" },
     { id: 1, image: '/projects/cardiact/hero.webp', alt: "This is the Alt text" },
     { id: 2, image: '/projects/cardiact/hero.webp', alt: "This is the Alt text" },
-    { id: 3, image: '/projects/cardiact/hero.webp', alt: "This is the Alt text" },
-    { id: 4, image: '/projects/cardiact/hero.webp', alt: "This is the Alt text" },
+    { id: 3, image: '/projects/castle/stalbans.webp', alt: "This is the Alt text" },
+    { id: 4, image: '/projects/taa/screens/hero.webp', alt: "This is the Alt text" },
     { id: 5, image: '/projects/cardiact/hero.webp', alt: "This is the Alt text" },
     { id: 6, image: '/projects/cardiact/hero.webp', alt: "This is the Alt text" }
   ]
@@ -94,8 +100,8 @@ export const Projects = ({ projects }:ProjectProps) => {
             { projects.map(( project, i ) => (
 
               <li key={`project-${ i }`}>
-                <Link href={ project.link } onMouseEnter={ () => setImage( images[0].image ) }>
-                  <a>
+                <Link href={ project.link }>
+                  <a onMouseEnter={ () => setImage( images[i].image ) }>
                     <ProjectItem>
                       <Heading font='serif' size="l5" align="center" title={ project.title } />
                     </ProjectItem>
@@ -116,8 +122,9 @@ export const Projects = ({ projects }:ProjectProps) => {
     
             <Browser 
               url="gather.goldininstitute.org" 
-              image="/projects/gather/profile.webp" 
-              imageAlt="Gather" 
+              image={ image }
+              imageAlt="Gather"
+              maxHeight="l1"
             />
             
           </Tilt>

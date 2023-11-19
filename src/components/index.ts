@@ -36,4 +36,5 @@ export { Cardiact } from './Projects/Cardiact/App/Cardiact'
 export { CardiactProcess } from './Projects/Cardiact/Process/Process'
 export { GatherLogo } from './Projects/Gather/Logo/Logo'
 export { TAALogo } from './Projects/TAA/Logo/Logo'
+export { ManWithWallet } from './Projects/Walgreens/Illustration/ManWithWallet'
 

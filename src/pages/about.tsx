@@ -33,9 +33,9 @@ const AboutPage: NextPage = () => {
           </>
         }
         socials={[
-          { href: '/', icon: <DribbleIcon /> },
-          { href: '/', icon: <GithubIcon /> },
-          { href: '/', icon: <LinkedInIcon /> },
+          { href: 'https://www.linkedin.com/in/tyler-stober/', icon: <LinkedInIcon /> },
+          { href: 'https://github.com/stobertg/portfoliov3', icon: <GithubIcon /> },
+          { href: 'https://www.linkedin.com/in/tyler-stober/', icon: <DribbleIcon /> },
           { href: '/', icon: <MediumIcon /> }
         ]}
       />

@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       <Projects 
         projects={[
           { link: '/work/gather', title: 'Gather' },
-          { link: '/work/cardiact', title: 'Walgreens' },
+          { link: '/work/walgreens', title: 'Walgreens' },
           { link: '/work/cardiact', title: 'CardiAct' },
           { link: '/work/castle', title: 'Castle for no Reason' },
           { link: '/work/taa', title: 'The Apparel Agency' },

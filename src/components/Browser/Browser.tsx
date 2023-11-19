@@ -103,7 +103,13 @@ const BrowserScreen = styled('div', {
   width: '100%',
   borderRadius: '0 0 $r2 $r2',
   overflow: 'hidden',
-  img: { display: 'flex' }
+  img: { display: 'flex' },
+
+  variants: {
+    maxHeight: {
+      l1: { maxHeight: 530 }
+    }
+  }
 })
 
 // -------------- Typescript declarations -------------- //
@@ -113,6 +119,7 @@ interface BrowserProps {
   image?: string
   imageAlt?: string
   content?: React.ReactNode
+  maxHeight?: 'l1'
 }
 
 // ---------- This is the end of declarations ---------- //
@@ -121,7 +128,8 @@ export const Browser = ({
     url, // Required - For the url address for web context (can be live or fake site)
     image, // Required if no 'content' - For the image on display
     imageAlt, // Required if image - For the alt text of the image
-    content // Required if no 'image' - For custom needs
+    content, // Required if no 'image' - For custom needs
+    maxHeight // Optional - For cases where hright needs to be declared
   }:BrowserProps) => {
 
   return(
@@ -150,8 +158,8 @@ export const Browser = ({
         </BrowserContent>  
       </BrowserWrap>
 
-      <BrowserScreen>
-        { image ? ( <img src={ image } alt={ imageAlt } /> ): ( <>{ content }</> )}
+      <BrowserScreen {...{ maxHeight }}>
+        { image ? ( <img src={ image } alt={ imageAlt } /> ) : ( <>{ content }</> )}
       </BrowserScreen>
     </DeviceWrap>
 
