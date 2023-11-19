@@ -27,27 +27,29 @@ const ProjectContent = styled('div', {
   height: '100%'
 })
 
+// For the container of the project list in the forground of the container
+// This contains a list of the selected projects I am displaying on the portfolio
+
 const ProjectList = styled('div', {
   position: 'relative',
   maxWidth: 700,
   width: '100%',
   zIndex: 10,
-
-  ul: {
-    listStyle: 'none'
-  },
-
-  li: {
-    display: 'flex',
-    justifyContent: 'center'
-  }
+  ul: { listStyle: 'none' },
+  li: { display: 'flex', justifyContent: 'center' }
 })
+
+// For the styling of the individual links within the li container
+// This sets the title to be in the center and the sets the line up that reveals on hover
 
 const ProjectItem = styled('div', {
   display: 'inline-flex',
   flexDirection: 'row',
   alignItems: 'center',
   position: 'relative',
+
+  // For the line in the middle of the word that shows up on hover
+  // Here we set all of the styling and user scale to hide the lines on default
 
   '&:after': {
     content: '',
@@ -60,36 +62,43 @@ const ProjectItem = styled('div', {
     transition: '$s2 ease'
   },
 
+  // On hover, we reveal the line horizontally centered in the container
+  // This takes up the full width of the word
+
   '&:hover:after': { transform: 'scale( 1, 1 )' }
 })
+
+// For the container of the background images behind the text container
+// This has a different image that displays based on the project a user hovers over - image associated with the project
 
 const ProjectBackground = styled('div', {
   position: 'absolute',
   width: 1024,
   margin: '0 auto',
-  opacity: 0.1
+  opacity: 0.1,
+  '@tablet': { display: 'none' }
 })
 
+// -------------- Typescript declarations -------------- //
+
 interface ProjectProps {
+  images: {
+    url: string
+    image: string
+    alt: string
+  }[]
   projects: {
     link: string
     title: string
   }[]
 }
 
-export const Projects = ({ projects }:ProjectProps) => {
-  
-  const images = [
-    { id: 0, image: '/projects/gather/profile.webp', alt: "This is the Alt text" },
-    { id: 1, image: '/projects/wag/gui/coupons.webp', alt: "This is the Alt text" },
-    { id: 2, image: '/projects/cardiact/hero.webp', alt: "This is the Alt text" },
-    { id: 3, image: '/projects/castle/stalbans.webp', alt: "This is the Alt text" },
-    { id: 4, image: '/projects/taa/screens/hero.webp', alt: "This is the Alt text" },
-    { id: 5, image: '/projects/cardiact/hero.webp', alt: "This is the Alt text" },
-    { id: 6, image: '/projects/cardiact/hero.webp', alt: "This is the Alt text" }
-  ]
+// ---------- This is the end of declarations ---------- //
 
+export const Projects = ({ images, projects }:ProjectProps) => {
+  const [ url, setUrl ] = useState( images[0].image )
   const [ image, setImage ] = useState( images[0].image )
+  const [ imageAlt, setImageAlt ] = useState( images[0].image )
   
   return(
 
@@ -101,10 +110,16 @@ export const Projects = ({ projects }:ProjectProps) => {
 
               <li key={`project-${ i }`}>
                 <Link href={ project.link }>
-                  <a onMouseEnter={ () => setImage( images[i].image ) }>
+                  <a onMouseEnter={() => {
+                    setUrl( images[i].url )
+                    setImage( images[i].image )
+                    setImageAlt( images[i].alt )
+                  }}>
+
                     <ProjectItem>
                       <Heading font='serif' size="l5" align="center" title={ project.title } />
                     </ProjectItem>
+
                   </a>
                 </Link>
               </li>
@@ -121,9 +136,9 @@ export const Projects = ({ projects }:ProjectProps) => {
           >
     
             <Browser 
-              url="gather.goldininstitute.org" 
+              url={ url }
               image={ image }
-              imageAlt="Gather"
+              imageAlt={ imageAlt }
               maxHeight="l1"
             />
             

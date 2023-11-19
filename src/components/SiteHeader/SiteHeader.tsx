@@ -93,15 +93,9 @@ const NavLink = styled('div', {
   '&:hover:after': { transform: 'scale( 1, 1 )' }
 })
 
-// -------------- Typescript declarations -------------- //
-
-interface HeaderProps {
-
-}
-
 // ---------- This is the end of declarations ---------- //
 
-export const SiteHeader = ({}:HeaderProps) => {
+export const SiteHeader = () => {
   const scrollPos = useScrollPosition()
   const scrollDirection = useScrollDirection()
   const [ showHeader, setShowHeader ] = useState( true )

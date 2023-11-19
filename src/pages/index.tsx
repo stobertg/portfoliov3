@@ -21,7 +21,17 @@ const Home: NextPage = () => {
           { link: '/work/taa', title: 'The Apparel Agency' },
           { link: '/work/animations', title: 'CSS Animations' },
         ]}
+        images = {[
+          { image: '/projects/gather/profile.webp', alt: "Gather Platform by Tyler Stober and Travis Rejman", url: "gather.goldininstitute.org" },
+          { image: '/projects/wag/gui/coupons.webp', alt: "Walgreens Brand Standards", url: "walgreens.com" },
+          { image: '/projects/cardiact/hero.webp', alt: "CardiAct - Response for unresponsive vicitims of cardiac arrest", url: "cardiact.com" },
+          { image: '/projects/castle/stalbans.webp', alt: "3d model of St Albans Cathedral by Tyler Stober", url: "whooooooooooooooo.cool" },
+          { image: '/projects/taa/screens/hero.webp', alt: "Plans by TAA", url: "blahblahblah.com" },
+          { image: '/projects/cardiact/hero.webp', alt: "This is the Alt text" },
+          { image: '/projects/cardiact/hero.webp', alt: "This is the Alt text" }
+        ]}
       />
+
     </SiteContainer>
 
   )
