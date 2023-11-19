@@ -60,11 +60,11 @@ const Gather: NextPage = () => {
         />
       </Block>
 
-      {/* <Block>
+      <Block width="medium">
         <ArtizenNewton />
         <ArtizenAirplane />
         <ArtizenTrumpet />
-      </Block> */}
+      </Block>
 
       <Block>
         <NextProject 
