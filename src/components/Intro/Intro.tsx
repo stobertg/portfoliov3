@@ -16,7 +16,7 @@ const IntroWrap = styled('div', {
 const IntroContent = styled('div', {
   position: 'relative',
   maxWidth: 900,
-  width: '90%',
+  width: '88%',
   margin: '0 auto',
   '> *:not(:last-child)': { marginBottom: 50 }
 })

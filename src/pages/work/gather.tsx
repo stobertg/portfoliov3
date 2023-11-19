@@ -28,7 +28,7 @@ const Gather: NextPage = () => {
         />
       </Block>
 
-      <Block>
+      <Block width="medium">
         <Intro 
           title="Creating a E-Learning Platform"
           text={
