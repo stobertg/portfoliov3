@@ -36,7 +36,8 @@ const AboutContent = styled('div', {
 const AboutBackground = styled('div', {
   position: 'absolute',
   opacity: 0.1,
-  video: { maxWidth: 1400, width: '100%' }
+  video: { maxWidth: 1400, width: '100%' },
+  '@mobile': { display: 'none' }
 })
 
 // For the container of the links on the bottom of the container

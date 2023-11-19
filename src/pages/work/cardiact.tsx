@@ -26,7 +26,7 @@ const Gather: NextPage = () => {
     <SiteContainer 
       hasContactForm 
       shareURL="https://tylerstober.com/work/cardiact"
-      pageTitle="TS - CardiAct"
+      pageTitle="Tyler Stober - CardiAct"
       content="CardiAct is a project created by Tyler Stober and Geoff Burroughs. It won the Director's Choice Award winner at the University of Cincinnati school of Design, Architecture, Art & Planning in 2014"
       socialImage="https://mxmlcreative.com/global/social-hero.jpeg"
       blockSpacing="l3"
