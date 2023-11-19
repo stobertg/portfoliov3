@@ -23,7 +23,6 @@ export { Text } from './Text/Text'
 
 export { CheckboxInput } from './Inputs/CheckboxInput'
 export { FileInput } from './Inputs/FileInput/FileInput'
-export { Form } from './Form/Form'
 export { InputStatus } from './Inputs/InputStatus'
 
 // Projects
