@@ -1,6 +1,5 @@
 import React from 'react'
 import { styled } from '@theme'
-import { Heading, Icon } from '@components'
 import { IphoneTop } from './Parts'
 
 // For the master container of the iphone component
@@ -118,10 +117,6 @@ const IphoneBottom = styled('div', {
       true: { '&:after': { background: '$white' }}
     }
   }
-})
-
-const IphoneTransition = styled('div', {
-
 })
 
 // -------------- Typescript declarations -------------- //

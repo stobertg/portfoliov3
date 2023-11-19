@@ -30,6 +30,9 @@ const BlockContent = styled('div', {
       large: { maxWidth: 1300, width: '90%' }
     },
 
+    // For the optional spacing of the content within the block container
+    // This automates the spacing between each of the content blocks wihtin it
+
     spacing: {
       l0: { '> *:not(:last-child)': { marginBottom: 32 }},
       l1: { '> *:not(:last-child)': { marginBottom: 52 }},
@@ -50,7 +53,7 @@ interface BlockProps {
 
 export const Block = ({ 
     width, // Optional - Accomidating various widths based on needs
-    spacing,
+    spacing, // Optional - For the spacing of the content items within the container
     children // Required - For the content within the component
   }:BlockProps) => {
 

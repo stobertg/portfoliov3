@@ -2,6 +2,9 @@ import React from 'react'
 import { styled } from '@theme'
 import { Heading } from '@components'
 
+// For the master container of the Tyler Stober logo
+// This holds the logo mark on the left of the container and the Tyler Stober text on the right
+
 const LogoWrap = styled('div', {
   display: 'inline-flex',
   flexDirection: 'row',
@@ -18,12 +21,17 @@ const LogoContent = styled('figure', {
 	width: 46,
 	height: 70,
 
+  // For the sizing of the logo on the left of the container
+
   variants: {
     size: {
       l0: { transform: 'scale( 0.6 )' }
     }
   }
 })
+
+// For the lines making up the 'T' within the logo
+// This holds the horizontal slant on the top and the vertical line in the middle of the container
 
 const Tyler = styled('div', {
   display: 'flex',
@@ -107,12 +115,12 @@ const Stober = styled('div', {
 // -------------- Typescript declarations -------------- //
 
 interface LogoProps {
-
+  nameHidden?: boolean
 }
 
 // ---------- This is the end of declarations ---------- //
 
-export const Logo = ({}:LogoProps) => {
+export const Logo = ({ nameHidden }:LogoProps) => {
   return(
 
     <LogoWrap>
@@ -120,7 +128,7 @@ export const Logo = ({}:LogoProps) => {
         <Tyler /><Stober />
       </LogoContent>
 
-      <Heading bold size="l1" title="Tyler Stober" />
+      { nameHidden ?? ( <Heading bold size="l1" title="Tyler Stober" /> )}
     </LogoWrap>
 
   )

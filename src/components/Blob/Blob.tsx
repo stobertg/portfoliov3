@@ -1,17 +1,25 @@
 import React from 'react'
 import { styled } from '@theme'
 
+// For the master container of the blob that can be used throughout the site
+// This is only being used on the phone presentation in the Cardiact App
+
 const BlobWrap = styled('div', {
   position: 'absolute',
   width: 950,
   transform: 'translate3d( 50px, 30px, 0 )',
   zIndex: 0,
 
+  // For the styling of the color of the blob within the container
+  // This holds the gradient colors defined by the defs below
+
   svg: { 
     fill: 'url(#header-shape-gradient) #fff',
     opacity: 0.7
   }
 })
+
+// ---------- This is the end of declarations ---------- //
 
 export const Blob = () => {
   return(

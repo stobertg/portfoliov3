@@ -16,7 +16,7 @@ export const HeadTags = ({
     content, // For the page content to be used within SEO and social Sharing
     shareURL, // For the page to be shared within social media links
     pageTitle, // For the title of the page
-    socialImage
+    socialImage // Required - For the social image on the page
   }: HeadProps ) => {
   
   return(

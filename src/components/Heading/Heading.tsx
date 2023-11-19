@@ -37,11 +37,17 @@ const HeadingWrap = styled('div', {
       serif: { fontFamily: '$serif' }
     },
 
+    // For the ability to have the title of the header be text aligned centered
+    // This is because by default the heading is 100% width of the parent contaienr
+
     align: {
       center: { textAlign: 'center' }
     }
   }
 })
+
+// For the font weight if the heavy or bold attribute is declared
+// By default, the heading is font weight normal
 
 const Heavy = styled('strong', { fontFamily: '$sansSerifHeavy' })
 const Bold = styled('strong', { fontFamily: '$sansSerifBold' })
@@ -80,13 +86,13 @@ export const Heading = ({
     font, // Optional - for the option to make the font code from the default font
     color, // Optional - To change the color of the text
     title, // Required - For the title of the heading
-    heavy,
+    heavy, // Optional - For the heaviest font weight for the title
     bold, // Opitonal - the heading is regular by default but can be changed to bold or heavy weights
-    children,
-    align,
-    style,
-    className,
-    htag
+    children, // Optional - Supporting complex children wihtin the title
+    align, // Optional - For the ability to center align the text
+    style, // Optional - For ability of one-off styling for the heading
+    className, // Optional - For the ability of one-off classnames of the heading
+    htag // Optional - To label the heading for SEO from h1 - h6
   }:HeadingProps) => {
   
   const Tag = htag ? headingTags[ htag ] : HeadingWrap
@@ -105,5 +111,3 @@ export const Heading = ({
 
   )
 }
-
-

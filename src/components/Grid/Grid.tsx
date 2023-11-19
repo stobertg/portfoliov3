@@ -30,6 +30,8 @@ const GridWrap = styled('div', {
       14: { gridTemplateColumns: 'repeat(14, 1fr)' },
     },
 
+    // Here we support the customization of the columns needed for the large desktop breakpoints
+
     largeDesktopColumns: {
       2: {  '@largeDesktop': { gridTemplateColumns: 'repeat(2, 1fr)'  }},
       3: {  '@largeDesktop': { gridTemplateColumns: 'repeat(3, 1fr)'  }},
@@ -43,6 +45,8 @@ const GridWrap = styled('div', {
       11: { '@largeDesktop': { gridTemplateColumns: 'repeat(11, 1fr)' }},
       12: { '@largeDesktop': { gridTemplateColumns: 'repeat(12, 1fr)' }}
     },
+
+    // Here we support the customization of the columns needed for the small desktop breakpoints
 
     smallDesktopColumns: {
       2: {  '@smallDesktop': { gridTemplateColumns: 'repeat(2, 1fr)'  }},
@@ -58,6 +62,8 @@ const GridWrap = styled('div', {
       12: { '@smallDesktop': { gridTemplateColumns: 'repeat(12, 1fr)' }}
     },
 
+    // Here we support the customization of the columns needed for the tablet breakpoints
+
     tabletColumns: { 
       1: {  '@tablet': { gridTemplateColumns: 'repeat(1, 1fr)'  }},
       2: {  '@tablet': { gridTemplateColumns: 'repeat(2, 1fr)'  }},
@@ -72,6 +78,8 @@ const GridWrap = styled('div', {
       11: { '@tablet': { gridTemplateColumns: 'repeat(11, 1fr)' }},
       12: { '@tablet': { gridTemplateColumns: 'repeat(12, 1fr)' }}
     },
+
+    // Here we support the customization of the columns needed for the mobile breakpoints
 
     mobileColumns: { 
       1: {  '@mobile': { gridTemplateColumns: 'repeat(1, 1fr)'  }},
@@ -105,10 +113,10 @@ interface GridProps {
 
 export const Grid = ({ 
     columns, // Required - Set the columns needed for the grid
-    largeDesktopColumns,
-    smallDesktopColumns,
-    tabletColumns,
-    mobileColumns,
+    largeDesktopColumns, // Optional - Supporting columns for large desktop breakpoints
+    smallDesktopColumns, // Optional - Supporting columns for small desktop breakpoints
+    tabletColumns, // Optional - Supporting columns for tablet breakpoints
+    mobileColumns, // Optional - Supporting columns for mobile breakpoints
     children // Required - For the content inside of the grid
   }:GridProps) => {
 

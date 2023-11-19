@@ -107,6 +107,9 @@ const BrowserScreen = styled('div', {
   overflow: 'hidden',
   img: { display: 'flex' },
 
+  // For the variant to set a height for the browser
+  // This will make it so for a taller image to be overflow hidden, such as the images in the homepage background
+
   variants: {
     maxHeight: {
       l1: { maxHeight: 530 }
