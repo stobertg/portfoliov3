@@ -2,6 +2,8 @@ import React from 'react'
 import { Grid } from '@components'
 import { WagIcon } from './Icon'
 
+// For all of the icons I am going to display for the Walgreens Project
+
 const icons = [
   { icon: 'device--desktop' },
   { icon: 'device--tablet' },
@@ -134,6 +136,8 @@ const icons = [
   { icon: 'close' },
   { icon: 'disabled' }
 ]
+
+// ---------- This is the end of declarations ---------- //
 
 export const WalgreensIcons = () => {
   return(
