@@ -1,15 +1,23 @@
 import React from 'react'
 import { styled, keyframes } from '@theme'
 
+// For the animations of the dollars coming out of the wallet
+// This is held by the hand and is the main animation of the illustration
+
 const animate__dollarOne = keyframes({
 	'0%': { transform: 'translateY( 50px ) rotate( 0deg )' },
 	'20%, 100%': { transform: 'translateY( 30px ) rotate( 26deg )' }
 })
 
+// For the dollar on the bottom - first to pop out of the wallet
+
 const animate__dollarTwo = keyframes({
 	'0%': { transform: 'translateY( 38px ) rotate( 0deg )' },
 	'20%, 100%': { transform: 'translateY( 30px ) rotate( 15deg )' }
 })
+
+// For the master container of the wallet, held by the man
+// This holds the dolars on the top and the base of the wallet on the bottom of the container
 
 const WalletWrap = styled('div', {
 	position: 'absolute',
@@ -21,11 +29,25 @@ const WalletWrap = styled('div', {
 	zIndex: 0
 })
 
+// For the base of the wallet
+// This is just used to set the layer of the wallet to sit above the dollars
+
+const WalletBase = styled('div', {
+	position: 'relative',
+	zIndex: 2
+})
+
+// For the placement of the dollars that come out of the base of the wallet
+// Here we set the position and the animation origin
+
 const Dollar = styled('div', {
 	position: 'absolute',
 	right: 0,
 	top: 0,
 	transformOrigin: 'bottom right',
+
+	// Here we add variants for the top and bottom
+	// This sets the position for each of them
 
 	variants: {
 		variant: {
@@ -44,15 +66,14 @@ const Dollar = styled('div', {
 	}
 })
 
-const WalletBase = styled('div', {
-	position: 'relative',
-	zIndex: 2
-})
+// Here we have shared colors so we need to set these to be shared between the illustration lines
 
 const LightBlue = styled('polygon', { fill: '#0082aa' })
 const DarkBlue = styled('path', { fill: '#323264' })
 const Red = styled('polygon', { fill: '#e63214' })
 const DarkRed = styled('path', { fill: '#aa0a0a' })
+
+// ---------- This is the end of declarations ---------- //
 
 export const IllusWallet = () => {
   return(
