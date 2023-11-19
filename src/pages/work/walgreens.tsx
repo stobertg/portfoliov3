@@ -1,6 +1,6 @@
 import React from 'react'
 import type { NextPage } from 'next'
-import { SiteContainer, Block, Hero, Intro, Browser, GatherLogo, ManWithWallet, NextProject } from '@components'
+import { SiteContainer, Block, Hero, Intro, Browser, GatherLogo, ManWithWallet, WalgreensIcons, NextProject } from '@components'
 
 const Walgreens: NextPage = () => {
   return (
@@ -64,6 +64,10 @@ const Walgreens: NextPage = () => {
             { title: 'Mike Pruim, Ryne Estwig, Akemi Hong' }
           ]}
         />
+      </Block>
+
+      <Block width="medium">
+        <WalgreensIcons />
       </Block>
 
       <Block>

@@ -65,7 +65,7 @@ export const Intro = ({
     <IntroWrap>
       <IntroContent>
         <IntroMain>
-          <Heading htag="2" heavy size="l4" {...{ title }} />
+          <Heading htag="3" heavy size="l4" {...{ title }} />
           <Text fontSize="l1">{ text }</Text>
         </IntroMain>
 

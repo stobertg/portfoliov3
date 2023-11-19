@@ -38,23 +38,24 @@ const HeadingWrap = styled('div', {
     },
 
     align: {
-      center: { textAlign: 'center' },
-      right: { textAlign: 'right' }
-    },
-
-    allCaps: {
-      true: { textTransform: 'uppercase' }
-    },
-
-    letterSpacing: {
-      'l0': { letterSpacing: 5 },
-      'l1': { letterSpacing: 10, '@tablet': { letterSpacing: 5 }}
+      center: { textAlign: 'center' }
     }
   }
 })
 
 const Heavy = styled('strong', { fontFamily: '$sansSerifHeavy' })
 const Bold = styled('strong', { fontFamily: '$sansSerifBold' })
+
+// ----------- Special - Heading declarations ----------- //
+
+const headingTags = {
+  '1': 'h1',
+  '2': 'h2',
+  '3': 'h3',
+  '4': 'h4',
+  '5': 'h5',
+  '6': 'h6',
+};
 
 // -------------- Typescript declarations -------------- //
 
@@ -66,9 +67,7 @@ interface HeadingProps {
   bold?: boolean
   font?: 'serif' | 'sansSerif'
   children?: React.ReactNode 
-  align?: 'center' | 'right'
-  allCaps?: boolean
-  letterSpacing?: 'l0' | 'l1'
+  align?: 'center'
   style?: any
   className?: any
   htag?: '1' | '2' | '3' | '4' | '5' | '6'
@@ -85,19 +84,17 @@ export const Heading = ({
     bold, // Opitonal - the heading is regular by default but can be changed to bold or heavy weights
     children,
     align,
-    allCaps,
-    letterSpacing,
     style,
     className,
     htag
   }:HeadingProps) => {
   
-  const Tag = htag ? HEADING_ELEMENTS[ htag ] : HeadingWrap;
+  const Tag = htag ? headingTags[ htag ] : HeadingWrap
 
   return (
 
     <Tag>
-      <HeadingWrap {...{ size, color, font, align, allCaps, letterSpacing, style, className }}>
+      <HeadingWrap {...{ size, color, font, align, style, className }}>
         { heavy 
           ? ( <Heavy>{ title || children }</Heavy> ) 
           : bold ? ( <Bold>{ title || children }</Bold> ) 
@@ -109,11 +106,4 @@ export const Heading = ({
   )
 }
 
-const HEADING_ELEMENTS = {
-  '1': 'h1',
-  '2': 'h2',
-  '3': 'h3',
-  '4': 'h4',
-  '5': 'h5',
-  '6': 'h6',
-};
+

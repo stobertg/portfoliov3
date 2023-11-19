@@ -43,10 +43,10 @@ export const HeadTags = ({
         <meta key="twitterDescription" name="twitter:description" content={ content } />
         <meta key="twitterImage" name="twitter:image" content={ socialImage } />
         <meta name="twitter:card" content={ socialImage } />
-        <meta key="twitterSite" name="twitter:site" content="@MXML" />
+        <meta key="twitterSite" name="twitter:site" content="@tylerstober" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:image:alt" content="MXML Creative" />
-        <meta name="twitter:image:alt" content="MXML Creative" />
+        <meta property="og:image:alt" content="Tyler Stober" />
+        <meta name="twitter:image:alt" content="Tyler Stober" />
         <title>{ pageTitle }</title>
       </Head>
     
