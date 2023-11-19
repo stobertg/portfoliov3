@@ -11,6 +11,8 @@ const HeadWrap = styled('div', {
   zIndex: 1
 })
 
+// ---------- This is the end of declarations ---------- //
+
 export const Head = () => {
   return(
 

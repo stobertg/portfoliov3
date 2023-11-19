@@ -2,15 +2,23 @@ import React from 'react'
 import { styled, keyframes } from '@theme'
 import { IllusWallet } from '../Wallet/Wallet'
 
+// For the animations of the arm and the hand that are the main focus of the animation
+// For the animation of the whole arm
+
 const animate__main = keyframes({
   '0%': { transform: 'rotate( -5deg ) scale( 0.95 )' },
   '30%, 100%': { transform: 'rotate( 0deg ) scale( 1 )' }
 })
 
+// For the animation of the hand holding the wallet
+
 const animate__hand = keyframes({
   '0%': { transform: 'rotate( -15deg ) scale( 0.95 )' },
   '30%, 100%': { transform: 'rotate( 0deg ) scale( 1 )' }
 })
+
+// For the master container of the arm 
+// This holds the arm itself, the hand, and the wallet witihin the hand
 
 const ArmWrap = styled('div', {
   position: 'absolute',
@@ -18,9 +26,12 @@ const ArmWrap = styled('div', {
   bottom: 0,
   width: '100%',
   height: 310,
-  animation: `${ animate__main } 5s ease infinite forwards alternate`,
+  animation: `${ animate__main } 3s ease infinite forwards alternate`,
   transformOrigin: 'top right'
 })
+
+// For the container of the hand on the left side of the container
+// This holds the hand itself, as well as the wallet
 
 const HandWrap = styled('div', {
   display: 'flex',
@@ -30,25 +41,32 @@ const HandWrap = styled('div', {
   left: 0,
   width: 125,
   paddingTop: 42,
-  animation: `${ animate__hand } 5s ease infinite forwards alternate`,
+  animation: `${ animate__hand } 3s ease infinite forwards alternate`,
   transformOrigin: 'bottom right'
 })
+
+// For the container of the actual hand in within the parent container
+// This sets the width and the zindex for the hand to sit above the arm
 
 const HandMain = styled('div', {
   position: 'relative',
   width: 90,
-  zIndex: 10
+  zIndex: 10,
+  path: { fill: '#a24f14' }
 })
+
+// For the container of the arm on the right side of the container
+// This is largest part of the arm component, obviously connecting to the hand on the left
 
 const ArmMain = styled('div', {
   position: 'absolute',
   right: 0,
   bottom: 0,
-  width: 270
+  width: 270,
+  path: { fill: '#0082aa' }
 })
 
-const DarkSkin = styled('path', { fill: '#a24f14' })
-const LightBlue = styled('path', { fill: '#0082aa' })
+// ---------- This is the end of declarations ---------- //
 
 export const Arm = () => {
   return(
@@ -59,7 +77,7 @@ export const Arm = () => {
 
         <HandMain>
           <svg viewBox="0 0 83.92 95.71">
-            <DarkSkin d="M83.92,77.83L47.1,95.71C34.54,77.62-1.42,31.92,0.04,28.82C1.37,25.99,19,45.42,20.39,44.85c0,
+            <path d="M83.92,77.83L47.1,95.71C34.54,77.62-1.42,31.92,0.04,28.82C1.37,25.99,19,45.42,20.39,44.85c0,
               0-20.17-27.11-16.49-29.8c2.71-1.98,19.79,23.62,23.2,24.48C25.18,33.56,5.62,5.79,9.02,3.87S36.25,36.12,38.8,34.41
               c2.55-1.7-16.59-32.76-13.83-34.27C29.9-2.54,48.8,32.29,53.49,34.2c0.43,0,13.62-0.11,13.62-0.11C72.42,38.77,81.37,
               54.85,83.92,77.83z"
@@ -70,7 +88,7 @@ export const Arm = () => {
 
       <ArmMain>
         <svg viewBox="0 0 260.89 254.59">
-          <LightBlue d="M140.42,254.5c-16.15,0-33.51-2.67-51.89-8.05c-29.38-8.6-52.78-31.4-69.55-67.78C7.01,152.69,1.52,125.62,
+          <path d="M140.42,254.5c-16.15,0-33.51-2.67-51.89-8.05c-29.38-8.6-52.78-31.4-69.55-67.78C7.01,152.69,1.52,125.62,
             0.16,113.72c-1.03-9.05,3.08-17.4,10.49-21.26c7.04-3.68,15.42-2.44,21.86,3.24c1.88,1.66,4.84,4.87,8.58,8.95c17.36,18.88,
             53.47,58.17,76.64,45.36c19.96-11.03,24.62-34.97,31.68-71.21c3.1-15.92,6.61-33.98,12.08-54.25c4.26-15.81,17.44-25.41,
             33.57-24.48c13.56,0.79,27.1,8.74,38.14,22.4c12.82,15.87,21.79,38.98,25.93,66.83l0,0c6.59,44.29-4.49,104.43-44.12,

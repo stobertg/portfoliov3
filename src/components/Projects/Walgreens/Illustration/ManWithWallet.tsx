@@ -7,6 +7,15 @@ const AnimationWrap = styled('div', {
   justifyContent: 'center',
   alignItems: 'center',
   position: 'relative',
+  width: 170,
+  height: 170
+})
+
+const AnimationContent = styled('div', {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  position: 'relative',
   padding: '50px 0',
   transform: 'scale( 0.3 )'
 })
@@ -28,16 +37,14 @@ export const ManWithWallet = () => {
   return(
 
     <AnimationWrap>
-			<Blob />
+      <AnimationContent>
+        <WalletAnimation>
+          <WallletAnimationBase><Head /><Body /></WallletAnimationBase>
+          <Arm />
+        </WalletAnimation>
 
-			<WalletAnimation>
-				<WallletAnimationBase>
-					<Head />
-					<Body />
-				</WallletAnimationBase>
-
-				<Arm />
-      </WalletAnimation>
+        <Blob />
+      </AnimationContent>
     </AnimationWrap>
 
   )

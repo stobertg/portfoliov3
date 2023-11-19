@@ -31,13 +31,13 @@ const Dollar = styled('div', {
 		variant: {
 			1: { 
 				width: '70%',
-				animation: `${ animate__dollarOne } 5s ease infinite forwards alternate`,
+				animation: `${ animate__dollarOne } 3s ease infinite forwards alternate`,
 				zIndex: 0
 			},
 
 			2: {
 				width: '90%',
-				animation: `${ animate__dollarTwo } 5s ease infinite forwards alternate`,
+				animation: `${ animate__dollarTwo } 3s ease infinite forwards alternate`,
 				zIndex: 1
 			}
 		}

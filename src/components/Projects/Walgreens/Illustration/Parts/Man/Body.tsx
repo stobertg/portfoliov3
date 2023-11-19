@@ -1,22 +1,32 @@
 import React from 'react'
 import { styled, keyframes } from '@theme'
 
+// For the animation of the body of the man holding the monies
+// This is super subtle to compliment the other animations
+
 const animate__body = keyframes({
   '0%': { transform: 'rotate( -3deg ) translateX( 10px )' },
   '30%, 100%': { transform: 'rotate(0deg) translateX(0)' }
 })
 
+// For the master container of the body, that contains the shirt with the collar
+// Here we set the animation and apply for it to be animated
+
 const BodyWrap = styled('div', {
   position: 'relative',
   width: '100%',
   zIndex: 0,
-  animation: `${ animate__body } 5s ease infinite forwards alternate`
+  animation: `${ animate__body } 3s ease infinite forwards alternate`
 })
+
+// Here we have shared colors so we need to set these to be shared between the illustration lines
 
 const White = styled('polygon', { fill: '#fff' })
 const WhitePath = styled('path', { fill: '#fff' })
 const Blue = styled('path', { fill: '#284b9b' })
 const DarkBlue = styled('path', { fill: '#323264' })
+
+// ---------- This is the end of declarations ---------- //
 
 export const Body = () => {
   return(

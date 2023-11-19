@@ -2,23 +2,33 @@ import React from 'react'
 import { styled, keyframes } from '@theme'
 import { Eyes } from './Eyes'
 
+// For the animation of the facethat also does the work for the glasses and the eyes
+// This shows the guy following the wallet animation going from down to up
+
 const animate__face = keyframes({
   '0%': { transform: 'rotate( -5deg )' },
   '30%, 100%': { transform: 'rotate( 0deg )' }
 })
 
+// For the master container of the face
+// This holds the face, glasses, eyes, and the hair of the man
+
 const FaceWrap = styled('div', {
   position: 'relative',
   width: '100%',
   zIndex: 1,
-  animation: `${ animate__face } 5s ease infinite forwards alternate`,
+  animation: `${ animate__face } 3s ease infinite forwards alternate`,
   transformOrigin: 'center right'
 })
+
+// Here we have shared colors so we need to set these to be shared between the illustration lines
 
 const White = styled('path', { fill: '#fff' })
 const DarkSkin = styled('path', { fill: '#a24f14' })
 const LightBlue = styled('path', { fill: '#0082aa' })
 const DarkBlue = styled('path', { fill: '#323264' })
+
+// ---------- This is the end of declarations ---------- //
 
 export const Face = () => {
   return(
