@@ -1,0 +1,6 @@
+export { Arm } from './Man/Arm'
+export { Body } from './Man/Body'
+export { Blob } from './Blob/Blob'
+export { Face } from './Man/Face'
+export { Head } from './Man/Head'
+export { Neck } from './Man/Neck'

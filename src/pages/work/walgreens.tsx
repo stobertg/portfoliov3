@@ -1,6 +1,6 @@
 import React from 'react'
 import type { NextPage } from 'next'
-import { SiteContainer, Block, Hero, Intro, Browser, GatherLogo, NextProject } from '@components'
+import { SiteContainer, Block, Hero, Intro, Browser, GatherLogo, ManWithWallet, NextProject } from '@components'
 
 const Walgreens: NextPage = () => {
   return (
@@ -16,9 +16,9 @@ const Walgreens: NextPage = () => {
 
       <Block width="medium">
         <Hero 
-          heroGraphic={ <GatherLogo /> }
-          title="Walgreens" 
-          subtitle="E-Learning Application for Grassroots Leadership"
+          heroGraphic={ <ManWithWallet /> }
+          title="Walgreens Design Systems" 
+          subtitle="UX/UI Design, Design Systems, & Front End Development"
         />
 
         <Browser 
@@ -30,33 +30,38 @@ const Walgreens: NextPage = () => {
 
       <Block>
         <Intro 
-          title="Creating a E-Learning Platform"
+          title="Design and Front End"
           text={
             <>
               <p>
-                Gather is both a mobile platform for shared learning and a curriculum for people who want to build on the talents 
-                of their neighbors and the assets of their communities to make real and lasting change. Participants in Gather 
-                learn and work together through an innovative curriculum that comes pre-loaded on a tablet device with all the 
-                connectivity materials videos practices and tools necessary to provide a mobile classroom and toolkit for community 
-                leadership.
+                At Walgreens, my current role is the designer and developer for the Walgreens Live Style Guide, promoting the 
+                design and front-end integrity of foundational components that support Walgreens.com. In addition, front-end 
+                developer of the Walgreens.com homepage and designer of Walgreen's functional icons.
               </p>
 
               <p>
-                My role is the sole designer and front-end developer of the Gather platform, working with a back-end dev to 
-                implement Gather as a fully functional application.
+                As the lead on the LSG team since 2017, my efforts have been to bridge the design, dev, and accessibility teams, 
+                which were previously siloed parts of the organization.
+              </p>
+
+              <p>
+                As Walgreens transitions to React JS and new branding, my team has led the efforts to design GUI components, 
+                standardize and create a Live Style Guide, as well as accessible front-end components to preserve design integrity 
+                and maintenance.
               </p>
             </>
           }
           skills={[
-            { title: 'UI/UX Design' },
             { title: 'Design Systems' },
-            { title: 'Front end development' },
-            { title: 'Back end development' },
+            { title: 'UX/UI Design' },
+            { title: 'Front End Development' },
             { title: 'Accessibility'}
           ]}
           project={[
-            { title: 'Goldin Institute: 2017 - Present' },
-            { title: 'Co-founder - Travis Rejman' }
+            { title: 'Full Time - Walgreens' },
+            { title: '2017 - 2021' },
+            { title: 'Stefan Clark - ACD' },
+            { title: 'Mike Pruim, Ryne Estwig, Akemi Hong' }
           ]}
         />
       </Block>
