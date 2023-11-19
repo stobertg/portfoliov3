@@ -6,11 +6,10 @@ const Castle: NextPage = () => {
   return (
     
     <SiteContainer 
-      hasContactForm 
-      shareURL="https://tylerstober.com"
-      pageTitle="TS - Gather"
-      content="Tyler Stober is a multidisicplinary designer"
-      socialImage="https://mxmlcreative.com/global/social-hero.jpeg"
+      shareURL="https://tylerstober.com/work/castle"
+      pageTitle="Tyler Stober - Castle for no Reason"
+      content="US and Europe based multidisciplinary designer with a primary background in User Experience, User Interface Design, and Front End Development. In addition, also proficient in Motion and 3D design, rendering a unique technical perspective and collaborator with an awareness of multiple mediums."
+      socialImage="https://tylerstober.com/global/social-hero.webp"
       blockSpacing="l2"
     >
 

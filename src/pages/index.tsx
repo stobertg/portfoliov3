@@ -6,7 +6,6 @@ const Home: NextPage = () => {
   return (
     
     <SiteContainer 
-      hasContactForm 
       shareURL="https://tylerstober.com"
       pageTitle="Tyler Stober"
       content="US and Europe based multidisciplinary designer with a primary background in User Experience, User Interface Design, and Front End Development. In addition, also proficient in Motion and 3D design, rendering a unique technical perspective and collaborator with an awareness of multiple mediums."
