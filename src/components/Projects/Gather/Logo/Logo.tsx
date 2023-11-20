@@ -24,7 +24,7 @@ const LogoWrap = styled('div', {
   position: 'relative',
 	width: 110,
 	height: 130,
-	overflow: 'hidden',
+	overflow: 'hidden'
 })
 
 // For the container of the hex caps on the top and the bottom of the container
@@ -89,7 +89,7 @@ const LogoCap = styled('div', {
 			bottom: { 
 				bottom: 0,
 				'*:before': { bottom: -4, background: '#f37223' },
-				
+
 				'> *:first-child:before': { 
 					transform: 'rotate( 30deg )',
 					transformOrigin: 'top right' 

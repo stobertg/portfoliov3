@@ -32,6 +32,7 @@ const SiteContent = styled('div', {
   margin: '0 auto',
   padding: '150px 0 0',
   zIndex: 1,
+  '@mobile': { paddingTop: 75 },
 
   // The only variant option for this component is to automate the spacing between content blocks within the site
   // This will eventally space out all of the content for consistancy between blocks

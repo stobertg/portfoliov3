@@ -62,16 +62,16 @@ const Gather: NextPage = () => {
               text={
                 <>
                   <p>
-                    Gather is both a mobile platform for shared learning and a curriculum for people who want to build on the talents 
-                    of their neighbors and the assets of their communities to make real and lasting change. Participants in Gather 
-                    learn and work together through an innovative curriculum that comes pre-loaded on a tablet device with all the 
-                    connectivity materials videos practices and tools necessary to provide a mobile classroom and toolkit for community 
-                    leadership.
+                    Gather&apos;s fundamental purpose is to foster a collaborative learning environment, where knowledge is gained 
+                    and shared through a foundational curriculum, coupled with individual experiences. Gather&apos;s belief is that 
+                    real change does not follow cliché templates controlled by bureaucratic flexors, but instead by empowering 
+                    grassroot leaders who understand the nuanced and complex nature of their own communities. This unconventional 
+                    approach creates realistic, small changes that compound into substantial growth within their communities.
                   </p>
 
                   <p>
-                    My role is the sole designer and front-end developer of the Gather platform, working with a back-end dev to 
-                    implement Gather as a fully functional application.
+                    Since 2021, my reponsibilties has been the sole designer, front-end developer, and back-end developer of the 
+                    Gather platform. This is apart of my non-profit work to help communites where I can, through Design.
                   </p>
                 </>
               }
