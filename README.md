@@ -1,5 +1,5 @@
 
-<img src="./src/images/global/siteshot.jpg" alt="Tyler Stober Portfolio" />
+<img src="./public/global/siteshot.webp" alt="Tyler Stober Portfolio" />
 <br/>
 Thanks for visiting my Portfolio repo for www.tylerstober.com
 <br/>
