@@ -12,7 +12,12 @@ const ProjectWrap = styled('div', {
   top: 0,
   left: 0,
   width: '100vw',
-  height: '100vh'
+  height: '100vh',
+
+  '@tablet': { 
+    '*': { fontSize: '$s4 !important' },
+    'li': { padding: '8px 0' }
+  }
 })
 
 // For the master container of the text within the center of the master container

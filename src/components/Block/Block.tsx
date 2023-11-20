@@ -60,8 +60,8 @@ interface BlockProps {
 export const Block = ({ 
     width, // Optional - Accomidating various widths based on needs
     spacing, // Optional - For the spacing of the content items within the container
-    animationDelay,
-    animateUp,
+    animationDelay, // Optional - For the ability to delay the default animation of the fade-in
+    animateUp, // Optional - For the ability to add the animation in from bottom to top
     children // Required - For the content within the component
   }:BlockProps) => {
 
