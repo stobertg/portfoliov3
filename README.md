@@ -40,6 +40,4 @@ react-reveal: https://www.react-reveal.com/examples/common/custom/
 <br/>
 react-count-up: https://www.npmjs.com/package/react-countup
 <br/>
-react-transition-group: https://github.com/reactjs/react-transition-group
-<br/>
 react-player: https://www.npmjs.com/package/react-player
