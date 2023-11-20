@@ -50,6 +50,8 @@ const BlockContent = styled('div', {
 interface BlockProps {
   width?: 'small' | 'medium' | 'large'
   spacing?: 'l0' | 'l1' | 'l2'
+  animationDelay?: string
+  animateUp?: boolean
   children: React.ReactNode
 }
 
@@ -58,12 +60,14 @@ interface BlockProps {
 export const Block = ({ 
     width, // Optional - Accomidating various widths based on needs
     spacing, // Optional - For the spacing of the content items within the container
+    animationDelay,
+    animateUp,
     children // Required - For the content within the component
   }:BlockProps) => {
 
   return(
 
-    <XyzTransition xyz="fade" appearVisible>
+    <XyzTransition xyz={`fade fade ${ animateUp ? 'down-25%' : undefined } duration-10 ${ animationDelay ? 'down-' + animationDelay : undefined }`} appearVisible>
       <BlockWrap>
         <BlockContent {...{ width, spacing }}>
           { children }

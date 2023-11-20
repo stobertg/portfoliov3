@@ -13,13 +13,15 @@ const Gather: NextPage = () => {
       blockSpacing="l2"
     >
 
-      <Block width="medium">
+      <Block width="medium" animateUp>
         <Hero 
           heroGraphic={ <GatherLogo /> }
           title="Gather Web Application" 
           subtitle="E-Learning Application for Grassroots Leadership"
         />
+      </Block>
 
+      <Block width="medium" animateUp animationDelay='2'>
         <Browser 
           url="gather.goldininstitute.org" 
           image="/projects/gather/profile.png" 
@@ -72,7 +74,7 @@ const Gather: NextPage = () => {
           image="/projects/gather/lessons.webp" 
           imageAlt="Walgreens Design Systems" 
         />
-
+      
         <Browser 
           url="gather.goldininstitute.org" 
           image="/projects/gather/library.webp" 
