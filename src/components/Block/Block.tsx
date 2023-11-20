@@ -19,6 +19,9 @@ const BlockContent = styled('div', {
   width: '100%',
   margin: '0 auto',
 
+  // For the default spacing between each of the content within the block component
+  // This will add the margin to the bottom of each of the content block, with the exception of the last item
+
   '> *:not(:last-child)': { 
     marginBottom: 80,
     '@tablet': { marginBottom: 40 }
