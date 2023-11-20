@@ -1,8 +1,6 @@
 import React from 'react'
 import { styled, keyframes } from '@stitches/react'
-import TrumpetHorn from './_Horn'
-import TrumpetBase from './_Base'
-import TrumpetLines from './_Lines'
+import { TrumpetHorn, TrumpetBase, TrumpetLines } from './Parts'
 
 const Rotate = keyframes({
   '0%': { transform: 'rotate( -11deg ) scale( 0.7 )' },

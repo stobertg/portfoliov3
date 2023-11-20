@@ -48,7 +48,7 @@ const Circle = styled('path', {
   animation: `${FadeIn} 3000ms ease infinite forwards`
 });
 
-const TrumpetLines = () => {
+export const TrumpetLines = () => {
   return(
 
     <LineWrap>
@@ -78,5 +78,3 @@ const TrumpetLines = () => {
 
   )
 }
-
-export default TrumpetLines

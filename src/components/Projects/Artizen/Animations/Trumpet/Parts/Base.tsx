@@ -68,7 +68,7 @@ const TrumpetThumb = styled('div', {
 
 // ---------- This is the end of declarations ---------- //
 
-const TrumpetBase = () => {
+export const TrumpetBase = () => {
   return(
     
     <TrumpetWrap>
@@ -117,5 +117,3 @@ const TrumpetBase = () => {
 
   )
 }
-
-export default TrumpetBase

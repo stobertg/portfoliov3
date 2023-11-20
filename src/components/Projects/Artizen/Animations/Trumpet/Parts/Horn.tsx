@@ -10,7 +10,7 @@ const HornWrap = styled('div', {
   }
 });
 
-const TrumpetHorn = () => {
+export const TrumpetHorn = () => {
   return(
 
     <HornWrap>
@@ -40,5 +40,3 @@ const TrumpetHorn = () => {
 
   )
 }
-
-export default TrumpetHorn
