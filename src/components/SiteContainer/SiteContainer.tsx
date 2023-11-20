@@ -53,7 +53,7 @@ const SiteContent = styled('div', {
       l2: { 
         '> *:not(:first-child, :last-child)': { marginBottom: 100 }, 
         '> *:first-child': { marginBottom: 75 }, 
-        '@tablet': { '*': { marginBottom: 40 }} 
+        '@tablet': { '> *': { marginBottom: '40px !important' }} 
       },
       l3: { '> *:not(:last-child)': { marginBottom: 150, '@tablet': { marginBottom: 75 }}},
       l4: { '> *:not(:last-child)': { marginBottom: 200, '@tablet': { marginBottom: 50 }}},
