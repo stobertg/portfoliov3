@@ -70,7 +70,10 @@ export const Block = ({
 
   return(
 
-    <XyzTransition xyz={`fade fade ${ animateUp ? 'down-25%' : undefined } duration-10 ${ animationDelay ? 'down-' + animationDelay : undefined }`} appearVisible>
+    <XyzTransition 
+      xyz={`fade fade ${ animateUp ? 'down-25%' : undefined } duration-10 ${ animationDelay ? 'down-' + animationDelay : undefined }`} 
+      appearVisible
+    >
       <BlockWrap>
         <BlockContent {...{ width, spacing }}>
           { children }
