@@ -22,7 +22,7 @@ const AirplaneScene = styled('div', {
   position: 'relative',
   minWidth: 450,
   height: 158,
-  marginBottom: 75,
+  marginBottom: 32,
   animation: `${MoveUp} 1000ms ease forwards`,
   opacity: 0
 });

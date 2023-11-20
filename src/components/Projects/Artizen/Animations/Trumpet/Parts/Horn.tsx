@@ -6,7 +6,7 @@ const HornWrap = styled('div', {
   width: 260,
 
   svg: {
-    fill: '$moss'
+    fill: '#1acc6c'
   }
 });
 

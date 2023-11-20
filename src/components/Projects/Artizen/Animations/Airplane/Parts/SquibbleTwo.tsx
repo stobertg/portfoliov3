@@ -86,7 +86,7 @@ const Squibble = styled('div', {
 
   'svg': {
     fill: 'none',
-    stroke: '$moon',
+    stroke: '$gray',
     strokeLinecap: 'round',
     strokeWidth: 6,
     strokeDasharray: 169,

@@ -17,10 +17,10 @@ const Squibble = styled('div', {
 
   'svg': {
     fill: 'none',
-    stroke: '$moon',
+    stroke: '$gray',
     strokeLinecap: 'round',
     strokeDasharray: 99,
-    animation: `${Dash} 3000ms ease infinite forwards`
+    animation: `${ Dash } 3000ms ease infinite forwards`
   }
 })
 

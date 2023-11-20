@@ -16,7 +16,8 @@ const TrumpetWrap = styled('div', {
   justifyContent: 'center',
   alignItems: 'center',
   position: 'absolute',
-  bottom: 0
+  bottom: 0,
+  svg: { fill: '#1acc6c' }
 });
 
 // For the circle base that emcompass the keys within the container

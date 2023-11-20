@@ -10,7 +10,7 @@ const BaseWrap = styled('div', {
   width: '80%',
   height: '80%',
   zIndex: 0,
-  fill: '$green',
+  fill: '#1acc6c',
   marginRight: 20
 })
 

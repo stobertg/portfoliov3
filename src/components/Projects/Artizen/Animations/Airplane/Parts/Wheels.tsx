@@ -17,6 +17,7 @@ const Wheels = styled('div', {
   zIndex: 0,
   animation: `${MoveWheels} 5000ms ease infinite forwards`,
   animationDelay: '200ms',
+  svg: { fill: '#000' }
 });
 
 export const AirplaneWheels = () => {

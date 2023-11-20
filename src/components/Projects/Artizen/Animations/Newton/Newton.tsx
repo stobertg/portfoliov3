@@ -18,9 +18,9 @@ const NewtonWrap = styled('div', {
     position: 'absolute',
     top: 0,
     left: 0,
-    width: '80%',
+    width: '90%',
     height: 1,
-    // background: '$white',
+    background: '$white',
     zIndex: 1
   }
 })

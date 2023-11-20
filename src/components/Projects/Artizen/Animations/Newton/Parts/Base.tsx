@@ -5,7 +5,7 @@ const BaseWrap = styled('div', {
   display: 'flex',
   position: 'relative',
   width: 240,
-  fill: '$green',
+  fill: '#1acc6c',
   zIndex: 2
 })
 

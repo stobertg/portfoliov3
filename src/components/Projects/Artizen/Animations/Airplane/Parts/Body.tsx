@@ -8,7 +8,7 @@ const AirplaneBase = styled('div', {
 });
 
 const Green = styled('path', {
-  fill: '$green'
+  fill: '#1acc6c'
 })
 
 export const AirplaneBody = () => {

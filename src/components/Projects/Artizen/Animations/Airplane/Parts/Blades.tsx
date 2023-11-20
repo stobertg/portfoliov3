@@ -20,7 +20,7 @@ const Blades = styled('div', {
   transformOrigin: 'center center',
   animation: `${Rotate} 200ms linear infinite forwards`,
   zIndex: 10,
-  fill: '$slate'
+  fill: '#000'
 })
 
 // ---------- This is the end of declarations ---------- //

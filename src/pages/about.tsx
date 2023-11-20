@@ -28,15 +28,15 @@ const AboutPage: NextPage = () => {
             <p>
               Made in <a href="https://en.wikipedia.org/wiki/Bethel,_Ohio" target="_blank" rel="noreferrer">small town</a> Ohio, educated 
               at <a href="https://en.wikipedia.org/wiki/University_of_Cincinnati_College_of_Design,_Architecture,_Art,_and_Planning" target="_blank" rel="noreferrer">DAAP</a> at U 
-              of Cincy, professionally developed in NYC and Chicago. Interests in <a href="https://www.pinterest.com/stobertg/user-interfaces/" target="_blank" rel="noreferrer">design</a>, <a href="https://www.pinterest.com/stobertg/history/" target="_blank" rel="noreferrer">history</a>, <a href="https://www.pinterest.com/stobertg/medieval-architecture/" target="_blank" rel="noreferrer">architecture</a>, <a href="https://www.pinterest.com/stobertg/cinema4d/" target="_blank" rel="noreferrer">3D</a>, and memorable <a href="https://www.pinterest.com/stobertg/experiences/" target="_blank" rel="noreferrer">experiences</a>.
+              of Cincy, professionally developed in NYC and Chicago. Interests in <a href="https://www.pinterest.com/stobertg/user-interfaces/" target="_blank" rel="noreferrer">design,</a> <a href="https://www.pinterest.com/stobertg/history/" target="_blank" rel="noreferrer">history,</a> <a href="https://www.pinterest.com/stobertg/medieval-architecture/" target="_blank" rel="noreferrer">architecture,</a> <a href="https://www.pinterest.com/stobertg/cinema4d/" target="_blank" rel="noreferrer">3D,</a> and memorable <a href="https://www.pinterest.com/stobertg/experiences/" target="_blank" rel="noreferrer">experiences</a>.
             </p>
           </>
         }
         socials={[
           { href: 'https://www.linkedin.com/in/tyler-stober/', icon: <LinkedInIcon /> },
           { href: 'https://github.com/stobertg/portfoliov3', icon: <GithubIcon /> },
-          { href: 'https://www.linkedin.com/in/tyler-stober/', icon: <DribbleIcon /> },
-          { href: '/', icon: <MediumIcon /> }
+          { href: 'https://dribbble.com/stobertg', icon: <DribbleIcon /> },
+          { href: 'https://medium.com/@TylerStober', icon: <MediumIcon /> }
         ]}
       />
     </SiteContainer>

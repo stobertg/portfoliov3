@@ -15,6 +15,15 @@ const GridWrap = styled('div', {
   // I only use one at the moment, but the shiz is made to scale if I need it
 
   variants: {
+    hasDviderLines: {
+      true: { 
+        borderRadius: '$r2',
+        border: '1px solid $borderDeco',
+        overflow: 'hidden',
+        '> *:not(:last-child)': { borderRight: '1px solid $borderDeco' } 
+      }
+    },
+
     columns: {
       2: {  gridTemplateColumns: 'repeat(2, 1fr)'  },
       3: {  gridTemplateColumns: 'repeat(3, 1fr)'  },
@@ -106,6 +115,7 @@ interface GridProps {
   smallDesktopColumns?: 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
   tabletColumns?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
   mobileColumns?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
+  hasDviderLines?: boolean
   children: React.ReactNode
 }
 
@@ -117,12 +127,13 @@ export const Grid = ({
     smallDesktopColumns, // Optional - Supporting columns for small desktop breakpoints
     tabletColumns, // Optional - Supporting columns for tablet breakpoints
     mobileColumns, // Optional - Supporting columns for mobile breakpoints
+    hasDviderLines,
     children // Required - For the content inside of the grid
   }:GridProps) => {
 
   return(
 
-    <GridWrap {...{ columns, largeDesktopColumns, smallDesktopColumns, tabletColumns, mobileColumns }}>
+    <GridWrap {...{ columns, largeDesktopColumns, smallDesktopColumns, tabletColumns, mobileColumns, hasDviderLines }}>
       { children }
     </GridWrap>
 
