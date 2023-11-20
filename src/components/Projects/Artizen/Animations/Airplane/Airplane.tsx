@@ -1,10 +1,10 @@
 import React from 'react'
 import { styled, keyframes } from '@stitches/react'
 import AirplaneBody from './Body';
-import AirplaneBlades from './Blades';
-import AirplaneWheels from './Wheels';
-import SquibbleOne from './SquibbleOne';
-import SquibbleTwo from './SquibbleTwo';
+import AirplaneBlades from './Blades'
+import AirplaneWheels from './Wheels'
+import SquibbleOne from './SquibbleOne'
+import SquibbleTwo from './SquibbleTwo'
 
 const Move = keyframes({
   '0%': { transform: 'translate3d( 2px, 5px ,0 ) rotate( -1deg )' },
