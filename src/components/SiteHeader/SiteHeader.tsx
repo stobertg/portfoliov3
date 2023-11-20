@@ -47,7 +47,7 @@ const Nav = styled('nav', {
   justifyContent: 'space-between',
   position: 'relative',
   maxWidth: 1400,
-  width: '95%',
+  width: '92%',
   margin: '0 auto',
   padding: '12px 0',
   transition: '$s1'
@@ -61,7 +61,30 @@ const NavLinks = styled('div', {
   flexDirection: 'row',
   alignItems: 'center',
   position: 'relative',
-  '> *:not(:last-child)': { marginRight: 12 }
+  '> *:not(:last-child)': { marginRight: 12 },
+
+  // On the tablet breakpoints, we will hide the global navigation items
+  // We put them behind a menu button click that shows up on tablet breakpoints in place of the menu items
+
+  '@tablet': {
+    // display: 'none',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100vw',
+    height: '100vh',
+    background: '$black',
+
+    '*': { 
+      justifyContent: 'center',
+      alignItems: 'center',
+      textAlign: 'center',
+      marginRight: '0px !important',
+      fontSize: '$s4'
+    }
+  }
 })
 
 // For the styling of the individual nav links within the container
@@ -91,6 +114,11 @@ const NavLink = styled('div', {
   // When the user hovers of the button, the underline is shown below
 
   '&:hover:after': { transform: 'scale( 1, 1 )' }
+})
+
+const ShowOnTablet = styled('div', {
+  display: 'none',
+  '@tablet': { display: 'flex' }
 })
 
 // ---------- This is the end of declarations ---------- //
@@ -137,8 +165,9 @@ export const SiteHeader = () => {
           <Link href="/"><a><NavLink><Heading bold size="l0" title="Work" /></NavLink></a></Link>
           <Link href="/about"><a><NavLink><Heading bold size="l0" title="About" /></NavLink></a></Link>
           <button><NavLink><Heading bold size="l0" title="Contact" /></NavLink></button>
-          <MenuButton onClick={ () => console.log( 'hello' ) } />
         </NavLinks>
+
+        <ShowOnTablet><MenuButton onClick={ () => console.log( 'hello' ) } /></ShowOnTablet>
       </Nav>
     </HeaderWrap>
 

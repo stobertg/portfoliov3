@@ -10,6 +10,7 @@ const LogoWrap = styled('div', {
   flexDirection: 'row',
   alignItems: 'center',
   position: 'relative',
+  zIndex: 9000,
   '> *:not(:last-child)': { marginRight: 12 },
   '@tablet': { '> *:not(:first-child)': { display: 'none' }}
 })

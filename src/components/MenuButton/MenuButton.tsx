@@ -15,7 +15,7 @@ const ButtonWrap = styled('button', {
   border: '1px solid $borderDeco',
   borderRadius: '$r1',
   transition: '$s1',
-  '> *:not(:last-child)': { marginRight: 12 },
+  '> *:not(:last-child)': { marginRight: 8 },
   '&:hover': { background: '$borderDeco' }
 })
 
