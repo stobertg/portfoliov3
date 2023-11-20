@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled } from '@stitches/react'
-import RightBall from './_RightBall'
-import LeftBall from './_LeftBall'
+import RightBall from './RightBall'
+import LeftBall from './LeftBall'
 
 const Ballz = styled('div', {
   padding: '0 22px',

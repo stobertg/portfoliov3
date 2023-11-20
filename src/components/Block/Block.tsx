@@ -18,7 +18,11 @@ const BlockContent = styled('div', {
   position: 'relative',
   width: '100%',
   margin: '0 auto',
-  '> *:not(:last-child)': { marginBottom: 80 },
+
+  '> *:not(:last-child)': { 
+    marginBottom: 80,
+    '@tablet': { marginBottom: 40 }
+  },
 
   // For the various widths supported
   // By default the width is set at 100% and based on needs, we can adjust for the content

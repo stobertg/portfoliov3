@@ -1,8 +1,8 @@
 import React from 'react'
 import { styled } from '@stitches/react'
-import NewtonBalls from './_Balls'
-import NewtonBase from './_Base'
-import BaseBack from './_BaseBack'
+import NewtonBalls from './Balls'
+import NewtonBase from './Base'
+import BaseBack from './BaseBack'
 
 const NewtonWrap = styled('div', {
   display: 'flex',
