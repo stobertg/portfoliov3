@@ -67,7 +67,6 @@ const NavLinks = styled('div', {
   // We put them behind a menu button click that shows up on tablet breakpoints in place of the menu items
 
   '@tablet': {
-    display: 'none',
     flexDirection: 'column',
     justifyContent: 'center',
     position: 'fixed',
@@ -76,9 +75,10 @@ const NavLinks = styled('div', {
     width: '100vw',
     height: '100vh',
     background: '$black',
-    transform: 'scale( 0.8 )',
-    transition: '$s1',
+    transform: 'scale( 0.9 )',
+    transition: '$s2',
     opacity: 0,
+    
 
     '*': { 
       justifyContent: 'center',
