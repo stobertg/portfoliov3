@@ -49,6 +49,9 @@ export const HeadTags = ({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:image:alt" content="Tyler Stober" />
         <meta name="twitter:image:alt" content="Tyler Stober" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:title" content={ pageTitle } />
+        <meta prefix="og: http://ogp.me/ns#" property="og:description" content={ content } />
+        <meta prefix="og: http://ogp.me/ns#" property="og:image" content={ shareURL } />
         <title>{ pageTitle }</title>
       </Head>
     
