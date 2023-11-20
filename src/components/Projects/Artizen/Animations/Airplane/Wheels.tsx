@@ -1,5 +1,5 @@
 import React from 'react'
-import { styled, keyframes } from '@stitches/react'
+import { styled, keyframes } from '@theme'
 
 const MoveWheels = keyframes({
   '0%': { transform: 'translate3d( 1px, 5px ,0 ) rotate( 0deg )' },

@@ -1,5 +1,5 @@
 import React from 'react'
-import { styled, keyframes } from '@stitches/react'
+import { styled, keyframes } from '@theme'
 
 const Rotate = keyframes({
   '0%': { transform: 'rotate( 0deg )' },

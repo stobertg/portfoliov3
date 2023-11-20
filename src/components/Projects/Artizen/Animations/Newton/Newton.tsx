@@ -1,5 +1,5 @@
 import React from 'react'
-import { styled } from '@stitches/react'
+import { styled } from '@theme'
 import NewtonBalls from './Balls'
 import NewtonBase from './Base'
 import BaseBack from './BaseBack'

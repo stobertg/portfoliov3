@@ -1,5 +1,5 @@
 import React from 'react'
-import { styled, keyframes } from '@stitches/react'
+import { styled, keyframes } from '@theme'
 
 const Dash = keyframes({
   '0%': { strokeDashoffset: 199, transform: 'rotate( -5deg )' },

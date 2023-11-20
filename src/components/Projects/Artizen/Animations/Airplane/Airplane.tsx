@@ -1,5 +1,5 @@
 import React from 'react'
-import { styled, keyframes } from '@stitches/react'
+import { styled, keyframes } from '@theme'
 import AirplaneBody from './Body';
 import AirplaneBlades from './Blades'
 import AirplaneWheels from './Wheels'
