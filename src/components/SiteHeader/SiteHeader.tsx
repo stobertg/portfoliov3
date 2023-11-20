@@ -17,7 +17,11 @@ const HeaderWrap = styled('header', {
 
   variants: {
     active: {
-      true: { background: '#101010' }
+      true: { 
+        background: 'rgba( 16,16,16, 0.9 )',
+        '> *': { padding: '0 0' },
+        '&:before': { backdropFilter: 'blur( 10px )' } 
+      }
     }
   },
 
@@ -29,13 +33,7 @@ const HeaderWrap = styled('header', {
     top: 0,
     left: 0,
     width: '100%',
-    height: '100%',
-    
-    variants: {
-      active: {
-        true: { backdropFilter: 'blur( 10px )' }
-      }
-    }
+    height: '100%'
   }
 })
 
@@ -51,7 +49,8 @@ const Nav = styled('nav', {
   maxWidth: 1400,
   width: '95%',
   margin: '0 auto',
-  padding: '12px 0'
+  padding: '12px 0',
+  transition: '$s1'
 })
 
 // For the container of the links on the right side of the container
@@ -126,7 +125,10 @@ export const SiteHeader = () => {
 
   return(
 
-    <HeaderWrap style={{ transform: `translateY( ${ scrollDirection == 'down' ? '-100%' : '0' })` }}>
+    <HeaderWrap 
+      style={{ transform: `translateY( ${ scrollDirection == 'down' ? '-100%' : '0' })` }}
+      active={ scrollPos > 100 && true }
+    >
       <Nav>
         <Link href="/"><a><Logo /></a></Link>
 

@@ -13,11 +13,11 @@ const HeadingWrap = styled('div', {
     size: {
       l0: { fontSize: '$s0', lineHeight: 1.2 },
       l1: { fontSize: '$s1', lineHeight: 1.2 },
-      l2: { fontSize: '$s2', lineHeight: 1.2 },
-      l3: { fontSize: '$s3', lineHeight: 1.3, '@tablet': { fontSize: '$s1', lineHeight: 1.2 } },
-      l4: { fontSize: '$s4', lineHeight: 1.3, '@tablet': { fontSize: '$s2', lineHeight: 1.2 } },
-      l5: { fontSize: '$s5', lineHeight: 1.3, '@tablet': { fontSize: '$s3', lineHeight: 1.2 } },
-      l6: { fontSize: '$s6', lineHeight: 1.2, '@tablet': { fontSize: '$s4', lineHeight: 1.2 } },
+      l2: { fontSize: '$s2', lineHeight: 1.2, '@tablet': { fontSize: '$s1', lineHeight: 1.2 }},
+      l3: { fontSize: '$s3', lineHeight: 1.3, '@tablet': { fontSize: '$s1', lineHeight: 1.2 }},
+      l4: { fontSize: '$s4', lineHeight: 1.3, '@tablet': { fontSize: '$s2', lineHeight: 1.2 }},
+      l5: { fontSize: '$s5', lineHeight: 1.3, '@tablet': { fontSize: '$s3', lineHeight: 1.2 }},
+      l6: { fontSize: '$s6', lineHeight: 1.2, '@tablet': { fontSize: '$s4', lineHeight: 1.2 }},
       l7: { fontSize: '$s7', lineHeight: 1.2, '@tablet': { fontSize: '$s5', lineHeight: 1.2 }}
     },
 

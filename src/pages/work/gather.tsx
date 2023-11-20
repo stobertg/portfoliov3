@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import type { NextPage } from 'next'
 import LoadingBar from 'react-top-loading-bar'
+import { preloadImages } from '@lib';
 import { SiteContainer, Block, Hero, Intro, Browser, GatherLogo, NextProject } from '@components'
 
 const Gather: NextPage = () => {
@@ -8,7 +9,7 @@ const Gather: NextPage = () => {
   const [ progress, setProgress ] = useState( 0 )
 
   const imageUrls = [
-    "/projects/gather/profile.png",
+    "/projects/gather/profile.webp",
     "/projects/gather/ds1.webp",
     "/projects/gather/lessons.webp",
     "/projects/gather/library.webp",
@@ -17,20 +18,10 @@ const Gather: NextPage = () => {
     "/projects/wag/gui/hero.webp"
   ]
 
-  const preloadImages = () => {
-    let loadedImagesCount = 0
-    imageUrls.forEach( url => {
-      const img = new Image()
-      img.src = url;
-      img.onload = () => {
-        loadedImagesCount++
-        setProgress(( loadedImagesCount / imageUrls.length ) * 100 )
-      }
-    })
-  }
-
   useEffect(() => {
-    preloadImages()
+    preloadImages( imageUrls, setProgress ).then(() => {
+      setProgress( 100 )
+    });
   }, [])
 
   return (
@@ -63,7 +54,7 @@ const Gather: NextPage = () => {
           <Block width="medium" animateUp animationDelay='2'>
             <Browser 
               url={ browserUrl }
-              image="/projects/gather/profile.png" 
+              image="/projects/gather/profile.webp" 
               imageAlt="Gather Pofile" 
             />
           </Block>

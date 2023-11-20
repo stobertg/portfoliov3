@@ -13,13 +13,15 @@ const Walgreens: NextPage = () => {
       blockSpacing="l2"
     >
 
-      <Block width="medium">
+      <Block width="medium" animateUp>
         <Hero 
           heroGraphic={ <ManWithWallet /> }
           title="Walgreens Design Systems" 
-          subtitle="UX/UI Design, Design Systems, & Front End Development"
+          subtitle="Design Systems, UX/UI Design, & Front End Development"
         />
-
+      </Block>
+      
+      <Block width="medium" animateUp animationDelay="2">
         <Browser 
           url="walgreens.com" 
           image="/projects/wag/gui/coupons.webp" 
