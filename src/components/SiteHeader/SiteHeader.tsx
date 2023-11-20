@@ -78,14 +78,18 @@ const NavLinks = styled('div', {
     transform: 'scale( 0.9 )',
     transition: '$s2',
     opacity: 0,
+    pointerEvents: 'none',
     
+    // Here we set the styling for all of titles within the menu to sit text aligned centered
+    // This will override all of the default styling and change set the font size to be larger
 
     '*': { 
       justifyContent: 'center',
       alignItems: 'center',
       textAlign: 'center',
       marginRight: '0px !important',
-      fontSize: '$s4'
+      fontSize: '$s4',
+      pointerEvents: 'auto'
     }
   },
 
