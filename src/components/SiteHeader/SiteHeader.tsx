@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useScrollPosition, useScrollDirection } from '@lib'
 import { styled } from '@theme'
-import { Logo, Heading } from '@components'
+import { Logo, Heading, MenuButton } from '@components'
 
 // For the master container of the global site header
 // This is always positioned on the top of the site, and hides on scroll down and shows on scroll up
@@ -59,6 +59,7 @@ const Nav = styled('nav', {
 const NavLinks = styled('div', {
   display: 'flex',
   flexDirection: 'row',
+  alignItems: 'center',
   position: 'relative',
   '> *:not(:last-child)': { marginRight: 12 }
 })
@@ -136,6 +137,7 @@ export const SiteHeader = () => {
           <Link href="/"><a><NavLink><Heading bold size="l0" title="Work" /></NavLink></a></Link>
           <Link href="/about"><a><NavLink><Heading bold size="l0" title="About" /></NavLink></a></Link>
           <button><NavLink><Heading bold size="l0" title="Contact" /></NavLink></button>
+          <MenuButton onClick={ () => console.log( 'hello' ) } />
         </NavLinks>
       </Nav>
     </HeaderWrap>

@@ -10,7 +10,8 @@ const LogoWrap = styled('div', {
   flexDirection: 'row',
   alignItems: 'center',
   position: 'relative',
-  '> *:not(:last-child)': { marginRight: 12 }
+  '> *:not(:last-child)': { marginRight: 12 },
+  '@tablet': { '> *:not(:first-child)': { display: 'none' }}
 })
 
 // For the master container of the Tyler Stober logo
