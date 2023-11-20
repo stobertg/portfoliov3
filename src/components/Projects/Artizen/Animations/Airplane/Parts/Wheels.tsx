@@ -19,7 +19,7 @@ const Wheels = styled('div', {
   animationDelay: '200ms',
 });
 
-const AirplaneWheels = () => {
+export const AirplaneWheels = () => {
   return(
 
     <Wheels>
@@ -43,5 +43,3 @@ const AirplaneWheels = () => {
 
   )
 }
-
-export default AirplaneWheels

@@ -17,7 +17,7 @@ const Blades = styled('div', {
   fill: '$slate'
 });
 
-const AirplaneBlades = () => {
+export const AirplaneBlades = () => {
   return(
 
     <Blades>
@@ -104,5 +104,3 @@ const AirplaneBlades = () => {
 
   )
 }
-
-export default AirplaneBlades

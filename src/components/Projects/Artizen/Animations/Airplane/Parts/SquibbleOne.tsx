@@ -24,7 +24,7 @@ const Squibble = styled('div', {
   }
 })
 
-const SquibbleOne = () => {
+export const SquibbleOne = () => {
   return(
 
     <Squibble>
@@ -36,5 +36,3 @@ const SquibbleOne = () => {
 
   )
 }
-
-export default SquibbleOne

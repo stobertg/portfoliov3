@@ -94,7 +94,7 @@ const Squibble = styled('div', {
   }
 })
 
-const SquibbleTwo = () => {
+export const SquibbleTwo = () => {
   return(
 
     <SquibbleWrap>
@@ -129,5 +129,3 @@ const SquibbleTwo = () => {
 
   )  
 }
-
-export default SquibbleTwo

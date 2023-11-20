@@ -11,7 +11,7 @@ const Green = styled('path', {
   fill: '$green'
 })
 
-const AirplaneBody = () => {
+export const AirplaneBody = () => {
   return(
 
     <AirplaneBase>
@@ -167,5 +167,3 @@ const AirplaneBody = () => {
 
   )
 }
-
-export default AirplaneBody

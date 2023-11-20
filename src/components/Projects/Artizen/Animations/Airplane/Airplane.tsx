@@ -1,10 +1,6 @@
 import React from 'react'
 import { styled, keyframes } from '@theme'
-import AirplaneBody from './Body';
-import AirplaneBlades from './Blades'
-import AirplaneWheels from './Wheels'
-import SquibbleOne from './SquibbleOne'
-import SquibbleTwo from './SquibbleTwo'
+import { AirplaneBody, AirplaneBlades, AirplaneWheels, SquibbleOne, SquibbleTwo } from './Parts'
 
 const Move = keyframes({
   '0%': { transform: 'translate3d( 2px, 5px ,0 ) rotate( -1deg )' },
