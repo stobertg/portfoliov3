@@ -29,7 +29,7 @@ const HeroHeading = styled('div', {
   flexDirection: 'column',
   alignItems: 'center',
   '> *:not(:last-child)': { marginBottom: 8 },
-  '> *:last-child': { maxWidth: '80%' }
+  '> *:last-child': { maxWidth: '90%' }
 })
 
 // For the container of the optional image on the top of the hero section
