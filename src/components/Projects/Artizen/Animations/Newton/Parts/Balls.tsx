@@ -1,7 +1,6 @@
 import React from 'react'
 import { styled } from '@theme'
-import RightBall from './RightBall'
-import LeftBall from './LeftBall'
+import { RightBall, LeftBall } from './'
 
 const Ballz = styled('div', {
   padding: '0 22px',
@@ -23,7 +22,7 @@ const White = styled('path', {
   fill: '$white'
 })
 
-const NewtonBalls = () => {
+export const NewtonBalls = () => {
   return(
 
     <Ballz>
@@ -50,5 +49,3 @@ const NewtonBalls = () => {
 
   )
 }
-
-export default NewtonBalls

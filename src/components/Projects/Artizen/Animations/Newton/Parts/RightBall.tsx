@@ -38,7 +38,7 @@ const White = styled('path', {
 })
 
 
-const RightBall = () => {
+export const RightBall = () => {
   return(
 
     <Wrap>
@@ -52,5 +52,3 @@ const RightBall = () => {
 
   )
 }
-
-export default RightBall

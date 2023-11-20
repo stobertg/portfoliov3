@@ -62,31 +62,31 @@ const Gather: NextPage = () => {
 
       <Block width="medium">
         <Browser 
-          url="walgreens.com" 
+          url="gather.goldininstitute.org" 
           image="/projects/gather/ds1.webp" 
           imageAlt="Walgreens Design Systems" 
         />
 
         <Browser 
-          url="walgreens.com" 
+          url="gather.goldininstitute.org" 
           image="/projects/gather/lessons.webp" 
           imageAlt="Walgreens Design Systems" 
         />
 
         <Browser 
-          url="walgreens.com" 
+          url="gather.goldininstitute.org" 
           image="/projects/gather/library.webp" 
           imageAlt="Walgreens Design Systems" 
         />
 
         <Browser 
-          url="walgreens.com" 
+          url="gather.goldininstitute.org" 
           image="/projects/gather/upload.webp" 
           imageAlt="Walgreens Design Systems" 
         />
 
         <Browser 
-          url="walgreens.com" 
+          url="gather.goldininstitute.org" 
           image="/projects/gather/admin.webp" 
           imageAlt="Walgreens Design Systems" 
         />
@@ -94,10 +94,10 @@ const Gather: NextPage = () => {
 
       <Block>
         <NextProject 
-          pageLink="/work/gather"
-          title="Walgreens' Design Systems" 
-          image="/projects/gather/profile.png"
-          imageAlt="Gather by Tyler Stober"
+          pageLink="/work/walgreens"
+          title="Walgreens Design Systems" 
+          image="/projects/wag/gui/hero.webp"
+          imageAlt="Walgreens Design Systems by Tyler Stober"
         />
       </Block>
     </SiteContainer>

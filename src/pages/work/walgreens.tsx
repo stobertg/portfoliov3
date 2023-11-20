@@ -33,7 +33,7 @@ const Walgreens: NextPage = () => {
           text={
             <>
               <p>
-                At Walgreens, my current role is the designer and developer for the Walgreens Live Style Guide, promoting the 
+                At Walgreens, my role was the designer and developer for the Walgreens Design Systems, promoting the 
                 design and front-end integrity of foundational components that support Walgreens.com. In addition, front-end 
                 developer of the Walgreens.com homepage and designer of Walgreen&apos;s functional icons.
               </p>
@@ -83,9 +83,9 @@ const Walgreens: NextPage = () => {
 
       <Block>
         <NextProject 
-          pageLink="/work/gather"
-          title="Walgreens' Design Systems" 
-          image="/projects/gather/profile.png"
+          pageLink="/work/cardiact"
+          title="CardiAct - Empowering Unresponsive Cariact Vicitims" 
+          image="/projects/cardiact/hero.webp"
           imageAlt="Gather by Tyler Stober"
         />
       </Block>

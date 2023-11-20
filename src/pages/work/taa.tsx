@@ -27,9 +27,9 @@ const TAA: NextPage = () => {
         />
       </Block>
 
-      <Block width="medium">
+      <Block>
         <Intro 
-          title="The Lengend of the Doge"
+          title="Threads for days"
           text={
             <>
               <p>

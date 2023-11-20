@@ -1,11 +1,12 @@
 import React from 'react'
 import { styled } from '@theme'
-import NewtonBalls from './Balls'
-import NewtonBase from './Base'
-import BaseBack from './BaseBack'
+import { NewtonBalls, NewtonBase, BaseBack } from './Parts'
+
+// For the master container of the Newton illustration animation
+// This shows the left and right balls swinging back and forth, with the three balls in the middle staying still 
 
 const NewtonWrap = styled('div', {
-  display: 'flex',
+  display: 'inline-flex',
   justifyContent: 'center',
   position: 'relative',
   overflow: 'hidden',
@@ -17,9 +18,9 @@ const NewtonWrap = styled('div', {
     position: 'absolute',
     top: 0,
     left: 0,
-    width: '100%',
+    width: '80%',
     height: 1,
-    background: '$white',
+    // background: '$white',
     zIndex: 1
   }
 })

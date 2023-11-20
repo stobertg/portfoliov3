@@ -14,7 +14,7 @@ const Front = styled('g', {
   zIndex: 10
 })
 
-const NewtonBase = () => {
+export const NewtonBase = () => {
   return(
 
     <BaseWrap>
@@ -40,5 +40,3 @@ const NewtonBase = () => {
 
   )
 }
-
-export default NewtonBase

@@ -25,7 +25,7 @@ const BaseRight = styled('div', {
   width: 30,
 })
 
-const BaseBack = () => {
+export const BaseBack = () => {
   return(
 
     <BaseWrap>
@@ -69,5 +69,3 @@ const BaseBack = () => {
 
   )
 }
-
-export default BaseBack

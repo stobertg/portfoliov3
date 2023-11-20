@@ -27,7 +27,7 @@ const NextContent = styled('div', {
   justifyContent: 'center',
   alignItems: 'center',
   position: 'relative',
-  maxWidth: 500,
+  maxWidth: 700,
   width: '90%',
   margin: '0 auto',
   padding: '120px 0',
@@ -86,7 +86,7 @@ export const NextProject = ({
         <NextWrap>
           <NextContent>
             <Heading title="Next Project" />
-            <Heading heavy size="l4" {...{ title }} />
+            <Heading heavy align="center" size="l4" {...{ title }} />
           </NextContent>
 
           <NextBg><img src={ image } alt={ imageAlt } /></NextBg>

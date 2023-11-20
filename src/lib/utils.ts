@@ -45,10 +45,6 @@ export const useScrollDirection = () => {
   return scrollDirection;
 };
 
-
-
-
-
 export const smoothScrollTo = (selector:any) => {
   const element = document.querySelector(selector);
   if (element) {

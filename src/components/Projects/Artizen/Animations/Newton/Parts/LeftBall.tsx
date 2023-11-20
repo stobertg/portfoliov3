@@ -37,7 +37,7 @@ const White = styled('path', {
   fill: '$white'
 })
 
-const LeftBall = () => {
+export const LeftBall = () => {
   return(
 
     <Wrap>
@@ -52,5 +52,3 @@ const LeftBall = () => {
 
   )
 }
-
-export default LeftBall
