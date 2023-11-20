@@ -13,14 +13,16 @@ const GuiWrap = styled('div', {
   img: { width: 'auto', height: 540 }
 })
 
+interface GuiProps {
+  image: string
+}
+
 // ---------- This is the end of declarations ---------- //
 
-export const WalgreensGui = () => {
+export const WalgreensGui = ({ image }:GuiProps) => {
   return(
 
-    <GuiWrap>
-      <img src="/projects/wag/gui/gui.webp" />
-    </GuiWrap>
+    <GuiWrap><img src={ image } alt="Walgreens Design Systems" /></GuiWrap>
 
   )
 }

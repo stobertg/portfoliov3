@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import type { NextPage } from 'next'
 import LoadingBar from 'react-top-loading-bar'
 import { useImagePreloader } from '@lib'
 import { SiteContainer, Block, Hero, Intro, Browser, GatherLogo, NextProject } from '@components'
+
+// ---------------- Images to be loaded ----------------- //
 
 const imageUrls = [
   "/projects/gather/profile.webp",
@@ -13,6 +15,8 @@ const imageUrls = [
   "/projects/gather/admin.webp",
   "/projects/wag/gui/hero.webp"
 ]
+
+// ---------- This is the end of declarations ---------- //
 
 const Gather: NextPage = () => {
   const browserUrl = 'gather.goldininstitute.org'
