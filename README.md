@@ -9,9 +9,6 @@ This is for viewing / observational purposes only.
 <br/>
 Visit https://codepen.io/stobertg, or the repos mentioned below for front end contributions available for free use.
 <br/><br/>
-Special thanks to Keanan Koppenhaver - forever greatful for the coding mentorship
-https://keanankoppenhaver.com/
-<br/><br/>
 Team members worked with:
 
 Gather: 
