@@ -1,10 +1,16 @@
 import React from 'react'
 import { styled, keyframes } from '@theme'
 
+// For the rotation animation of the blade of the airplane
+// This infintily spins it around in a circle
+
 const Rotate = keyframes({
   '0%': { transform: 'rotate( 0deg )' },
-  '100%': { transform: 'rotate( 360deg )' },
-});
+  '100%': { transform: 'rotate( 360deg )' }
+})
+
+// For the container of the spinning blade on the front of the aiplane
+// This is obvisouly used for the airplane to be able to fly
 
 const Blades = styled('div', {
   position: 'absolute',
@@ -15,7 +21,9 @@ const Blades = styled('div', {
   animation: `${Rotate} 200ms linear infinite forwards`,
   zIndex: 10,
   fill: '$slate'
-});
+})
+
+// ---------- This is the end of declarations ---------- //
 
 export const AirplaneBlades = () => {
   return(

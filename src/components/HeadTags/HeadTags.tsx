@@ -30,9 +30,9 @@ export const HeadTags = ({
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#000" />
-        <meta name="theme-color" content="#ecd96f" media="(prefers-color-scheme: light)" />
-        <meta name="theme-color" content="#0b3e05" media="(prefers-color-scheme: dark)" />
+        <meta name="theme-color" content="#101010" />
+        <meta name="theme-color" content="#101010" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#101010" media="(prefers-color-scheme: dark)" />
         <meta key="description" property="description" content={ content } />
         <meta key="ogUrl" property="og:url" content={ shareURL } />
         <meta key="ogType" property="og:type" content="website" />

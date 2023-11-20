@@ -17,7 +17,7 @@ const HeaderWrap = styled('header', {
 
   variants: {
     active: {
-      true: { background: 'rgba( 24,24,24, 0.8 )' }
+      true: { background: '#101010' }
     }
   },
 

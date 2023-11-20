@@ -80,7 +80,7 @@ const SiteBg = styled('div', {
     animation: `${ staticAnimation } 300ms linear infinite`,
     transformOrigin: 'center center',
     transform: 'scale( 2 )',
-    opacity: 0.75,
+    opacity: 0.5,
     zIndex: 2
   }
 })
