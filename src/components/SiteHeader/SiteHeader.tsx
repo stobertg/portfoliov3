@@ -93,6 +93,9 @@ const NavLinks = styled('div', {
     }
   },
 
+  // For the vairant of how the menu reveals on tablet breakpoints
+  // This will scale the menu in, reveal it, and allow for click events
+
   variants: {
     openMenu: {
       true: {
