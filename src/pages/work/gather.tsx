@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import type { NextPage } from 'next'
 import LoadingBar from 'react-top-loading-bar'
 import { SiteContainer, Block, Hero, Intro, Browser, GatherLogo, NextProject } from '@components'
@@ -6,17 +6,16 @@ import { SiteContainer, Block, Hero, Intro, Browser, GatherLogo, NextProject } f
 const Gather: NextPage = () => {
   const browserUrl = 'gather.goldininstitute.org'
   const [ progress, setProgress ] = useState( 0 )
-  const loadingRef = useRef( null )
+  const [ showContent, setShowContent ] = useState( false )
 
   useEffect(() => {
-    // Start loading
-    setProgress(30); // Start with a small percentage
-
-    // Simulate an async operation (like data fetching)
-    setTimeout(() => {
-      setProgress(100); // Complete the loading after a delay
-    }, 0); // Adjust the time to your needs
-  }, []);
+    setProgress(100)
+    if (progress === 100) {
+      setTimeout(() => {
+        setShowContent(true) // Set content to show after 1 second delay
+      }, 300) // 1000 milliseconds = 1 second
+    }
+  }, [progress])
 
   return (
 
@@ -25,12 +24,10 @@ const Gather: NextPage = () => {
         color="yellow"
         progress={ progress }
         onLoaderFinished={() => setProgress(100)}
-        height={ 2 }
         shadow={ true }
-        style={{ zIndex: 9999 }} 
       />
 
-      { progress === 100 && (
+      { showContent && (
         <SiteContainer 
           shareURL="https://tylerstober.com/work/gather"
           pageTitle="Tyler Stober - Gather"
