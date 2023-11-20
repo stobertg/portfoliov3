@@ -6,16 +6,32 @@ import { SiteContainer, Block, Hero, Intro, Browser, GatherLogo, NextProject } f
 const Gather: NextPage = () => {
   const browserUrl = 'gather.goldininstitute.org'
   const [ progress, setProgress ] = useState( 0 )
-  const [ showContent, setShowContent ] = useState( false )
+
+  const imageUrls = [
+    "/projects/gather/profile.png",
+    "/projects/gather/ds1.webp",
+    "/projects/gather/lessons.webp",
+    "/projects/gather/library.webp",
+    "/projects/gather/upload.webp",
+    "/projects/gather/admin.webp",
+    "/projects/wag/gui/hero.webp"
+  ]
+
+  const preloadImages = () => {
+    let loadedImagesCount = 0
+    imageUrls.forEach( url => {
+      const img = new Image()
+      img.src = url;
+      img.onload = () => {
+        loadedImagesCount++
+        setProgress(( loadedImagesCount / imageUrls.length ) * 100 )
+      }
+    })
+  }
 
   useEffect(() => {
-    setProgress(100)
-    if (progress === 100) {
-      setTimeout(() => {
-        setShowContent(true) // Set content to show after 1 second delay
-      }, 300) // 1000 milliseconds = 1 second
-    }
-  }, [progress])
+    preloadImages()
+  }, [])
 
   return (
 
@@ -27,7 +43,7 @@ const Gather: NextPage = () => {
         shadow={ true }
       />
 
-      { showContent && (
+      { progress === 100 && (
         <SiteContainer 
           shareURL="https://tylerstober.com/work/gather"
           pageTitle="Tyler Stober - Gather"
