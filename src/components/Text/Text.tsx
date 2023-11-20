@@ -33,12 +33,13 @@ const TextWrap = styled('div', {
     '&:before': {
       content: '',
       position: 'absolute',
-      bottom: 0,
+      bottom: 4,
       left: 0,
       width: '100%',
       height: '100%',
       background: '$yellow',
-      transform: 'translateY( calc( 100% - 1px ))',
+      transform: 'scale( 1, 0.02 )',
+      transformOrigin: 'bottom center',
       transition: '$s1',
       zIndex: -1
     },
@@ -48,7 +49,7 @@ const TextWrap = styled('div', {
 
     '&:hover': {
       color: '$black',
-      '&:before': { transform: 'translateY( 0 )' }
+      '&:before': { transform: 'scale( 1, 1 ) translateY( 4px )' }
     }
   },
 
