@@ -67,7 +67,7 @@ const NavLinks = styled('div', {
   // We put them behind a menu button click that shows up on tablet breakpoints in place of the menu items
 
   '@tablet': {
-    // display: 'none',
+    display: 'none',
     flexDirection: 'column',
     justifyContent: 'center',
     position: 'fixed',
@@ -76,6 +76,9 @@ const NavLinks = styled('div', {
     width: '100vw',
     height: '100vh',
     background: '$black',
+    transform: 'scale( 0.8 )',
+    transition: '$s1',
+    opacity: 0,
 
     '*': { 
       justifyContent: 'center',
@@ -83,6 +86,18 @@ const NavLinks = styled('div', {
       textAlign: 'center',
       marginRight: '0px !important',
       fontSize: '$s4'
+    }
+  },
+
+  variants: {
+    openMenu: {
+      true: {
+        '@tablet': { 
+          display: 'flex',
+          transform: 'scale( 1 )',
+          opacity: 1
+        }
+      }
     }
   }
 })
@@ -127,6 +142,8 @@ export const SiteHeader = () => {
   const scrollPos = useScrollPosition()
   const scrollDirection = useScrollDirection()
   const [ showHeader, setShowHeader ] = useState( true )
+  const [ openMenu, setOpenMenu ] = useState( false )
+  const showMenu = () => setOpenMenu( !openMenu )
 
   useEffect(() => {
     const timerId = setTimeout(() => {
@@ -161,13 +178,13 @@ export const SiteHeader = () => {
       <Nav>
         <Link href="/"><a><Logo /></a></Link>
 
-        <NavLinks>
+        <NavLinks openMenu={ openMenu }>
           <Link href="/"><a><NavLink><Heading bold size="l0" title="Work" /></NavLink></a></Link>
           <Link href="/about"><a><NavLink><Heading bold size="l0" title="About" /></NavLink></a></Link>
           <button><NavLink><Heading bold size="l0" title="Contact" /></NavLink></button>
         </NavLinks>
 
-        <ShowOnTablet><MenuButton onClick={ () => console.log( 'hello' ) } /></ShowOnTablet>
+        <ShowOnTablet><MenuButton onClick={ showMenu } /></ShowOnTablet>
       </Nav>
     </HeaderWrap>
 
