@@ -76,6 +76,15 @@ export const preloadImages = (imageUrls: string[], onProgress?: ProgressCallback
   })
 }
 
+export const useImagePreloader = (imageUrls: string[]) => {
+  const [progress, setProgress] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false);
 
+  useEffect(() => {
+    preloadImages(imageUrls, setProgress).then(() => {
+      setIsLoaded(true);
+    });
+  }, [imageUrls]);
 
-
+  return { progress, isLoaded };
+}

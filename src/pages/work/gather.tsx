@@ -1,28 +1,22 @@
 import React, { useState, useEffect } from 'react'
 import type { NextPage } from 'next'
 import LoadingBar from 'react-top-loading-bar'
-import { preloadImages } from '@lib';
+import { useImagePreloader } from '@lib'
 import { SiteContainer, Block, Hero, Intro, Browser, GatherLogo, NextProject } from '@components'
+
+const imageUrls = [
+  "/projects/gather/profile.webp",
+  "/projects/gather/ds1.webp",
+  "/projects/gather/lessons.webp",
+  "/projects/gather/library.webp",
+  "/projects/gather/upload.webp",
+  "/projects/gather/admin.webp",
+  "/projects/wag/gui/hero.webp"
+]
 
 const Gather: NextPage = () => {
   const browserUrl = 'gather.goldininstitute.org'
-  const [ progress, setProgress ] = useState( 0 )
-
-  const imageUrls = [
-    "/projects/gather/profile.webp",
-    "/projects/gather/ds1.webp",
-    "/projects/gather/lessons.webp",
-    "/projects/gather/library.webp",
-    "/projects/gather/upload.webp",
-    "/projects/gather/admin.webp",
-    "/projects/wag/gui/hero.webp"
-  ]
-
-  useEffect(() => {
-    preloadImages( imageUrls, setProgress ).then(() => {
-      setProgress( 100 )
-    });
-  }, [])
+  const { progress, isLoaded } = useImagePreloader( imageUrls )
 
   return (
 
@@ -30,11 +24,10 @@ const Gather: NextPage = () => {
       <LoadingBar 
         color="yellow"
         progress={ progress }
-        onLoaderFinished={() => setProgress(100)}
         shadow={ true }
       />
 
-      { progress === 100 && (
+      { isLoaded && (
         <SiteContainer 
           shareURL="https://tylerstober.com/work/gather"
           pageTitle="Tyler Stober - Gather"
@@ -53,7 +46,7 @@ const Gather: NextPage = () => {
 
           <Block width="medium" animateUp animationDelay='2'>
             <Browser 
-              url={ browserUrl }
+              url={ browserUrl + '/profile' }
               image="/projects/gather/profile.webp" 
               imageAlt="Gather Pofile" 
             />
