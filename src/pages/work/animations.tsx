@@ -69,8 +69,8 @@ const Gather: NextPage = () => {
           <Block width="medium" animateUp>
             <Hero 
               heroGraphic={ <Knight /> }
-              title="The Anatomy of CSS Animations" 
-              subtitle="Giving movement to "
+              title="CSS Illustrative Animations" 
+              subtitle="Giving movement to code"
             />
           </Block>
 
@@ -84,32 +84,27 @@ const Gather: NextPage = () => {
 
           <Block>
             <Intro 
-              title="Creating a E-Learning Platform"
+              title="Giving Movement to Code"
               text={
                 <>
                   <p>
-                    Gather is both a mobile platform for shared learning and a curriculum for people who want to build on the talents 
-                    of their neighbors and the assets of their communities to make real and lasting change. Participants in Gather 
-                    learn and work together through an innovative curriculum that comes pre-loaded on a tablet device with all the 
-                    connectivity materials videos practices and tools necessary to provide a mobile classroom and toolkit for community 
-                    leadership.
-                  </p>
-
-                  <p>
-                    My role is the sole designer and front-end developer of the Gather platform, working with a back-end dev to 
-                    implement Gather as a fully functional application.
+                    CSS animations offer several practical advantages for web design. They are efficient and lightweight, 
+                    which means faster loading times and improved website performance. Their customizability allows designers 
+                    to finely control the timing and appearance of animations, aligning them with their design goals. 
+                    CSS animations are also responsive, seamlessly adapting to various screen sizes, ensuring a consistent user 
+                    experience. Moreover, they enable interactivity, making websites more engaging through user-triggered 
+                    animations. Their compatibility with modern browsers, accessibility features, and SEO benefits make them a 
+                    dependable choice for creating polished and functional web animations.
                   </p>
                 </>
               }
               skills={[
-                { title: 'UI/UX Design' },
                 { title: 'Front end development' },
-                { title: 'Back end development' },
-                { title: 'Accessibility'}
+                { title: 'CSS-in-JS, SASS' }
               ]}
               project={[
-                { title: 'Goldin Institute: 2017 - Present' },
-                { title: 'Co-founder - Travis Rejman' }
+                { title: 'Various Projects' },
+                { title: '2017 - Present' }
               ]}
             />
           </Block>
