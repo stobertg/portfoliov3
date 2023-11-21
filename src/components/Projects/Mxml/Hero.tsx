@@ -4,6 +4,9 @@ import { Text } from '@components'
 import { LogoLoop } from './LogoLoop/LogoLoop'
 import { BgImageLoop, EndingAniamtion } from './Parts '
 
+// For the master container of the Hero animation for MXML Creative site
+// This is shown within the CSS Animations page
+
 const HeroMaster = styled('div', {
   display: 'flex',
   flexDirection: 'column',
@@ -38,10 +41,16 @@ const HeroContent = styled('div', {
   height: '100%'
 })
 
+// For the container of the logos in the center of the master parent container
+// This sets the logos in the center and to sit above the background images
+
 const HeroLogos = styled('div', {
   position: 'absolute',
   zIndex: 10
 })
+
+// For the container of the start animation which loops through the hero images and the logos
+// This Animations plats first for sometime before the ending animations appears
 
 const StartAnimation = styled('div', {
   display: 'flex',
@@ -54,6 +63,9 @@ const StartAnimation = styled('div', {
   height: '100%',
   zIndex: 10
 })
+
+// For the container of the end nanimation that plays right after the start aniamtion
+// This shows the MXML logo on a black background and then scales back, showing the 'Creative' text below
 
 const EndAnimation = styled('div', {
   position: 'absolute',

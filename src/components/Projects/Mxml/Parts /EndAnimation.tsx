@@ -3,30 +3,43 @@ import { styled, keyframes } from '@theme'
 import { Logo } from '../Logo/Logo'
 import { Heading } from '@components'
 
+// For all of the animations used within the end animation
+// This set the MXML logo on black, scales back while the background turns white, and reveals the text and arrow below
+
 const logoAnimation = keyframes({
   '0%, 40%': { transform: 'scale( 1.7 )' },
   '100%': { transform: 'scale( 1 )' }
 })
+
+// Here we change the color of the logo on scale back
 
 const logoColor = keyframes({
   '0%, 50%': { fill: '$white' },
   '100%': { fill: '$black' }
 }) 
 
+// Here we set the intro of the Creative text
+
 const setCreativeText = keyframes({
   '0%, 99%': { opacity: 0 },
   '100%': { opacity: 1 }
 }) 
+
+// Here we reveal the Creative text
 
 const showCreativeText = keyframes({
   '0%': { transform: 'translateX( 0 )' },
   '100%': { transform: 'translateX( 100% )' }
 }) 
 
+// Here we set the Arrow on the bottom to come into view
+
 const showArrow = keyframes({
   '0%, 99%': { opacity: 0 },
   '100%': { opacity: 1 }
 }) 
+
+// Here we start the arrown animation
 
 const animateArrow = keyframes({
   '0%': { transform: 'translateY( -100% ) scale( 0 )', opacity: 0 },
@@ -71,7 +84,10 @@ const EndingLogo = styled('div', {
   svg: { 
     animation: `${ logoColor } 3s cubic-bezier(.74,.08,.15,.83) forwards`
   }
-})  
+})
+
+// For the creative text that is displayed once the MXML logo scales all of th way back
+// This animates as being revealed from left to right
 
 const CreativeText = styled('div', {
   position: 'absolute',
@@ -82,10 +98,16 @@ const CreativeText = styled('div', {
   animation: `${ setCreativeText } 3s forwards`,
   overflow: 'hidden',
 
+  // Here we adjust the default styling of the text here since this is a one-off
+  // We set the text to be all uppercase and the letter spacing to be wider
+
   '> *': { 
     textTransform: 'uppercase',
     letterSpacing: 10
   },
+
+  // For the bar that reveals the text within the animation
+  // This takes up the full width and height of the container and then animates left to reveal the text
 
   '&:after': {
     content: '',
@@ -102,6 +124,9 @@ const CreativeText = styled('div', {
   '@tablet': { '*': { fontSize: '$s0 !important' }} 
 })
 
+// For the master container of the arrow animation on the bottom of the hero
+// We need a master container so that we can animate the arrow witin it
+
 const ScrollDown = styled('div', {
   position: 'absolute',
   bottom: 0,
@@ -109,6 +134,9 @@ const ScrollDown = styled('div', {
   overflow: 'hidden',
   animation: `${ showArrow } 3s forwards`,
 })
+
+// For the container of the arrow on the bottom of the hero container
+// This shows right after the 'Creative' text shows and is used as affordance for the user to scroll down
 
 const ArrowIcon = styled('div', {
   display: 'flex',
@@ -123,6 +151,7 @@ const ArrowIcon = styled('div', {
   animationDelay: '4s',
 
   // For the middle line, centered vertically in the container
+  // This is attached to the two arrow lines on the bottom of the container
 
   '&:before': {
     content: '',
@@ -132,6 +161,9 @@ const ArrowIcon = styled('div', {
     height: 'calc( 100% - 3px )',
     background: '$black'
   },
+  
+  // For the styling of the the lines that form the arrow on the bottom of the container
+  // These are attached to the line in the middle to form the full arrow
 
   span: {
     position: 'relative',
