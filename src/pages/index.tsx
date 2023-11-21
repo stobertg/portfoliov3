@@ -55,8 +55,8 @@ const Home: NextPage = () => {
                 { image: '/projects/wag/gui/coupons.webp', alt: "Walgreens Brand Standards", url: "walgreens.com" },
                 { image: '/projects/cardiact/hero.webp', alt: "CardiAct - Response for unresponsive vicitims of cardiac arrest", url: "cardiact.com" },
                 { image: '/projects/castle/stalbans.webp', alt: "3d model of St Albans Cathedral by Tyler Stober", url: "whooooooooooooooo.cool" },
+                { image: '/projects/mxml/backgrounds/bg_01.webp', alt: "Plans by TAA", url: "blahblahblah.com" },
                 { image: '/projects/taa/screens/hero.webp', alt: "Plans by TAA", url: "blahblahblah.com" },
-                { image: '/projects/cardiact/hero.webp', alt: "This is the Alt text", url: "I like turtles" },
                 { image: '/projects/cardiact/hero.webp', alt: "This is the Alt text", url: "hello.com" }
               ]}
             />
