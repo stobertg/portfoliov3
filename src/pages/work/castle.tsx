@@ -54,7 +54,7 @@ const Castle: NextPage = () => {
             />
           </Block>
 
-          <Block width="medium">
+          <Block>
             <Intro 
               title="The Lengend of the Doge"
               text={
