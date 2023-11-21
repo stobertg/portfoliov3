@@ -75,6 +75,10 @@ const TextWrap = styled('div', {
 
     color: {
       secondary: { color: '$textSecondary' }
+    },
+
+    align: {
+      center: { textAlign: 'center' }
     }
   }
 })
@@ -85,6 +89,7 @@ interface TextProps {
   font?: 'sansSerif'
   fontSize?: 'l0' | 'l1'
   color?: 'secondary'
+  align?: 'center'
   children: React.ReactNode
 }
 
@@ -94,12 +99,13 @@ export const Text = ({
     children, // Required - For the text that makes up the content of the component
     font, // Optional - For the ability to change the text to sans serif
     color, // Optional - For the ability to change the color of the text from the default primary color
-    fontSize // Optional - For the ability to change the font size of the p's within the component
+    fontSize, // Optional - For the ability to change the font size of the p's within the component
+    align
   }:TextProps) => {
 
   return(
 
-    <TextWrap {...{ font, fontSize, color }}>{ children }</TextWrap>
+    <TextWrap {...{ font, fontSize, color, align }}>{ children }</TextWrap>
 
   )
 }

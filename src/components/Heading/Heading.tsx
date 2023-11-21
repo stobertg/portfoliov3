@@ -7,6 +7,11 @@ import { styled } from '@theme'
 const HeadingWrap = styled('div', {
   position: 'relative',
 
+  a: {
+    font: 'inherit',
+    textDecoration: 'underline'
+  },
+
   // For the different font sizes supported within the headings of the site
 
   variants: {

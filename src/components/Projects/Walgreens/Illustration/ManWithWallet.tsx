@@ -11,7 +11,18 @@ const AnimationWrap = styled('div', {
   alignItems: 'center',
   position: 'relative',
   width: 170,
-  height: 170
+  height: 170,
+
+  // For the illustration to be it's full width and height
+
+  variants: {
+    full: {
+      true: {
+        width: 'initial',
+        height: 'initial'
+      }
+    }
+  }
 })
 
 // For all the content of the illustrations, held in the center of the master container
@@ -23,7 +34,15 @@ const AnimationContent = styled('div', {
   alignItems: 'center',
   position: 'relative',
   padding: '50px 0',
-  transform: 'scale( 0.3 )'
+  transform: 'scale( 0.3 )',
+
+  // For the illustration to be it's full width and height
+
+  variants: {
+    full: {
+      true: { transform: 'scale( 1 )' }
+    }
+  }
 })
 
 // For the container of the main illustration of the man holding the wallet
@@ -45,13 +64,19 @@ const WallletAnimationBase = styled('div', {
   paddingTop: 143
 })
 
+// -------------- Typescript declarations -------------- //
+
+interface ManProps {
+  full?: boolean
+}
+
 // ---------- This is the end of declarations ---------- //
 
-export const ManWithWallet = () => {
+export const ManWithWallet = ({ full }:ManProps) => {
   return(
 
-    <AnimationWrap>
-      <AnimationContent>
+    <AnimationWrap {...{ full }}>
+      <AnimationContent {...{ full }}>
         <Man>
           <WallletAnimationBase><Head /><Body /></WallletAnimationBase>
           <Arm />

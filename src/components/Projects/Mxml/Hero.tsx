@@ -1,7 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import { styled } from '@theme'
+import { Text } from '@components'
 import { LogoLoop } from './LogoLoop/LogoLoop'
 import { BgImageLoop, EndingAniamtion } from './Parts '
+
+const HeroMaster = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  position: 'relative',
+  width: '100%',
+  '> *:not(:last-child)': { marginBottom: 12 }
+})
 
 // For the master container of the hero section
 // This holds the animation with the backgrounds and logos changing
@@ -13,8 +23,7 @@ const HeroWrap = styled('div', {
   position: 'relative',
   width: '100%',
   height: 600,
-  '@desktop': { height: '90vh' },
-  '@tablet': { height: '80vh' }
+  '@tablet': { height: 500 }
 })
 
 // For the container of the changing logos in the center of the master container
@@ -80,24 +89,30 @@ export const MxmlHero = ({ logos, backgroundImages }:HeroProps) => {
 
   return(
 
-    <HeroWrap>
-      <HeroContent>
-        { showStartAnimation ? (
+    <HeroMaster>
+      <HeroWrap>
+        <HeroContent>
+          { showStartAnimation ? (
 
-          <StartAnimation>
-            <HeroLogos><LogoLoop {...{ logos }} /></HeroLogos>
-            <BgImageLoop images={ backgroundImages } />
-          </StartAnimation>
+            <StartAnimation>
+              <HeroLogos><LogoLoop {...{ logos }} /></HeroLogos>
+              <BgImageLoop images={ backgroundImages } />
+            </StartAnimation>
 
-        ) : (
+          ) : (
 
-          <EndAnimation>
-            <EndingAniamtion />
-          </EndAnimation>
+            <EndAnimation>
+              <EndingAniamtion />
+            </EndAnimation>
 
-        )}
-      </HeroContent>
-    </HeroWrap>
+          )}
+        </HeroContent>
+      </HeroWrap>
+
+      <Text align="center" color="secondary">
+        <p>Design by <a href="https://mxmlcreative.com/" target="_blank" rel="noreferrer">Stefan Clark</a></p>
+      </Text>
+    </HeroMaster>
 
   )
 }

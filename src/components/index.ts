@@ -40,4 +40,5 @@ export { TAALogo } from './Projects/TAA/Logo/Logo'
 export { ManWithWallet } from './Projects/Walgreens/Illustration/ManWithWallet'
 export { WalgreensIcons } from './Projects/Walgreens/Icons/IconTable'
 export { WalgreensGui } from './Projects/Walgreens/Gui/Gui'
+export { WalgreensIllusHero } from './Projects/Walgreens/IllustrationHero/IllustrationHero'
 

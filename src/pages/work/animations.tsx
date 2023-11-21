@@ -3,7 +3,7 @@ import type { NextPage } from 'next'
 import { useImagePreloader } from '@lib'
 import LoadingBar from 'react-top-loading-bar'
 import ReactPlayer from 'react-player'
-import { SiteContainer, Block, Hero, Intro, MxmlHero, ArtizenAnimations, Knight, NextProject } from '@components'
+import { SiteContainer, Block, Hero, Intro, Knight, MxmlHero, ArtizenAnimations, WalgreensIllusHero, NextProject } from '@components'
 
 // ---------------- Images to be loaded ----------------- //
 
@@ -160,7 +160,7 @@ const Gather: NextPage = () => {
           </Block>
 
           <Block width="medium">
-
+            <WalgreensIllusHero />
           </Block>
 
           <Block>
