@@ -121,7 +121,7 @@ const TAA: NextPage = () => {
             <NextProject 
               pageLink="/work/gather"
               title="Gather E-Learning app" 
-              image="/projects/gather/profile.png"
+              image="/projects/gather/profile.webp"
               imageAlt="Gather by Tyler Stober"
             />
           </Block>
