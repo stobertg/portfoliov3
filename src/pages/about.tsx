@@ -35,11 +35,11 @@ const AboutPage: NextPage = () => {
           socialImage="https://tylerstober.com/global/social-hero.webp"
         >
           <XyzTransition xyz="fade fade down-25% duration-10" appearVisible>
-            
+
             <About
               title="Tyler Stober"
               video="/about/turtles.mp4"
-              resumeLink="/"
+              resumeLink="/global/stobert_resume.pdf"
               descp={
                 <>
                   <p>
