@@ -190,7 +190,7 @@ export const SiteHeader = () => {
         <NavLinks openMenu={ openMenu }>
           <Link href="/"><a><NavLink><Heading bold size="l0" title="Work" /></NavLink></a></Link>
           <Link href="/about"><a><NavLink><Heading bold size="l0" title="About" /></NavLink></a></Link>
-          <button><NavLink><Heading bold size="l0" title="Contact" /></NavLink></button>
+          <a href="mailto:stobertg@gmail.com"><NavLink><Heading bold size="l0" title="Contact" /></NavLink></a>
         </NavLinks>
 
         <ShowOnTablet><MenuButton onClick={ showMenu } /></ShowOnTablet>
