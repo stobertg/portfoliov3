@@ -6,6 +6,14 @@ import LoadingBar from 'react-top-loading-bar'
 import { useImagePreloader } from '@lib'
 import { SiteContainer, About, DribbleIcon, GithubIcon, LinkedInIcon, MediumIcon } from '@components'
 
+// ---------------- Images to be loaded ----------------- //
+
+const imageUrls = [
+  "/projects/gather/profile.webp"
+]
+
+// ---------- This is the end of declarations ---------- //
+
 const AboutPage: NextPage = () => {
   const { progress, isLoaded } = useImagePreloader( imageUrls )
 
@@ -20,14 +28,14 @@ const AboutPage: NextPage = () => {
 
       { isLoaded && (
     
-        <XyzTransition xyz="fade fade down-25% duration-10" appearVisible>
-          <SiteContainer 
-            shareURL="https://tylerstober.com/about"
-            pageTitle="Tyler Stober"
-            content="US and Europe based multidisciplinary designer with a primary background in User Experience, User Interface Design, and Front End Development. In addition, also proficient in Motion and 3D design, rendering a unique technical perspective and collaborator with an awareness of multiple mediums."
-            socialImage="https://tylerstober.com/global/social-hero.webp"
-          >
-
+        <SiteContainer 
+          shareURL="https://tylerstober.com/about"
+          pageTitle="Tyler Stober"
+          content="US and Europe based multidisciplinary designer with a primary background in User Experience, User Interface Design, and Front End Development. In addition, also proficient in Motion and 3D design, rendering a unique technical perspective and collaborator with an awareness of multiple mediums."
+          socialImage="https://tylerstober.com/global/social-hero.webp"
+        >
+          <XyzTransition xyz="fade fade down-25% duration-10" appearVisible>
+            
             <About
               title="Tyler Stober"
               video="/about/turtles.mp4"
@@ -54,8 +62,9 @@ const AboutPage: NextPage = () => {
                 { href: 'https://medium.com/@TylerStober', icon: <MediumIcon /> }
               ]}
             />
-          </SiteContainer>
-        </XyzTransition>
+
+          </XyzTransition>
+        </SiteContainer>
 
       )}
     </>
