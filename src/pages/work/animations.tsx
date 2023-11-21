@@ -3,7 +3,7 @@ import type { NextPage } from 'next'
 import { useImagePreloader } from '@lib'
 import LoadingBar from 'react-top-loading-bar'
 import ReactPlayer from 'react-player'
-import { SiteContainer, Block, Grid, Hero, Intro, MxmlHero, AnimationContainer, ArtizenAirplane, ArtizenEgg, ArtizenHammer, ArtizenNewton, ArtizenPlanets, ArtizenTrumpet, Knight, NextProject } from '@components'
+import { SiteContainer, Block, Hero, Intro, MxmlHero, ArtizenAnimations, Knight, NextProject } from '@components'
 
 // ---------------- Images to be loaded ----------------- //
 
@@ -156,14 +156,11 @@ const Gather: NextPage = () => {
           </Block>
 
           <Block width="medium">
-            <Grid columns={ 3 } largeDesktopColumns={ 2 } smallDesktopColumns={ 1 } hasDviderLines>
-              <AnimationContainer><ArtizenNewton /></AnimationContainer>
-              <AnimationContainer><ArtizenAirplane /></AnimationContainer>
-              <AnimationContainer><ArtizenTrumpet /></AnimationContainer>
-              <AnimationContainer><ArtizenPlanets /></AnimationContainer>
-              <AnimationContainer><ArtizenHammer /></AnimationContainer>
-              <AnimationContainer><ArtizenEgg /></AnimationContainer>
-            </Grid>
+            <ArtizenAnimations />
+          </Block>
+
+          <Block width="medium">
+
           </Block>
 
           <Block>

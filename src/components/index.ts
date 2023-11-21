@@ -24,6 +24,7 @@ export { Text } from './Text/Text'
 // Projects
 
 export { Projects } from './Projects/Projects'
+export { ArtizenAnimations } from './Projects/Artizen/AnimationTable/AnimationTable'
 export { ArtizenAirplane } from './Projects/Artizen/Animations/Airplane/Airplane'
 export { ArtizenEgg } from './Projects/Artizen/Animations/Egg/Egg'
 export { ArtizenHammer } from './Projects/Artizen/Animations/Hammer/Hammer'
