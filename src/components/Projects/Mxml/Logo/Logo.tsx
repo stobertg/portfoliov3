@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import { styled } from '@theme'
 import { LogoMark } from './LogoMark'
 
@@ -12,16 +11,22 @@ const LogoWrap = styled('figure', {
   alignItems: 'center',
   position: 'relative',
 
+  // For the sizing of the svg logo within the container
+
   svg: {
     display: 'flex',
     height: 'auto',
     width: '100%'
   },
 
+  // Here we allow the color of the logo to be changed
+
   variants: {
     color: {
       brand: { svg: { fill: '$brandPrimary' } }
     },
+
+    // For the supported sizes of the logo
 
     size: {
       l0: {},
@@ -36,32 +41,18 @@ const LogoWrap = styled('figure', {
 interface LogoProps {
   color?: 'brand'
   size?: 'l0' | 'l1' | 'l2'
-  linkToHome?: boolean
 }
 
 // ---------- This is the end of declarations ---------- //
 
 export const Logo = ({
     size,
-    color,
-    linkToHome // Optional - allow the logo to hold a link path, but this is mostly the homepage
+    color
   }: LogoProps ) => {
   
   return(
 
-    <>
-      { linkToHome ? (
-        
-        <Link href="/">
-          <a><LogoWrap {...{ color, size }}><LogoMark /></LogoWrap></a>
-        </Link>
-
-      ) : (
-
-        <LogoWrap {...{ color, size }}><LogoMark /></LogoWrap>
-
-      )}
-    </>
+    <LogoWrap {...{ color, size }}><LogoMark /></LogoWrap>
 
   )
 }

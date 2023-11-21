@@ -12,11 +12,7 @@ const LogoWrap = styled('div', {
   minWidth: 550,
   maxWidth: 550,
   width: '100%',
-
-  '@tablet': {
-    minWidth: 400,
-    maxWidth: 400
-  },
+  '@tablet': { minWidth: 400, maxWidth: 400 },
 
   // For the sizing and position of the logos within the master containers
   // This makes sure all of the logos are the same size, as they are stacked on top of one another
@@ -26,6 +22,9 @@ const LogoWrap = styled('div', {
     width: '100%',
     height: 'auto',
   },
+
+  // Here we allow for a different size of the logos to be
+  // This is made so It can sit within the header of the site
 
   variants: { 
     size: { 
@@ -37,6 +36,8 @@ const LogoWrap = styled('div', {
     }
   }
 })
+
+// -------------- Typescript declarations -------------- //
 
 interface LogoProps {
   logos: any
