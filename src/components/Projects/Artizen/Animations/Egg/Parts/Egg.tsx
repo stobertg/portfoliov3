@@ -12,7 +12,7 @@ const Rotate = keyframes({
 const EggWrap = styled('div', {
   position: 'relative',
   width: 120,
-  fill: '$green',
+  fill: '#1acc6c',
   animation: `${Rotate} 3000ms ease infinite forwards`,
   transformOrigin: 'bottom center'
 })

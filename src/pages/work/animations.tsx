@@ -3,7 +3,7 @@ import type { NextPage } from 'next'
 import { useImagePreloader } from '@lib'
 import LoadingBar from 'react-top-loading-bar'
 import ReactPlayer from 'react-player'
-import { SiteContainer, Block, Grid, Hero, Intro, AnimationContainer, ArtizenAirplane, ArtizenEgg, ArtizenHammer, ArtizenHat, ArtizenNewton, ArtizenPlanets, ArtizenTrumpet, Knight, NextProject } from '@components'
+import { SiteContainer, Block, Grid, Hero, Intro, MxmlHero, AnimationContainer, ArtizenAirplane, ArtizenEgg, ArtizenHammer, ArtizenNewton, ArtizenPlanets, ArtizenTrumpet, Knight, NextProject } from '@components'
 
 // ---------------- Images to be loaded ----------------- //
 
@@ -84,14 +84,54 @@ const Gather: NextPage = () => {
           </Block>
 
           <Block width="medium">
+            <MxmlHero 
+              logos={[
+                "/projects/mxml/logos/logo_01.png",
+                "/projects/mxml/logos/logo_02.png",
+                "/projects/mxml/logos/logo_03.png",
+                "/projects/mxml/logos/logo_04.png",
+                "/projects/mxml/logos/logo_05.png",
+                "/projects/mxml/logos/logo_06.png",
+                "/projects/mxml/logos/logo_07.png",
+                "/projects/mxml/logos/logo_08.png",
+                "/projects/mxml/logos/logo_09.png",
+                "/projects/mxml/logos/logo_10.png",
+                "/projects/mxml/logos/logo_11.png",
+                "/projects/mxml/logos/logo_12.png",
+                "/projects/mxml/logos/logo_13.png",
+                "/projects/mxml/logos/logo_14.png",
+                "/projects/mxml/logos/logo_15.png",
+                "/projects/mxml/logos/logo_16.png"
+              ]}  
+              backgroundImages={[
+                "/projects/mxml/backgrounds/bg_01.webp",
+                "/projects/mxml/backgrounds/bg_02.webp",
+                "/projects/mxml/backgrounds/bg_03.webp",
+                "/projects/mxml/backgrounds/bg_04.webp",
+                "/projects/mxml/backgrounds/bg_05.webp",
+                "/projects/mxml/backgrounds/bg_06.webp",
+                "/projects/mxml/backgrounds/bg_07.webp",
+                "/projects/mxml/backgrounds/bg_08.webp",
+                "/projects/mxml/backgrounds/bg_09.webp",
+                "/projects/mxml/backgrounds/bg_10.webp",
+                "/projects/mxml/backgrounds/bg_11.webp",
+                "/projects/mxml/backgrounds/bg_12.webp",
+                "/projects/mxml/backgrounds/bg_13.webp",
+                "/projects/mxml/backgrounds/bg_14.webp",
+                "/projects/mxml/backgrounds/bg_15.webp",
+                "/projects/mxml/backgrounds/bg_16.webp"
+              ]}
+            />
+          </Block>
+
+          <Block width="medium">
             <Grid columns={ 3 } hasDviderLines>
               <AnimationContainer><ArtizenNewton /></AnimationContainer>
               <AnimationContainer><ArtizenAirplane /></AnimationContainer>
               <AnimationContainer><ArtizenTrumpet /></AnimationContainer>
-              <AnimationContainer><ArtizenHammer /></AnimationContainer>
-              <AnimationContainer><ArtizenHat /></AnimationContainer>
-              <AnimationContainer><ArtizenEgg /></AnimationContainer>
               <AnimationContainer><ArtizenPlanets /></AnimationContainer>
+              <AnimationContainer><ArtizenHammer /></AnimationContainer>
+              <AnimationContainer><ArtizenEgg /></AnimationContainer>
             </Grid>
           </Block>
 

@@ -18,7 +18,7 @@ const HammerWrap = styled('div', {
 });
 
 const HammerHead = styled('path', {
-  fill: '$moss'
+  fill: '#1acc6c'
 })
 
 export const HammerIllus = () => {

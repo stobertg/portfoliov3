@@ -3,7 +3,7 @@ import { styled } from '@stitches/react'
 
 const BaseWrap = styled('div', {
   width: 225,
-  fill: '$moss'
+  fill: '#1acc6c'
 });
 
 export const HammerTable = () => {

@@ -12,6 +12,7 @@ const HorseMaster = styled('div', {
   position: 'relative',
   width: '100%',
   height: 150,
+  marginLeft: 32,
 
   // Here we add support for this animation to be used as a preloader
   // This supports a full screen takeover, sitting on top of the site until it is done loading

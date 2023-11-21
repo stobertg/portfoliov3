@@ -17,8 +17,7 @@ const GridWrap = styled('div', {
   variants: {
     hasDviderLines: {
       true: { 
-        borderRadius: '$r2',
-        border: '1px solid $borderDeco',
+        border: '1px solid $gray900',
         overflow: 'hidden',
         '> *:not(:last-child)': { borderRight: '1px solid $borderDeco' } 
       }

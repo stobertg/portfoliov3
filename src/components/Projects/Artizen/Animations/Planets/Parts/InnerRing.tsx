@@ -34,7 +34,7 @@ const Planet = styled('div', {
   position: 'absolute',
   top: 0,
   width: 20,
-  fill: '$green',
+  fill: '#1acc6c',
   transform: 'translate3d(-29px, 4px, 0)'
 });
 

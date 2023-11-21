@@ -17,7 +17,7 @@ const PlanetWrap = styled('div', {
     width: 40,
     height: 40,
     borderRadius: '50%',
-    background: '$green',
+    background: '#1acc6c',
     zIndex: 10
   }
 })
