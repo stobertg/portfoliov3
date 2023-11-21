@@ -15,6 +15,7 @@ const AnimationContent = styled('div', {
   justifyContent: 'center',
   alignItems: 'center',
   position: 'relative',
+  width: 300,
   transform: 'scale( 0.8 )'
 })
 
