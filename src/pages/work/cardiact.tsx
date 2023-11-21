@@ -260,6 +260,6 @@ const textSegments: Record<string, TextSegmentType> = {
 
   help: {
     title: "Help Screen",
-    text: "Static mode is for at-risk individuals who could experience a cardiac arrest. The app is married to a heart rate monitor, that the individual wears and the app alerts CPR responders and emergency contacts. Here the user can see their current heart rate."
+    text: "The Help Screen is reserved for a user who is still responsive but needs help from 911 or emergency responders. This is to give the user proative help where the EMS and Emergency Contacts are consolidated into a single UI."
   }
 }

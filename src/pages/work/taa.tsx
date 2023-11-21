@@ -76,7 +76,8 @@ const TAA: NextPage = () => {
               }
               skills={[
                 { title: 'UX/UI Design' },
-                { title: 'Front End Development' }
+                { title: 'Front End Development' },
+                { title: 'Wordpress Theme Development' }
               ]}
               project={[
                 { title: 'Doejo - 2016' }

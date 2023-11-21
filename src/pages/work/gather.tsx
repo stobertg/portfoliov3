@@ -71,7 +71,7 @@ const Gather: NextPage = () => {
 
                   <p>
                     Since 2021, my reponsibilties has been the sole designer, front-end developer, and back-end developer of the 
-                    Gather platform. This is apart of my non-profit work to help communites where I can, through Design.
+                    Gather platform. This is part of my non-profit design work.
                   </p>
                 </>
               }
