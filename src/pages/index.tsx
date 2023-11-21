@@ -46,8 +46,9 @@ const Home: NextPage = () => {
                 { link: '/work/walgreens', title: 'Walgreens' },
                 { link: '/work/cardiact', title: 'CardiAct' },
                 { link: '/work/castle', title: 'Castle for no Reason' },
-                { link: '/work/taa', title: 'The Apparel Agency' },
                 { link: '/work/animations', title: 'CSS Animations' },
+                { link: '/work/taa', title: 'The Apparel Agency' },
+                
               ]}
               images = {[
                 { image: '/projects/gather/profile.webp', alt: "Gather Platform by Tyler Stober and Travis Rejman", url: "gather.goldininstitute.org" },

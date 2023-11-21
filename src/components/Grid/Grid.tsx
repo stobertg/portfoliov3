@@ -57,6 +57,7 @@ const GridWrap = styled('div', {
     // Here we support the customization of the columns needed for the small desktop breakpoints
 
     smallDesktopColumns: {
+      1: {  '@smallDesktop': { gridTemplateColumns: 'repeat(1, 1fr)'  }},
       2: {  '@smallDesktop': { gridTemplateColumns: 'repeat(2, 1fr)'  }},
       3: {  '@smallDesktop': { gridTemplateColumns: 'repeat(3, 1fr)'  }},
       4: {  '@smallDesktop': { gridTemplateColumns: 'repeat(4, 1fr)'  }},
@@ -111,7 +112,7 @@ const GridWrap = styled('div', {
 interface GridProps {
   columns?: 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 14
   largeDesktopColumns?: 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
-  smallDesktopColumns?: 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
+  smallDesktopColumns?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
   tabletColumns?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
   mobileColumns?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
   hasDviderLines?: boolean

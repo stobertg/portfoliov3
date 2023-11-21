@@ -128,9 +128,9 @@ const Castle: NextPage = () => {
 
           <Block>
             <NextProject 
-              pageLink="/work/taa"
-              title="The Apparel Agency" 
-              image="/projects/taa/screens/hero.webp"
+              pageLink="/work/animations"
+              title="CSS Animations" 
+              image="/projects/mxml/backgrounds/bg_10.webp"
               imageAlt="The Apparel Agency by Tyler Stober"
             />
           </Block>

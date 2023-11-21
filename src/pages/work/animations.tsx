@@ -8,7 +8,38 @@ import { SiteContainer, Block, Grid, Hero, Intro, MxmlHero, AnimationContainer, 
 // ---------------- Images to be loaded ----------------- //
 
 const imageUrls = [
-  "/projects/cardiact/process/poster.webp"
+  "/projects/mxml/logos/logo_01.png",
+  "/projects/mxml/logos/logo_02.png",
+  "/projects/mxml/logos/logo_03.png",
+  "/projects/mxml/logos/logo_04.png",
+  "/projects/mxml/logos/logo_05.png",
+  "/projects/mxml/logos/logo_06.png",
+  "/projects/mxml/logos/logo_07.png",
+  "/projects/mxml/logos/logo_08.png",
+  "/projects/mxml/logos/logo_09.png",
+  "/projects/mxml/logos/logo_10.png",
+  "/projects/mxml/logos/logo_11.png",
+  "/projects/mxml/logos/logo_12.png",
+  "/projects/mxml/logos/logo_13.png",
+  "/projects/mxml/logos/logo_14.png",
+  "/projects/mxml/logos/logo_15.png",
+  "/projects/mxml/logos/logo_16.png",
+  "/projects/mxml/backgrounds/bg_01.webp",
+  "/projects/mxml/backgrounds/bg_02.webp",
+  "/projects/mxml/backgrounds/bg_03.webp",
+  "/projects/mxml/backgrounds/bg_04.webp",
+  "/projects/mxml/backgrounds/bg_05.webp",
+  "/projects/mxml/backgrounds/bg_06.webp",
+  "/projects/mxml/backgrounds/bg_07.webp",
+  "/projects/mxml/backgrounds/bg_08.webp",
+  "/projects/mxml/backgrounds/bg_09.webp",
+  "/projects/mxml/backgrounds/bg_10.webp",
+  "/projects/mxml/backgrounds/bg_11.webp",
+  "/projects/mxml/backgrounds/bg_12.webp",
+  "/projects/mxml/backgrounds/bg_13.webp",
+  "/projects/mxml/backgrounds/bg_14.webp",
+  "/projects/mxml/backgrounds/bg_15.webp",
+  "/projects/mxml/backgrounds/bg_16.webp"
 ]
 
 // -------------- Typescript declarations -------------- //
@@ -125,7 +156,7 @@ const Gather: NextPage = () => {
           </Block>
 
           <Block width="medium">
-            <Grid columns={ 3 } hasDviderLines>
+            <Grid columns={ 3 } largeDesktopColumns={ 2 } smallDesktopColumns={ 1 } hasDviderLines>
               <AnimationContainer><ArtizenNewton /></AnimationContainer>
               <AnimationContainer><ArtizenAirplane /></AnimationContainer>
               <AnimationContainer><ArtizenTrumpet /></AnimationContainer>
@@ -137,10 +168,10 @@ const Gather: NextPage = () => {
 
           <Block>
             <NextProject 
-              pageLink="/work/gather"
-              title="Walgreens' Design Systems" 
-              image="/projects/gather/profile.png"
-              imageAlt="Gather by Tyler Stober"
+              pageLink="/work/taa"
+              title="The Apparel Agency" 
+              image="/projects/taa/screens/hero.webp"
+              imageAlt="The Apparel Agency by Tyler Stober"
             />
           </Block>
         </SiteContainer>
