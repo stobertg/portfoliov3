@@ -39,7 +39,7 @@ const AboutPage: NextPage = () => {
             <About
               title="Tyler Stober"
               video="/about/turtles.mp4"
-              resumeLink="/global/stobert_resume.pdf"
+              resumeLink="/global/tylerstober_resume.pdf"
               descp={
                 <>
                   <p>
