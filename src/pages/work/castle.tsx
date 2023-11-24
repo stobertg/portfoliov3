@@ -7,6 +7,7 @@ import { SiteContainer, Block, Hero, Intro, NextProject } from '@components'
 // ---------------- Images to be loaded ----------------- //
 
 const imageUrls = [
+  "/projects/castle/crest.png",
   "/projects/castle/castle-hero.webp",
   "/projects/castle/stalbans.webp",
   "/projects/castle/the-inn.webp",
