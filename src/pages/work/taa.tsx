@@ -8,9 +8,6 @@ import { SiteContainer, Block, Hero, Intro, Browser, NextProject, TAALogo } from
 
 const imageUrls = [
   "/projects/deco/logo.svg",
-  "/projects/deco/sewing.svg",
-  "/projects/deco/siz.svg",
-  "/projects/deco/thimble.svg",
   "/projects/gather/profile.webp",
   "/projects/gather/ds1.webp",
   "/projects/gather/lessons.webp",
