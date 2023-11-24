@@ -7,7 +7,6 @@ import { SiteContainer, Block, Hero, Intro, Browser, NextProject, TAALogo } from
 // ---------------- Images to be loaded ----------------- //
 
 const imageUrls = [
-  "/projects/deco/logo.svg",
   "/projects/gather/profile.webp",
   "/projects/gather/ds1.webp",
   "/projects/gather/lessons.webp",
